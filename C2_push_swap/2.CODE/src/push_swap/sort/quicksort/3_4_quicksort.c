@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   3.4.Quicksort.c                                    :+:      :+:    :+:   */
+/*   3_4_quicksort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/24 23:41:32 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/26 16:36:47 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,6 @@
 void	recursive_split_chunk(t_chunk *chunk_to_sort, \
 			t_list_program *list_program);
 
-
-/* void	merge_back_no_sort(t_chunk *chunk_to_sort, \
-			t_split_chunks *split_chunks, t_list_program *list_program)
-{
-	int			i;
-
-	printer_dbg_split(MERGE_NS, split_chunks, list_program);
-	i = chunk_to_sort->size;
-	while (i-- > 0)
-	{
-		if(split_chunks->position_from == TOP_B)
-			push('a', list_program);
-		else if(split_chunks->position_from == BOTTOM_B)
-		{
-			rotate("r", 'b', list_program);
-			push('a', list_program);
-		}
-	}
-} */
 
 void	pivot_calculation(t_chunk *chunk_to_sort, t_split_chunks *split_chunks)
 {
@@ -165,3 +146,22 @@ void	quick_sort_pushswap(t_list_program *list_program)
 								TOP_A};
 	recursive_split_chunk(&chunk_to_sort, list_program);
 }
+
+/* void	merge_back_no_sort(t_chunk *chunk_to_sort, \
+			t_split_chunks *split_chunks, t_list_program *list_program)
+{
+	int			i;
+
+	printer_dbg_split(MERGE_NS, split_chunks, list_program);
+	i = chunk_to_sort->size;
+	while (i-- > 0)
+	{
+		if(split_chunks->position_from == TOP_B)
+			push('a', list_program);
+		else if(split_chunks->position_from == BOTTOM_B)
+		{
+			rotate("r", 'b', list_program);
+			push('a', list_program);
+		}
+	}
+} */
