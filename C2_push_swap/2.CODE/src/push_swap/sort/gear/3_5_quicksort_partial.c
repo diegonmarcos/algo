@@ -6,14 +6,13 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/25 10:54:23 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/26 17:44:00 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* static void	pivot_calculation(t_chunk *chunk_to_sort, \
-		t_split_chunks *split_chunks)
+void	pivot_calculation(t_chunk *chunk_to_sort, t_split_chunks *split_chunks)
 {
 	int	delta;
 
@@ -38,7 +37,7 @@
 	split_chunks->max.min = split_chunks->pivot2 + 1;
 	split_chunks->max.max = chunk_to_sort->max;
 	split_chunks->max.size = chunk_to_sort->max - split_chunks->pivot2 + 1;
-} */
+}
 
 static void	merge_back_max(t_chunk *chunk_to_sort, \
 				t_split_chunks *split_chunks, t_list_program *list_program)
@@ -126,42 +125,3 @@ void	quick_sort_partial(t_list_program *list_program)
 		list_program->stack_a_size, TOP_A};
 	recursive_split_chunk(&chunk_to_sort, list_program);
 }
-
-/* 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-static void	recursive_split_chunk(t_chunk *chunk_to_sort, \
-				t_list_program *list_program)
-{
-	t_split_chunks	split_chunks;
-
-	if (chunk_to_sort->size <= 0)
-	{
-		selection_sort_chunk(list_program);
-		return ;
-	}
-	split_chunk(chunk_to_sort, &split_chunks, list_program);
-	merge_back_and_sort(chunk_to_sort, &split_chunks, list_program);
-
-	split_chunk(&split_chunks.max, &split_chunks, list_program);
-	merge_back_max(chunk_to_sort, &split_chunks, list_program);
- 	recursive_split_chunk(&split_chunks.mid, list_program);
-	recursive_split_chunk(&split_chunks.max, list_program);
- 	merge_back_and_sort(&split_chunks.min, &split_chunks, list_program);
-	merge_back_and_sort(&split_chunks.mid, &split_chunks, list_program);
-	merge_back_and_sort(&split_chunks.max, &split_chunks, list_program);
-} */

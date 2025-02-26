@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   2.0.Checkargs.c                                    :+:      :+:    :+:   */
+/*   2_0_input_check.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:30:32 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/19 08:19:56 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/26 17:37:06 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,16 @@ void	error_handling_input_0(int argc, char **argv)
 		halt_exit_(0);
 	if (argv[1] == NULL || argv[1][0] == '\0')
 		halt_exit_(0);
+}
+
+void	is_sorted_linked_list_push(t_list_program *list_program)
+{
+	if (*list_program->stack_b)
+		return ;
+	if (is_sorted_linked_list(*list_program->stack_a))
+	{
+		print_results(list_program);
+		ft_free_push_swap_end(list_program);
+		exit (0);
+	}
 }

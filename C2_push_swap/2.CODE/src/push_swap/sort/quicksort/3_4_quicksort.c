@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/26 16:36:47 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/26 17:44:00 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,33 +15,6 @@
 void	recursive_split_chunk(t_chunk *chunk_to_sort, \
 			t_list_program *list_program);
 
-
-void	pivot_calculation(t_chunk *chunk_to_sort, t_split_chunks *split_chunks)
-{
-	int	delta;
-
-	delta = chunk_to_sort->size - 1;
-	split_chunks->min_number = chunk_to_sort->min;
-	split_chunks->pivot1 = chunk_to_sort->min + delta / 3;
-	split_chunks->pivot2 = chunk_to_sort->min + 2 * delta / 3;
-	split_chunks->max_number = chunk_to_sort->max;
-	split_chunks->position_from = chunk_to_sort->position;
-
-	split_chunks->min.position = BOTTOM_B;
-	split_chunks->min.min = chunk_to_sort->min;
-	split_chunks->min.max = split_chunks->pivot1;
-	split_chunks->min.size = split_chunks->pivot1 - chunk_to_sort->min + 1;
-
-	split_chunks->mid.position = TOP_B;
-	split_chunks->mid.min = split_chunks->pivot1 + 1;
-	split_chunks->mid.max = split_chunks->pivot2;
-	split_chunks->mid.size = split_chunks->pivot2 - split_chunks->pivot1 + 1;
-
-	split_chunks->max.position = BOTTOM_A;
-	split_chunks->max.min = split_chunks->pivot2 + 1;
-	split_chunks->max.max = chunk_to_sort->max;
-	split_chunks->max.size = chunk_to_sort->max - split_chunks->pivot2 + 1;
-}
 
 void	merge_back_and_sort(t_chunk *chunk_to_sort, \
 			t_split_chunks *split_chunks, t_list_program *list_program)
@@ -164,4 +137,28 @@ void	quick_sort_pushswap(t_list_program *list_program)
 			push('a', list_program);
 		}
 	}
+} */
+
+
+/* 
+static void	recursive_split_chunk(t_chunk *chunk_to_sort, \
+				t_list_program *list_program)
+{
+	t_split_chunks	split_chunks;
+
+	if (chunk_to_sort->size <= 0)
+	{
+		selection_sort_chunk(list_program);
+		return ;
+	}
+	split_chunk(chunk_to_sort, &split_chunks, list_program);
+	merge_back_and_sort(chunk_to_sort, &split_chunks, list_program);
+
+	split_chunk(&split_chunks.max, &split_chunks, list_program);
+	merge_back_max(chunk_to_sort, &split_chunks, list_program);
+ 	recursive_split_chunk(&split_chunks.mid, list_program);
+	recursive_split_chunk(&split_chunks.max, list_program);
+ 	merge_back_and_sort(&split_chunks.min, &split_chunks, list_program);
+	merge_back_and_sort(&split_chunks.mid, &split_chunks, list_program);
+	merge_back_and_sort(&split_chunks.max, &split_chunks, list_program);
 } */
