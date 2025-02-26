@@ -44,7 +44,7 @@ tests_run
  make DBG=0 M2=1 ALGO=radix re tests_run_500 
 ```
  
-make DBG=1 ALGO=quick re tests_run_12
+> make DBG=1 ALGO=quick re tests_run_12  
 
 
 ## Eval Points

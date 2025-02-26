@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/02/25 15:24:18 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/02/26 13:49:08 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -752,6 +752,8 @@ tests_run:
 	-echo -n "$(YELLOW)b3. ARG_500$(BLUE): | " ; ./push_swap $(ARG_500) 2>&1 | ./testers/checker_linux $(ARG_500) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) > log/3.Unit_Testing/moves/moves_500.txt; echo "";
 	echo""
 	-echo -n "$(GRAY)B PERFORMANCE_CHECK_BONUS $(RESET)"; echo""
+	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_5) | ./checker $(ARG_5) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_100) | ./checker $(ARG_100) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_500) | ./checker $(ARG_500) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	echo"";
 	-echo -n "$(GRAY)C ERROR_HANDLING_INPUTS_BONUS $(RESET)"; echo"";

@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/02/16 09:40:45 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/02/26 15:18:16 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,7 +97,7 @@ LIB_COMP_STATIC = ar rcs
 #LIB_COMP_DYNAMIC_lib = shared
 RM = rm -rf
 CFLAG_ASAN =
-CFLAGS_DBG =
+CFLAGS_DBG = -g3 -o0
 
 # ############################################################################ #
 #                                 HELPERS                                      #

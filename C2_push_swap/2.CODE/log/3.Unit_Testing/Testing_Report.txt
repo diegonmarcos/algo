@@ -47,27 +47,16 @@ b2. ARG_100: | OK  | 587  |
 b3. ARG_500: | OK  | 4663  | 
 
 B PERFORMANCE_CHECK_BONUS 
-b3. ARG_500 && CHECKER_BONUS: | Segmentation fault (core dumped)
- | 4663  | 
+b3. ARG_500 && CHECKER_BONUS: | OK  | 8  | 
+b3. ARG_500 && CHECKER_BONUS: | OK  | 587  | 
+b3. ARG_500 && CHECKER_BONUS: | OK  | 4663  | 
 
 C ERROR_HANDLING_INPUTS_BONUS 
-a1. ARG_INT_MAX: | Segmentation fault (core dumped)
- | Segmentation fault (core dumped)
-0  | 
-a2. ARG_INT_MIN: | Segmentation fault (core dumped)
- | 0 Segmentation fault (core dumped)
- | 
-a3. ARG_DUPLICATED: | Segmentation fault (core dumped)
- | Segmentation fault (core dumped)
-0  | 
-a4. ARG_NON_NUMERIC: | Segmentation fault (core dumped)
- | Segmentation fault (core dumped)
-0  | 
+a1. ARG_INT_MAX: | Error  | 1  | 
+a2. ARG_INT_MIN: | Error  | 1  | 
+a3. ARG_DUPLICATED: | Error  | 1  | 
+a4. ARG_NON_NUMERIC: | Error  | 1  | 
 C ERROR_HANDLING_INPUTS_2_BONUS 
 a5. ARG_EMPTY : |  | 0  | 
-a6. ARG_1: | Segmentation fault (core dumped)
- | Segmentation fault (core dumped)
-0  | 
-a7. ARG_SORTED: | Segmentation fault (core dumped)
- | 0 Segmentation fault (core dumped)
- | 
+a6. ARG_1: |  | 0  | 
+a7. ARG_SORTED: |  | 0  | 
