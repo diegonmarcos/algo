@@ -1,0 +1,14 @@
+==173369== Memcheck, a memory error detector
+==173369== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==173369== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==173369== Command: ./push_swap -132\ 192\ -136\ -182\ 135\ 169\ -194\ -201\ 52\ 217\ 156\ 36\ 236\ -55\ -139\ 0\ 238\ -227\ 221\ -177\ -87\ -95\ 214\ -34\ -102\ -154\ 191\ 83\ -105\ -144\ 244\ -137\ -186\ -199\ 240\ 150\ -113\ -180\ -36\ 175\ -164\ -110\ -115\ 20\ -235\ 237\ 87\ -130\ 122\ 61\ -239\ -225\ -206\ 14\ -45\ 176\ 57\ -121\ 10\ -100\ 60\ 168\ -86\ -210\ -134\ -91\ 204\ 72\ -205\ 53\ -195\ -40\ -23\ -141\ 243\ 209\ 212\ 142\ -82\ -187\ -5\ 22\ 112\ 132\ 178\ 163\ -250\ 222\ -170\ -248\ 216\ 126\ 234\ 218\ 194\ 76\ 170\ 224\ 67\ -219
+==173369== Parent PID: 173368
+==173369== 
+==173369== 
+==173369== HEAP SUMMARY:
+==173369==     in use at exit: 0 bytes in 0 blocks
+==173369==   total heap usage: 12,623 allocs, 12,623 frees, 72,377,943 bytes allocated
+==173369== 
+==173369== All heap blocks were freed -- no leaks are possible
+==173369== 
+==173369== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

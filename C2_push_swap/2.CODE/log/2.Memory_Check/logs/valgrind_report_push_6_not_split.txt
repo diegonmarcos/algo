@@ -1,0 +1,14 @@
+==184835== Memcheck, a memory error detector
+==184835== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==184835== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==184835== Command: ./log/4.Bins_folder/push_swap_g 0 9 1 8 2 6
+==184835== Parent PID: 184834
+==184835== 
+==184835== 
+==184835== HEAP SUMMARY:
+==184835==     in use at exit: 0 bytes in 0 blocks
+==184835==   total heap usage: 12,036 allocs, 12,036 frees, 72,189,434 bytes allocated
+==184835== 
+==184835== All heap blocks were freed -- no leaks are possible
+==184835== 
+==184835== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

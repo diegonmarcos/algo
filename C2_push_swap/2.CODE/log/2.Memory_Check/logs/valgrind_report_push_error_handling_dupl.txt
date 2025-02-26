@@ -1,0 +1,71 @@
+==184315== Memcheck, a memory error detector
+==184315== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==184315== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==184315== Command: ./log/4.Bins_folder/push_swap_g 5\ 4\ 3\ 2\ 1\ 1
+==184315== Parent PID: 184314
+==184315== 
+==184315== 
+==184315== HEAP SUMMARY:
+==184315==     in use at exit: 72,177,960 bytes in 12,005 blocks
+==184315==   total heap usage: 12,028 allocs, 23 frees, 72,185,580 bytes allocated
+==184315== 
+==184315== 8 bytes in 1 blocks are still reachable in loss record 1 of 7
+==184315==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==184315==    by 0x109392: data_alloc_vars (src/src_all/1_0_data_allocation.c:41)
+==184315==    by 0x109312: data_alloc (src/src_all/1_0_data_allocation.c:26)
+==184315==    by 0x10928C: main (src/src_all/push_swap.c:28)
+==184315== 
+==184315== 8 bytes in 1 blocks are still reachable in loss record 2 of 7
+==184315==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==184315==    by 0x1093A7: data_alloc_vars (src/src_all/1_0_data_allocation.c:42)
+==184315==    by 0x109312: data_alloc (src/src_all/1_0_data_allocation.c:26)
+==184315==    by 0x10928C: main (src/src_all/push_swap.c:28)
+==184315== 
+==184315== 48,008 bytes in 1 blocks are still reachable in loss record 3 of 7
+==184315==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==184315==    by 0x10C139: ft_calloc (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10C1A0: ft_calloc_ (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10C1FB: ft_calloc_2d (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10932C: data_alloc (src/src_all/1_0_data_allocation.c:27)
+==184315==    by 0x10928C: main (src/src_all/push_swap.c:28)
+==184315== 
+==184315== 48,008 bytes in 1 blocks are still reachable in loss record 4 of 7
+==184315==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==184315==    by 0x10C139: ft_calloc (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10C1A0: ft_calloc_ (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10C1FB: ft_calloc_2d (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x109346: data_alloc (src/src_all/1_0_data_allocation.c:28)
+==184315==    by 0x10928C: main (src/src_all/push_swap.c:28)
+==184315== 
+==184315== 81,928 bytes in 1 blocks are still reachable in loss record 5 of 7
+==184315==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==184315==    by 0x10C139: ft_calloc (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10EF13: ft_calloc_fd (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10CD1D: ft_initializator_list_gargabe (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10934B: data_alloc (src/src_all/1_0_data_allocation.c:30)
+==184315==    by 0x10928C: main (src/src_all/push_swap.c:28)
+==184315== 
+==184315== 36,000,000 bytes in 6,000 blocks are still reachable in loss record 6 of 7
+==184315==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==184315==    by 0x10C139: ft_calloc (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10C1A0: ft_calloc_ (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10C243: ft_calloc_2d (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10932C: data_alloc (src/src_all/1_0_data_allocation.c:27)
+==184315==    by 0x10928C: main (src/src_all/push_swap.c:28)
+==184315== 
+==184315== 36,000,000 bytes in 6,000 blocks are still reachable in loss record 7 of 7
+==184315==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==184315==    by 0x10C139: ft_calloc (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10C1A0: ft_calloc_ (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x10C243: ft_calloc_2d (in /home/diego/Documents/Git/dev/algo/C2_push_swap/2.CODE/log/4.Bins_folder/push_swap_g)
+==184315==    by 0x109346: data_alloc (src/src_all/1_0_data_allocation.c:28)
+==184315==    by 0x10928C: main (src/src_all/push_swap.c:28)
+==184315== 
+==184315== LEAK SUMMARY:
+==184315==    definitely lost: 0 bytes in 0 blocks
+==184315==    indirectly lost: 0 bytes in 0 blocks
+==184315==      possibly lost: 0 bytes in 0 blocks
+==184315==    still reachable: 72,177,960 bytes in 12,005 blocks
+==184315==         suppressed: 0 bytes in 0 blocks
+==184315== 
+==184315== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
