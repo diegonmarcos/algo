@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 09:57:09 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/26 12:47:48 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/27 08:42:23 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,9 @@ void	push(char direction, t_list_program *list_program);
 void	swap(char stack_name, t_list_program *list_program);
 void	swap_both(t_list_program *t_list_program);
 void	rotate_both(char *direction, t_list_program *t_list_program);
+void	move_stack_fromto(t_position from, t_position to, t_list_program \
+			*list_program);
+void	move_stack_fromto_case(char *move_case, t_list_program *list_program);
 
 //  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  //
 //######################################################################### */

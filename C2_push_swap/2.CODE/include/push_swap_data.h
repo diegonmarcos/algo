@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 13:25:50 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/26 15:47:50 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/27 08:18:29 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,17 @@ typedef enum e_position
 	TOP_B,
 	BOTTOM_B
 }			t_position;
+
+typedef enum e_sort_3_cases
+{
+	CASE_0,
+	CASE_A,
+	CASE_B,
+	CASE_C,
+	CASE_D,
+	CASE_E,
+	CASE_F
+}			t_sort_3_cases;
 
 typedef struct s_chunk
 {

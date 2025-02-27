@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/02/26 13:49:08 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/02/27 08:44:05 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,8 @@ SOURCE_FILES = 							\
 				3_6_sort_helpers.c		\
 				3_7_moves_optim.c		\
 				4_0_moves_direction.c	\
-				4_1_moves_both.c		
+				4_1_moves_both.c		\
+				4_2_moves_fromto.c
 
 #SOURCE_MAIN = $(wildcard src/*.c) $(wildcard src/*/*.c)
 SOURCE_SRC_ALL = $(addprefix src/src_all/,$(SOURCE_MAIN)) $(addprefix src/src_all/,$(SOURCE_FILES))

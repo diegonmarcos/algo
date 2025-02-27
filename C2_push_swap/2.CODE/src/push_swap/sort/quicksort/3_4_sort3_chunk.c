@@ -6,11 +6,14 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:09 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/26 17:39:07 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/27 08:19:43 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	sort_3_chunk_case(t_sort_3_cases case_, t_list_program *list_program);
+void	sort_3_chunk_case_1(t_sort_3_cases case_, t_list_program *list_program);
 
 /*
 | Case 0 | Case A | Case B | Case C | Case D | Case E | Case F |
@@ -19,7 +22,84 @@
 |   1    |   2    |   1    |   1    |   3    |   3    |   2    |
 |   2    |   1    |   2    |   3    |   1    |   2    |   3    |
 */
-void	selection_sort_chunk(t_list_program *list_program)
+void	sort_3_chunkk(t_list_program *list_program)
+{
+	t_list_dls	**stack_a;
+	int			first;
+	int			second;
+	int			third;
+
+	stack_a = list_program->stack_a;
+	first = (*stack_a)->index;
+	second = (*stack_a)->next->index;
+	third = (*stack_a)->next->next->index;
+	if (first > second && first == third)
+		sort_3_chunk_case(CASE_0, list_program);
+	else if (first > second && second > third && first > third)
+		sort_3_chunk_case(CASE_A, list_program);
+	else if (first > second && second < third && first > third)
+		sort_3_chunk_case(CASE_B, list_program);
+	else if (first > second && second < third && first < third)
+		sort_3_chunk_case(CASE_C, list_program);
+	else if (first < second && second > third && first > third)
+		sort_3_chunk_case(CASE_D, list_program);
+	else if (first < second && second > third && first < third)
+		sort_3_chunk_case(CASE_E, list_program);
+	else if ((first < second && second < third && first < third) \
+		|| first == second)
+		return ;
+}
+
+void	sort_3_chunk_case(t_sort_3_cases case_, t_list_program *list_program)
+{
+	if (case_ == CASE_0)
+		swap('a', list_program);
+	else if (case_ == CASE_A)
+	{
+		rotate("r", 'a', list_program);
+		rotate("r", 'a', list_program);
+		push('b', list_program);
+		rotate("rr", 'a', list_program);
+		rotate("rr", 'a', list_program);
+		swap('a', list_program);
+		push('a', list_program);
+
+	}
+	else if (case_ == CASE_B)
+	{
+		swap('a', list_program);
+		push('b', list_program);
+		swap('a', list_program);
+		push('a', list_program);
+	}
+	else if (case_ == CASE_C)
+		swap('a', list_program);
+	else
+		sort_3_chunk_case_1(case_, list_program);
+}
+
+void	sort_3_chunk_case_1(t_sort_3_cases case_, t_list_program *list_program)
+{
+	if (case_ == CASE_D)
+	{
+		rotate("r", 'a', list_program);
+		rotate("r", 'a', list_program);
+		push('b', list_program);
+		rotate("rr", 'a', list_program);
+		rotate("rr", 'a', list_program);
+		push('a', list_program);
+	}
+	else if (case_ == CASE_E)
+	{
+		push('b', list_program);
+		swap('a', list_program);
+		push('a', list_program);
+	}
+	else if (case_ == CASE_F)
+		return ;
+}
+
+/* void	sort_3_chunk(t_list_program *list_program)
 {
 	t_list_dls	**stack_a;
 	int			first;
@@ -70,68 +150,4 @@ void	selection_sort_chunk(t_list_program *list_program)
 	else if ((first < second && second < third && first < third) \
 		|| first == second)
 		return ;
-}
-
-// Function to move a value from one position to another
-/* void	move_value(t_list_dls **stack_a, t_list_dls **stack_b,
-		t_position from, t_position to, t_list_program *list_program)
-{
-	if (from == to)
-		return ;
-	if (from == TOP_A)
-	{
-		if (to == BOTTOM_A)
-			rotate("r", 'a', stack_a, list_program);
-		else if (to == TOP_B)
-			push('b', stack_a, stack_b, list_program);
-		else if (to == BOTTOM_B)
-		{
-			push('b', stack_a, stack_b, list_program);
-			rotate("r", 'b', stack_b, list_program);
-		}
-	}
-	else if (from == BOTTOM_A)
-	{
-		if (to == TOP_A)
-			rotate("rr", 'a', stack_a, list_program);
-		else if (to == TOP_B)
-		{
-			rotate("rr", 'a', stack_a, list_program);
-			push('b', stack_a, stack_b, list_program);
-		}
-		else
-		{
-			rotate("rr", 'a', stack_a, list_program);
-			push('b', stack_a, stack_b, list_program);
-			rotate("r", 'b', stack_b, list_program);
-		}
-	}
-	else if (from == TOP_B)
-	{
-		if (to == BOTTOM_B)
-			rotate("r", 'b', stack_b, list_program);
-		else if (to == TOP_A)
-			push('a', stack_a, stack_b, list_program);
-		else
-		{
-			push('a', stack_a, stack_b, list_program);
-			rotate("r", 'a', stack_a, list_program);
-		}
-	}
-	else
-	{
-		if (to == TOP_B)
-			rotate("rr", 'b', stack_b, list_program);
-		else if (to == TOP_A)
-		{
-			rotate("rr", 'b', stack_b, list_program);
-			push('a', stack_a, stack_b, list_program);
-		}
-		else
-		{
-			rotate("rr", 'b', stack_b, list_program);
-			push('a', stack_a, stack_b, list_program);
-			rotate("r", 'a', stack_a, list_program);
-		}
-	}
 } */
