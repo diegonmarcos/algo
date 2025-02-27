@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/02/27 10:45:13 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/02/27 22:32:32 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -568,7 +568,7 @@ log/4.Bins_folder/$(NAME0)_g3: $(OBJECTS)
 	$(MAKE) CFLAGS_DBG=" -g3" OUTPUT_PLACE="log/4.Bins_folder/" NAME0=$(NAME0)_g3
 	gdb -batch -ex "info functions" log/4.Bins_folder/$(NAME0)_g3 > log/4.Bins_folder/log/gdb_functions_$(NAME0)_g3.txt
 	cd log/4.Bins_folder
-	ln -s ../../src/push_swap/main/push_swap.c log/4.Bins_folder/push_swap.c || true
+	ln -s ../../src/push_swap/push_swap.c log/4.Bins_folder/push_swap.c || true
 	ln -s ../../src/checker_bonus/src/checker_bonus.c log/4.Bins_folder/checker_bonus.c || true
 
 .PHONY: create_bins_dbg

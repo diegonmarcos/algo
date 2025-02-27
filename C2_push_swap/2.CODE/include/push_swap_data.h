@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 13:25:50 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 08:18:29 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/27 22:55:22 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ typedef struct s_split_chunks
 	int			pivot1;
 	int			pivot2;
 	int			max_number;
+	int			size_total;
 	t_position	position_from;
 	t_chunk		max;
 	t_chunk		mid;

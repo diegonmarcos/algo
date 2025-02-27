@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 07:53:06 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 10:47:38 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/27 22:03:37 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	move_stack_fromto2(t_position from, t_position to, t_list_program \
 void	move_stack_fromto(t_position from, t_position to, t_list_program \
 			*list_program)
 {
-	if (from == to)
-		return ;
 	if (from == TOP_A)
 	{
 		if (to == BOTTOM_A)
@@ -51,7 +49,7 @@ void	move_stack_fromto1(t_position from, t_position to, t_list_program \
 			rotate("rr", 'a', list_program);
 			push('b', list_program);
 		}
-		else
+		else if (to == BOTTOM_B)
 		{
 			rotate("rr", 'a', list_program);
 			push('b', list_program);
@@ -69,13 +67,13 @@ void	move_stack_fromto2(t_position from, t_position to, t_list_program \
 			rotate("r", 'b', list_program);
 		else if (to == TOP_A)
 			push('a', list_program);
-		else
+		else if (to == BOTTOM_A)
 		{
 			push('a', list_program);
 			rotate("r", 'a', list_program);
 		}
 	}
-	else
+	else if(from == BOTTOM_B)
 	{
 		if (to == TOP_B)
 			rotate("rr", 'b', list_program);
@@ -84,7 +82,7 @@ void	move_stack_fromto2(t_position from, t_position to, t_list_program \
 			rotate("rr", 'b', list_program);
 			push('a', list_program);
 		}
-		else
+		else if (to == BOTTOM_A)
 			move_stack_fromto_case("rrb+pa+ra", list_program);
 	}
 }
