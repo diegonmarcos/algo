@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 10:52:35 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/27 14:09:48 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,7 @@ void	split_chunk( t_chunk *chunk_to_sort, t_split_chunks *split_chunks, \
 		else if (value > pivot1)
 			push('b', list_program);
 		else
-		{
-//			push_and_rotate('b','r', list_program);
-			push('b', list_program);
-			rotate("r", 'b', list_program);
-		}
+			move_stack_fromto(TOP_A, BOTTOM_B, list_program);
 		i++;
 	}
 }
