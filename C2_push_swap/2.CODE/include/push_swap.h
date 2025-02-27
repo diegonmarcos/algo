@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 09:57:09 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 08:42:23 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/27 10:52:35 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,10 @@ void	radix_sort_step(int bit, int size, t_list_program *list_program);
 /* QUICK SORT														 */
 /* ***************************************************************** */
 void	quick_sort_pushswap(t_list_program *list_program);
+void	recursive_split_chunk(t_chunk *chunk_to_sort, \
+			t_list_program *list_program);
+void	sort_3_chunk(t_list_program *list_program);
+
 
 /* ***************************************************************** */
 /* GEAR SORT														 */

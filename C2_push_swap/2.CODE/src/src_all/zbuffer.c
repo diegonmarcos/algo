@@ -1,1 +1,1 @@
-../push_swap/sort/zarchive/zbuffer.c
+../push_swap/tracers/zarchive/zbuffer.c

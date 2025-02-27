@@ -6,15 +6,11 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/26 17:44:00 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/27 10:52:35 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	recursive_split_chunk(t_chunk *chunk_to_sort, \
-			t_list_program *list_program);
-
 
 void	merge_back_and_sort(t_chunk *chunk_to_sort, \
 			t_split_chunks *split_chunks, t_list_program *list_program)
@@ -25,7 +21,7 @@ void	merge_back_and_sort(t_chunk *chunk_to_sort, \
 	t_chunk		chunk_to_sort_new;
 
 	printer_dbg_split(MERGE_AS, split_chunks, list_program);
-	selection_sort_chunk(list_program);
+	sort_3_chunk(list_program);
 	stack_a = list_program->stack_a;
 	stack_b = list_program->stack_b;
 //	merge_back_no_sort(&split_chunks->mid, split_chunks, list_program);
@@ -40,7 +36,7 @@ void	merge_back_and_sort(t_chunk *chunk_to_sort, \
 	if (split_chunks->mid.size > 3)
 //		recursive_split_chunk(&split_chunks->mid, list_program);
 		recursive_split_chunk(&chunk_to_sort_new, list_program);
-	selection_sort_chunk(list_program);
+	sort_3_chunk(list_program);
 //	merge_back_no_sort(&split_chunks->min, split_chunks, list_program);
 	i = split_chunks->min.size - 0;
 	while (i-- > 0 && *stack_b)
@@ -55,7 +51,7 @@ void	merge_back_and_sort(t_chunk *chunk_to_sort, \
 	if (split_chunks->min.size > 3)
 //		recursive_split_chunk(&split_chunks->min, list_program);
 		recursive_split_chunk(&chunk_to_sort_new, list_program);
-	selection_sort_chunk(list_program);
+	sort_3_chunk(list_program);
 }
 
 // Function to split a chunk into three parts
@@ -148,7 +144,7 @@ static void	recursive_split_chunk(t_chunk *chunk_to_sort, \
 
 	if (chunk_to_sort->size <= 0)
 	{
-		selection_sort_chunk(list_program);
+		sort_3_chunk(list_program);
 		return ;
 	}
 	split_chunk(chunk_to_sort, &split_chunks, list_program);

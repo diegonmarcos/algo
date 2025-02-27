@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   4_2_moves_all.c                                    :+:      :+:    :+:   */
+/*   4_2_moves_fromto.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 07:53:06 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 08:42:23 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/27 10:47:38 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	move_stack_fromto1(t_position from, t_position to, t_list_program \
+			*list_program);
+void	move_stack_fromto2(t_position from, t_position to, t_list_program \
+			*list_program);
 
 // Function to move a value from one position to another
 void	move_stack_fromto(t_position from, t_position to, t_list_program \
@@ -80,7 +85,7 @@ void	move_stack_fromto2(t_position from, t_position to, t_list_program \
 			push('a', list_program);
 		}
 		else
-			move_stack_fromto_case("rrb+pa+ra", list_program)
+			move_stack_fromto_case("rrb+pa+ra", list_program);
 	}
 }
 

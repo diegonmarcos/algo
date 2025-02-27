@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/02/27 08:44:05 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/02/27 10:45:13 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,8 +48,8 @@ SOURCE_MAIN =							\
 				push_swap.c				
 
 SOURCE_FILES = 							\
-				1_0_data_allocation.c	\
-				1_1_data_release.c		\
+				1_0_mem_alloc.c			\
+				1_1_mem_clear.c			\
 				1_2_debugger_helpers.c	\
 				1_2_printers_tracers.c	\
 				2_0_input_check.c		\
@@ -62,7 +62,6 @@ SOURCE_FILES = 							\
 				3_5_gearsort_pricing.c	\
 				3_5_gearsort_pricing2.c	\
 				3_5_quicksort_partial.c	\
-				3_6_sort_helpers.c		\
 				3_7_moves_optim.c		\
 				4_0_moves_direction.c	\
 				4_1_moves_both.c		\

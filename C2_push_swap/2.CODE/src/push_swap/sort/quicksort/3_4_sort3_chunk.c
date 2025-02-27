@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:09 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 08:19:43 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/27 10:50:45 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	sort_3_chunk_case_1(t_sort_3_cases case_, t_list_program *list_program);
 |   1    |   2    |   1    |   1    |   3    |   3    |   2    |
 |   2    |   1    |   2    |   3    |   1    |   2    |   3    |
 */
-void	sort_3_chunkk(t_list_program *list_program)
+void	sort_3_chunk(t_list_program *list_program)
 {
 	t_list_dls	**stack_a;
 	int			first;

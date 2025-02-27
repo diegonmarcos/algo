@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 08:41:29 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/27 10:54:04 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ static void	split_chunk( t_chunk *chunk_to_sort, t_split_chunks *split_chunks, \
 	}
 }
 
-static void	recursive_split_chunk(t_chunk *chunk_to_sort, \
+void	recursive_split_chunk_partial(t_chunk *chunk_to_sort, \
 				t_list_program *list_program)
 {
 	t_split_chunks	split_chunks;
@@ -124,5 +124,5 @@ void	quick_sort_partial(t_list_program *list_program)
 	ft_printers(QUICK, list_program);
 	chunk_to_sort = (t_chunk){0, list_program->stack_a_size - 1, \
 		list_program->stack_a_size, TOP_A};
-	recursive_split_chunk(&chunk_to_sort, list_program);
+	recursive_split_chunk_partial(&chunk_to_sort, list_program);
 }
