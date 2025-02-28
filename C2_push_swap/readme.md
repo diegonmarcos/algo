@@ -36,15 +36,14 @@ tests_run
 ### Examples:
 ``` bash
  make DBG=1 ALGO=selec re tests_run_5
-```
-``` bash
- make DBG=1 ALGO=radix re tests_run_100
-```
-``` bash
- make DBG=0 ALGO=radix re tests_run_500 
-```
+ make DBG=1 ALGO=quick re tests_run_12
  
-> make DBG=1 ALGO=quick re tests_run_12  
+ make DBG=1 ALGO=radix re tests_run_100
+ make DBG=0 ALGO=radix re tests_run_500
+
+ make DBG=1 ALGO=quick re debug-vscode 
+    
+```
 
 
 ## Eval Points

@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 13:25:50 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 22:55:22 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/28 15:03:36 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,10 @@ typedef struct s_list_program
 /* ***************************************************************** */
 typedef enum e_position
 {
-	TOP_A,
-	BOTTOM_A,
+	BOTTOM_B,
 	TOP_B,
-	BOTTOM_B
+	BOTTOM_A,
+	TOP_A,
 }			t_position;
 
 typedef enum e_sort_3_cases
@@ -89,9 +89,10 @@ typedef struct s_chunk
 	int			max;
 	int			size;
 	t_position	position;
+	int			size_parent;
 }				t_chunk;
 
-typedef struct s_split_chunks
+typedef struct s_splits
 {
 	int			min_number;
 	int			pivot1;
@@ -102,7 +103,7 @@ typedef struct s_split_chunks
 	t_chunk		max;
 	t_chunk		mid;
 	t_chunk		min;
-}				t_split_chunks;
+}				t_splits;
 
 /* ***************************************************************** */
 /* GEAR SORT														 */

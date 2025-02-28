@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/02/27 22:32:32 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/02/28 13:51:22 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -234,22 +234,6 @@ else
 	@echo "$(GRAY)Skipping library merge$(RESET)"
 endif
 
-# *** Phony *** #
-.PHONY:		all build program_or_lib libs_build					\
-			clean fclean fclean_all re 							\
-			library_clean library_fclean library_re 			\
-			folder_lns_builder folders_build check_up_to_date 	\
-			hello debug 										\
-			werror norm_1 norm_2 log_all werror_bonus			\
-			testing_alles test_export 							\
-			make_dbg create_bins								\
-			leaks valgrind asan time_and_perfomance				\
-			help bonus											\
-			bonus bonus_re										\
-			run_visualizer										\
-
-#NOT PHONY:	program lib
-
 # ############################################################################ #
 #                                 RULES/RECLEAN                                #
 # ############################################################################ #
@@ -302,6 +286,44 @@ ifeq ($(DBG),1)
 	cp push_swap log/4.Bins_folder/push_swap_g3
 endif
 
+# ************************************************************************ #
+#                               DEFS                                       #
+# ************************************************************************ #
+# *** Phony *** #
+.PHONY:		all build program_or_lib libs_build					\
+			clean fclean fclean_all re 							\
+			library_clean library_fclean library_re 			\
+			folder_lns_builder folders_build check_up_to_date 	\
+			hello debug 										\
+			werror norm_1 norm_2 log_all werror_bonus			\
+			testing_alles test_export 							\
+			make_dbg create_bins								\
+			leaks valgrind asan time_and_perfomance				\
+			help bonus											\
+			bonus bonus_re										\
+			run_visualizer										\
+
+#NOT PHONY:	program lib
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
 #                                LOG ALLES                                     #
@@ -325,11 +347,40 @@ log_alles:
 #	$(MAKE) libs_build
 #	$(MAKE) program_or_lib
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
-#                                 LINTING                                      #
+#                          STATIC ANALYZERS                                    #
 # ############################################################################ #
-# *** Liting analyzer *** #
+# *** static analyzer *** #
 warning_linting:
 	$(MAKE) bear
 	$(MAKE) bonus
@@ -346,52 +397,77 @@ bear:
 # *** Wall Wextra *** #
 werror:
 	
-	@echo "$(GREEN)\n·Clang Litings$(RESET)"
+	@echo "$(GREEN)\n·Clang lintings$(RESET)"
 	echo "\n##Clang Wall Wextra - fsyntaxOnly"
 	echo "############################################\n"
-	$(MAKE) CFLAGS_DBG=" -Wall -Wextra" 2>&1 | sed 's/\x1b\[//g'| sed 's/\0;93m//g'| sed 's/\0;90m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_Linting/clang_www.txt
+	$(MAKE) CFLAGS_DBG=" -Wall -Wextra" 2>&1 | sed 's/\x1b\[//g'| sed 's/\0;93m//g'| sed 's/\0;90m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_www.txt
 
 	@echo "\n##Clang Fron-End Semantic Wcore - fsyntaxOnly"
 	echo "############################################\n"
-	$(MAKE) CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_Linting/clang_wcore.txt
+	$(MAKE) CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_wcore.txt
 
 	@echo "\n##Clang Fron-End Semantic wEverything - fsyntaxOnly"
 	echo "############################################\n"
-	$(MAKE) CFLAGS_DBG="-Weverything" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_Linting/clang_wevery.txt
+	$(MAKE) CFLAGS_DBG="-Weverything" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_wevery.txt
 
 	@echo "\n##Clang Fron-End Semantic Clang-Tidy - fsyntaxOnly"
 	echo "############################################\n"
-	clang-tidy -p log/6.Make_dbg/compile_commands.json $(SOURCE_SRC_ALL) 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_Linting/clang_tidy.txt
+	clang-tidy -p log/6.Make_dbg/compile_commands.json $(SOURCE_SRC_ALL) 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_tidy.txt
 	
 	@echo "\n###Clang Static Analyzer Wcore"
 	echo  "#########################\n"
-	$(MAKE) CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_Linting/clang_analyzer.txt
+	$(MAKE) CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_linting/clang_analyzer.txt
 
 # *** Norminette on Project*** #
 norm:
 	@echo "$(GREEN)\n····Running Norminette····$(RESET)"
-	norminette src/push_swap > log/1.Warning_Linting/norminette.txt; \
-	norminette include >> log/1.Warning_Linting/norminette.txt ; cat log/1.Warning_Linting/norminette.txt
+	norminette src/push_swap > log/1.Warning_linting/norminette.txt; \
+	norminette include >> log/1.Warning_linting/norminette.txt ; cat log/1.Warning_linting/norminette.txt
 
 # *** Norminette on Bonus*** #
 norm_bonus:
 	@echo "$(GREEN)\n····Running Norminette····$(RESET)"
-	norminette src/checker_bonus > log/1.Warning_Linting/norminette_bonus.txt ; cat log/1.Warning_Linting/norminette_bonus.txt \
+	norminette src/checker_bonus > log/1.Warning_linting/norminette_bonus.txt ; cat log/1.Warning_linting/norminette_bonus.txt \
 
 werror_bonus:
-	@echo "$(GREEN)\n·Clang Litings$(RESET)"
+	@echo "$(GREEN)\n·Clang lintings$(RESET)"
 	echo "\n## BONUS Clang Wall Wextra - fsyntaxOnly"
 	echo "############################################\n"
-	$(CHECKER_BUILD) CFLAGS_DBG="-Wall -Wextra" || true > log/1.Warning_Linting/bonus_clang_www.txt
+	$(CHECKER_BUILD) CFLAGS_DBG="-Wall -Wextra" || true > log/1.Warning_linting/bonus_clang_www.txt
 	@echo "\n## BONUS Clang Fron-End Semantic - fsyntaxOnly"
 	echo "############################################\n"
-	$(CHECKER_BUILD) CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_Linting/bonus_clang_wevery.txt
+	$(CHECKER_BUILD) CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/bonus_clang_wevery.txt
 	@echo "\n### BONUS Clang Static Analyzer"
 	echo  "#########################\n"
-	$(MAKE) CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core " 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_Linting/bonus_clang_analyzer.txt
+	$(MAKE) CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core " 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_linting/bonus_clang_analyzer.txt
 
 clang_tidy_fix:
 		clang-tidy $(SOURCE_MAIN) $(SOURCE_FILES) --fix
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
@@ -548,56 +624,52 @@ asan:
 	./log/4.Bins_folder/push_swap_asan 5 4 3 2 1
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
-# ############################################################################ #
-#                                DEBUGGERS                                     #
-# ############################################################################ #
-# *** Debuggers *** #
-debuggers:
-	$(MAKE) create_bins_dbg
-	$(MAKE) debuggers_info
-
-# ************************************************************************ #
-#                                                                          #
-# ************************************************************************ #
-# *** Create the bin for G3 debugging *** #
-create_bins_dbg: log/4.Bins_folder/$(NAME0)_g3
-log/4.Bins_folder/$(NAME0)_g3: $(OBJECTS)
-# *** debugging _g3 *** #
-	$(MAKE) fclean
-	$(MAKE) CFLAGS_DBG=" -g3" OUTPUT_PLACE="log/4.Bins_folder/" NAME0=$(NAME0)_g3
-	gdb -batch -ex "info functions" log/4.Bins_folder/$(NAME0)_g3 > log/4.Bins_folder/log/gdb_functions_$(NAME0)_g3.txt
-	cd log/4.Bins_folder
-	ln -s ../../src/push_swap/push_swap.c log/4.Bins_folder/push_swap.c || true
-	ln -s ../../src/checker_bonus/src/checker_bonus.c log/4.Bins_folder/checker_bonus.c || true
-
-.PHONY: create_bins_dbg
-
-# *** Librarys info and make=debug *** #
-debuggers_info:
-	$(MAKE) libs_nm_art
-#	$(MAKE) make_dbg
 
 
-libs_nm_art:
-	nm libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_nm.txt
-	ar t libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_art.txt
-	nm libs/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_nm.txt
-	ar t libs/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_art.txt
 
-make_dbg:
-	$(MAKE) -d > log/6.Make_dbg/make_d.txt
-	$(MAKE) CFLAGS_DBG="-v" > log/6.Make_dbg/clang_v.txt
-	$(MAKE) --debug=b -j1 re > log/6.Make_dbg/make_debug_b.txt
-	$(MAKE) --debug=v -j1 re > log/6.Make_dbg/make_debug_v.txt
 
-# ************************************************************************ #
-#                                 RUN DEBUGGER                              #
-# ************************************************************************ #
-# *** Command to run especif debug *** #
-ARG_DBG = "500 400 300 200 100 1000"
-debug: $(MAKE) CFLAGS="$(CFLAGS) -g3" $(NAME)
-	lldb ./$(NAME) -o "b main" -o run -o gui -o "run $(ARG_DBG)" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
@@ -805,6 +877,155 @@ run_visualizer: testers/push_swap_visualizer/build/bin/visualizer
 
 .PHONY: run_visualizer
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
+# ############################################################################ #
+#                                DEBUGGERS                                     #
+# ############################################################################ #
+
+# ************************************************************************ #
+#                                 RUN DEBUGGER                             #
+# ************************************************************************ #
+# *** Command to run especif debug *** #
+debug-gdb: 
+	$(MAKE) CFLAGS="$(CFLAGS) -g3"
+	gdb ./$(NAME) -o "b main" -o run -o gui -o "run $(ARG_12)" 
+
+debug-lldb: 
+	$(MAKE) CFLAGS="$(CFLAGS) -g3"
+	lldb ./$(NAME) -o "b main" -o run -o gui -o "run $(ARG_12)" 
+
+debug-vscode:
+ifeq ($(ALGO), 0)
+	$(MAKE) create_bins_dbg
+endif
+	code -r -g log/4.Bins_folder/push_swap.c:1
+	sleep 1
+	sudo apt-get install xdotool > /dev/null 2>&1
+	xdotool key F5
+#   code --open-url "vscode://ms-vscode.cpptools/debug/launch?name=PUSHSWAP_DBG"
+#	code --open-url "vscode://ms-vscode.cpptools/debug?name=Debug%20Push%20Swap&program=$(CURDIR)/$(NAME)&args=$(ARG_12)"
+
+
+
+# *** Debuggers *** #
+debuggers:
+	$(MAKE) create_bins_dbg
+	$(MAKE) debuggers_info
+
+# ************************************************************************ #
+#                                                                          #
+# ************************************************************************ #
+# *** Create the bin for G3 debugging *** #
+create_bins_dbg: log/4.Bins_folder/$(NAME0)_g3
+log/4.Bins_folder/$(NAME0)_g3: $(OBJECTS)
+# *** debugging _g3 *** #
+	$(MAKE) fclean
+	$(MAKE) CFLAGS_DBG=" -g3" OUTPUT_PLACE="log/4.Bins_folder/" NAME0=$(NAME0)_g3
+	gdb -batch -ex "info functions" log/4.Bins_folder/$(NAME0)_g3 > log/4.Bins_folder/log/gdb_functions_$(NAME0)_g3.txt
+	cd log/4.Bins_folder
+	ln -s ../../src/push_swap/push_swap.c log/4.Bins_folder/push_swap.c || true
+	ln -s ../../src/checker_bonus/src/checker_bonus.c log/4.Bins_folder/checker_bonus.c || true
+
+.PHONY: create_bins_dbg
+
+# *** Librarys info and make=debug *** #
+debuggers_info:
+	$(MAKE) libs_nm_art
+#	$(MAKE) make_dbg
+
+
+libs_nm_art:
+	nm libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_nm.txt
+	ar t libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_art.txt
+	nm libs/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_nm.txt
+	ar t libs/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_art.txt
+
+make_dbg:
+	$(MAKE) -d > log/6.Make_dbg/make_d.txt
+	$(MAKE) CFLAGS_DBG="-v" > log/6.Make_dbg/clang_v.txt
+	$(MAKE) --debug=b -j1 re > log/6.Make_dbg/make_debug_b.txt
+	$(MAKE) --debug=v -j1 re > log/6.Make_dbg/make_debug_v.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
 #                                FOLDER BUILDER                                #
@@ -841,7 +1062,7 @@ folders_lns_build:
 
 # *** Build folders *** #
 folders_log_build:
-	mkdir -p log/1.Warning_Linting
+	mkdir -p log/1.Warning_linting
 	mkdir -p log/2.Memory_Check/logs
 	mkdir -p log/2.Memory_Check/allocs
 	mkdir -p log/3.Unit_Testing
@@ -932,8 +1153,8 @@ help:
 	@echo "$(GREEN)	2. program_or_lib, program, lib, libs_build $(RESET)"
 	@echo "$(GREEN)	3. library_clean, library_fclean, library_re $(RESET)"
 	@echo "$(GREEN)	4. hello, check_up_to_date, code_cleaner, files_lns_creator $(RESET)"
-	@echo "$(GRAY) LINTING(static/Wflags):$(RESET)"
-	@echo "$(GREEN)	5. liting: werror, norm_1, norm_2$(RESET)"
+	@echo "$(GRAY) linting(static/Wflags):$(RESET)"
+	@echo "$(GREEN)	5. linting: werror, norm_1, norm_2$(RESET)"
 	@echo "$(GRAY) SANITIZATION(static/Asan) & RUNTIME ERROR(dynamic/Valgrind):$(RESET)"
 	@echo "$(GREEN)	6. leaks: create_bins, valgrind, asan$(RESET)"
 	@echo "$(GRAY) UNIT TESTS:$(RESET)"
@@ -946,6 +1167,25 @@ help:
 	@echo "$(GREEN)	10. bonus\n$(RESET)"
 	
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # **************************************************************************** #
 #                                DEFS/COLORS                               	   #
 # **************************************************************************** #
@@ -1048,7 +1288,7 @@ endif
 #	- FUNCTIONS BUILD:
 #		2. program_or_lib, program, lib, libs_build, folders_build
 #
-#	- LINTING(static/Wflags) & SANITIZATION(static/Asan) & RUNTIME ERROR(dynamic/Valgrind) & UNIT_TESTING :
+#	- linting(static/Wflags) & SANITIZATION(static/Asan) & RUNTIME ERROR(dynamic/Valgrind) & UNIT_TESTING :
 #		3. log_all: norm_1, norm_2, leaks: valgrind, asan
 #		4. test, test5
 #

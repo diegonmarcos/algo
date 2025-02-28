@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 09:57:09 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 10:52:35 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/28 16:46:24 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,8 @@ void	radix_sort_step(int bit, int size, t_list_program *list_program);
 /* QUICK SORT														 */
 /* ***************************************************************** */
 void	quick_sort_pushswap(t_list_program *list_program);
-void	recursive_split_chunk(t_chunk *chunk_to_sort, \
-			t_list_program *list_program);
+//void	recursive_split_chunk(t_chunk *chunk_to_sort, \
+//			t_list_program *list_program);
 void	sort_3_chunk(t_list_program *list_program);
 
 
@@ -85,7 +85,7 @@ void	quick_sort_partial(t_list_program *list_program);
 /* ***************************************************************** */
 /* SMALL SORT AND UTILS												 */
 /* ***************************************************************** */
-void	pivot_calculation(t_chunk *chunk_to_sort, t_split_chunks *split_chunks);
+void	pivot_calculation(t_chunk *chunk_to_sort, t_splits *split_chunks);
 void	selection_sort_chunk(t_list_program *list_dls_program);
 void	moves_optimizations(t_list_program *list_program);
 
@@ -144,7 +144,7 @@ void	ft_printers(t_ft_printers_db s, t_list_program *list_program);
 void	ft_printers_gearsort(t_ft_printers_db s, t_move_lower_cost *v, \
 					t_list_program *list_program);
 void	printer_dbg_split(t_ft_printers_db s, \
-					t_split_chunks *split_chunks, t_list_program *list_program);
+					t_splits *split_chunks, t_list_program *list_program);
 void	printer_dbg_split1(t_ft_printers_db s, \
 					t_chunk1 *split_chunks, t_list_program *list_program);
 

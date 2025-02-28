@@ -6,14 +6,14 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 23:15:33 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/28 09:02:21 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 void	pivot_calculation_partial(t_chunk *chunk_to_sort, \
-			t_split_chunks *split_chunks)
+			t_splits *split_chunks)
 {
 	int	delta;
 
@@ -42,7 +42,7 @@ void	pivot_calculation_partial(t_chunk *chunk_to_sort, \
 }
 
 static void	merge_back_and_sort(t_chunk *chunk_to_sort, \
-				t_split_chunks *split_chunks, t_list_program *list_program)
+				t_splits *split_chunks, t_list_program *list_program)
 {
 	t_list_dls	**stack_a;
 	t_list_dls	**stack_b;
@@ -61,7 +61,7 @@ static void	merge_back_and_sort(t_chunk *chunk_to_sort, \
 }
 
 // Function to split a chunk into three parts
-static void	split_chunk( t_chunk *chunk_to_sort, t_split_chunks *split_chunks, \
+static void	split_chunk( t_chunk *chunk_to_sort, t_splits *split_chunks, \
 				t_list_program *list_program)
 {
 	int	value;
@@ -89,7 +89,7 @@ static void	split_chunk( t_chunk *chunk_to_sort, t_split_chunks *split_chunks, \
 void	recursive_split_chunk_partial(t_chunk *chunk_to_sort, \
 				t_list_program *list_program)
 {
-	t_split_chunks	split_chunks;
+	t_splits	split_chunks;
 
 	pivot_calculation_partial(chunk_to_sort, &split_chunks);
 	split_chunk(chunk_to_sort, &split_chunks, list_program);
@@ -99,9 +99,10 @@ void	recursive_split_chunk_partial(t_chunk *chunk_to_sort, \
 void	quick_sort_partial(t_list_program *list_program)
 {
 	t_chunk	chunk_to_sort;
+	int		size;
 
 	ft_printers(QUICK, list_program);
-	chunk_to_sort = (t_chunk){0, list_program->stack_a_size - 1, \
-		list_program->stack_a_size, TOP_A};
+	size = list_program->stack_a_size;
+	chunk_to_sort = (t_chunk){0, size - 1, size, TOP_A};
 	recursive_split_chunk_partial(&chunk_to_sort, list_program);
 }

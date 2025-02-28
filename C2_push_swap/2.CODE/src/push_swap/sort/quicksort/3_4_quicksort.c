@@ -6,64 +6,112 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 23:15:33 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/28 17:44:51 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pivot_calculation(t_chunk *chunk_to_sort, t_split_chunks *split_chunks)
+void	recursive_split_chunk(t_chunk *chunk_to_sort, int *i, t_list_program \
+			*list_program);
+void	pivot_calculation(t_chunk *chunk_to_sort, t_splits *splits);
+void	split_chunk(t_splits *splits, t_list_program *list_program);
+void	merge_back(t_splits *splits, int *i, t_list_program *list_program);
+
+
+void	quick_sort_pushswap(t_list_program *list_program)
+{
+	t_chunk	chunk_to_sort;
+	int		size;
+	int		i;
+
+	i = 0;
+	ft_printers(QUICK, list_program);
+	size = list_program->stack_a_size;
+	chunk_to_sort = (t_chunk){0, size - 1, size, TOP_A, size};
+	recursive_split_chunk(&chunk_to_sort, &i, list_program);
+}
+
+void	recursive_split_chunk(t_chunk *chunk_to_sort, int *i, \
+			t_list_program *list_program)
+{
+	t_splits	splits;
+
+	splits = (t_splits){0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	if (chunk_to_sort->size_parent <= 4)	//review this base case!
+	{
+//		sort_3_chunk(list_program);
+		return ;
+	}
+	pivot_calculation(chunk_to_sort, &splits);
+	split_chunk(&splits, list_program);
+
+	recursive_split_chunk(&splits.max, i, list_program);
+	recursive_split_chunk(&splits.mid, i,  list_program);
+	recursive_split_chunk(&splits.min, i,  list_program);
+	merge_back(&splits, i, list_program);
+}
+
+void	pivot_calculation(t_chunk *chunk_to_sort, t_splits *splits)
 {
 	int	delta;
 
 	delta = chunk_to_sort->size - 1;
-	split_chunks->min_number = chunk_to_sort->min;
-	split_chunks->pivot1 = chunk_to_sort->min + delta / 3;
-	split_chunks->pivot2 = chunk_to_sort->min + 2 * delta / 3;
-	split_chunks->max_number = chunk_to_sort->max;
-	split_chunks->position_from = chunk_to_sort->position;
-	split_chunks->size_total = chunk_to_sort->size;
+	splits->min_number = chunk_to_sort->min;
+	splits->pivot1 = chunk_to_sort->min + delta / 3;
+	splits->pivot2 = chunk_to_sort->min + 2 * delta / 3;
+	splits->max_number = chunk_to_sort->max;
+	splits->position_from = chunk_to_sort->position;
+	splits->size_total = chunk_to_sort->size;
 
-	split_chunks->min.position = BOTTOM_B;
-	split_chunks->min.min = chunk_to_sort->min;
-	split_chunks->min.max = split_chunks->pivot1;
-	split_chunks->min.size = split_chunks->pivot1 - chunk_to_sort->min + 1;
+	splits->min.position = BOTTOM_B;
+	splits->min.min = chunk_to_sort->min;
+	splits->min.max = splits->pivot1;
+	splits->min.size = splits->pivot1 - chunk_to_sort->min + 1;
+	splits->min.size_parent = chunk_to_sort->size;
 
-	split_chunks->mid.position = TOP_B;
-	split_chunks->mid.min = split_chunks->pivot1 + 1;
-	split_chunks->mid.max = split_chunks->pivot2;
-	split_chunks->mid.size = split_chunks->pivot2 - split_chunks->pivot1 ;
+	splits->mid.position = TOP_B;
+	splits->mid.min = splits->pivot1 + 1;
+	splits->mid.max = splits->pivot2;
+	splits->mid.size = splits->pivot2 - splits->pivot1;
+	splits->mid.size_parent = chunk_to_sort->size;
 
-	split_chunks->max.position = BOTTOM_A;
-	split_chunks->max.min = split_chunks->pivot2 + 1;
-	split_chunks->max.max = chunk_to_sort->max;
-	split_chunks->max.size = chunk_to_sort->max - split_chunks->pivot2 ;
-}
-
-void	merge_back_no_sort(t_chunk *chunk_to_sort, \
-			t_split_chunks *split_chunks, t_list_program *list_program)
-{
-	printer_dbg_split(MERGE_NS, split_chunks, list_program);
-	while (chunk_to_sort->size-- > 0)
-		move_stack_fromto(split_chunks->position_from, TOP_A, list_program);
+	splits->max.position = BOTTOM_A;
+	splits->max.min = splits->pivot2 + 1;
+	splits->max.max = chunk_to_sort->max;
+	splits->max.size = chunk_to_sort->max - splits->pivot2;
+	splits->max.size_parent = chunk_to_sort->size;
 }
 
 // Function to split a chunk into three parts
-void	split_chunk( t_chunk *chunk_to_sort, t_split_chunks *split_chunks, \
-			t_list_program *list_program)
+void	split_chunk(t_splits *splits, t_list_program *list_program)
 {
 	int	value;
 	int	i;
 	int	pivot1;
 	int	pivot2;
 
-	printer_dbg_split(SPLIT, split_chunks, list_program);
-	i = chunk_to_sort->min - 1;
-	pivot1 = split_chunks->pivot1;
-	pivot2 = split_chunks->pivot2;
-	if (chunk_to_sort->position == TOP_B || chunk_to_sort->position == BOTTOM_B)
-		merge_back_no_sort(chunk_to_sort, split_chunks, list_program);
-	while (i <= chunk_to_sort->max)
+	printer_dbg_split(SPLIT, splits, list_program);
+	i = splits->size_total;
+	pivot1 = splits->pivot1;
+	pivot2 = splits->pivot2;
+	if (splits->position_from == BOTTOM_A)
+	{
+		while (i--)
+			move_stack_fromto(BOTTOM_A, TOP_A, list_program);
+	}
+	if (splits->position_from == TOP_B)
+	{
+		while (i--)
+			move_stack_fromto(TOP_B, TOP_A, list_program);
+	}
+	if (splits->position_from == BOTTOM_B)
+	{
+		while (i--)
+			move_stack_fromto(BOTTOM_B, TOP_A, list_program);
+	}
+	i = splits->size_total;
+	while (i--)
 	{
 		value = (*list_program->stack_a)->index;
 		if (value > pivot2)
@@ -72,100 +120,32 @@ void	split_chunk( t_chunk *chunk_to_sort, t_split_chunks *split_chunks, \
 			move_stack_fromto(TOP_A, TOP_B, list_program);
 		else
 			move_stack_fromto(TOP_A, BOTTOM_B, list_program);
-		i++;
 	}
 }
 
-// Recursive function to sort a chunk
-void	recursive_split_chunk(t_chunk *chunk_to_sort, \
-			t_list_program *list_program)
+void	merge_back(t_splits *splits, int *i, t_list_program *list_program)
 {
-	t_split_chunks	split_chunks;
+	int	max_size;
+	int	mid_size;
+	int	min_size;
 
-	if (chunk_to_sort->size == 1)
+	printer_dbg_split(MERGE_NS, splits, list_program);
+	if (*i == 3 || (splits->min.min == (*list_program->stack_a)->index && ft_lstsize(*list_program->stack_a) > 3)) //review this base case!
 	{
-//		sort_3_chunk(list_program);
+		*i = 0;
 		return ;
 	}
-	pivot_calculation(chunk_to_sort, &split_chunks);
-	split_chunk(chunk_to_sort, &split_chunks, list_program);
-
-	recursive_split_chunk(&split_chunks.max, list_program);
-
-	recursive_split_chunk(&split_chunks.mid, list_program);
-	merge_back_no_sort(&split_chunks.mid, &split_chunks, list_program);
-
-	recursive_split_chunk(&split_chunks.min, list_program);
-	merge_back_no_sort(&split_chunks.min, &split_chunks, list_program);
+	if (splits->min.min == 0 && splits->max.max == \
+		list_program->stack_a_size - 1)
+		return ;
+	max_size = splits->max.size;
+	mid_size = splits->mid.size;
+	min_size = splits->min.size;
+	while (max_size-- > 0)
+		move_stack_fromto(BOTTOM_A, TOP_A, list_program);
+	while (mid_size-- > 0)
+		move_stack_fromto(TOP_B, TOP_A, list_program);
+	while (min_size-- > 0)
+		move_stack_fromto(BOTTOM_B, TOP_A, list_program);
+	(*i)++;
 }
-
-void	quick_sort_pushswap(t_list_program *list_program)
-{
-	t_chunk	chunk_to_sort;
-
-	ft_printers(QUICK, list_program);
-	chunk_to_sort = (t_chunk) \
-		{0, list_program->stack_a_size - 1, \
-		list_program->stack_a_size, TOP_A};
-	recursive_split_chunk(&chunk_to_sort, list_program);
-}
-
-//is_sorted_linked_list_push(list_program);
-
-/* void	merge_back_and_sort(t_chunk *chunk_to_sort, \
-			t_split_chunks *split_chunks, t_list_program *list_program)
-{
-	t_list_dls	**stack_a;
-	t_list_dls	**stack_b;
-	int			i;
-	t_chunk		chunk_to_sort_new;
-
-	printer_dbg_split(MERGE_AS, split_chunks, list_program);
-	sort_3_chunk(list_program);
-	stack_a = list_program->stack_a;
-	stack_b = list_program->stack_b;
-//	merge_back_no_sort(&split_chunks->mid, split_chunks, list_program);
-	i = split_chunks->mid.size;
-	while (i-- > 0)
-		push('a', list_program);
-	chunk_to_sort_new.min = split_chunks->mid.min;
-	chunk_to_sort_new.max = split_chunks->mid.max;
-	chunk_to_sort_new.size = split_chunks->mid.size;
-	chunk_to_sort_new.position = TOP_A;
-//	split_chunks->mid.position = TOP_A;
-	if (split_chunks->mid.size > 3)
-//		recursive_split_chunk(&split_chunks->mid, list_program);
-		recursive_split_chunk(&chunk_to_sort_new, list_program);
-	sort_3_chunk(list_program);
-//	merge_back_no_sort(&split_chunks->min, split_chunks, list_program);
-	i = split_chunks->min.size - 0;
-	while (i-- > 0 && *stack_b)
-	{
-		rotate("rr", 'b', list_program);
-		push('a', list_program);
-	}
-	chunk_to_sort_new.min = split_chunks->min.min;
-	chunk_to_sort_new.max = split_chunks->min.max;
-	chunk_to_sort_new.size = split_chunks->min.size;
-//	chunk_to_sort_new.position = TOP_A;
-	if (split_chunks->min.size > 3)
-//		recursive_split_chunk(&split_chunks->min, list_program);
-		recursive_split_chunk(&chunk_to_sort_new, list_program);
-	sort_3_chunk(list_program);
-} */
-
-/* static void	merge_back_max(t_chunk *chunk_to_sort, \
-				t_split_chunks *split_chunks, t_list_program *list_program)
-{
-	int	i;
-
-	printer_dbg_split(MERGE_AS, split_chunks, list_program);
-	i = split_chunks->min.size ;
-	while (i-- > 0)
-		rotate("rr", 'a', list_program);
-	i = split_chunks->mid.size;
-	while (i-- > 0)
-		push('a', list_program);
-	while (*list_program->stack_b)
-		push('a', list_program);
-} */

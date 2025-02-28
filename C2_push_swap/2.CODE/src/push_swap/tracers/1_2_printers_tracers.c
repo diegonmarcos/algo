@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 08:53:04 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/25 10:25:50 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/28 17:10:50 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	ft_printers_gearsort(t_ft_printers_db s, t_move_lower_cost *v, \
 			v->value_of_cheapest, v->price_of_cheapest);
 }
 
-void	printer_dbg_split(t_ft_printers_db s, t_split_chunks *split_chunks, \
+void	printer_dbg_split(t_ft_printers_db s, t_splits *split_chunks, \
 			t_list_program *list_program)
 {
 	if (!DBG)
@@ -108,7 +108,8 @@ void	printer_dbg_split(t_ft_printers_db s, t_split_chunks *split_chunks, \
 		split_chunks->pivot1);
 	ft_fprintf2("a", SA_PATH, "PIVOT2:%d\n", \
 		split_chunks->pivot2);
-	ft_fprintf2("a", SA_PATH, "MAX:%d\nPOS:%d\n\n", \
-		split_chunks->max.max, split_chunks->position_from);
+	ft_fprintf2("a", SA_PATH, "MAX:%d\nPOS:%d\nSize:%d\n\n", \
+		split_chunks->max.max, split_chunks->position_from, \
+		split_chunks->size_total);
 	ft_printers(END, list_program);
 }

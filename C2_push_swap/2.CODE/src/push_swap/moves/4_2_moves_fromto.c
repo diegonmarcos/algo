@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 07:53:06 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 22:03:37 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/02/28 14:35:24 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ void	move_stack_fromto1(t_position from, t_position to, t_list_program \
 			rotate("r", 'b', list_program);
 		}
 	}
+	else
+		move_stack_fromto2(from, to, list_program);
 }
 
 void	move_stack_fromto2(t_position from, t_position to, t_list_program \
@@ -73,7 +75,7 @@ void	move_stack_fromto2(t_position from, t_position to, t_list_program \
 			rotate("r", 'a', list_program);
 		}
 	}
-	else if(from == BOTTOM_B)
+	else if (from == BOTTOM_B)
 	{
 		if (to == TOP_B)
 			rotate("rr", 'b', list_program);
