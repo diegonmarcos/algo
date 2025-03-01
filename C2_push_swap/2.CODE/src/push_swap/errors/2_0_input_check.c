@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:30:32 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/26 17:37:06 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/01 16:35:16 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,29 @@
 //##############################################################################
 // ERROR HANDLING
 //##############################################################################
-/*
-** Function to check for duplicates and non-integers in the input
-*/
+/**
+ * @brief Error handling and egde cases
+ *
+ * @details
+ * @par Details:
+ * This module provides functions to handle errors and edge cases in the input
+ * for the push_swap program. It includes checks for the following:
+ * 
+ * - Duplicate values in the input
+ * - Non-integer values in the input
+ * - Insufficient number of arguments
+ * - Empty or null arguments
+ * - Already sorted input
+ * - Single element input
+ * - Sorted linked list in stack_a
+ * - Non-empty stack_b
+ * 
+ * @par Functions:
+ * - error_handling_input_1: for duplicates, non-integers, and sorted input.
+ * - error_handling_input_0: for the number of arguments and empty arguments.
+ * - is_sorted_linked_list_push: Checks if stack_a is sorted,
+ * 	if stack_b is empty, and handles memory release for termination.
+ */
 void	error_handling_input_1(t_list_program *list_program)
 {
 	char	**argv_1;

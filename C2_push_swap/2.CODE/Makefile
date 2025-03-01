@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/01 12:33:34 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/01 17:30:21 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -935,7 +935,6 @@ ifeq ($(ALGO), 0)
 endif
 	code -r -g log/4.Bins_folder/push_swap.c:1
 	sleep 1
-	sudo apt-get install xdotool > /dev/null 2>&1
 	xdotool key F5
 #   code --open-url "vscode://ms-vscode.cpptools/debug/launch?name=PUSHSWAP_DBG"
 #	code --open-url "vscode://ms-vscode.cpptools/debug?name=Debug%20Push%20Swap&program=$(CURDIR)/$(NAME)&args=$(ARG_12)"
@@ -1072,6 +1071,7 @@ folders_log_build:
 	mkdir -p log/4.Bins_folder/log/2.Memory_Check/allocs
 	mkdir -p log/5.Libs_nmart
 	mkdir -p log/6.Make_dbg
+	mkdir -p log/7.Doxygen
 
 # ############################################################################ #
 #                                HELPER                                        #
@@ -1169,9 +1169,52 @@ help:
 
 
 
+doxygen:
+	create_Doxyfile
+	doxygen ./log/7.Doxygen/Doxyfile
+	xdg-open log/7.Doxygen/html/index.html
+
+
+create_Doxyfile:
+	doxygen -g ./log/7.Doxygen/Doxyfile
+	sed -i 's/PROJECT_NAME           = "My Project"/PROJECT_NAME           = "$(NAME)"/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/PROJECT_BRIEF          = "My Project Brief"/PROJECT_BRIEF          = "$(NAME)"/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/PROJECT_NUMBER         =/PROJECT_NUMBER         = $(VERSION)/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/OUTPUT_DIRECTORY        =/OUTPUT_DIRECTORY        = log\/7.Doxygen/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/INPUT                  =/INPUT                  = src include/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/EXTRACT_ALL            = NO/EXTRACT_ALL            = YES/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/EXTRACT_PRIVATE        = NO/EXTRACT_PRIVATE        = YES/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/EXTRACT_STATIC         = NO/EXTRACT_STATIC         = YES/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/EXTRACT_LOCAL_CLASSES  = NO/EXTRACT_LOCAL_CLASSES  = YES/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/EXTRACT_LOCAL_METHODS  = NO/EXTRACT_LOCAL_METHODS  = YES/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/EXTRACT_ANON_NSPACES   = NO/EXTRACT_ANON_NSPACES   = YES/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/EXTRACT_INLINES        = NO/EXTRACT_INLINES        = YES/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/INLINE_INFO            = NO/INLINE_INFO            = YES/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/SORT_MEMBER_DOCS       = NO/SORT_MEMBER_DOCS       = YES/g' ./log/7.Doxygen/Do
+	sed -i 's/GENERATE_LATEX         = NO/GENERATE_LATEX         = YES/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/LATEX_OUTPUT           =/LATEX_OUTPUT           = log\/7.Doxygen/g' ./log/7.Doxygen/Doxyfile
+	sed -i 's/HAVE_DOT               = NO/HAVE_DOT               = YES/g' ./log/7.Doxygen/Doxyfile
 
 
 
+
+build_dependencies_libs:
+#	sudo apt update
+
+#gdown
+#	pipx install gdown
+
+#bear
+#	sudo apt install bear
+
+#doxygen
+#	sudo apt install doxygen
+
+#graphvitz	
+#	sudo apt install graphviz
+
+#xdotool
+#	sudo apt-get install xdotool > /dev/null 2>&1
 
 
 

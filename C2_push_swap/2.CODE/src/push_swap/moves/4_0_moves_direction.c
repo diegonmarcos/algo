@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:31:50 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/26 15:29:05 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/01 16:35:22 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,27 @@ static void	push2(t_list_dls **dest_stack, t_list_dls *node_to_move, \
 //##############################################################################
 // STACK MOVES
 //##############################################################################
-
-// - Push the top element of statck.
+/**
+ * @brief Numbers moved from one stack to another using: push, swap, rotate
+ *
+ * @details
+ * @par Details:
+ * This module provides functions to perform various stack operations for the
+ * push_swap program. It includes the following functionalities:
+ * 
+ * - push(A to B or B to A), 
+ * - swap(A or B or both), 
+ * - rotate(Tail to head or Next to head, one stack or both at the same time ).
+ * - Handling edge cases such as empty stacks or stacks with a single element
+ * 
+ * @par Functions:
+ * - void push(char direction, t_list_program *list_program):
+ * Moves the top element from one stack to another.
+ * - void swap(char stack_name, t_list_program *list_program): 
+ * Swaps the top two elements of a stack.
+ * - void rotate(char *direction, char stack_name, t_list_program *list_program):
+ * Rotates a stack in both directions.
+ */
 void	push(char direction, t_list_program *list_program)
 {
 	t_list_dls	**src_stack;
