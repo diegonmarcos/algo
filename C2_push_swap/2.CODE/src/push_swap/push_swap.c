@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:35:06 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/28 13:40:06 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/01 13:06:26 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
  * 	ARG="0 9 8 2 3"; ./push_swap $ARG | ./checker_linux $ARG
  * @endcode
  * 
- * @par Usage Make:
+ * @par Usage Make: make [option1] [option2] ...
  * 	- [static analysis]	make linting
  *	- [leaks]			make leaks
  *	- [tester]			make testing_alles
