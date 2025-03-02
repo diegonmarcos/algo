@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/02/26 15:18:16 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/02 17:03:00 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ MAKEFLAGS += --silent
 # ************************************************************************ #
 # *** Library *.a (libraries to be included) THE ORDER MATTERS!!! *** #
 LIBS_DIR = libs
-LIB_2_NAME = ft_mylib
+LIB_2_NAME = mylibc
 LIB_2_PATH = $(LIBS_DIR)/$(LIB_1_NAME)
 LIB_1_NAME = push_swap
 LIB_1_PATH = $(LIBS_DIR)/$(LIB_1_NAME)
