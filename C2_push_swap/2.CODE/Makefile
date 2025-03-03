@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/03 08:01:51 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/03 10:54:25 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -1072,6 +1072,7 @@ folders_log_build:
 	mkdir -p log/5.Libs_nmart
 	mkdir -p log/6.Make_dbg
 	mkdir -p log/7.Doxygen
+	mkdir -p log/8.Docker
 
 # ############################################################################ #
 #                                HELPER                                        #
@@ -1172,44 +1173,54 @@ help:
 # **************************************************************************** #
 #                                DOXYGEN                               	   #
 # **************************************************************************** #
+DOXYGEN_FILE = log/7.Doxygen/Doxygen
+DOXYGEN_PATH = log/7.Doxygen
 doxygen:
-	create_Doxyfile
-	doxygen ./log/7.Doxygen/Doxyfile
+	rm -rf $(DOXYGEN_PATH)
+	$(MAKE) create_Doxyfile
+	$(MAKE) doxfile_mod
+	doxygen ./$(DOXYGEN_FILE)
 	xdg-open log/7.Doxygen/html/index.html
 
 
 create_Doxyfile:
-	doxygen -g ./log/7.Doxygen/Doxyfile
-	sed -i 's/PROJECT_NAME           = "My Project"/PROJECT_NAME           = "$(NAME)"/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/PROJECT_BRIEF          = "My Project Brief"/PROJECT_BRIEF          = "$(NAME)"/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/PROJECT_NUMBER         =/PROJECT_NUMBER         = $(VERSION)/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/OUTPUT_DIRECTORY        =/OUTPUT_DIRECTORY        = log\/7.Doxygen/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/INPUT                  =/INPUT                  = src include/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/EXTRACT_ALL            = NO/EXTRACT_ALL            = YES/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/EXTRACT_PRIVATE        = NO/EXTRACT_PRIVATE        = YES/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/EXTRACT_STATIC         = NO/EXTRACT_STATIC         = YES/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/EXTRACT_LOCAL_CLASSES  = NO/EXTRACT_LOCAL_CLASSES  = YES/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/EXTRACT_LOCAL_METHODS  = NO/EXTRACT_LOCAL_METHODS  = YES/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/EXTRACT_ANON_NSPACES   = NO/EXTRACT_ANON_NSPACES   = YES/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/EXTRACT_INLINES        = NO/EXTRACT_INLINES        = YES/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/INLINE_INFO            = NO/INLINE_INFO            = YES/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/SORT_MEMBER_DOCS       = NO/SORT_MEMBER_DOCS       = YES/g' ./log/7.Doxygen/Do
-	sed -i 's/GENERATE_LATEX         = NO/GENERATE_LATEX         = YES/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/LATEX_OUTPUT           =/LATEX_OUTPUT           = log\/7.Doxygen/g' ./log/7.Doxygen/Doxyfile
-	sed -i 's/HAVE_DOT               = NO/HAVE_DOT               = YES/g' ./log/7.Doxygen/Doxyfile
+	mkdir -p log/7.Doxygen
+	doxygen -g $(DOXYGEN_FILE)
 
+doxfile_mod:
+	sed -i 's/PROJECT_NAME           = "My Project"/PROJECT_NAME           = "$(NAME)"/g' ./$(DOXYGEN_FILE)
+	sed -i 's/PROJECT_BRIEF          = "My Project Brief"/PROJECT_BRIEF          = "$(NAME)"/g' ./$(DOXYGEN_FILE)
+	sed -i 's/OUTPUT_DIRECTORY       =/OUTPUT_DIRECTORY       = log\/7.Doxygen/g' ./$(DOXYGEN_FILE)
+	sed -i 's/OPTIMIZE_OUTPUT_FOR_C  = NO/OPTIMIZE_OUTPUT_FOR_C  = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/EXTRACT_ALL            = NO/EXTRACT_ALL            = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/HIDE_SCOPE_NAMES       = NO/HIDE_SCOPE_NAMES       = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/INPUT                  =/INPUT                  = src/g' ./$(DOXYGEN_FILE)
+	sed -i 's/RECURSIVE              = NO/RECURSIVE              = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/EXCLUDE                =/EXCLUDE                = src\/src_all/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_LATEX         = NO/GENERATE_LATEX         = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_TREEVIEW      = NO/GENERATE_TREEVIEW      = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_MAN           = NO/GENERATE_MAN           = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_DOCBOOK       = NO/GENERATE_DOCBOOK       = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/CALL_GRAPH             = NO/CALL_GRAPH             = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/CALLER_GRAPH           = NO/CALLER_GRAPH           = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/TIMESTAMP              = NO/TIMESTAMP              = YES/g' ./$(DOXYGEN_FILE)
+#	sed -i 's/STRIP_FROM_PATH        =/STRIP_FROM_PATH        = ..\/..\/..\//g' ./$(DOXYGEN_FILE)
+
+
+
+.PHONY: doxygen create_Doxyfile
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # **************************************************************************** #
 #                         DOCKER AND DEPENDENCIES                          	   #
 # **************************************************************************** #
 
 docker:
-	mkdir -p log/docker
-	wget \
-	-O log/docker/d_make.sh \
+	mkdir -p log/8.Docker
+#	wget \
+	-O log/8.Docker/d_make.sh \
 	https://raw.githubusercontent.com/diegonmarcos/diegonmarcos.github.io/refs/heads/main/resources/docker/d_make.sh
-	chmod +x log/docker/d_make.sh
-	./log/docker/d_make.sh
+	chmod +x log/8.Docker/d_make.sh
+	./log/8.Docker/d_make.sh
 
 
 build_dependencies_libs:
@@ -1269,23 +1280,7 @@ DARK_YELLOW =	\033[38;5;143m
 all: $(NAME)
 
 $(NAME):	$(OBJECTS)
-	echo "$(RED) _MAKE BUILD_ IS THE CORRECT!$(RESET)"
-	$(COMPILER) $(OBJECTS) $(LDFLAGS) $(CFLAG_ASAN) -o $(NAME)
-	@echo "$(YELLOW)(•̀ᴗ•́)و $(NAME) BIN GENERATED!$(RESET)"
-	$(MAKE) check_up_to_date
-
-program_or_lib1:
-ifeq ($(IS_PROGRAM_AND_NOT_LIB), 1)
-	$(MAKE) check_up_to_date
-	$(MAKE) libs_build
-	$(MAKE) program
-else
-	$(MAKE) check_up_to_date
-	$(MAKE) lib
-	$(MAKE) combine_libs
-endif
-
-
+	check_up_to_date
 
 
 # ************************************************************************ #
