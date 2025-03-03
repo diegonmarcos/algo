@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/01 17:30:21 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/03 08:01:51 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -1168,7 +1168,10 @@ help:
 	
 
 
-
+###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
+# **************************************************************************** #
+#                                DOXYGEN                               	   #
+# **************************************************************************** #
 doxygen:
 	create_Doxyfile
 	doxygen ./log/7.Doxygen/Doxyfile
@@ -1195,24 +1198,30 @@ create_Doxyfile:
 	sed -i 's/LATEX_OUTPUT           =/LATEX_OUTPUT           = log\/7.Doxygen/g' ./log/7.Doxygen/Doxyfile
 	sed -i 's/HAVE_DOT               = NO/HAVE_DOT               = YES/g' ./log/7.Doxygen/Doxyfile
 
+###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
+# **************************************************************************** #
+#                         DOCKER AND DEPENDENCIES                          	   #
+# **************************************************************************** #
 
+docker:
+	mkdir -p log/docker
+	wget \
+	-O log/docker/d_make.sh \
+	https://raw.githubusercontent.com/diegonmarcos/diegonmarcos.github.io/refs/heads/main/resources/docker/d_make.sh
+	chmod +x log/docker/d_make.sh
+	./log/docker/d_make.sh
 
 
 build_dependencies_libs:
 #	sudo apt update
-
 #gdown
 #	pipx install gdown
-
 #bear
 #	sudo apt install bear
-
 #doxygen
 #	sudo apt install doxygen
-
 #graphvitz	
 #	sudo apt install graphviz
-
 #xdotool
 #	sudo apt-get install xdotool > /dev/null 2>&1
 
