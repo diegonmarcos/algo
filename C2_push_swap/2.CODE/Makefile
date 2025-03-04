@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/03 10:54:25 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/04 18:29:13 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -1216,12 +1216,15 @@ doxfile_mod:
 
 docker:
 	mkdir -p log/8.Docker
-#	wget \
-	-O log/8.Docker/d_make.sh \
-	https://raw.githubusercontent.com/diegonmarcos/diegonmarcos.github.io/refs/heads/main/resources/docker/d_make.sh
-	chmod +x log/8.Docker/d_make.sh
+	wget \
+	-O log/8.Docker/make_docker.sh \
+	https://raw.githubusercontent.com/diegonmarcos/system/refs/heads/main/S1_docker/src/make_docker.sh
+	chmod +x log/8.Docker/make_docker.sh
+	ln -s log/8.Docker/make_docker.sh make_docker.sh
 	./log/8.Docker/d_make.sh
 
+docker_run:
+	./log/8.Docker/make_docker.sh run
 
 build_dependencies_libs:
 #	sudo apt update
