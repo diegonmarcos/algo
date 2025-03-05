@@ -1,0 +1,6 @@
+src/checker_bonus/src/checker_bonus.c: OK!
+src/checker_bonus/include/mylibc.h: OK!
+src/checker_bonus/include/push_swap.h: OK!
+src/checker_bonus/include/mylibc_data.h: OK!
+src/checker_bonus/include/push_swap_data.h: OK!
+src/checker_bonus/include/push_swap_defines.h: OK!

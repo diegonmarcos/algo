@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 09:57:09 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/01 12:33:51 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/05 12:51:08 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void	quick_sort_pushswap(t_list_program *list_program);
 //void	recursive_split_chunk(t_chunk *chunk_to_sort, \
 //			t_list_program *list_program);
 void	sort_3_chunk(t_list_program *list_program);
-
 
 /* ***************************************************************** */
 /* GEAR SORT														 */

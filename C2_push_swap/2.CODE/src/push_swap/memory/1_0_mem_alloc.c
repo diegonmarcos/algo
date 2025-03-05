@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   1_0_data_allocation.c                              :+:      :+:    :+:   */
+/*   1_0_mem_alloc.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 08:48:03 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/26 12:23:18 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/05 12:50:56 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void	data_alloc_vars(int argc, char **argv, t_list_program *list_program)
 {
 	list_program->argc = argc;
 	list_program->argv = argv;
-
 	list_program->stack_a = (t_list_dls **)malloc(sizeof(t_list_dls *));
 	list_program->stack_b = (t_list_dls **)malloc(sizeof(t_list_dls *));
 	*list_program->stack_a = NULL;

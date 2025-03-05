@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:09 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 10:50:45 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/05 12:49:49 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ void	sort_3_chunk_case(t_sort_3_cases case_, t_list_program *list_program)
 		rotate("rr", 'a', list_program);
 		swap('a', list_program);
 		push('a', list_program);
-
 	}
 	else if (case_ == CASE_B)
 	{

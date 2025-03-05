@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/25 15:18:35 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/05 12:48:55 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,3 @@ void	low_up_stack(t_list_program *list_program)
 			rotate("r", 'a', list_program);
 	}
 }
-

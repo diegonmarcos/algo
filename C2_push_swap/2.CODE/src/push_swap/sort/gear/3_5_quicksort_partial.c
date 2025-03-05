@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/28 09:02:21 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/05 12:49:14 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,14 @@ void	pivot_calculation_partial(t_chunk *chunk_to_sort, \
 	split_chunks->max_number = chunk_to_sort->max;
 	split_chunks->position_from = chunk_to_sort->position;
 	split_chunks->size_total = chunk_to_sort->size;
-
 	split_chunks->min.position = BOTTOM_B;
 	split_chunks->min.min = chunk_to_sort->min;
 	split_chunks->min.max = split_chunks->pivot1;
 	split_chunks->min.size = split_chunks->pivot1 - chunk_to_sort->min + 1;
-
 	split_chunks->mid.position = TOP_B;
 	split_chunks->mid.min = split_chunks->pivot1 + 1;
 	split_chunks->mid.max = split_chunks->pivot2;
 	split_chunks->mid.size = split_chunks->pivot2 - split_chunks->pivot1 ;
-
 	split_chunks->max.position = BOTTOM_A;
 	split_chunks->max.min = split_chunks->pivot2 + 1;
 	split_chunks->max.max = chunk_to_sort->max;

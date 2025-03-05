@@ -6,13 +6,17 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/28 17:44:51 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/05 13:08:45 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	recursive_split_chunk(t_chunk *chunk_to_sort, int *i, t_list_program \
+void	quick_sort_pushswap(t_list_program *list_program)
+{
+	ft_printers(QUICK, list_program);
+}
+/* void	recursive_split_chunk(t_chunk *chunk_to_sort, int *i, t_list_program \
 			*list_program);
 void	pivot_calculation(t_chunk *chunk_to_sort, t_splits *splits);
 void	split_chunk(t_splits *splits, t_list_program *list_program);
@@ -45,7 +49,6 @@ void	recursive_split_chunk(t_chunk *chunk_to_sort, int *i, \
 	}
 	pivot_calculation(chunk_to_sort, &splits);
 	split_chunk(&splits, list_program);
-
 	recursive_split_chunk(&splits.max, i, list_program);
 	recursive_split_chunk(&splits.mid, i,  list_program);
 	recursive_split_chunk(&splits.min, i,  list_program);
@@ -63,19 +66,16 @@ void	pivot_calculation(t_chunk *chunk_to_sort, t_splits *splits)
 	splits->max_number = chunk_to_sort->max;
 	splits->position_from = chunk_to_sort->position;
 	splits->size_total = chunk_to_sort->size;
-
 	splits->min.position = BOTTOM_B;
 	splits->min.min = chunk_to_sort->min;
 	splits->min.max = splits->pivot1;
 	splits->min.size = splits->pivot1 - chunk_to_sort->min + 1;
 	splits->min.size_parent = chunk_to_sort->size;
-
 	splits->mid.position = TOP_B;
 	splits->mid.min = splits->pivot1 + 1;
 	splits->mid.max = splits->pivot2;
 	splits->mid.size = splits->pivot2 - splits->pivot1;
 	splits->mid.size_parent = chunk_to_sort->size;
-
 	splits->max.position = BOTTOM_A;
 	splits->max.min = splits->pivot2 + 1;
 	splits->max.max = chunk_to_sort->max;
@@ -130,7 +130,8 @@ void	merge_back(t_splits *splits, int *i, t_list_program *list_program)
 	int	min_size;
 
 	printer_dbg_split(MERGE_NS, splits, list_program);
-	if (*i == 3 || (splits->min.min == (*list_program->stack_a)->index && ft_lstsize(*list_program->stack_a) > 3)) //review this base case!
+	if (*i == 3 || (splits->min.min == (*list_program->stack_a)->index \
+		&& ft_lstsize(*list_program->stack_a) > 3)) //review this base case!
 	{
 		*i = 0;
 		return ;
@@ -149,3 +150,4 @@ void	merge_back(t_splits *splits, int *i, t_list_program *list_program)
 		move_stack_fromto(BOTTOM_B, TOP_A, list_program);
 	(*i)++;
 }
+ */

@@ -1,0 +1,52 @@
+[1/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/push_swap.c.
+[2/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/1_0_mem_alloc.c.
+[3/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/1_1_mem_clear.c.
+[4/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/1_2_debugger_helpers.c.
+[5/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/1_2_printers_tracers.c.
+1 warning generated.
+[6/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/2_0_input_check.c.
+2 warnings generated.
+[7/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/3_0_sort_stack.c.
+2 warnings generated.
+[8/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/3_1_presorting_getmin.c.
+2 warnings generated.
+[9/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/3_2_selectionsort.c.
+2 warnings generated.
+[10/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/3_3_radixsort.c.
+2 warnings generated.
+[11/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/3_4_quicksort.c.
+2 warnings generated.
+[12/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/3_4_sort3_chunk.c.
+2 warnings generated.
+[13/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/3_5_gearsort_pricing.c.
+2 warnings generated.
+[14/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/3_5_gearsort_pricing2.c.
+2 warnings generated.
+[15/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/3_5_quicksort_partial.c.
+3 warnings generated.
+[16/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/3_7_moves_optim.c.
+3 warnings generated.
+[17/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/4_0_moves_direction.c.
+3 warnings generated.
+[18/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/4_1_moves_both.c.
+3 warnings generated.
+[19/19] Processing file /home/diego/Documents/Git/algo/C2_push_swap/2.CODE/src/src_all/4_2_moves_fromto.c.
+3 warnings generated.
+src/src_all/1_2_printers_tracers.c:68:2: warning: Value stored to 'last' is never read [clang-analyzer-deadcode.DeadStores]
+   68 |         last = list_program->move_count - 1;
+      |         ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/src_all/1_2_printers_tracers.c:68:2: note: Value stored to 'last' is never read
+   68 |         last = list_program->move_count - 1;
+      |         ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/src_all/2_0_input_check.c:52:2: warning: Value stored to 'argc' is never read [clang-analyzer-deadcode.DeadStores]
+   52 |         argc = list_program->argc;
+      |         ^      ~~~~~~~~~~~~~~~~~~
+src/src_all/2_0_input_check.c:52:2: note: Value stored to 'argc' is never read
+   52 |         argc = list_program->argc;
+      |         ^      ~~~~~~~~~~~~~~~~~~
+src/src_all/3_5_quicksort_partial.c:50:2: warning: Value stored to 'stack_a' is never read [clang-analyzer-deadcode.DeadStores]
+   50 |         stack_a = list_program->stack_a;
+      |         ^         ~~~~~~~~~~~~~~~~~~~~~
+src/src_all/3_5_quicksort_partial.c:50:2: note: Value stored to 'stack_a' is never read
+   50 |         stack_a = list_program->stack_a;
+      |         ^         ~~~~~~~~~~~~~~~~~~~~~

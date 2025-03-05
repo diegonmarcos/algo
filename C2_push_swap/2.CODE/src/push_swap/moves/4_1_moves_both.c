@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:31:41 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 10:46:48 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/05 12:50:44 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ void	rotate_both(char *direction, t_list_program *list_program)
 		rotate("rr", 'a', list_program);
 		rotate("rr", 'b', list_program);
 	}
-
 	ft_snprintf(list_program->moves[list_program->move_count++], \
 				list_program->max_moves, "%s", direction);
 	ft_printers(MOVES, list_program);

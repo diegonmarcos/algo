@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/25 15:10:58 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/05 12:49:28 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,5 +131,4 @@ int	sort_gearing_is_base_case(int base_case, t_list_program *list_program)
 	else if (base_case == 0 && ft_lstsize(*list_program->stack_b) == base_case)
 		return (1);
 	return (0);
-
 }

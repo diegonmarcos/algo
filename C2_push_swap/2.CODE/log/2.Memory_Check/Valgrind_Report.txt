@@ -1,0 +1,12 @@
+1. Empty: ok
+1. Empty: ok
+2. One: ok
+3. INT_MAX: ok
+4. INT_MIN: ok
+5: Sort: ok
+6. Dupl: ok
+7. Alpha: ok
+8. ARG_5: ok
+8. ARG_5: ok
+9. ARG_6: ok
+9. ARG_6: ok
