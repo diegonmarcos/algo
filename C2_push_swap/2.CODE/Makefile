@@ -6,10 +6,11 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/04 18:29:13 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/05 16:59:51 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
 #                                 MAKEFILE                                     #
 # ############################################################################ #
@@ -23,12 +24,30 @@
 #	2. Library.a, files all them must be inside of the folder "libs"
 #	3. The library makefile must be inside of the folder "libs/mylib"
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
 #                          VARIABLES INITIALIZATIONS                           #
 # ############################################################################ #
 # ************************************************************************ #
-MAKEFLAGS :=
 
 # *** Name Output *** #
 NAME0 = push_swap
@@ -41,6 +60,7 @@ IS_PROGRAM_AND_NOT_LIB = 1
 INCLUDE_LIB = 1
 BUILD_LIBRARY = 1
 BONUS = 1
+VERBOSE = 0
 
 # ************************************************************************ #
 # *** Files source *.c *** #
@@ -67,70 +87,66 @@ SOURCE_FILES = 							\
 				4_1_moves_both.c		\
 				4_2_moves_fromto.c
 
-#SOURCE_MAIN = $(wildcard src/*.c) $(wildcard src/*/*.c)
-SOURCE_SRC_ALL = $(addprefix src/src_all/,$(SOURCE_MAIN)) $(addprefix src/src_all/,$(SOURCE_FILES))
-
-VPATH = src/src_all:							\
+VPATH = src/src_all:					\
 
 # *** Extra Rules (Bonus) ***	 #
 CHECKER_BONUS_DIR = src/checker_bonus
-CHECKER_BUILD = $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
-
-# *** DEBUG MAKE? *** #
-MAKEFLAGS += --silent
 
 # ************************************************************************ #
+# *** HEADERS *.h *** #
+HEADER_DIR = include
+
 # *** Library *.a (libraries to be included) THE ORDER MATTERS!!! *** #
 LIBS_DIR = libs
+
 LIB_1_NAME = mylibc
 LIB_1_PATH = libs/mylibc
-#LIB_2_NAME =
-#LIB_2_PATH = $(LIBS_DIR)/$(LIB_1_NAME)
 
-# *** Include or not a library (REMEBER TO MANAGE DEPENDECIES OF THE LIBRARIES, the root library comes after the child)
-LDFLAGS +=
-ifeq ($(INCLUDE_LIB), 1)
-	LDFLAGS += -L$(LIB_1_PATH) -l$(LIB_1_NAME)
-#	LDFLAGS += -l$(LIB_2_NAME)
-endif
+LIB_2_NAME = 0
+LIB_2_PATH = 
 
-# *** Type of the Lib *** #
-#IS_LIB_STATIC_AND_NOT_DYNAMIC = 1
+LIB_3_NAME = 0
+LIB_3_PATH = 
 
-# *** HEADERS *.h *** #
-CFLAGS_INCL = -Iinclude -Ilibs/$(LIB_1_NAME)/include
+LIB_4_NAME = 0
+LIB_4_PATH = 
 
-# ************************************************************************ #
-ifeq ($(DBG),1)
-	DBG = 1
-	CFLAGS_DBG += -g3
-	MACROS += -DDBG=$(DBG)
-endif
-
-ALGO = 0
-ifneq ($(ALGO),0)
-	M2		= ALGO
-	MACROS += -D$(M2)=\"$(ALGO)\"
-endif
 
 # ************************************************************************ #
 # *** Compiler, Make and Library compilers Declar *** #
 MAKE = make -j -O
-#MAKE += --trace all --warn-undefined-variables
-#MAKE += --debug=b -j1 --warn-undefined-variables
-#MAKE += --debug=v -j1 --warn-undefined-variables
-#MAKE += --debug=t -j1 --warn-undefined-variables
-
 COMPILER = clang
-COMPILER +=
 LIB_COMP_STATIC = ar rcs
 #LIB_COMP_DYNAMIC_obj = fPIC
 #LIB_COMP_DYNAMIC_lib = shared
 RM = rm -rf
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ############################################################################ #
-#                                 HELPERS                                      #
+#                                 VARIABLES HELPERS                            #
 # ############################################################################ #
+# ************************************************************************ #
+#                         NAME AND SOURCES  	                           #
 # ************************************************************************ #
 # *** Name definition *** #
 NAME1 = $(OUTPUT_PLACE)$(NAME0)
@@ -142,8 +158,13 @@ else
 endif
 
 # *** Source Files .c Definition path *** #
+SOURCE_SRC_ALL = $(addprefix src/src_all/,$(SOURCE_MAIN)) $(addprefix src/src_all/,$(SOURCE_FILES))
+
+# *** Source Files .c Definition path *** #
 SOURCES = $(SOURCE_MAIN) $(SOURCE_FILES)
 
+# *** Bonus Source Files .c Definition path *** #
+CHECKER_BUILD = $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 
 # ************************************************************************ #
 #                         OBJECTS AND DEPENDENCIES                         #
@@ -161,6 +182,78 @@ DEPS_LIB = $(OBJECTS_LIB:.o=.d)
 -include $(DEPS_LIB)
 
 OBJECTS = $(OBJECTS_MAIN) $(OBJECTS_LIB) 
+
+# ************************************************************************ #
+#                         HEADERS AND LIBS		                           #
+# ************************************************************************ #
+# *** Include or not a library (REMEBER TO MANAGE DEPENDECIES OF THE LIBRARIES, the root library comes after the child)
+LDFLAGS :=
+CFLAGS_INCL = -I$(HEADER_DIR)
+ifneq ($(LIB_1_NAME), 0)
+	LDFLAGS += -L$(LIB_1_PATH) -l$(LIB_1_NAME)
+	CFLAGS_INCL += -I$(LIB_1_PATH)/include
+endif
+ifneq ($(LIB_2_NAME), 0)
+	LDFLAGS += -l$(LIB_2_NAME)
+	CFLAGS_INCL += -I$(LIB_2_PATH)/include
+endif
+ifneq ($(LIB_3_NAME), 0)
+	LDFLAGS += -l$(LIB_3_NAME)
+	CFLAGS_INCL += -I$(LIB_3_PATH)/include
+endif
+ifneq ($(LIB_4_NAME), 0)
+	LDFLAGS += -l$(LIB_4_NAME)
+	CFLAGS_INCL += -I$(LIB_3_PATH)/include
+endif
+
+# ************************************************************************ #
+#                         VERBOSE AND DEBUG		                           #
+# ************************************************************************ #
+# *** VERBOSE MAKE? *** #
+MAKEFLAGS :=
+ifeq ($(VERBOSE), 0)
+MAKEFLAGS += --no-print-directory --silent
+#MAKE += --trace all --warn-undefined-variables
+#MAKE += --debug=b -j1 --warn-undefined-variables
+#MAKE += --debug=v -j1 --warn-undefined-variables
+#MAKE += --debug=t -j1 --warn-undefined-variables
+else
+MAKEFLAGS +=
+endif
+
+# *** PROGRAM DBG MODE *** #
+ifeq ($(DBG),1)
+	DBG = 1
+	CFLAGS_DBG += -g3
+	MACROS += -DDBG=$(DBG)
+endif
+
+ALGO = 0
+ifneq ($(ALGO),0)
+	M2		= ALGO
+	MACROS += -D$(M2)=\"$(ALGO)\"
+endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
@@ -224,6 +317,9 @@ program:	$(OBJECTS) $(LIB_1_PATH)
 	@echo "  $(YELLOW)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
 	$(MAKE) check_up_to_date
 
+# ************************************************************************ #
+#                               OTHERS                                     #
+# ************************************************************************ #
 # *** Combine the program library with the included libraries *** #
 combine_libs:
 ifeq ($(INCLUDE_LIB), 1)
@@ -233,6 +329,17 @@ ifeq ($(INCLUDE_LIB), 1)
 else
 	@echo "$(GRAY)Skipping library merge$(RESET)"
 endif
+
+dbg_rules:
+ifeq ($(DBG),1)
+	cp $(NAME0) log/4.Bins_folder/push_swap_g3
+endif
+
+#Name NO USE!
+all: $(NAME)
+
+$(NAME):	$(OBJECTS)
+	check_up_to_date
 
 # ############################################################################ #
 #                                 RULES/RECLEAN                                #
@@ -274,21 +381,82 @@ fclean_all:	fclean
 re_all: fclean_all build_dependencies
 
 # ############################################################################ #
-#                                EXTRAS		                                   #
+#                                BONUS		                                   #
 # ############################################################################ #
 # *** Bonus Rule *** #
 bonus:
 	$(MAKE)
 	$(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 
-dbg_rules:
-ifeq ($(DBG),1)
-	cp push_swap log/4.Bins_folder/push_swap_g3
-endif
 
-# ************************************************************************ #
-#                               DEFS                                       #
-# ************************************************************************ #
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
+# ############################################################################ #
+#                                FOLDER BUILDER                                #
+# ############################################################################ #
+# *** Build folders *** #
+folders_build:
+	$(MAKE) folders_make_build
+	$(MAKE) folders_log_build
+
+# *** Build folders *** #
+folders_make_build:
+	mkdir -p include
+	mkdir -p libs
+	mkdir -p objs
+
+# *** Build folders *** #
+folders_log_build:
+	mkdir -p log/1.Warning_linting
+	mkdir -p log/2.Memory_Check/logs
+	mkdir -p log/2.Memory_Check/allocs
+	mkdir -p log/3.Unit_Testing
+	mkdir -p log/3.Unit_Testing/moves
+	mkdir -p log/4.Bins_folder
+	mkdir -p log/4.Bins_folder/log
+	mkdir -p log/4.Bins_folder/log/2.Memory_Check/allocs
+	mkdir -p log/5.Libs_nmart
+	mkdir -p log/6.Make_dbg
+	mkdir -p log/7.Doxygen
+	mkdir -p log/8.Docker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
+# ############################################################################ #
+#                                DEFS		                                   #
+# ############################################################################ #
+# **************************************************************************** #
+#                                DEFS/PHONNY                               	   #
+# **************************************************************************** #
 # *** Phony *** #
 .PHONY:		all build program_or_lib libs_build					\
 			clean fclean fclean_all re 							\
@@ -303,10 +471,76 @@ endif
 			bonus bonus_re										\
 			run_visualizer										\
 
-#NOT PHONY:	program lib
+# **************************************************************************** #
+#                                DEFS/COLORS                               	   #
+# **************************************************************************** #
+DEL_LINE =		\033[2K
+ITALIC =		\033[3m
+BOLD =			\033[1m
+RESET =			\033[0;39m
+GRAY =			\033[0;90m
+RED =			\033[0;91m
+GREEN =			\033[0;92m
+YELLOW =		\033[0;93m
+BLUE =			\033[0;94m
+MAGENTA =		\033[0;95m
+CYAN =			\033[0;96m
+WHITE =			\033[0;97m
+BLACK =			\033[0;99m
+ORANGE =		\033[38;5;209m
+BROWN =			\033[38;2;184;143;29m
+DARK_GRAY =		\033[38;5;234m
+MID_GRAY =		\033[38;5;245m
+DARK_GREEN =	\033[38;2;75;179;82m
+DARK_YELLOW =	\033[38;5;143m
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
+# **************************************************************************** #
+#                         DOCKER AND DEPENDENCIES                          	   #
+# **************************************************************************** #
+
+docker:
+	mkdir -p log/8.Docker
+	wget \
+	-O log/8.Docker/make_docker.sh \
+	https://raw.githubusercontent.com/diegonmarcos/system/refs/heads/main/S1_docker/src/make_docker.sh
+	chmod +x log/8.Docker/make_docker.sh
+	ln -s log/8.Docker/make_docker.sh make_docker.sh
+	./log/8.Docker/d_make.sh
+
+docker_run:
+	./log/8.Docker/make_docker.sh run
+
+build_dependencies_libs:
+#	sudo apt update
+#gdown
+#	pipx install gdown
+#bear
+#	sudo apt install bear
+#doxygen
+#	sudo apt install doxygen
+#graphvitz	
+#	sudo apt install graphviz
+#xdotool
+#	sudo apt-get install xdotool > /dev/null 2>&1
 
 
 
@@ -357,6 +591,53 @@ log_alles:
 
 
 
+
+
+
+
+
+
+
+###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
+# **************************************************************************** #
+#                                DOXYGEN                               	   #
+# **************************************************************************** #
+DOXYGEN_FILE = log/7.Doxygen/Doxygen
+DOXYGEN_PATH = log/7.Doxygen
+doxygen:
+	rm -rf $(DOXYGEN_PATH)
+	$(MAKE) create_Doxyfile
+	$(MAKE) doxfile_mod
+	doxygen ./$(DOXYGEN_FILE)
+	xdg-open log/7.Doxygen/html/index.html
+
+
+create_Doxyfile:
+	mkdir -p log/7.Doxygen
+	doxygen -g $(DOXYGEN_FILE)
+
+doxfile_mod:
+	sed -i 's/PROJECT_NAME           = "My Project"/PROJECT_NAME           = "$(NAME)"/g' ./$(DOXYGEN_FILE)
+	sed -i 's/PROJECT_BRIEF          = "My Project Brief"/PROJECT_BRIEF          = "$(NAME)"/g' ./$(DOXYGEN_FILE)
+	sed -i 's/OUTPUT_DIRECTORY       =/OUTPUT_DIRECTORY       = log\/7.Doxygen/g' ./$(DOXYGEN_FILE)
+	sed -i 's/OPTIMIZE_OUTPUT_FOR_C  = NO/OPTIMIZE_OUTPUT_FOR_C  = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/EXTRACT_ALL            = NO/EXTRACT_ALL            = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/HIDE_SCOPE_NAMES       = NO/HIDE_SCOPE_NAMES       = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/INPUT                  =/INPUT                  = src/g' ./$(DOXYGEN_FILE)
+	sed -i 's/RECURSIVE              = NO/RECURSIVE              = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/EXCLUDE                =/EXCLUDE                = src\/src_all/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_LATEX         = NO/GENERATE_LATEX         = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_TREEVIEW      = NO/GENERATE_TREEVIEW      = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_MAN           = NO/GENERATE_MAN           = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_DOCBOOK       = NO/GENERATE_DOCBOOK       = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/CALL_GRAPH             = NO/CALL_GRAPH             = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/CALLER_GRAPH           = NO/CALLER_GRAPH           = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/TIMESTAMP              = NO/TIMESTAMP              = YES/g' ./$(DOXYGEN_FILE)
+#	sed -i 's/STRIP_FROM_PATH        =/STRIP_FROM_PATH        = ..\/..\/..\//g' ./$(DOXYGEN_FILE)
+
+
+
+.PHONY: doxygen create_Doxyfile
 
 
 
@@ -421,33 +702,32 @@ werror:
 # *** Norminette on Project*** #
 norm:
 	@echo "$(GREEN)\n····Running Norminette····$(RESET)"
-	norminette src/push_swap > log/1.Warning_linting/norminette.txt; \
+	norminette src > log/1.Warning_linting/norminette.txt; \
 	norminette include >> log/1.Warning_linting/norminette.txt ; cat log/1.Warning_linting/norminette.txt
+
+# *** Clang tidy fix*** #
+clang_tidy_fix:
+		clang-tidy $(SOURCE_MAIN) $(SOURCE_FILES) --fix
 
 # *** Norminette on Bonus*** #
 norm_bonus:
 	@echo "$(GREEN)\n····Running Norminette····$(RESET)"
 	norminette src/checker_bonus > log/1.Warning_linting/norminette_bonus.txt ; cat log/1.Warning_linting/norminette_bonus.txt \
 
+
 werror_bonus:
 	@echo "$(GREEN)\n·Clang lintings$(RESET)"
 	echo "\n## BONUS Clang Wall Wextra - fsyntaxOnly"
 	echo "############################################\n"
 	$(CHECKER_BUILD) CFLAGS_DBG="-Wall -Wextra" || true > log/1.Warning_linting/bonus_clang_www.txt
+	
 	@echo "\n## BONUS Clang Fron-End Semantic - fsyntaxOnly"
 	echo "############################################\n"
 	$(CHECKER_BUILD) CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/bonus_clang_wevery.txt
+	
 	@echo "\n### BONUS Clang Static Analyzer"
 	echo  "#########################\n"
-	$(MAKE) CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core " 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_linting/bonus_clang_analyzer.txt
-
-clang_tidy_fix:
-		clang-tidy $(SOURCE_MAIN) $(SOURCE_FILES) --fix
-
-
-
-
-
+	$(CHECKER_BUILD) CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core " 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_linting/bonus_clang_analyzer.txt
 
 
 
@@ -673,7 +953,7 @@ asan:
 
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
-#                             TESTING_ALLES                                    #
+#                             DYNAMIC ANALYSIS TESTERS                         #
 # ############################################################################ #
 # *** Command to run all tests *** #
 testing_alles:
@@ -1025,54 +1305,7 @@ make_dbg:
 
 
 
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
-# ############################################################################ #
-#                                FOLDER BUILDER                                #
-# ############################################################################ #
-# *** Build folders *** #
-folders_build:
-	$(MAKE) folders_make_build
-	$(MAKE) folders_log_build
 
-# *** Build folders *** #
-folders_make_build:
-	mkdir -p include
-	mkdir -p libs
-	mkdir -p objs
-
-# *** Build folders *** #
-folders_lns_build:
-	@echo "Running folder_lns_builder..."
-	@if [ -d "src/src_all" ]; then \
-		echo "Deleting existing src/src_all directory..."; \
-		rm -rf "src/src_all"; \
-	fi
-	@echo "Creating src/src_all directory..."
-	@mkdir -p "src/src_all"
-	@echo "Creating symbolic links for .c files..."
-	@(find src/ -mindepth 1 -maxdepth 5 -type f -name "*.c" ! -path "*/.*" -print0 | \
-		xargs -0 -I {} sh -c 'filename=$$(basename "{}"); \
-			echo "Creating symbolic link for {} in src/src_all/$$filename"; \
-			ln -s "$$(realpath --relative-to=src/src_all "{}")" "src/src_all/$$filename" || echo "Error creating symbolic link for {}";')
-	@echo "Generating list_files_c.txt..."
-	@(cd src/src_all; \
-		find . -name "*.c" -print0 | xargs -0  printf "%s\t\t\\ \n"  > ../../log/list_files_c.txt)
-	@echo "folder_lns_builder completed successfully."
-
-# *** Build folders *** #
-folders_log_build:
-	mkdir -p log/1.Warning_linting
-	mkdir -p log/2.Memory_Check/logs
-	mkdir -p log/2.Memory_Check/allocs
-	mkdir -p log/3.Unit_Testing
-	mkdir -p log/3.Unit_Testing/moves
-	mkdir -p log/4.Bins_folder
-	mkdir -p log/4.Bins_folder/log
-	mkdir -p log/4.Bins_folder/log/2.Memory_Check/allocs
-	mkdir -p log/5.Libs_nmart
-	mkdir -p log/6.Make_dbg
-	mkdir -p log/7.Doxygen
-	mkdir -p log/8.Docker
 
 # ############################################################################ #
 #                                HELPER                                        #
@@ -1109,7 +1342,24 @@ hello:
 	@echo "$(GRAY)################################################$(RESET)"
 	echo "---"
 
-
+# *** Build folders *** #
+folders_lns_build:
+	@echo "Running folder_lns_builder..."
+	@if [ -d "src/src_all" ]; then \
+		echo "Deleting existing src/src_all directory..."; \
+		rm -rf "src/src_all"; \
+	fi
+	@echo "Creating src/src_all directory..."
+	@mkdir -p "src/src_all"
+	@echo "Creating symbolic links for .c files..."
+	@(find src/ -mindepth 1 -maxdepth 5 -type f -name "*.c" ! -path "*/.*" -print0 | \
+		xargs -0 -I {} sh -c 'filename=$$(basename "{}"); \
+			echo "Creating symbolic link for {} in src/src_all/$$filename"; \
+			ln -s "$$(realpath --relative-to=src/src_all "{}")" "src/src_all/$$filename" || echo "Error creating symbolic link for {}";')
+	@echo "Generating list_files_c.txt..."
+	@(cd src/src_all; \
+		find . -name "*.c" -print0 | xargs -0  printf "%s\t\t\\ \n"  > ../../log/list_files_c.txt)
+	@echo "folder_lns_builder completed successfully."
 
 # *** help message *** #
 help:
@@ -1169,75 +1419,6 @@ help:
 	
 
 
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
-# **************************************************************************** #
-#                                DOXYGEN                               	   #
-# **************************************************************************** #
-DOXYGEN_FILE = log/7.Doxygen/Doxygen
-DOXYGEN_PATH = log/7.Doxygen
-doxygen:
-	rm -rf $(DOXYGEN_PATH)
-	$(MAKE) create_Doxyfile
-	$(MAKE) doxfile_mod
-	doxygen ./$(DOXYGEN_FILE)
-	xdg-open log/7.Doxygen/html/index.html
-
-
-create_Doxyfile:
-	mkdir -p log/7.Doxygen
-	doxygen -g $(DOXYGEN_FILE)
-
-doxfile_mod:
-	sed -i 's/PROJECT_NAME           = "My Project"/PROJECT_NAME           = "$(NAME)"/g' ./$(DOXYGEN_FILE)
-	sed -i 's/PROJECT_BRIEF          = "My Project Brief"/PROJECT_BRIEF          = "$(NAME)"/g' ./$(DOXYGEN_FILE)
-	sed -i 's/OUTPUT_DIRECTORY       =/OUTPUT_DIRECTORY       = log\/7.Doxygen/g' ./$(DOXYGEN_FILE)
-	sed -i 's/OPTIMIZE_OUTPUT_FOR_C  = NO/OPTIMIZE_OUTPUT_FOR_C  = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/EXTRACT_ALL            = NO/EXTRACT_ALL            = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/HIDE_SCOPE_NAMES       = NO/HIDE_SCOPE_NAMES       = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/INPUT                  =/INPUT                  = src/g' ./$(DOXYGEN_FILE)
-	sed -i 's/RECURSIVE              = NO/RECURSIVE              = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/EXCLUDE                =/EXCLUDE                = src\/src_all/g' ./$(DOXYGEN_FILE)
-	sed -i 's/GENERATE_LATEX         = NO/GENERATE_LATEX         = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/GENERATE_TREEVIEW      = NO/GENERATE_TREEVIEW      = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/GENERATE_MAN           = NO/GENERATE_MAN           = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/GENERATE_DOCBOOK       = NO/GENERATE_DOCBOOK       = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/CALL_GRAPH             = NO/CALL_GRAPH             = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/CALLER_GRAPH           = NO/CALLER_GRAPH           = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/TIMESTAMP              = NO/TIMESTAMP              = YES/g' ./$(DOXYGEN_FILE)
-#	sed -i 's/STRIP_FROM_PATH        =/STRIP_FROM_PATH        = ..\/..\/..\//g' ./$(DOXYGEN_FILE)
-
-
-
-.PHONY: doxygen create_Doxyfile
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
-# **************************************************************************** #
-#                         DOCKER AND DEPENDENCIES                          	   #
-# **************************************************************************** #
-
-docker:
-	mkdir -p log/8.Docker
-	wget \
-	-O log/8.Docker/make_docker.sh \
-	https://raw.githubusercontent.com/diegonmarcos/system/refs/heads/main/S1_docker/src/make_docker.sh
-	chmod +x log/8.Docker/make_docker.sh
-	ln -s log/8.Docker/make_docker.sh make_docker.sh
-	./log/8.Docker/d_make.sh
-
-docker_run:
-	./log/8.Docker/make_docker.sh run
-
-build_dependencies_libs:
-#	sudo apt update
-#gdown
-#	pipx install gdown
-#bear
-#	sudo apt install bear
-#doxygen
-#	sudo apt install doxygen
-#graphvitz	
-#	sudo apt install graphviz
-#xdotool
-#	sudo apt-get install xdotool > /dev/null 2>&1
 
 
 
@@ -1251,39 +1432,21 @@ build_dependencies_libs:
 
 
 
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
-# **************************************************************************** #
-#                                DEFS/COLORS                               	   #
-# **************************************************************************** #
-DEL_LINE =		\033[2K
-ITALIC =		\033[3m
-BOLD =			\033[1m
-RESET =			\033[0;39m
-GRAY =			\033[0;90m
-RED =			\033[0;91m
-GREEN =			\033[0;92m
-YELLOW =		\033[0;93m
-BLUE =			\033[0;94m
-MAGENTA =		\033[0;95m
-CYAN =			\033[0;96m
-WHITE =			\033[0;97m
-BLACK =			\033[0;99m
-ORANGE =		\033[38;5;209m
-BROWN =			\033[38;2;184;143;29m
-DARK_GRAY =		\033[38;5;234m
-MID_GRAY =		\033[38;5;245m
-DARK_GREEN =	\033[38;2;75;179;82m
-DARK_YELLOW =	\033[38;5;143m
 
-# **************************************************************************** #
-#                                TRASH		                               	   #
-# **************************************************************************** #
 
-#Name NO USE!
-all: $(NAME)
 
-$(NAME):	$(OBJECTS)
-	check_up_to_date
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # ************************************************************************ #
