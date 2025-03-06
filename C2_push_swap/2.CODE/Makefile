@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/05 16:59:51 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/06 07:12:39 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,114 @@
 #	1. Headers.h, files all them must be placed inside the folder "include".
 #	2. Library.a, files all them must be inside of the folder "libs"
 #	3. The library makefile must be inside of the folder "libs/mylib"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
+# ############################################################################ #
+#                                LOG ALLES                                     #
+# ############################################################################ #
+# *** Log Alles *** #
+#Make= make -j -O
+log_alles:
+	$(MAKE) || true
+	$(MAKE) warning_linting || true
+	$(MAKE) leaks || true
+	$(MAKE) testing_alles || true
+	$(MAKE) debuggers_info || true
+	$(MAKE) doxygen || true
+	$(MAKE) dockerfile || true
+
+
+
+
+### BUILD
+build_dependencies:
+	$(MAKE) libs_build
+	$(MAKE) check_up_to_date
+	$(MAKE) build_project
+
+build_project:
+	$(MAKE) hello
+	$(MAKE) folders_build
+	$(MAKE) program_or_lib
+	$(MAKE) dbg_rules
+
+
+
+
+### WARNINGS
+#-Wall -Wextra
+#-Wformat -Warray-bounds -Wnull-dereference -Wvla
+#-Weverything"
+#clang-tidy
+#--analyze -Xanalyzer -analyzer-checker=core
+warning_linting:
+	$(MAKE) bear
+	$(MAKE) werror
+	$(MAKE) norm
+
+
+
+
+### LEAKS
+#VALGRIND = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s
+#--tool=massif
+#--tool=cachegrind 
+#--tool=callgrind
+leaks:
+	$(MAKE) valgrind || true
+	$(MAKE) asan || true
+
+
+
+
+### TOOLS
+tools;
+	$(MAKE) docker_run
+	$(MAKE) debug-gdb
+	$(MAKE) debug-lldb
+	$(MAKE) debug-vscode
+	$(MAKE) create_bins_dbg
+	$(MAKE) create_bins_leaks
+	$(MAKE) libs_nm_art
+ 	$(MAKE) folders_lns_build
+	$(MAKE) test_performance
+	$(MAKE) perfomance
+
+
+
+
+### TESTS
+tests;
+	$(MAKE) tests_run_5
+	$(MAKE) tests_run_100
+	$(MAKE) tests_run_500
+	$(MAKE) test_visualizer_build
+	$(MAKE) test_visualizer_run
+
+
+
+log_alles_bonus:
+	$(MAKE) bonus || true
+	$(MAKE) leaks_bonus || true
+
 
 
 
@@ -517,17 +625,16 @@ DARK_YELLOW =	\033[38;5;143m
 #                         DOCKER AND DEPENDENCIES                          	   #
 # **************************************************************************** #
 
-docker:
+dockerfile:
 	mkdir -p log/8.Docker
 	wget \
-	-O log/8.Docker/make_docker.sh \
-	https://raw.githubusercontent.com/diegonmarcos/system/refs/heads/main/S1_docker/src/make_docker.sh
-	chmod +x log/8.Docker/make_docker.sh
-	ln -s log/8.Docker/make_docker.sh make_docker.sh
-	./log/8.Docker/d_make.sh
+	-O log/8.Docker/Make_docker.sh \
+	https://raw.githubusercontent.com/diegonmarcos/system/refs/heads/main/S1_docker/src/Make_docker.sh
+	chmod +x log/8.Docker/Make_docker.sh
+	ln -s log/8.Docker/Make_docker.sh Make_docker.sh
 
 docker_run:
-	./log/8.Docker/make_docker.sh run
+	./log/8.Docker/Make_docker.sh run
 
 build_dependencies_libs:
 #	sudo apt update
@@ -558,28 +665,7 @@ build_dependencies_libs:
 
 
 
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
-# ############################################################################ #
-#                                LOG ALLES                                     #
-# ############################################################################ #
-# *** Log Alles *** #
-#log_alles:
-#	$(MAKE) perfomance
-log_alles:
-	$(MAKE) || true
-	$(MAKE) bonus || true
-	$(MAKE) warning_linting || true
-	$(MAKE) leaks_bonus || true
-	$(MAKE) leaks || true
-	$(MAKE) testing_alles || true
-	$(MAKE) debuggers_info || true
 
-#build:
-#	$(MAKE) hello
-#	$(MAKE) check_up_to_date
-#	$(MAKE) folders_build
-#	$(MAKE) libs_build
-#	$(MAKE) program_or_lib
 
 
 
@@ -1138,7 +1224,7 @@ tests_run_small:
 # ************************************************************************ #
 #                          TESTERS VISUALIZER                              #
 # ************************************************************************ #
-test_visualizer: testers/push_swap_visualizer/build/bin/visualizer
+test_visualizer_build: testers/push_swap_visualizer/build/bin/visualizer
 
 testers/push_swap_visualizer.tar.gz:
 	pipx install gdown
@@ -1152,7 +1238,7 @@ testers/push_swap_visualizer: testers/push_swap_visualizer.tar.gz
 
 testers/push_swap_visualizer/build/bin/visualizer: testers/push_swap_visualizer
 
-run_visualizer: testers/push_swap_visualizer/build/bin/visualizer
+test_visualizer_run: testers/push_swap_visualizer/build/bin/visualizer
 	./testers/push_swap_visualizer/build/bin/visualizer
 
 .PHONY: run_visualizer
