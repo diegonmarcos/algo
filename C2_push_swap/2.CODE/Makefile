@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/06 07:12:39 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/09 17:02:29 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,12 +61,12 @@ log_alles:
 
 
 ### BUILD
-build_dependencies:
+#build_dependencies:
 	$(MAKE) libs_build
 	$(MAKE) check_up_to_date
 	$(MAKE) build_project
 
-build_project:
+#build_project:
 	$(MAKE) hello
 	$(MAKE) folders_build
 	$(MAKE) program_or_lib
@@ -81,7 +81,8 @@ build_project:
 #-Weverything"
 #clang-tidy
 #--analyze -Xanalyzer -analyzer-checker=core
-warning_linting:
+
+#warning_linting:
 	$(MAKE) bear
 	$(MAKE) werror
 	$(MAKE) norm
@@ -94,7 +95,8 @@ warning_linting:
 #--tool=massif
 #--tool=cachegrind 
 #--tool=callgrind
-leaks:
+
+#leaks:
 	$(MAKE) valgrind || true
 	$(MAKE) asan || true
 
@@ -102,7 +104,8 @@ leaks:
 
 
 ### TOOLS
-tools;
+
+#tools:
 	$(MAKE) docker_run
 	$(MAKE) debug-gdb
 	$(MAKE) debug-lldb
@@ -110,7 +113,7 @@ tools;
 	$(MAKE) create_bins_dbg
 	$(MAKE) create_bins_leaks
 	$(MAKE) libs_nm_art
- 	$(MAKE) folders_lns_build
+# 	$(MAKE) folders_lns_build
 	$(MAKE) test_performance
 	$(MAKE) perfomance
 
@@ -118,7 +121,8 @@ tools;
 
 
 ### TESTS
-tests;
+
+#tests:
 	$(MAKE) tests_run_5
 	$(MAKE) tests_run_100
 	$(MAKE) tests_run_500
@@ -127,7 +131,7 @@ tests;
 
 
 
-log_alles_bonus:
+#log_alles_bonus:
 	$(MAKE) bonus || true
 	$(MAKE) leaks_bonus || true
 
@@ -446,8 +450,8 @@ endif
 #Name NO USE!
 all: $(NAME)
 
-$(NAME):	$(OBJECTS)
-	check_up_to_date
+$(NAME):
+	$(MAKE) build_dependencies
 
 # ############################################################################ #
 #                                 RULES/RECLEAN                                #
@@ -566,7 +570,7 @@ folders_log_build:
 #                                DEFS/PHONNY                               	   #
 # **************************************************************************** #
 # *** Phony *** #
-.PHONY:		all build program_or_lib libs_build					\
+.PHONY:		all build program_or_lib libs_build	$(NAME)			\
 			clean fclean fclean_all re 							\
 			library_clean library_fclean library_re 			\
 			folder_lns_builder folders_build check_up_to_date 	\
