@@ -1,1 +1,0 @@
-../push_swap/tracers/zarchive/zbuffer.c
