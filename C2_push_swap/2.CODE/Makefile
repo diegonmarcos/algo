@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/10 10:09:06 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/10 11:06:47 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -210,7 +210,7 @@ CHECKER_BONUS_DIR = src/checker_bonus
 
 # ************************************************************************ #
 # *** HEADERS *.h *** #
-HEADER_DIR = include
+HEADER_DIR = inc
 
 # *** Library *.a (libraries to be included) THE ORDER MATTERS!!! *** #
 LIBS_DIR = libs
@@ -307,19 +307,19 @@ LDFLAGS :=
 CFLAGS_INCL = -I$(HEADER_DIR)
 ifneq ($(LIB_1_NAME), 0)
 	LDFLAGS += -L$(LIB_1_PATH) -l$(LIB_1_NAME)
-	CFLAGS_INCL += -I$(LIB_1_PATH)/include
+	CFLAGS_INCL += -I$(LIB_1_PATH)/inc
 endif
 ifneq ($(LIB_2_NAME), 0)
 	LDFLAGS += -l$(LIB_2_NAME)
-	CFLAGS_INCL += -I$(LIB_2_PATH)/include
+	CFLAGS_INCL += -I$(LIB_2_PATH)/inc
 endif
 ifneq ($(LIB_3_NAME), 0)
 	LDFLAGS += -l$(LIB_3_NAME)
-	CFLAGS_INCL += -I$(LIB_3_PATH)/include
+	CFLAGS_INCL += -I$(LIB_3_PATH)/inc
 endif
 ifneq ($(LIB_4_NAME), 0)
 	LDFLAGS += -l$(LIB_4_NAME)
-	CFLAGS_INCL += -I$(LIB_3_PATH)/include
+	CFLAGS_INCL += -I$(LIB_3_PATH)/inc
 endif
 
 # ************************************************************************ #
@@ -797,7 +797,7 @@ werror:
 norm:
 	@echo "$(GREEN)\n····Running Norminette····$(RESET)"
 	norminette src > log/1.Warning_linting/norminette.txt; \
-	norminette include >> log/1.Warning_linting/norminette.txt ; cat log/1.Warning_linting/norminette.txt
+	norminette inc >> log/1.Warning_linting/norminette.txt ; cat log/1.Warning_linting/norminette.txt
 
 # *** Clang tidy fix*** #
 clang_tidy_fix:
@@ -1413,7 +1413,7 @@ check_up_to_date:
 		echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
 		$(MAKE) build_project; \
 	else \
-		if find src/ include/ -newer "$(NAME)" -print | grep -q .; then \
+		if find src/ inc/ -newer "$(NAME)" -print | grep -q .; then \
 			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
 			echo "$(GRAY)$(NAME)					$(shell date)\n$(RED)STATUS: Some files have changed. Rebuilding...$(RESET)"; \
 			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
