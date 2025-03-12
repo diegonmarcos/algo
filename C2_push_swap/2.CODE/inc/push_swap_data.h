@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 13:25:50 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 10:57:56 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 15:33:32 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 # define PUSH_SWAP_DATA_H
 
 //  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  //
-# include "mylibc.h"
+//# include "mylibc.h"
 # include <stdbool.h>
+# define MAX_ALLOCATIONS 10000
 
 //  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  //
 //##################################################################### */
@@ -28,23 +29,23 @@
 /* ***************************************************************** */
 /* PUSH SWAP LIST													 */
 /* ***************************************************************** */
-/*
-typedef struct s_list_garbage
+
+/* typedef struct s_list_garbage
 {
 	void	*allocated_pointers[MAX_ALLOCATIONS];
 	int		blocks_count;
 }			t_list_garbage;
-*/
 
-/*
 typedef struct s_list_dls
 {
 	int					value;
 	int					index;
 	struct s_list_dls	*next;
 	struct s_list_dls	*prev;
-}				t_list_dls;
-*/
+}				t_list_dls; */
+
+typedef struct s_list_dls		t_list_dls;
+typedef struct s_list_garbage	t_list_garbage;
 
 typedef struct s_list_program
 {

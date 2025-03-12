@@ -1,11 +1,11 @@
-objs/3_7_moves_optim.o: src/src_all/3_7_moves_optim.c include/push_swap.h \
-  include/push_swap_defines.h include/push_swap_data.h include/mylibc.h \
-  libs/mylibc/include/mylibc_defines.h libs/mylibc/include/mylibc.h \
-  include/mylibc_data.h
-include/push_swap.h:
-include/push_swap_defines.h:
-include/push_swap_data.h:
-include/mylibc.h:
-libs/mylibc/include/mylibc_defines.h:
-libs/mylibc/include/mylibc.h:
-include/mylibc_data.h:
+objs/3_7_moves_optim.o: src/src_all/3_7_moves_optim.c inc/push_swap.h \
+  inc/push_swap_defines.h inc/push_swap_data.h \
+  inc/../libs/mylibc/inc/mylibc.h \
+  inc/../libs/mylibc/inc/mylibc_defines.h \
+  inc/../libs/mylibc/inc/mylibc_data.h
+inc/push_swap.h:
+inc/push_swap_defines.h:
+inc/push_swap_data.h:
+inc/../libs/mylibc/inc/mylibc.h:
+inc/../libs/mylibc/inc/mylibc_defines.h:
+inc/../libs/mylibc/inc/mylibc_data.h:

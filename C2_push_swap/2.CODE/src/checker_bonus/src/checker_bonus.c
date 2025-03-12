@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:56:06 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 09:38:21 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 15:43:27 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int	main(int argc, char **argv)
 	*list_program->stack_a = \
 		array_to_d_linked_list(list_program->stack_a_array);
 	add_index_numbers(*list_program->stack_a);
-	get_next_line2(0, line2);
+	get_next_line_split(0, line2);
 	apply_moves_to_stack(line2, list_program);
 	ft_free_push_swap_end(list_program);
 	return (0);

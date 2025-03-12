@@ -1,11 +1,11 @@
-objs/4_1_moves_both.o: src/src_all/4_1_moves_both.c include/push_swap.h \
-  include/push_swap_defines.h include/push_swap_data.h include/mylibc.h \
-  libs/mylibc/include/mylibc_defines.h libs/mylibc/include/mylibc.h \
-  include/mylibc_data.h
-include/push_swap.h:
-include/push_swap_defines.h:
-include/push_swap_data.h:
-include/mylibc.h:
-libs/mylibc/include/mylibc_defines.h:
-libs/mylibc/include/mylibc.h:
-include/mylibc_data.h:
+objs/4_1_moves_both.o: src/src_all/4_1_moves_both.c inc/push_swap.h \
+  inc/push_swap_defines.h inc/push_swap_data.h \
+  inc/../libs/mylibc/inc/mylibc.h \
+  inc/../libs/mylibc/inc/mylibc_defines.h \
+  inc/../libs/mylibc/inc/mylibc_data.h
+inc/push_swap.h:
+inc/push_swap_defines.h:
+inc/push_swap_data.h:
+inc/../libs/mylibc/inc/mylibc.h:
+inc/../libs/mylibc/inc/mylibc_defines.h:
+inc/../libs/mylibc/inc/mylibc_data.h:

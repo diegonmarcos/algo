@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/02 17:03:00 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/12 15:22:35 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,7 +80,7 @@ endif
 #IS_LIB_STATIC_AND_NOT_DYNAMIC = 1
 
 # *** HEADERS *.h *** #
-CFLAGS_INCL = -Iinclude -Ilibs/$(LIB_1_NAME)/include
+CFLAGS_INCL = -Iinc -Ilibs/$(LIB_1_NAME)/inc
 
 # ************************************************************************ #
 # *** Compiler, Make and Library compilers Declar *** #
@@ -327,7 +327,7 @@ werror:
 norm:
 	@echo "$(GREEN)\n····Running Norminette····$(RESET)"
 	norminette src/push_swap > log/1.Warning_Linting/norminette.txt; \
-	norminette include >> log/1.Warning_Linting/norminette.txt ; cat log/1.Warning_Linting/norminette.txt
+	norminette inc >> log/1.Warning_Linting/norminette.txt ; cat log/1.Warning_Linting/norminette.txt
 
 # *** Norminette on Bonus*** #
 norm_bonus:
@@ -686,7 +686,7 @@ folders_build:
 
 # *** Build folders *** #
 folders_make_build:
-	mkdir -p include
+	mkdir -p inc
 	mkdir -p libs
 	mkdir -p objs
 
@@ -741,7 +741,7 @@ ifeq ($(MAKECMDGOALS),all) # Only check if 'all' is the explicit goal
 		echo "$(YELLOW)$(NAME) does not exist. Building...$(RESET)"; \
 	else \
 		# If $(NAME) exists, check if any source files are newer.
-		@if find src/ include/ -newer "$(NAME)" -print | grep -q .; then \
+		@if find src/ inc/ -newer "$(NAME)" -print | grep -q .; then \
 			echo "$(RED)$(NAME) Some files have changed. Rebuilding...$(RESET)"; \
 		else \
 			echo "$(GREEN)Everything up-to-date.$(RESET)"; \
@@ -750,7 +750,7 @@ ifeq ($(MAKECMDGOALS),all) # Only check if 'all' is the explicit goal
 	fi
 endif
 ifeq ($(MAKECMDGOALS),check_up_to_date) # Special handling for 'make check_up_to_date'
-	@if [ -f "$(NAME)" ] && find src/ include/ -newer "$(NAME)" -print | grep -q .; then \
+	@if [ -f "$(NAME)" ] && find src/ inc/ -newer "$(NAME)" -print | grep -q .; then \
 		echo "$(RED)$(NAME) Some files have changed. Run 'make all' to rebuild.$(RESET)"; \
 	else \
 		echo "$(GREEN)$(NAME) is up-to-date.$(RESET)"; \

@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/10 11:06:47 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/12 15:37:27 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -488,6 +488,7 @@ re: fclean build_dependencies
 fclean_all:	fclean
 	$(RM) log
 	$(RM) testers
+	$(RM) make_docker.sh
 	if [ -f imgui.ini ]; then \
 		rm imgui.ini; \
 	fi
@@ -1228,6 +1229,16 @@ tests_run_small:
 	-echo -n "$(YELLOW)b1. ARG_4$(BLUE): | " ; ./push_swap $(ARG_4) 2>&1 | ./testers/checker_linux $(ARG_4) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_4) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_4) > log/3.Unit_Testing/moves/moves_4.txt; echo "";
 	-echo -n "$(YELLOW)b1. ARG_5$(BLUE): | " ; ./push_swap $(ARG_5) 2>&1 | ./testers/checker_linux $(ARG_5) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) > log/3.Unit_Testing/moves/moves_5.txt; echo "";
 
+
+test_bonus:
+	$(MAKE) testers_folder_build
+	$(MAKE) bonus
+	-echo -n "$(GRAY)B PERFORMANCE_CHECK_LINUX $(RESET)"; echo""
+	-echo -n "$(YELLOW)b2. ARG_100$(BLUE): | " ; ./push_swap $(ARG_100) 2>&1 | ./testers/checker_linux $(ARG_100) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) > log/3.Unit_Testing/moves/moves_100.txt; echo "";
+	-echo -n "$(GRAY)B PERFORMANCE_CHECK_BONUS $(RESET)"; echo""
+	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_5) | ./checker $(ARG_5) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_100) | ./checker $(ARG_100) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_500) | ./checker $(ARG_500) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 
 # ************************************************************************ #
 #                          TESTERS VISUALIZER                              #
