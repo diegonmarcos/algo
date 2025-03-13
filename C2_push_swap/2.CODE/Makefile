@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/12 15:37:27 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/13 16:50:11 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -169,7 +169,7 @@ log_alles:
 NAME0 = push_swap
 
 # *** ../ or ../../ or empty *** # Libraries autocmactly already have the ../
-OUTPUT_PLACE = 
+OUTPUT_PLACE =
 
 # ***Is? *** #
 IS_PROGRAM_AND_NOT_LIB = 1
@@ -217,16 +217,19 @@ LIBS_DIR = libs
 
 LIB_1_NAME = mylibc
 LIB_1_PATH = libs/mylibc
+LIB_1_FILE = libs/$(LIB_1_PATH)/lib$(LIB_1_NAME).a
 
 LIB_2_NAME = 0
 LIB_2_PATH = 
+LIB_2_FILE =
 
 LIB_3_NAME = 0
 LIB_3_PATH = 
+LIB_3_FILE = 
 
 LIB_4_NAME = 0
 LIB_4_PATH = 
-
+LIB_4_FILE =
 
 # ************************************************************************ #
 # *** Compiler, Make and Library compilers Declar *** #
@@ -394,6 +397,7 @@ else
 #	@echo "$(GRAY)Skipping library build$(RESET)"
 endif
 
+
 # ************************************************************************ #
 #                               MAIN                                       #
 # ************************************************************************ #
@@ -428,7 +432,7 @@ lib:	$(OBJECTS_LIB)
 	@echo "  $(YELLOW)(•̀ᴗ•́)و lib$(NAME).a Library Generated!$(RESET)"
 
 # *** Linking the object files into the program *** #
-program:	$(OBJECTS) $(LIB_1_PATH)
+program:
 	$(COMPILER) $(OBJECTS_MAIN) -Llibs -l$(NAME0) $(LDFLAGS) $(CFLAG_ASAN) -o $(NAME)
 	@echo "  $(YELLOW)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
 	$(MAKE) check_up_to_date
@@ -575,7 +579,7 @@ folders_log_build:
 #                                DEFS/PHONNY                               	   #
 # **************************************************************************** #
 # *** Phony *** #
-.PHONY:		all build program_or_lib libs_build	$(NAME)			\
+.PHONY:		all build program_or_lib libs_build program	$(NAME)	\
 			clean fclean fclean_all re 							\
 			library_clean library_fclean library_re 			\
 			folder_lns_builder folders_build check_up_to_date 	\
@@ -1420,18 +1424,18 @@ make_dbg:
 check_up_to_date:
 	if [ ! -f "$(NAME)" ]; then \
 		echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
-		echo "$(GRAY)$(NAME)					$(shell date)\n$(YELLOW)STATUS: Bin does not exist. Building...$(RESET)"; \
+		echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(YELLOW)STATUS: Bin does not exist. Building...$(RESET)"; \
 		echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
 		$(MAKE) build_project; \
 	else \
-		if find src/ inc/ -newer "$(NAME)" -print | grep -q .; then \
+		if find -L src/ inc/ libs/ -newer "$(NAME)" -print | grep -q .; then \
 			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
-			echo "$(GRAY)$(NAME)					$(shell date)\n$(RED)STATUS: Some files have changed. Rebuilding...$(RESET)"; \
+			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(RED)STATUS: Some files have changed. Rebuilding...$(RESET)"; \
 			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
 			$(MAKE) build_project; \
 		else \
 			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
-			echo "$(GRAY)$(NAME)					$(shell date)\n$(GREEN)STATUS: is up-to-date.$(RESET)"; \
+			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(GREEN)STATUS: is up-to-date.$(RESET)"; \
 			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
 			exit 0; \
 		fi; \
