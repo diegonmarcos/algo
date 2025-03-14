@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/14 11:45:06 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/14 12:00:14 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,30 +18,44 @@
 # ############################################################################ #
 #                                 MAKEFILE                                     #
 # ############################################################################ #
-
-#1. DESCRIPTION:
-#	This is make file for build either PROGRAM, LIBRARY, PROGRAM+LIBRARY 
-#		with their dependecies connect.
 #
-# - This Makefile is a template for a project with the following structure:
-#	1. Headers.h, files all them must be placed inside the folder "include".
-#	2. Library.a, files all them must be inside of the folder "libs"
-#	3. The library makefile must be inside of the folder "libs/mylib"
+# 1. DESCRIPTION:
+# -	This is make file for build either PROGRAM, LIBRARY, PROGRAM+LIBRARY 
+#		with their dependecies connected.
 #
-#	##### *** LOG ALLES *** ####
-#	#### * STATIC ANALYSIS *
-#	#### * LEAKS *
-#	#### * DYNAMIC ANALYSIS *
-#	#### * DEBUGGERS *
-#	#### * DOC *
-#	#### * TOOLS *
-#	#### * EXTRAS *
 #
-#	##### *** ENV, COMPILING AND LINKING PIPELINE *** #####
-#	#### * DEFINITIONS VARIABLES *
-#	#### * ENVIROMENT SET *
-#	#### * COMPILING PIPELINE *
-#	#### * LINKING PIPELINE * 
+# 2. USAGE:
+#	2.1 OPTIONS:
+#	 - To build the program, run the command "make"
+#	 - To generate the log files, run the command "make log_alles"
+#	 - To clean the project, run the command "make fclean_all"
+#
+#	2.2 INPUTS::
+#	 - Headers.h, files all them must be placed inside the folder "inc".
+#	 - The source files must be inside of the folder "src/"
+#	 - Library.a, files all them must be inside of the folder "libs"
+#	 - The library makefile must be inside of the folder "libs/[LIB_NAME]"
+#	 - The expcted file structure is:
+#	  - inc/
+#	  - src/
+#	  - libs/
+#	  - Makefile
+#
+#	2.3 OPTIONS MORE:
+#	- LOG ALLES
+#	 - STATIC ANALYSIS
+#	 - LEAKS
+#	 - DYNAMIC ANALYSIS
+#	 - DEBUGGERS
+#	 - DOC
+#	 - TOOLS
+#	 - EXTRAS
+#
+#	- ENV, COMPILING AND LINKING PIPELINE
+#	 - DEFINITIONS VARIABLES
+#	 - ENVIROMENT SET
+#	 - COMPILING PIPELINE
+#	 - LINKING PIPELINE
 #
 #
 
@@ -381,6 +395,7 @@ endif
 #	
 #	
 #	#### * ENVIROMENT SET *
+#	### folders_build
 #	### * Build Docker *
 #	## Build the Dockerfile
 #	## Run the Dockerfile
