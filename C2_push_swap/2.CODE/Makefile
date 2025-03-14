@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/14 12:00:14 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/14 15:05:16 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,20 +42,25 @@
 #	  - Makefile
 #
 #	2.3 OPTIONS MORE:
+#
 #	- LOG ALLES
-#	 - STATIC ANALYSIS
-#	 - LEAKS
-#	 - DYNAMIC ANALYSIS
-#	 - DEBUGGERS
-#	 - DOC
-#	 - TOOLS
-#	 - EXTRAS
+#	  - STATIC ANALYSIS
+#	  - LEAKS
+#	  - DYNAMIC ANALYSIS
+#	  - DEBUGGERS
+#	  - DOC
+#	  - TOOLS
+#	  - EXTRAS
 #
 #	- ENV, COMPILING AND LINKING PIPELINE
-#	 - DEFINITIONS VARIABLES
-#	 - ENVIROMENT SET
-#	 - COMPILING PIPELINE
-#	 - LINKING PIPELINE
+#	  - DEFINITIONS VARIABLES
+#	  - ENVIROMENT SET
+#	  - COMPILING PIPELINE
+#	  - LINKING PIPELINE
+#
+#	- HELPERS
+#	  - hello, check_up_to_date, code_cleaner, files_lns_creator
+#	  -	library_clean, library_fclean, library_re
 #
 #
 
@@ -431,6 +436,8 @@ endif
 # ************************************************************************ #
 #                               DEPENDENCIES                               #
 # ************************************************************************ #
+.DEFAULT_GOAL:= build_dependencies
+
 # *** Default rule *** #
 build_dependencies:
 	$(MAKE) libs_build
@@ -480,7 +487,7 @@ lib:	$(OBJECTS_LIB)
 	@echo "  $(YELLOW)(•̀ᴗ•́)و lib$(NAME).a Library Generated!$(RESET)"
 
 # *** Linking the object files into the program *** #
-program:
+program: $(OBJECTS)
 	$(COMPILER) $(OBJECTS_MAIN) -Llibs -l$(NAME0) $(LDFLAGS) $(CFLAG_ASAN) -o $(NAME)
 	@echo "  $(YELLOW)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
 	$(MAKE) check_up_to_date

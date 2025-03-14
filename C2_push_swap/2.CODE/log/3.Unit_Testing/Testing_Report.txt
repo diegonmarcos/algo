@@ -1,0 +1,62 @@
+
+# RUNNING TESTS
+
+### Milestones
+Points for #5 numbers:
+- less than 8: kudos
+- less than 12: ok
+- more than 12; FAIL!
+
+Points for #100 numbers:
+- less than 700: 5
+- less than 900: 4
+- less than 1,100: 3
+- less than 1,300: 2
+- less than 1,500: 1
+
+Points for #500 numbers
+- less than 5,500: 5
+- less than 7,000: 4
+- less than 8,500: 3
+- less than 10,000: 2
+- less than 11,500: 1
+
+Min Points: 8
+---------------------------------------------------------------------------------------------------------------------------
+
+A ERROR_HANDLING_INPUTS 
+a1. ARG_DUPLICATED: | Error  | 1  | 
+a2. ARG_NON_NUMERIC: | Error  | 1  | 
+a3. ARG_INT_MAX: | Error  | 1  | 
+a4. ARG_INT_MIN: | Error  | 1  | 
+A ERROR_HANDLING_INPUTS2 
+a5. ARG_EMPTY : |  | 0  | 
+a6. ARG_1: |  | 0  | 
+a7. ARG_SORTED: |  | 0  | 
+
+A ERROR_HANDLING_INPUTS3 
+b1. ARG_5_NOT_SPLIT: | KO  | 16  | 
+b1. ARG_6_NOT_SPLIT: | OK  | 29  | 
+
+B PERFORMANCE_CHECK 
+b1. ARG_2: | KO  | 0  | 
+b1. ARG_3: | KO  | 4  | 
+b1. ARG_4: | OK  | 12  | 
+b1. ARG_5: | KO  | 16  | 
+b2. ARG_100: | OK  | 1084  | 
+b3. ARG_500: | OK  | 6784  | 
+
+B PERFORMANCE_CHECK_BONUS 
+b3. ARG_500 && CHECKER_BONUS: | KO  | 16  | 
+b3. ARG_500 && CHECKER_BONUS: | OK  | 1084  | 
+b3. ARG_500 && CHECKER_BONUS: | OK  | 6784  | 
+
+C ERROR_HANDLING_INPUTS_BONUS 
+a1. ARG_INT_MAX: | Error  | 1  | 
+a2. ARG_INT_MIN: | Error  | 1  | 
+a3. ARG_DUPLICATED: | Error  | 1  | 
+a4. ARG_NON_NUMERIC: | Error  | 1  | 
+C ERROR_HANDLING_INPUTS_2_BONUS 
+a5. ARG_EMPTY : |  | 0  | 
+a6. ARG_1: |  | 0  | 
+a7. ARG_SORTED: |  | 0  | 
