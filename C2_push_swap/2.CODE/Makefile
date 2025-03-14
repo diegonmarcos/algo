@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/14 15:05:16 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/14 16:43:13 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -246,6 +246,7 @@ LIB_COMP_STATIC = ar rcs
 #LIB_COMP_DYNAMIC_obj = fPIC
 #LIB_COMP_DYNAMIC_lib = shared
 RM = rm -rf
+PIC = -fPIC
 
 
 
@@ -467,7 +468,7 @@ build_project:
 # *** Compiling the source files into object files *** #
 objs/%.o:	%.c
 	mkdir -p objs
-	$(COMPILER) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) $(MACROS) -c $< -o $@
+	$(COMPILER) $(PIC) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) $(MACROS) -c $< -o $@
 	@echo "$(GRAY)()و $@ $(NAME) Compiling Objects !$(RESET)"
 
 # *** Is program or a Lib? ***
