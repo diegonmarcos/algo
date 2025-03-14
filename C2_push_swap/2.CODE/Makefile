@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/13 16:50:11 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/14 07:09:35 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -376,9 +376,44 @@ endif
 
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
-#                                 RULES/ALL                                    #
+#                     COMPILING AND LINKING PIPELINE                           #
 # ############################################################################ #
+
+##### *** COMPILING PIPELINE ** #####
+#### * External Dependencies *
+### Build(run make -C) Deps Libs, 
+###		if uptdated(): extrct its news objs
+### 
+#### * Objs Program *
+### Compile the program objs: $(OBJS)
+###
+###
+###
+##### *** LINKING PIPELINE ** #####
+#### * Library Link *
+### Link a program Lib0
+### Link a program and external libs Lib1
+### Link a program, external and shared libs Lib2
+### Create the Lib_program
+###
+#### * Exec link *
+### Link the lib_program with main.file
+###
+###
+###
+
 .DEFAULT_GOAL:= build_dependencies
+build_dependencies_libs
+	extract_objs_from_deps_libs: check_up_to_date
+
+compile_objs_functions_from_program
+	ar_rcs_program_lib: OBJS
+	ar_rcs_program_lib_merged : OBJS_PRG OBJS_LIBS
+	arc_rcs_program_lib_merged_so
+
+link_main_program_lib_merged
+
+
 
 # ************************************************************************ #
 #                               DEPENDENCIES                               #
