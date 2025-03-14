@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/14 07:09:35 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/14 10:52:33 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -376,9 +376,19 @@ endif
 
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
-#                     COMPILING AND LINKING PIPELINE                           #
+#                ENV, COMPILING AND LINKING PIPELINE                           #
 # ############################################################################ #
 
+##### *** ENVIROMENT SET ** #####
+#### * Build Docker *
+### Build the Dockerfile
+### Run the Dockerfile
+###
+#### * GCL Repos *
+### gcl program repo
+### gcl libs depencies repo
+###
+###
 ##### *** COMPILING PIPELINE ** #####
 #### * External Dependencies *
 ### Build(run make -C) Deps Libs, 
@@ -386,7 +396,6 @@ endif
 ### 
 #### * Objs Program *
 ### Compile the program objs: $(OBJS)
-###
 ###
 ###
 ##### *** LINKING PIPELINE ** #####
@@ -398,7 +407,6 @@ endif
 ###
 #### * Exec link *
 ### Link the lib_program with main.file
-###
 ###
 ###
 
