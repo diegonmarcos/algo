@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/14 11:32:21 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/14 11:45:06 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,23 @@
 #	1. Headers.h, files all them must be placed inside the folder "include".
 #	2. Library.a, files all them must be inside of the folder "libs"
 #	3. The library makefile must be inside of the folder "libs/mylib"
-
+#
+#	##### *** LOG ALLES *** ####
+#	#### * STATIC ANALYSIS *
+#	#### * LEAKS *
+#	#### * DYNAMIC ANALYSIS *
+#	#### * DEBUGGERS *
+#	#### * DOC *
+#	#### * TOOLS *
+#	#### * EXTRAS *
+#
+#	##### *** ENV, COMPILING AND LINKING PIPELINE *** #####
+#	#### * DEFINITIONS VARIABLES *
+#	#### * ENVIROMENT SET *
+#	#### * COMPILING PIPELINE *
+#	#### * LINKING PIPELINE * 
+#
+#
 
 
 
@@ -50,56 +66,66 @@
 # ############################################################################ #
 #                                LOG ALLES                                     #
 # ############################################################################ #
-###
-##### *** LOG ALLES *** ####
-###
-#### * STATIC ANALYSIS *
-### log_static_analysis
-### bear
-###-Wall -Wextra
-###-Wformat -Warray-bounds -Wnull-dereference -Wvla
-###-Weverything"
-###clang-tidy
-###--analyze -Xanalyzer -analyzer-checker=core
-### norminette
-###
-###
-#### * LEAKS *
-### create_bins_leaks
-### log_leaks
-### VALGRIND = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s
-###--tool=massif
-###--tool=cachegrind 
-###--tool=callgrind
-### ASAN = -fsanitize=address
-###
-###
-#### * DYNAMIC ANALYSIS *
-### test_egde_cases
-### test_main_cases
-### test_performance
-###
-###
-#### * DEBUGGERS *
-### create_bins_dbg
-### run_debug-gdb
-### run_debug-lldb
-### run_debug-vscode
-### log_libs_nm_art
-### log_dbg_info
-###
-###
-#### * DOC *
-###doxygen
-###
-###
-#### * TOOLS *
-###test_make_performance
-###
-###
-#### EXTRAS
-###test_run_visualizer
-###log_alles_bonus
+#
+#	#### *** LOG ALLES *** ####
+#	### * STATIC ANALYSIS *
+#	### * LEAKS **
+#	### * DYNAMIC ANALYSIS *
+#	### * DEBUGGERS *
+#	### * DOC *
+#	### * TOOLS *
+#	### * EXTRAS *
+#
+#
+#	### * STATIC ANALYSIS *
+#	## log_static_analysis
+#	## bear
+#	##-Wall -Wextra
+#	##-Wformat -Warray-bounds -Wnull-dereference -Wvla
+#	##-Weverything"
+#	##clang-tidy
+#	##--analyze -Xanalyzer -analyzer-checker=core
+#	## norminette
+#
+#
+#	### * LEAKS *
+#	## create_bins_leaks
+#	## log_leaks
+#	## VALGRIND = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s
+#	##--tool=massif
+#	##--tool=cachegrind 
+#	##--tool=callgrind
+#	## ASAN = -fsanitize=address
+#
+#
+#	### * DYNAMIC ANALYSIS *
+#	## test_egde_cases
+#	## test_main_cases
+#	## test_performance
+#
+#
+#	### * DEBUGGERS *
+#	## create_bins_dbg
+#	## run_debug-gdb
+#	## run_debug-lldb
+#	## run_debug-vscode
+#	## log_libs_nm_art
+#	## log_dbg_info
+#
+#
+#	### * DOC *
+#	##doxygen
+#
+#
+#	### * TOOLS *
+#	##test_make_performance
+#
+#
+#	### * EXTRAS *
+#	##test_run_visualizer
+#	##log_alles_bonus
+#
+#
 
 
 
@@ -338,45 +364,52 @@ endif
 
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
-#                ENV, COMPILING AND LINKING PIPELINE                           #
+#            VAR, ENV, COMPILING AND LINKING PIPELINE                          #
 # ############################################################################ #
-###
-#### *** DEFINITIONS VARIABLES *** ####
-### MAKE_VERBOSE	= 0
-### PRGM_DBG 		= 0
-### PRGM_ALGO 		= 0
-###
-###
-##### *** ENVIROMENT SET ** #####
-#### * Build Docker *
-### Build the Dockerfile
-### Run the Dockerfile
-###
-#### * GCL Repos *
-### gcl program repo
-### gcl libs depencies repo
-###
-###
-##### *** COMPILING PIPELINE ** #####
-#### * External Dependencies *
-### Build(run make -C) Deps Libs, 
-###		if uptdated(): extrct its news objs
-### 
-#### * Objs Program *
-### Compile the program objs: $(OBJS)
-###
-###
-##### *** LINKING PIPELINE ** #####
-#### * Library Link *
-### Link a program Lib0
-### Link a program and external libs Lib1
-### Link a program, external and shared libs Lib2
-### Create the Lib_program
-###
-#### * Exec link *
-### Link the lib_program with main.file
-###
-###
+#	
+#	#### *** ENV, COMPILING AND LINKING PIPELINE *** #####
+#	### * DEFINITIONS VARIABLES *
+#	### * ENVIROMENT SET *
+#	### * COMPILING PIPELINE *
+#	### * LINKING PIPELINE * 
+#	
+#	
+#	### * DEFINITIONS VARIABLES *
+#	## MAKE_VERBOSE	= 0
+#	## PRGM_DBG 		= 0
+#	## PRGM_ALGO 		= 0
+#	
+#	
+#	#### * ENVIROMENT SET *
+#	### * Build Docker *
+#	## Build the Dockerfile
+#	## Run the Dockerfile
+#	
+#	### * GCL Repos *
+#	## gcl program repo
+#	## gcl libs depencies repo
+#	
+#	
+#	#### * COMPILING PIPELINE *
+#	### * External Dependencies *
+#	## Build(run make -C) Deps Libs, 
+#	##		if uptdated(): extrct its news objs
+#	
+#	### * Objs Program *
+#	## Compile the program objs: $(OBJS)
+#	
+#	
+#	#### * LINKING PIPELINE *
+#	### * Library Linking *
+#	## Link a program Lib0
+#	## Link a program and external libs Lib1
+#	## Link a program, external and shared libs Lib2
+#	## Create the Lib_program
+#	
+#	### * Executable linking *
+#	## Link the lib_program with main.file
+#	
+#	
 
 
 
