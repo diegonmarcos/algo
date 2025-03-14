@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/14 10:52:33 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/14 11:11:40 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,94 +50,55 @@
 # ############################################################################ #
 #                                LOG ALLES                                     #
 # ############################################################################ #
-# *** Log Alles *** #
-#Make= make -j -O
-log_alles:
-	$(MAKE) || true
-	$(MAKE) warning_linting || true
-	$(MAKE) leaks || true
-	$(MAKE) testing_alles || true
-	$(MAKE) debuggers_info || true
-	$(MAKE) doxygen || true
-	$(MAKE) dockerfile || true
-
-
-
-
-### BUILD
-#build_dependencies:
-	$(MAKE) libs_build
-	$(MAKE) check_up_to_date
-	$(MAKE) build_project
-
-#build_project:
-	$(MAKE) hello
-	$(MAKE) folders_build
-	$(MAKE) program_or_lib
-	$(MAKE) dbg_rules
-
-
-
-
-### WARNINGS
-#-Wall -Wextra
-#-Wformat -Warray-bounds -Wnull-dereference -Wvla
-#-Weverything"
-#clang-tidy
-#--analyze -Xanalyzer -analyzer-checker=core
-
-#warning_linting:
-	$(MAKE) bear
-	$(MAKE) werror
-	$(MAKE) norm
-
-
-
-
-### LEAKS
-#VALGRIND = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s
-#--tool=massif
-#--tool=cachegrind 
-#--tool=callgrind
-
-#leaks:
-	$(MAKE) valgrind || true
-	$(MAKE) asan || true
-
-
-
-
-### TOOLS
-
-#tools:
-	$(MAKE) docker_run
-	$(MAKE) debug-gdb
-	$(MAKE) debug-lldb
-	$(MAKE) debug-vscode
-	$(MAKE) create_bins_dbg
-	$(MAKE) create_bins_leaks
-	$(MAKE) libs_nm_art
-# 	$(MAKE) folders_lns_build
-	$(MAKE) test_performance
-	$(MAKE) perfomance
-
-
-
-
-### TESTS
-
-#tests:
-	$(MAKE) tests_run_5
-	$(MAKE) tests_run_100
-	$(MAKE) tests_run_500
-	$(MAKE) test_visualizer_build
-	$(MAKE) test_visualizer_run
-
-
-
-#log_alles_bonus:
-	$(MAKE) bonus || true
-	$(MAKE) leaks_bonus || true
+##### *** LOG ALLES *** ####
+###
+#### * STATIC ANALYSIS *
+### log_static_analysis
+### bear
+###-Wall -Wextra
+###-Wformat -Warray-bounds -Wnull-dereference -Wvla
+###-Weverything"
+###clang-tidy
+###--analyze -Xanalyzer -analyzer-checker=core
+### norminette
+###
+###
+#### * LEAKS *
+### create_bins_leaks
+### log_leaks
+### VALGRIND = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s
+###--tool=massif
+###--tool=cachegrind 
+###--tool=callgrind
+### ASAN = -fsanitize=address
+###
+###
+#### * DYNAMIC ANALYSIS *
+### test_egde_cases
+### test_main_cases
+### test_performance
+###
+###
+#### * DEBUGGERS *
+### create_bins_dbg
+### run_debug-gdb
+### run_debug-lldb
+### run_debug-vscode
+### log_libs_nm_art
+### log_dbg_info
+###
+###
+#### * DOC *
+###doxygen
+###
+###
+#### * TOOLS *
+###test_make_performance
+###
+###
+#### EXTRAS
+###test_run_visualizer
+###log_alles_bonus
 
 
 
