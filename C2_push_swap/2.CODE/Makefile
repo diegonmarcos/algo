@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/14 11:31:00 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/14 11:32:21 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -345,6 +345,7 @@ endif
 ### MAKE_VERBOSE	= 0
 ### PRGM_DBG 		= 0
 ### PRGM_ALGO 		= 0
+###
 ###
 ##### *** ENVIROMENT SET ** #####
 #### * Build Docker *
