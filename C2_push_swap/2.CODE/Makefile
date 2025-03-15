@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/14 16:43:13 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/15 08:57:12 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -171,26 +171,27 @@
 #                          VARIABLES INITIALIZATIONS                           #
 # ############################################################################ #
 # ************************************************************************ #
-
+# MAIN (NAME, IS? AND SOURCE FILES)										   #
+# ************************************************************************ #
 # *** Name Output *** #
-NAME0 = push_swap
+NAME0 					= push_swap
 
 # *** ../ or ../../ or empty *** # Libraries autocmactly already have the ../
-OUTPUT_PLACE =
+OUTPUT_PLACE 			=
 
 # ***Is? *** #
-IS_PROGRAM_AND_NOT_LIB = 1
-INCLUDE_LIB = 1
-BUILD_LIBRARY = 1
-BONUS = 1
-VERBOSE = 0
+IS_PROGRAM_AND_NOT_LIB 	= 1
+INCLUDE_LIB 			= 1
+BUILD_LIBRARY 			= 1
+BONUS 					= 1
+VERBOSE 				= 0
 
 # ************************************************************************ #
 # *** Files source *.c *** #
-SOURCE_MAIN =							\
+SOURCE_MAIN 	=						\
 				push_swap.c				
 
-SOURCE_FILES = 							\
+SOURCE_FILES 	= 						\
 				1_0_mem_alloc.c			\
 				1_1_mem_clear.c			\
 				1_2_debugger_helpers.c	\
@@ -210,43 +211,58 @@ SOURCE_FILES = 							\
 				4_1_moves_both.c		\
 				4_2_moves_fromto.c
 
-VPATH = src/src_all:					\
+VPATH 			= src/src_all:			\
 
+# *** HEADERS *.h *** #
+HEADER_DIR 		= inc
+
+# ************************************************************************ #
 # *** Extra Rules (Bonus) ***	 #
 CHECKER_BONUS_DIR = src/checker_bonus
 
 # ************************************************************************ #
-# *** HEADERS *.h *** #
-HEADER_DIR = inc
+# DEPENDENCIES (NAMES AND SOURCES)										   #
+# ************************************************************************ #
+# *** Shared Libraries *** #
+LIB_SO 		=
+
 
 # *** Library *.a (libraries to be included) THE ORDER MATTERS!!! *** #
-LIBS_DIR = libs
+LIBS_DIR 	= libs
 
-LIB_1_NAME = mylibc
-LIB_1_PATH = libs/mylibc
-LIB_1_FILE = libs/$(LIB_1_PATH)/lib$(LIB_1_NAME).a
+LIB_1_NAME 	= mylibc
+LIB_1_PATH 	= libs/mylibc
+LIB_1_FILE 	= libs/$(LIB_1_PATH)/lib$(LIB_1_NAME).a
+LIB_1_REPO 	= https://github.com/diegonmarcos/mylib.git
 
-LIB_2_NAME = 0
-LIB_2_PATH = 
-LIB_2_FILE =
+LIB_2_NAME 	= 0
+LIB_2_PATH 	= 
+LIB_2_FILE 	=
+LIB_2_REPO 	=
 
-LIB_3_NAME = 0
-LIB_3_PATH = 
-LIB_3_FILE = 
+LIB_3_NAME 	= 0
+LIB_3_PATH 	= 
+LIB_3_FILE 	=
+LIB_3_REPO 	= 
 
-LIB_4_NAME = 0
-LIB_4_PATH = 
-LIB_4_FILE =
+LIB_4_NAME 	= 0
+LIB_4_PATH 	= 
+LIB_4_FILE 	=
+LIBR_4_REPO =
 
 # ************************************************************************ #
+# COMPILER AND LINKER VARS												   #
+# ************************************************************************ #
 # *** Compiler, Make and Library compilers Declar *** #
-MAKE = make -j -O
-COMPILER = clang
-LIB_COMP_STATIC = ar rcs
-#LIB_COMP_DYNAMIC_obj = fPIC
-#LIB_COMP_DYNAMIC_lib = shared
-RM = rm -rf
-PIC = -fPIC
+MAKE 				= make -j -O
+COMPILER 			= clang
+PIC 				= -fPIC
+LIB_LINK_STATIC 	= ar rcs
+#LIB_LINK_DYNAMIC 	= shared
+RM 					= rm -rf
+GCL 				= git clone
+WGET 				= wget
+
 
 
 
@@ -276,36 +292,36 @@ PIC = -fPIC
 #                         NAME AND SOURCES  	                           #
 # ************************************************************************ #
 # *** Name definition *** #
-NAME1 = $(OUTPUT_PLACE)$(NAME0)
+NAME1 			= $(OUTPUT_PLACE)$(NAME0)
 
 ifeq ($(IS_PROGRAM_AND_NOT_LIB), 1)
-	NAME = $(NAME1)
+	NAME 		= $(NAME1)
 else
-	NAME = ../lib$(NAME1).a
+	NAME		= ../lib$(NAME1).a
 endif
 
 # *** Source Files .c Definition path *** #
-SOURCE_SRC_ALL = $(addprefix src/src_all/,$(SOURCE_MAIN)) $(addprefix src/src_all/,$(SOURCE_FILES))
+SOURCE_SRC_ALL 	= $(addprefix src/src_all/,$(SOURCE_MAIN)) $(addprefix src/src_all/,$(SOURCE_FILES))
 
 # *** Source Files .c Definition path *** #
-SOURCES = $(SOURCE_MAIN) $(SOURCE_FILES)
+SOURCES			= $(SOURCE_MAIN) $(SOURCE_FILES)
 
 # *** Bonus Source Files .c Definition path *** #
-CHECKER_BUILD = $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
+CHECKER_BUILD 	= $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 
 # ************************************************************************ #
 #                         OBJECTS AND DEPENDENCIES                         #
 # ************************************************************************ #
 #Object Files and Dependency Files Definition path Main *** #
-OBJECTS_MAIN =  $(patsubst %.c,objs/%.o,$(notdir $(SOURCE_MAIN)))
-DEPS_MAIN = $(OBJECTS_MAIN:.o=.d)
-DEPFLAGS = -MMD -MP#															# This will create the files(headers) as dependendcy and track them
+OBJECTS_MAIN 	=  $(patsubst %.c,objs/%.o,$(notdir $(SOURCE_MAIN)))
+DEPS_MAIN 		= $(OBJECTS_MAIN:.o=.d)
+DEPFLAGS 		= -MMD -MP#															# This will create the files(headers) as dependendcy and track them
 -include $(DEPS_MAIN)
 
 #Object Files and Dependency Files Definition path Lib *** #
-OBJECTS_LIB =  $(patsubst %.c,objs/%.o,$(notdir $(SOURCE_FILES)))
-DEPS_LIB = $(OBJECTS_LIB:.o=.d)
-#DEPFLAGS = -MMD -MP#															# This will create the files(headers) as dependendcy and track them
+OBJECTS_LIB 	=  $(patsubst %.c,objs/%.o,$(notdir $(SOURCE_FILES)))
+DEPS_LIB 		= $(OBJECTS_LIB:.o=.d)
+#DEPFLAGS 		= -MMD -MP#															# This will create the files(headers) as dependendcy and track them
 -include $(DEPS_LIB)
 
 OBJECTS = $(OBJECTS_MAIN) $(OBJECTS_LIB) 
@@ -314,22 +330,22 @@ OBJECTS = $(OBJECTS_MAIN) $(OBJECTS_LIB)
 #                         HEADERS AND LIBS		                           #
 # ************************************************************************ #
 # *** Include or not a library (REMEBER TO MANAGE DEPENDECIES OF THE LIBRARIES, the root library comes after the child)
-LDFLAGS :=
-CFLAGS_INCL = -I$(HEADER_DIR)
+LDFLAGS			:=
+CFLAGS_INCL 	= -I$(HEADER_DIR)
 ifneq ($(LIB_1_NAME), 0)
-	LDFLAGS += -L$(LIB_1_PATH) -l$(LIB_1_NAME)
+	LDFLAGS 	+= -L$(LIB_1_PATH) -l$(LIB_1_NAME)
 	CFLAGS_INCL += -I$(LIB_1_PATH)/inc
 endif
 ifneq ($(LIB_2_NAME), 0)
-	LDFLAGS += -l$(LIB_2_NAME)
+	LDFLAGS 	+= -l$(LIB_2_NAME)
 	CFLAGS_INCL += -I$(LIB_2_PATH)/inc
 endif
 ifneq ($(LIB_3_NAME), 0)
-	LDFLAGS += -l$(LIB_3_NAME)
+	LDFLAGS 	+= -l$(LIB_3_NAME)
 	CFLAGS_INCL += -I$(LIB_3_PATH)/inc
 endif
 ifneq ($(LIB_4_NAME), 0)
-	LDFLAGS += -l$(LIB_4_NAME)
+	LDFLAGS 	+= -l$(LIB_4_NAME)
 	CFLAGS_INCL += -I$(LIB_3_PATH)/inc
 endif
 
@@ -337,28 +353,29 @@ endif
 #                         VERBOSE AND DEBUG		                           #
 # ************************************************************************ #
 # *** VERBOSE MAKE? *** #
-MAKEFLAGS :=
+MAKEFLAGS		:=
 ifeq ($(VERBOSE), 0)
-MAKEFLAGS += --no-print-directory --silent
-#MAKE += --trace all --warn-undefined-variables
-#MAKE += --debug=b -j1 --warn-undefined-variables
-#MAKE += --debug=v -j1 --warn-undefined-variables
-#MAKE += --debug=t -j1 --warn-undefined-variables
+MAKEFLAGS		+= --no-print-directory --silent
+#MAKE 			+= --trace all --warn-undefined-variables
+#MAKE			+= --debug=b -j1 --warn-undefined-variables
+#MAKE			+= --debug=v -j1 --warn-undefined-variables
+#MAKE			+= --debug=t -j1 --warn-undefined-variables
 else
-MAKEFLAGS +=
+MAKEFLAGS 		+=
 endif
 
 # *** PROGRAM DBG MODE *** #
 ifeq ($(DBG),1)
-	DBG = 1
-	CFLAGS_DBG += -g3
-	MACROS += -DDBG=$(DBG)
+	DBG			= 1
+	CFLAGS_DBG	+= -g3
+	MACROS 		+= -DDBG=$(DBG)
 endif
 
+# *** PROGRAM OPTIONS *** #
 ALGO = 0
 ifneq ($(ALGO),0)
-	M2		= ALGO
-	MACROS += -D$(M2)=\"$(ALGO)\"
+	M2			= ALGO
+	MACROS 		+= -D$(M2)=\"$(ALGO)\"
 endif
 
 
@@ -437,8 +454,58 @@ endif
 # ************************************************************************ #
 #                               DEPENDENCIES                               #
 # ************************************************************************ #
-.DEFAULT_GOAL:= build_dependencies
 
+# ************************************************************************ #
+# .DEFAULT_GOAL:= build_system_pipeline
+# build_system_pipeline:
+# 	$(MAKE) check_up_to_date
+# 	$(MAKE) build_enviroment_folders
+# 	$(MAKE) build_dependencies_docker
+# 	$(MAKE) build_enviroment_docker
+# 	$(MAKE) build_dependencies_libraries
+# 	$(MAKE) compile_libs_objects
+# 	$(MAKE) compile_program_objects
+# 	$(MAKE) archive_lib_program
+# 	$(MAKE) archive_lib_program_merged
+# 	$(MAKE) link_main_program
+# 	$(MAKE) check_up_to_date
+
+# ************************************************************************ #
+
+build_enviroment_folders:
+	mkdir -p log
+	mkdir -p log/1.Warning_linting
+
+build_dependencies_docker:
+	$(MAKE) docker_install
+
+build_enviroment_docker:
+	$(MAKE) dockerfile
+	$(MAKE) docker_run
+
+build_dependencies_libraries:
+	$(MAKE) libs_build
+
+compile_libs_objects:
+	$(MAKE) -C $(LIB_1_PATH) MAKEFLAGS=""
+	@echo "$(YELLOW)(•̀ᴗ•́)و $@ Done!$(RESET)"
+
+compile_program_objects:
+	$(MAKE) $(OBJECTS)
+
+archive_lib_program:
+	$(MAKE) lib
+
+archive_lib_program_merged:
+	$(MAKE) combine_libs
+
+link_main_program:
+	$(MAKE) program
+
+
+
+# ************************************************************************ #
+.DEFAULT_GOAL:= build_dependencies
 # *** Default rule *** #
 build_dependencies:
 	$(MAKE) libs_build
@@ -484,7 +551,7 @@ endif
 
 # *** Linking the object files into a library *** #
 lib:	$(OBJECTS_LIB)
-	$(LIB_COMP_STATIC) $(LIB_OUTPUT) $(OBJECTS_LIB)
+	$(LIB_LINK_STATIC) $(LIB_OUTPUT) $(OBJECTS_LIB)
 	@echo "  $(YELLOW)(•̀ᴗ•́)و lib$(NAME).a Library Generated!$(RESET)"
 
 # *** Linking the object files into the program *** #
@@ -499,9 +566,9 @@ program: $(OBJECTS)
 # *** Combine the program library with the included libraries *** #
 combine_libs:
 ifeq ($(INCLUDE_LIB), 1)
-	$(MAKE) libs_build
-	$(LIB_COMP_STATIC) lib$(NAME1)_c.a $(NAME) libs/lib$(LIB_1_NAME).a
-	@echo "$(YELLOW)(•̀ᴗ•́)و $@ Done!$(RESET)"
+	echo "Creating combined library reference..."
+	echo "GROUP ( libmylibx.a libs/minilibx_linux/libmlx.a -lXext -lX11 -lm )" > libmylibx_.a
+	echo "  $(YELLOW)(•̀ᴗ•́)و libmylibx_combined.a Library reference created!$(RESET)"
 else
 	@echo "$(GRAY)Skipping library merge$(RESET)"
 endif
@@ -592,7 +659,7 @@ folders_build:
 
 # *** Build folders *** #
 folders_make_build:
-	mkdir -p include
+	mkdir -p inc
 	mkdir -p libs
 	mkdir -p objs
 
