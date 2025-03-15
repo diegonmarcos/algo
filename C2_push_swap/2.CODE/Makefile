@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/15 08:57:12 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/15 13:35:26 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,88 +61,6 @@
 #	- HELPERS
 #	  - hello, check_up_to_date, code_cleaner, files_lns_creator
 #	  -	library_clean, library_fclean, library_re
-#
-#
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
-# ############################################################################ #
-#                                LOG ALLES                                     #
-# ############################################################################ #
-#
-#	#### *** LOG ALLES *** ####
-#	### * STATIC ANALYSIS *
-#	### * LEAKS **
-#	### * DYNAMIC ANALYSIS *
-#	### * DEBUGGERS *
-#	### * DOC *
-#	### * TOOLS *
-#	### * EXTRAS *
-#
-#
-#	### * STATIC ANALYSIS *
-#	## log_static_analysis
-#	## bear
-#	##-Wall -Wextra
-#	##-Wformat -Warray-bounds -Wnull-dereference -Wvla
-#	##-Weverything"
-#	##clang-tidy
-#	##--analyze -Xanalyzer -analyzer-checker=core
-#	## norminette
-#
-#
-#	### * LEAKS *
-#	## create_bins_leaks
-#	## log_leaks
-#	## VALGRIND = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s
-#	##--tool=massif
-#	##--tool=cachegrind 
-#	##--tool=callgrind
-#	## ASAN = -fsanitize=address
-#
-#
-#	### * DYNAMIC ANALYSIS *
-#	## test_egde_cases
-#	## test_main_cases
-#	## test_performance
-#
-#
-#	### * DEBUGGERS *
-#	## create_bins_dbg
-#	## run_debug-gdb
-#	## run_debug-lldb
-#	## run_debug-vscode
-#	## log_libs_nm_art
-#	## log_dbg_info
-#
-#
-#	### * DOC *
-#	##doxygen
-#
-#
-#	### * TOOLS *
-#	##test_make_performance
-#
-#
-#	### * EXTRAS *
-#	##test_run_visualizer
-#	##log_alles_bonus
 #
 #
 
@@ -452,7 +370,7 @@ endif
 
 
 # ************************************************************************ #
-#                               DEPENDENCIES                               #
+#                      BUILD SYSTEM PIPELINE                               #
 # ************************************************************************ #
 
 # ************************************************************************ #
@@ -633,22 +551,6 @@ bonus:
 	$(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
 #                                FOLDER BUILDER                                #
 # ############################################################################ #
@@ -680,21 +582,6 @@ folders_log_build:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
 #                                DEFS		                                   #
 # ############################################################################ #
@@ -740,23 +627,6 @@ DARK_YELLOW =	\033[38;5;143m
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # **************************************************************************** #
 #                         DOCKER AND DEPENDENCIES                          	   #
 # **************************************************************************** #
@@ -820,71 +690,127 @@ build_dependencies_libs:
 
 
 
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
-# **************************************************************************** #
-#                                DOXYGEN                               	   #
-# **************************************************************************** #
-DOXYGEN_FILE = log/7.Doxygen/Doxygen
-DOXYGEN_PATH = log/7.Doxygen
-doxygen:
-	rm -rf $(DOXYGEN_PATH)
-	$(MAKE) create_Doxyfile
-	$(MAKE) doxfile_mod
-	doxygen ./$(DOXYGEN_FILE)
-	xdg-open log/7.Doxygen/html/index.html
-
-
-create_Doxyfile:
-	mkdir -p log/7.Doxygen
-	doxygen -g $(DOXYGEN_FILE)
-
-doxfile_mod:
-	sed -i 's/PROJECT_NAME           = "My Project"/PROJECT_NAME           = "$(NAME)"/g' ./$(DOXYGEN_FILE)
-	sed -i 's/PROJECT_BRIEF          = "My Project Brief"/PROJECT_BRIEF          = "$(NAME)"/g' ./$(DOXYGEN_FILE)
-	sed -i 's/OUTPUT_DIRECTORY       =/OUTPUT_DIRECTORY       = log\/7.Doxygen/g' ./$(DOXYGEN_FILE)
-	sed -i 's/OPTIMIZE_OUTPUT_FOR_C  = NO/OPTIMIZE_OUTPUT_FOR_C  = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/EXTRACT_ALL            = NO/EXTRACT_ALL            = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/HIDE_SCOPE_NAMES       = NO/HIDE_SCOPE_NAMES       = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/INPUT                  =/INPUT                  = src/g' ./$(DOXYGEN_FILE)
-	sed -i 's/RECURSIVE              = NO/RECURSIVE              = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/EXCLUDE                =/EXCLUDE                = src\/src_all/g' ./$(DOXYGEN_FILE)
-	sed -i 's/GENERATE_LATEX         = NO/GENERATE_LATEX         = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/GENERATE_TREEVIEW      = NO/GENERATE_TREEVIEW      = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/GENERATE_MAN           = NO/GENERATE_MAN           = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/GENERATE_DOCBOOK       = NO/GENERATE_DOCBOOK       = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/CALL_GRAPH             = NO/CALL_GRAPH             = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/CALLER_GRAPH           = NO/CALLER_GRAPH           = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/TIMESTAMP              = NO/TIMESTAMP              = YES/g' ./$(DOXYGEN_FILE)
-#	sed -i 's/STRIP_FROM_PATH        =/STRIP_FROM_PATH        = ..\/..\/..\//g' ./$(DOXYGEN_FILE)
-
-
-
-.PHONY: doxygen create_Doxyfile
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
+# ############################################################################ #
+#                                LOG ALLES                                     #
+# ############################################################################ #
+#
+#	#### *** LOG ALLES *** ####
+#	### * STATIC ANALYSIS *
+#	### * LEAKS **
+#	### * DYNAMIC ANALYSIS *
+#	### * DEBUGGERS *
+#	### * DOC *
+#	### * TOOLS *
+#	### * EXTRAS *
+#
+#
+#	### * STATIC ANALYSIS *
+#	## log_static_analysis
+#	## bear
+#	##-Wall -Wextra
+#	##-Wformat -Warray-bounds -Wnull-dereference -Wvla
+#	##-Weverything"
+#	##clang-tidy
+#	##--analyze -Xanalyzer -analyzer-checker=core
+#	## norminette
+#
+#
+#	### * LEAKS *
+#	## create_bins_leaks
+#	## log_leaks
+#	## VALGRIND = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s
+#	##--tool=massif
+#	##--tool=cachegrind 
+#	##--tool=callgrind
+#	## ASAN = -fsanitize=address
+#
+#
+#	### * DYNAMIC ANALYSIS *
+#	## test_egde_cases
+#	## test_main_cases
+#	## test_performance
+#
+#
+#	### * DEBUGGERS *
+#	## create_bins_dbg
+#	## run_debug-gdb
+#	## run_debug-lldb
+#	## run_debug-vscode
+#	## log_libs_nm_art
+#	## log_dbg_info
+#
+#
+#	### * DOC *
+#	##doxygen
+#
+#
+#	### * TOOLS *
+#	##test_make_performance
+#
+#
+#	### * EXTRAS *
+#	##test_run_visualizer
+#	##log_alles_bonus
+#
+#
+
+log_alles:
+	$(MAKE)
+	$(MAKE) log_static_analysis || true
+	$(MAKE) log_leaks || true
+	$(MAKE) log_dynamic_analysis_tests || true
+	$(MAKE) log_dbg_info || true
+	$(MAKE) log_doxygen || true
+	$(MAKE) log_make_performance || true
+	$(MAKE) test_run_visualizer || true
+
+log_alles_bonus:
+	$(MAKE) bonus
+	$(MAKE) log_static_analysis_bonus || true
+	$(MAKE) log_leaks_bonus || true
+	$(MAKE) log_dynamic_analysis_tests_bonus || true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ############################################################################ #
 #                          STATIC ANALYZERS                                    #
 # ############################################################################ #
 # *** static analyzer *** #
-warning_linting:
+log_static_analysis:
 	$(MAKE) bear
 	$(MAKE) bonus
 	$(MAKE) werror
@@ -971,12 +897,12 @@ werror_bonus:
 
 
 
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
+
 # ############################################################################ #
 #                                 LEAKS                                        #
 # ############################################################################ #
 # *** Leaks analyzer *** #
-leaks:
+log_leaks:
 	mkdir -p log/4.Bins_folder
 	$(MAKE) create_bins_leaks || true
 	$(MAKE) valgrind || true
@@ -1173,12 +1099,11 @@ asan:
 
 
 
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
 #                             DYNAMIC ANALYSIS TESTERS                         #
 # ############################################################################ #
 # *** Command to run all tests *** #
-testing_alles:
+log_dynamic_analysis_tests:
 	$(MAKE) testers_folder_build
 	$(MAKE) bonus
 	$(MAKE) tests_run 2>&1 | sed -r 's/\x1B\[[0-9;]*[mGKH]//g'| tee log/3.Unit_Testing/Testing_Report.txt
@@ -1367,27 +1292,6 @@ test_bonus:
 	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_100) | ./checker $(ARG_100) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_500) | ./checker $(ARG_500) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 
-# ************************************************************************ #
-#                          TESTERS VISUALIZER                              #
-# ************************************************************************ #
-test_visualizer_build: testers/push_swap_visualizer/build/bin/visualizer
-
-testers/push_swap_visualizer.tar.gz:
-	pipx install gdown
-	mkdir -p testers
-	gdown 'https://drive.google.com/uc?id=1xvaDfFKfIPTeiwLLu0K37YzJdesab_kx' -O $@
-#	file $@ | grep gzip > /dev/null
-#	if [ $$? -ne 0 ]; then echo "Error: Downloaded file is not a gzip archive!"; exit 1; fi
-
-testers/push_swap_visualizer: testers/push_swap_visualizer.tar.gz
-		tar -xzf $< -C testers/
-
-testers/push_swap_visualizer/build/bin/visualizer: testers/push_swap_visualizer
-
-test_visualizer_run: testers/push_swap_visualizer/build/bin/visualizer
-	./testers/push_swap_visualizer/build/bin/visualizer
-
-.PHONY: run_visualizer
 
 
 
@@ -1414,17 +1318,6 @@ test_visualizer_run: testers/push_swap_visualizer/build/bin/visualizer
 
 
 
-
-
-
-
-
-
-
-
-
-
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
 #                                DEBUGGERS                                     #
 # ############################################################################ #
@@ -1521,6 +1414,45 @@ make_dbg:
 
 
 
+# **************************************************************************** #
+#                                DOXYGEN         	                      	   #
+# **************************************************************************** #
+DOXYGEN_FILE = log/7.Doxygen/Doxygen
+DOXYGEN_PATH = log/7.Doxygen
+doxygen:
+	rm -rf $(DOXYGEN_PATH)
+	$(MAKE) create_Doxyfile
+	$(MAKE) doxfile_mod
+	doxygen ./$(DOXYGEN_FILE)
+	xdg-open log/7.Doxygen/html/index.html
+
+
+create_Doxyfile:
+	mkdir -p log/7.Doxygen
+	doxygen -g $(DOXYGEN_FILE)
+
+doxfile_mod:
+	sed -i 's/PROJECT_NAME           = "My Project"/PROJECT_NAME           = "$(NAME)"/g' ./$(DOXYGEN_FILE)
+	sed -i 's/PROJECT_BRIEF          = "My Project Brief"/PROJECT_BRIEF          = "$(NAME)"/g' ./$(DOXYGEN_FILE)
+	sed -i 's/OUTPUT_DIRECTORY       =/OUTPUT_DIRECTORY       = log\/7.Doxygen/g' ./$(DOXYGEN_FILE)
+	sed -i 's/OPTIMIZE_OUTPUT_FOR_C  = NO/OPTIMIZE_OUTPUT_FOR_C  = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/EXTRACT_ALL            = NO/EXTRACT_ALL            = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/HIDE_SCOPE_NAMES       = NO/HIDE_SCOPE_NAMES       = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/INPUT                  =/INPUT                  = src/g' ./$(DOXYGEN_FILE)
+	sed -i 's/RECURSIVE              = NO/RECURSIVE              = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/EXCLUDE                =/EXCLUDE                = src\/src_all/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_LATEX         = NO/GENERATE_LATEX         = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_TREEVIEW      = NO/GENERATE_TREEVIEW      = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_MAN           = NO/GENERATE_MAN           = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_DOCBOOK       = NO/GENERATE_DOCBOOK       = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/CALL_GRAPH             = NO/CALL_GRAPH             = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/CALLER_GRAPH           = NO/CALLER_GRAPH           = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/TIMESTAMP              = NO/TIMESTAMP              = YES/g' ./$(DOXYGEN_FILE)
+#	sed -i 's/STRIP_FROM_PATH        =/STRIP_FROM_PATH        = ..\/..\/..\//g' ./$(DOXYGEN_FILE)
+
+
+
+.PHONY: doxygen create_Doxyfile
 
 
 
@@ -1539,10 +1471,59 @@ make_dbg:
 
 
 
+
+
+
+
+
+
+
+
+# ************************************************************************ #
+#                          TESTERS VISUALIZER                              #
+# ************************************************************************ #
+test_visualizer_build: testers/push_swap_visualizer/build/bin/visualizer
+
+testers/push_swap_visualizer.tar.gz:
+	pipx install gdown
+	mkdir -p testers
+	gdown 'https://drive.google.com/uc?id=1xvaDfFKfIPTeiwLLu0K37YzJdesab_kx' -O $@
+#	file $@ | grep gzip > /dev/null
+#	if [ $$? -ne 0 ]; then echo "Error: Downloaded file is not a gzip archive!"; exit 1; fi
+
+testers/push_swap_visualizer: testers/push_swap_visualizer.tar.gz
+		tar -xzf $< -C testers/
+
+testers/push_swap_visualizer/build/bin/visualizer: testers/push_swap_visualizer
+
+test_visualizer_run: testers/push_swap_visualizer/build/bin/visualizer
+	./testers/push_swap_visualizer/build/bin/visualizer
+
+.PHONY: run_visualizer
+
+
+
+
+
+
+
+
+
+
+
+
+
+###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
 #                                HELPER                                        #
 # ############################################################################ #
-
+# *** Hello message *** #
+hello:
+	@echo "$(GRAY)\n################################################$(RESET)"
+	@echo "$(GRAY)# Hello, $(USER)! $(shell date)$(RESET)"
+	@echo "$(GRAY)# Welcome to Makefile for:$(BLUE) $(NAME)!$(RESET)"
+	@echo "$(GRAY)################################################$(RESET)"
+	echo "---"
 # *** Build message of timestamps changes *** #
 check_up_to_date:
 	if [ ! -f "$(NAME)" ]; then \
@@ -1563,17 +1544,6 @@ check_up_to_date:
 			exit 0; \
 		fi; \
 	fi
-#### Check if $(NAME) exists. If not, skip the up-to-date check.
-#### If $(NAME) exists, check if any source files are newer.
-
-# *** Hello message *** #
-hello:
-	@echo "$(GRAY)\n################################################$(RESET)"
-	@echo "$(GRAY)# Hello, $(USER)! $(shell date)$(RESET)"
-	@echo "$(GRAY)# Welcome to Makefile for:$(BLUE) $(NAME)!$(RESET)"
-	@echo "$(GRAY)################################################$(RESET)"
-	echo "---"
-
 # *** Build folders *** #
 folders_lns_build:
 	@echo "Running folder_lns_builder..."
