@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/15 13:35:26 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/16 13:57:44 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,6 +93,7 @@
 # ************************************************************************ #
 # *** Name Output *** #
 NAME0 					= push_swap
+NAME_REPO				= https://github.com/diegonmarcos/algo
 
 # *** ../ or ../../ or empty *** # Libraries autocmactly already have the ../
 OUTPUT_PLACE 			=
@@ -142,7 +143,7 @@ CHECKER_BONUS_DIR = src/checker_bonus
 # DEPENDENCIES (NAMES AND SOURCES)										   #
 # ************************************************************************ #
 # *** Shared Libraries *** #
-LIB_SO 		=
+LIBS_SO 		=
 
 
 # *** Library *.a (libraries to be included) THE ORDER MATTERS!!! *** #
@@ -150,7 +151,7 @@ LIBS_DIR 	= libs
 
 LIB_1_NAME 	= mylibc
 LIB_1_PATH 	= libs/mylibc
-LIB_1_FILE 	= libs/$(LIB_1_PATH)/lib$(LIB_1_NAME).a
+LIB_1_FILE 	= $(LIB_1_PATH)/lib$(LIB_1_NAME).a
 LIB_1_REPO 	= https://github.com/diegonmarcos/mylib.git
 
 LIB_2_NAME 	= 0
@@ -178,7 +179,7 @@ PIC 				= -fPIC
 LIB_LINK_STATIC 	= ar rcs
 #LIB_LINK_DYNAMIC 	= shared
 RM 					= rm -rf
-GCL 				= git clone
+GCL 				= git clone --depth=1
 WGET 				= wget
 
 
@@ -215,17 +216,12 @@ NAME1 			= $(OUTPUT_PLACE)$(NAME0)
 ifeq ($(IS_PROGRAM_AND_NOT_LIB), 1)
 	NAME 		= $(NAME1)
 else
-	NAME		= ../lib$(NAME1).a
+	NAME		= lib$(NAME1).a
 endif
 
 # *** Source Files .c Definition path *** #
 SOURCE_SRC_ALL 	= $(addprefix src/src_all/,$(SOURCE_MAIN)) $(addprefix src/src_all/,$(SOURCE_FILES))
-
-# *** Source Files .c Definition path *** #
 SOURCES			= $(SOURCE_MAIN) $(SOURCE_FILES)
-
-# *** Bonus Source Files .c Definition path *** #
-CHECKER_BUILD 	= $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 
 # ************************************************************************ #
 #                         OBJECTS AND DEPENDENCIES                         #
@@ -250,22 +246,29 @@ OBJECTS = $(OBJECTS_MAIN) $(OBJECTS_LIB)
 # *** Include or not a library (REMEBER TO MANAGE DEPENDECIES OF THE LIBRARIES, the root library comes after the child)
 LDFLAGS			:=
 CFLAGS_INCL 	= -I$(HEADER_DIR)
+LIBS_PATH 		:= $(LIBS_SO)
 ifneq ($(LIB_1_NAME), 0)
 	LDFLAGS 	+= -L$(LIB_1_PATH) -l$(LIB_1_NAME)
 	CFLAGS_INCL += -I$(LIB_1_PATH)/inc
+	LIBS_PATH 	+= $(LIB_1_FILE)
 endif
 ifneq ($(LIB_2_NAME), 0)
-	LDFLAGS 	+= -l$(LIB_2_NAME)
+	LDFLAGS 	+= -L$(LIB_2_PATH) -l$(LIB_2_NAME)
 	CFLAGS_INCL += -I$(LIB_2_PATH)/inc
+	LIBS_PATH 	+= $(LIB_2_FILE)
 endif
 ifneq ($(LIB_3_NAME), 0)
-	LDFLAGS 	+= -l$(LIB_3_NAME)
+	LDFLAGS 	+= -L$(LIB_3_PATH) -l$(LIB_3_NAME)
 	CFLAGS_INCL += -I$(LIB_3_PATH)/inc
+	LIBS_PATH 	+= $(LIB_3_FILE)
 endif
 ifneq ($(LIB_4_NAME), 0)
-	LDFLAGS 	+= -l$(LIB_4_NAME)
-	CFLAGS_INCL += -I$(LIB_3_PATH)/inc
+	LDFLAGS 	+= -L$(LIB_4_PATH) -l$(LIB_4_NAME)
+	CFLAGS_INCL += -I$(LIB_4_PATH)/inc
+	LIBS_PATH 	+= $(LIB_4_FILE)
 endif
+
+LIB_PROGRAM 	= -Llibs -l$(NAME0)
 
 # ************************************************************************ #
 #                         VERBOSE AND DEBUG		                           #
@@ -297,9 +300,11 @@ ifneq ($(ALGO),0)
 endif
 
 
-
-
-
+# ************************************************************************ #
+#                         BONUS HELPERSº		                           #
+# ************************************************************************ #
+# *** Bonus Source Files .c Definition path *** #
+CHECKER_BUILD 	= $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 
 
 
@@ -374,123 +379,89 @@ endif
 # ************************************************************************ #
 
 # ************************************************************************ #
-# .DEFAULT_GOAL:= build_system_pipeline
-# build_system_pipeline:
-# 	$(MAKE) check_up_to_date
-# 	$(MAKE) build_enviroment_folders
-# 	$(MAKE) build_dependencies_docker
-# 	$(MAKE) build_enviroment_docker
-# 	$(MAKE) build_dependencies_libraries
-# 	$(MAKE) compile_libs_objects
-# 	$(MAKE) compile_program_objects
-# 	$(MAKE) archive_lib_program
-# 	$(MAKE) archive_lib_program_merged
-# 	$(MAKE) link_main_program
-# 	$(MAKE) check_up_to_date
+.DEFAULT_GOAL:= build_system_pipeline
+
+build_system_pipeline:
+	$(MAKE) hello
+	$(MAKE) check_up_to_date
+	$(MAKE) build_enviroment_folders
+	$(MAKE) build_dependencies_docker
+	$(MAKE) build_enviroment_docker
+	$(MAKE) build_dependencies_libraries
+#	$(MAKE) compile_program_lib_objects
+	$(MAKE) archive_lib_program
+	$(MAKE) archive_lib_program_merged
+#	$(MAKE) compile_program_main_object
+	$(MAKE) link_main_program
+	$(MAKE) dbg_rules
+	$(MAKE) check_up_to_date
 
 # ************************************************************************ #
 
 build_enviroment_folders:
-	mkdir -p log
-	mkdir -p log/1.Warning_linting
+	$(MAKE) folders_build
 
 build_dependencies_docker:
-	$(MAKE) docker_install
+#	$(MAKE) docker_install
 
 build_enviroment_docker:
-	$(MAKE) dockerfile
-	$(MAKE) docker_run
+	$(MAKE) build_docker
+#	$(MAKE) run_docker
 
 build_dependencies_libraries:
-	$(MAKE) libs_build
-
-compile_libs_objects:
+ifneq ($(LIB_1_NAME), 0)
+	$(GCL) $(LIB_1_REPO) $(LIB_1_PATH) || true
+	git -C $(LIB_1_PATH) pull
 	$(MAKE) -C $(LIB_1_PATH) MAKEFLAGS=""
-	@echo "$(YELLOW)(•̀ᴗ•́)و $@ Done!$(RESET)"
+endif
+ifneq ($(LIB_2_NAME), 0)
+	$(GCL) $(LIB_2_REPO) $(LIB_2_PATH)
+	git -C $(LIB_2_PATH) pull
+	$(MAKE) -C $(LIB_2_PATH) MAKEFLAGS=""
+endif
+ifneq ($(LIB_3_NAME), 0)
+	$(GCL) $(LIB_3_REPO) $(LIB_3_PATH)
+	git -C $(LIB_3_PATH) pull
+	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS=""
+endif
+ifneq ($(LIB_4_NAME), 0)
+	$(GCL) $(LIB_4_REPO) $(LIB_4_PATH)
+	git -C $(LIB_4_PATH) pull
+	$(MAKE) -C $(LIB_4_PATH) MAKEFLAGS=""
+endif
+	@echo "$(GRAY)(•̀ᴗ•́)و $@ Build Dependencies done!$(RESET)"
 
-compile_program_objects:
-	$(MAKE) $(OBJECTS)
+#compile_program_lib_objects:
+objs/%.o:	%.c
+	$(COMPILER) $(PIC) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) $(MACROS) -c $< -o $@
+	@echo "$(GRAY)()و $@ $(NAME) Compiling Objects done!$(RESET)"
 
-archive_lib_program:
-	$(MAKE) lib
+LIB_OUTPUT_0="libs/lib$(NAME0)_0.a"
+archive_lib_program: $(OBJECTS_LIB)
+	$(LIB_LINK_STATIC) $(LIB_OUTPUT_0) $(OBJECTS_LIB)
+	@echo "  $(GRAY)(•̀ᴗ•́)و lib$(NAME)_0.a Library done!$(RESET)"
 
+LIB_OUTPUT="libs/lib$(NAME0).a"
 archive_lib_program_merged:
-	$(MAKE) combine_libs
+	echo "GROUP ( $(LIB_OUTPUT_0) $(LIBS_PATH) )" > $(LIB_OUTPUT)
+	echo "  $(GRAY)(•̀ᴗ•́)و lib$(NAME).a Library Merged Referenced done!$(RESET)"
+
+#compile_program_main_object:
 
 link_main_program:
-	$(MAKE) program
-
-
-
-# ************************************************************************ #
-.DEFAULT_GOAL:= build_dependencies
-# *** Default rule *** #
-build_dependencies:
-	$(MAKE) libs_build
-	$(MAKE) check_up_to_date
-
-# *** Build the library included (MAKEFLAGS="" this not inherit env variables from father*** #
-libs_build:
-ifeq ($(BUILD_LIBRARY), 1)
-	$(MAKE) -C $(LIB_1_PATH) MAKEFLAGS=""
-#	@echo "$(YELLOW)(•̀ᴗ•́)و $@ Done!$(RESET)"
-else
-#	@echo "$(GRAY)Skipping library build$(RESET)"
-endif
-
-
-# ************************************************************************ #
-#                               MAIN                                       #
-# ************************************************************************ #
-# *** Default rule *** #
-build_project:
-	$(MAKE) hello
-	$(MAKE) folders_build
-#	$(MAKE) folders_lns_build
-	$(MAKE) program_or_lib
-	$(MAKE) dbg_rules
-
-# *** Compiling the source files into object files *** #
-objs/%.o:	%.c
-	mkdir -p objs
-	$(COMPILER) $(PIC) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) $(MACROS) -c $< -o $@
-	@echo "$(GRAY)()و $@ $(NAME) Compiling Objects !$(RESET)"
-
-# *** Is program or a Lib? ***
-program_or_lib:
 ifeq ($(IS_PROGRAM_AND_NOT_LIB), 1)
-	echo "  $(YELLOW)Linking a Program$(RESET)"
-	$(MAKE) LIB_OUTPUT="libs/lib$(NAME0).a" lib
-	$(MAKE) program
+	$(MAKE) compile_program_main_object1
+compile_program_main_object1: $(OBJECTS_MAIN)
+	$(COMPILER) $(OBJECTS_MAIN) $(LIB_PROGRAM) $(LDFLAGS) $(CFLAG_ASAN) -o $(NAME)
+	@echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
 else
-	echo "  $(YELLOW)Linking a Lib$(RESET)"
-	$(MAKE) LIB_OUTPUT=$(NAME) lib
+	cp $(LIB_OUTPUT) $(NAME)
+	@echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Library Generated!$(RESET)"
 endif
 
-# *** Linking the object files into a library *** #
-lib:	$(OBJECTS_LIB)
-	$(LIB_LINK_STATIC) $(LIB_OUTPUT) $(OBJECTS_LIB)
-	@echo "  $(YELLOW)(•̀ᴗ•́)و lib$(NAME).a Library Generated!$(RESET)"
 
-# *** Linking the object files into the program *** #
-program: $(OBJECTS)
-	$(COMPILER) $(OBJECTS_MAIN) -Llibs -l$(NAME0) $(LDFLAGS) $(CFLAG_ASAN) -o $(NAME)
-	@echo "  $(YELLOW)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
-	$(MAKE) check_up_to_date
 
 # ************************************************************************ #
-#                               OTHERS                                     #
-# ************************************************************************ #
-# *** Combine the program library with the included libraries *** #
-combine_libs:
-ifeq ($(INCLUDE_LIB), 1)
-	echo "Creating combined library reference..."
-	echo "GROUP ( libmylibx.a libs/minilibx_linux/libmlx.a -lXext -lX11 -lm )" > libmylibx_.a
-	echo "  $(YELLOW)(•̀ᴗ•́)و libmylibx_combined.a Library reference created!$(RESET)"
-else
-	@echo "$(GRAY)Skipping library merge$(RESET)"
-endif
-
 dbg_rules:
 ifeq ($(DBG),1)
 	cp $(NAME0) log/4.Bins_folder/push_swap_g3
@@ -500,7 +471,33 @@ endif
 all: $(NAME)
 
 $(NAME):
-	$(MAKE) build_dependencies
+	$(MAKE) build_system_pipeline
+
+# ************************************************************************ #
+
+
+# *** Bonus Rule *** #
+bonus:
+	$(MAKE)
+	$(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # ############################################################################ #
 #                                 RULES/RECLEAN                                #
@@ -523,32 +520,27 @@ fclean:	clean
 ifeq ($(BONUS),1)
 	$(MAKE) fclean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 endif
-	@echo	"$(RED)	¯\_(ツ)_/¯ OBJECTS REMOVED!$(RESET)"
 	@echo	"$(RED)		(╯°□°）╯︵ ┻━┻ FILE, OBJ REMOVED!$(RESET)"
 
 # *** FClean+Build *** #
-re: fclean build_dependencies
+re: fclean build_system_pipeline
+
+
 
 # *** FClean+logs_folder *** #
 fclean_all:	fclean
 	$(RM) log
 	$(RM) testers
-	$(RM) make_docker.sh
+	$(RM) Makedocker.sh
 	if [ -f imgui.ini ]; then \
 		rm imgui.ini; \
 	fi
 	@echo	"$(RED)			(╯°□°）╯︵ ┻━┻ FILE, OBJ AND LOG REMOVED!$(RESET)"
 
 # *** Re_all *** #
-re_all: fclean_all build_dependencies
+re_all: fclean_all build_system_pipeline
 
-# ############################################################################ #
-#                                BONUS		                                   #
-# ############################################################################ #
-# *** Bonus Rule *** #
-bonus:
-	$(MAKE)
-	$(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
+
 
 
 # ############################################################################ #
@@ -559,13 +551,13 @@ folders_build:
 	$(MAKE) folders_make_build
 	$(MAKE) folders_log_build
 
-# *** Build folders *** #
+# *** Build folders Make *** #
 folders_make_build:
 	mkdir -p inc
 	mkdir -p libs
 	mkdir -p objs
 
-# *** Build folders *** #
+# *** Build folders Log *** #
 folders_log_build:
 	mkdir -p log/1.Warning_linting
 	mkdir -p log/2.Memory_Check/logs
@@ -631,16 +623,18 @@ DARK_YELLOW =	\033[38;5;143m
 #                         DOCKER AND DEPENDENCIES                          	   #
 # **************************************************************************** #
 
-dockerfile:
+build_docker:
 	mkdir -p log/8.Docker
 	wget \
-	-O log/8.Docker/Make_docker.sh \
-	https://raw.githubusercontent.com/diegonmarcos/system/refs/heads/main/S1_docker/src/Make_docker.sh
-	chmod +x log/8.Docker/Make_docker.sh
-	ln -s log/8.Docker/Make_docker.sh Make_docker.sh
+	-O log/8.Docker/Makedocker.sh \
+	https://raw.githubusercontent.com/diegonmarcos/system/refs/heads/main/S2_docker/src/Makedocker_.sh
+	chmod +x log/8.Docker/Makedocker.sh
+	ln -s log/8.Docker/Makedocker.sh Makedocker.sh
+	./Makedocker.sh clear
+	./Makedocker.sh build
 
-docker_run:
-	./log/8.Docker/Make_docker.sh run
+run_docker:
+	./log/8.Docker/Makedocker.sh run
 
 build_dependencies_libs:
 #	sudo apt update
@@ -1523,20 +1517,19 @@ hello:
 	@echo "$(GRAY)# Hello, $(USER)! $(shell date)$(RESET)"
 	@echo "$(GRAY)# Welcome to Makefile for:$(BLUE) $(NAME)!$(RESET)"
 	@echo "$(GRAY)################################################$(RESET)"
-	echo "---"
+	echo ""
+
 # *** Build message of timestamps changes *** #
 check_up_to_date:
 	if [ ! -f "$(NAME)" ]; then \
 		echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
 		echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(YELLOW)STATUS: Bin does not exist. Building...$(RESET)"; \
 		echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
-		$(MAKE) build_project; \
 	else \
 		if find -L src/ inc/ libs/ -newer "$(NAME)" -print | grep -q .; then \
 			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
 			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(RED)STATUS: Some files have changed. Rebuilding...$(RESET)"; \
 			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
-			$(MAKE) build_project; \
 		else \
 			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
 			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(GREEN)STATUS: is up-to-date.$(RESET)"; \
@@ -1544,6 +1537,7 @@ check_up_to_date:
 			exit 0; \
 		fi; \
 	fi
+
 # *** Build folders *** #
 folders_lns_build:
 	@echo "Running folder_lns_builder..."
@@ -1625,6 +1619,68 @@ help:
 
 
 
+
+
+#####OLD TRASH
+
+
+# # ************************************************************************ #
+# # *** Default rule *** #
+# #.DEFAULT_GOAL:= build_dependencies
+
+# # *** Default rule *** #
+# build_dependencies:
+# 	$(MAKE) libs_build
+# 	$(MAKE) check_up_to_date
+
+# # *** Build the library included (MAKEFLAGS="" this not inherit env variables from father*** #
+# libs_build:
+# ifeq ($(BUILD_LIBRARY), 1)
+# 	$(MAKE) -C $(LIB_1_PATH) MAKEFLAGS=""
+# #	@echo "$(YELLOW)(•̀ᴗ•́)و $@ Done!$(RESET)"
+# else
+# #	@echo "$(GRAY)Skipping library build$(RESET)"
+# endif
+
+
+# # ************************************************************************ #
+# #                               MAIN                                       #
+# # ************************************************************************ #
+# # *** Default rule *** #
+# build_project:
+# 	$(MAKE) hello
+# 	$(MAKE) folders_build
+# #	$(MAKE) folders_lns_build
+# 	$(MAKE) program_or_lib
+# 	$(MAKE) dbg_rules
+
+# # *** Compiling the source files into object files *** #
+# #objs/%.o:	%.c
+# #	mkdir -p objs
+# #	$(COMPILER) $(PIC) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) $(MACROS) -c $< -o $@
+# #	@echo "$(GRAY)()و $@ $(NAME) Compiling Objects !$(RESET)"
+
+# # *** Is program or a Lib? ***
+# program_or_lib:
+# ifeq ($(IS_PROGRAM_AND_NOT_LIB), 1)
+# 	echo "  $(YELLOW)Linking a Program$(RESET)"
+# 	$(MAKE) LIB_OUTPUT="libs/lib$(NAME0).a" lib
+# 	$(MAKE) program
+# else
+# 	echo "  $(YELLOW)Linking a Lib$(RESET)"
+# 	$(MAKE) LIB_OUTPUT=$(NAME) lib
+# endif
+
+# # *** Linking the object files into a library *** #
+# lib:	$(OBJECTS_LIB)
+# 	$(LIB_LINK_STATIC) $(LIB_OUTPUT) $(OBJECTS_LIB)
+# 	@echo "  $(YELLOW)(•̀ᴗ•́)و lib$(NAME).a Library Generated!$(RESET)"
+
+# # *** Linking the object files into the program *** #
+# program: $(OBJECTS)
+# 	$(COMPILER) $(OBJECTS_MAIN) -Llibs -l$(NAME0) $(LDFLAGS) $(CFLAG_ASAN) -o $(NAME)
+# 	@echo "  $(YELLOW)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
+# 	$(MAKE) check_up_to_date
 
 
 
