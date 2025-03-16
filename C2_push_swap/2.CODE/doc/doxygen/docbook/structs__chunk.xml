@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structs__chunk" xml:lang="en-US">
+<title>s_chunk Struct Reference</title>
+<indexterm><primary>s_chunk</primary></indexterm>
+<para>
+<computeroutput>#include &lt;push_swap_data.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structs__chunk_1a3e202b201e6255d975cd6d3aff1f5a4d">min</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__chunk_1ae1e1dde676c120fa6d10f3bb2c14059e">max</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__chunk_1a439227feff9d7f55384e8780cfc2eb82">size</link></para>
+</listitem>
+            <listitem><para><link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> <link linkend="_structs__chunk_1a1474b6dcae1c37f5a354108144176ae1">position</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__chunk_1a382652e1b5eeb4df0195903e931deffb">size_parent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structs__chunk_1ae1e1dde676c120fa6d10f3bb2c14059e"/><section>
+    <title>max</title>
+<indexterm><primary>max</primary><secondary>s_chunk</secondary></indexterm>
+<indexterm><primary>s_chunk</primary><secondary>max</secondary></indexterm>
+<para><computeroutput>int max</computeroutput></para></section>
+<anchor xml:id="_structs__chunk_1a3e202b201e6255d975cd6d3aff1f5a4d"/><section>
+    <title>min</title>
+<indexterm><primary>min</primary><secondary>s_chunk</secondary></indexterm>
+<indexterm><primary>s_chunk</primary><secondary>min</secondary></indexterm>
+<para><computeroutput>int min</computeroutput></para></section>
+<anchor xml:id="_structs__chunk_1a1474b6dcae1c37f5a354108144176ae1"/><section>
+    <title>position</title>
+<indexterm><primary>position</primary><secondary>s_chunk</secondary></indexterm>
+<indexterm><primary>s_chunk</primary><secondary>position</secondary></indexterm>
+<para><computeroutput><link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> position</computeroutput></para></section>
+<anchor xml:id="_structs__chunk_1a439227feff9d7f55384e8780cfc2eb82"/><section>
+    <title>size</title>
+<indexterm><primary>size</primary><secondary>s_chunk</secondary></indexterm>
+<indexterm><primary>s_chunk</primary><secondary>size</secondary></indexterm>
+<para><computeroutput>int size</computeroutput></para></section>
+<anchor xml:id="_structs__chunk_1a382652e1b5eeb4df0195903e931deffb"/><section>
+    <title>size_parent</title>
+<indexterm><primary>size_parent</primary><secondary>s_chunk</secondary></indexterm>
+<indexterm><primary>s_chunk</primary><secondary>size_parent</secondary></indexterm>
+<para><computeroutput>int size_parent</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/<link linkend="_push__swap__data_8h">push_swap_data.h</link></section>
+</section>

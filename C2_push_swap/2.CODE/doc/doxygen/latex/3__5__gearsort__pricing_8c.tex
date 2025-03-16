@@ -1,0 +1,126 @@
+\doxysection{src/push\+\_\+swap/sort/gear/3\+\_\+5\+\_\+gearsort\+\_\+pricing.c File Reference}
+\hypertarget{3__5__gearsort__pricing_8c}{}\label{3__5__gearsort__pricing_8c}\index{src/push\_swap/sort/gear/3\_5\_gearsort\_pricing.c@{src/push\_swap/sort/gear/3\_5\_gearsort\_pricing.c}}
+{\ttfamily \#include "{}push\+\_\+swap.\+h"{}}\newline
+Include dependency graph for 3\+\_\+5\+\_\+gearsort\+\_\+pricing.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__5__gearsort__pricing_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{3__5__gearsort__pricing_8c_a94dad898050e696fa4f545c5639799f0}{gear\+\_\+sort\+\_\+pushswap}} (\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+\item 
+void \mbox{\hyperlink{3__5__gearsort__pricing_8c_ae86baab4f6dd3dc1ac734b5a3a862839}{sort\+\_\+gearing}} (char stack\+\_\+from, char stack\+\_\+to, int base\+\_\+case, \mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+\item 
+void \mbox{\hyperlink{3__5__gearsort__pricing_8c_af9133ed1b514fc90860dce150471e4cb}{sort\+\_\+move\+\_\+lower\+\_\+cost}} (char stack\+\_\+from, \mbox{\hyperlink{push__swap__data_8h_a8e0066cb4526b2d7f286d40f1489739f}{t\+\_\+move\+\_\+lower\+\_\+cost}} \texorpdfstring{$\ast$}{*}v, \mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+\item 
+int \mbox{\hyperlink{3__5__gearsort__pricing_8c_af609451518018dfea744bcf6d0914c82}{node\+\_\+pos\+\_\+locator}} (int value, \mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program, char type, char stack\+\_\+from)
+\item 
+int \mbox{\hyperlink{3__5__gearsort__pricing_8c_a6e6fbdc2b632f680e9d9bd82897ae254}{sort\+\_\+gearing\+\_\+is\+\_\+base\+\_\+case}} (int base\+\_\+case, \mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{3__5__gearsort__pricing_8c_a94dad898050e696fa4f545c5639799f0}\label{3__5__gearsort__pricing_8c_a94dad898050e696fa4f545c5639799f0} 
+\index{3\_5\_gearsort\_pricing.c@{3\_5\_gearsort\_pricing.c}!gear\_sort\_pushswap@{gear\_sort\_pushswap}}
+\index{gear\_sort\_pushswap@{gear\_sort\_pushswap}!3\_5\_gearsort\_pricing.c@{3\_5\_gearsort\_pricing.c}}
+\doxysubsubsection{\texorpdfstring{gear\_sort\_pushswap()}{gear\_sort\_pushswap()}}
+{\footnotesize\ttfamily void gear\+\_\+sort\+\_\+pushswap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__5__gearsort__pricing_8c_a94dad898050e696fa4f545c5639799f0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__5__gearsort__pricing_8c_a94dad898050e696fa4f545c5639799f0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{3__5__gearsort__pricing_8c_af609451518018dfea744bcf6d0914c82}\label{3__5__gearsort__pricing_8c_af609451518018dfea744bcf6d0914c82} 
+\index{3\_5\_gearsort\_pricing.c@{3\_5\_gearsort\_pricing.c}!node\_pos\_locator@{node\_pos\_locator}}
+\index{node\_pos\_locator@{node\_pos\_locator}!3\_5\_gearsort\_pricing.c@{3\_5\_gearsort\_pricing.c}}
+\doxysubsubsection{\texorpdfstring{node\_pos\_locator()}{node\_pos\_locator()}}
+{\footnotesize\ttfamily int node\+\_\+pos\+\_\+locator (\begin{DoxyParamCaption}\item[{int}]{value,  }\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program,  }\item[{char}]{type,  }\item[{char}]{stack\+\_\+from }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{3__5__gearsort__pricing_8c_af609451518018dfea744bcf6d0914c82_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__5__gearsort__pricing_8c_af609451518018dfea744bcf6d0914c82_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{3__5__gearsort__pricing_8c_ae86baab4f6dd3dc1ac734b5a3a862839}\label{3__5__gearsort__pricing_8c_ae86baab4f6dd3dc1ac734b5a3a862839} 
+\index{3\_5\_gearsort\_pricing.c@{3\_5\_gearsort\_pricing.c}!sort\_gearing@{sort\_gearing}}
+\index{sort\_gearing@{sort\_gearing}!3\_5\_gearsort\_pricing.c@{3\_5\_gearsort\_pricing.c}}
+\doxysubsubsection{\texorpdfstring{sort\_gearing()}{sort\_gearing()}}
+{\footnotesize\ttfamily void sort\+\_\+gearing (\begin{DoxyParamCaption}\item[{char}]{stack\+\_\+from,  }\item[{char}]{stack\+\_\+to,  }\item[{int}]{base\+\_\+case,  }\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__5__gearsort__pricing_8c_ae86baab4f6dd3dc1ac734b5a3a862839_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__5__gearsort__pricing_8c_ae86baab4f6dd3dc1ac734b5a3a862839_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{3__5__gearsort__pricing_8c_a6e6fbdc2b632f680e9d9bd82897ae254}\label{3__5__gearsort__pricing_8c_a6e6fbdc2b632f680e9d9bd82897ae254} 
+\index{3\_5\_gearsort\_pricing.c@{3\_5\_gearsort\_pricing.c}!sort\_gearing\_is\_base\_case@{sort\_gearing\_is\_base\_case}}
+\index{sort\_gearing\_is\_base\_case@{sort\_gearing\_is\_base\_case}!3\_5\_gearsort\_pricing.c@{3\_5\_gearsort\_pricing.c}}
+\doxysubsubsection{\texorpdfstring{sort\_gearing\_is\_base\_case()}{sort\_gearing\_is\_base\_case()}}
+{\footnotesize\ttfamily int sort\+\_\+gearing\+\_\+is\+\_\+base\+\_\+case (\begin{DoxyParamCaption}\item[{int}]{base\+\_\+case,  }\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__5__gearsort__pricing_8c_a6e6fbdc2b632f680e9d9bd82897ae254_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__5__gearsort__pricing_8c_a6e6fbdc2b632f680e9d9bd82897ae254_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{3__5__gearsort__pricing_8c_af9133ed1b514fc90860dce150471e4cb}\label{3__5__gearsort__pricing_8c_af9133ed1b514fc90860dce150471e4cb} 
+\index{3\_5\_gearsort\_pricing.c@{3\_5\_gearsort\_pricing.c}!sort\_move\_lower\_cost@{sort\_move\_lower\_cost}}
+\index{sort\_move\_lower\_cost@{sort\_move\_lower\_cost}!3\_5\_gearsort\_pricing.c@{3\_5\_gearsort\_pricing.c}}
+\doxysubsubsection{\texorpdfstring{sort\_move\_lower\_cost()}{sort\_move\_lower\_cost()}}
+{\footnotesize\ttfamily void sort\+\_\+move\+\_\+lower\+\_\+cost (\begin{DoxyParamCaption}\item[{char}]{stack\+\_\+from,  }\item[{\mbox{\hyperlink{push__swap__data_8h_a8e0066cb4526b2d7f286d40f1489739f}{t\+\_\+move\+\_\+lower\+\_\+cost}} \texorpdfstring{$\ast$}{*}}]{v,  }\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__5__gearsort__pricing_8c_af9133ed1b514fc90860dce150471e4cb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__5__gearsort__pricing_8c_af9133ed1b514fc90860dce150471e4cb_icgraph}
+\end{center}
+\end{figure}

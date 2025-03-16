@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:30:32 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 09:38:21 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/16 15:07:18 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,8 @@
 void	error_handling_input_1(t_list_program *list_program)
 {
 	char	**argv_1;
-	int		argc;
 	int		size;
 
-	argc = list_program->argc;
 	argv_1 = list_program->stack_a_array;
 	size = list_program->stack_a_size;
 	if (ft_strcmp_duplicate_inter(argv_1)

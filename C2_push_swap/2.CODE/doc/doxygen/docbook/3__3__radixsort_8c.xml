@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__3__radixsort_8c" xml:lang="en-US">
+<title>src/push_swap/sort/radix/3_3_radixsort.c File Reference</title>
+<indexterm><primary>src/push_swap/sort/radix/3_3_radixsort.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_3_radixsort.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__radixsort_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_3__3__radixsort_8c_1afe4cfd19820a440051688b50dec1b4ce">max_node_finder</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> **stack, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__3__radixsort_8c_1ab6eef28b44540c8e841c0549a0ce8432">radix_sort_pushswap</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__3__radixsort_8c_1a3c78219d9c39f549c7c051d6f3df2de2">radix_sort_step</link> (int bit, int size, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_3__3__radixsort_8c_1afe4cfd19820a440051688b50dec1b4ce"/><section>
+    <title>max_node_finder()</title>
+<indexterm><primary>max_node_finder</primary><secondary>3_3_radixsort.c</secondary></indexterm>
+<indexterm><primary>3_3_radixsort.c</primary><secondary>max_node_finder</secondary></indexterm>
+<para><computeroutput>int max_node_finder (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> ** stack, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__radixsort_8c_afe4cfd19820a440051688b50dec1b4ce_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__3__radixsort_8c_1ab6eef28b44540c8e841c0549a0ce8432"/><section>
+    <title>radix_sort_pushswap()</title>
+<indexterm><primary>radix_sort_pushswap</primary><secondary>3_3_radixsort.c</secondary></indexterm>
+<indexterm><primary>3_3_radixsort.c</primary><secondary>radix_sort_pushswap</secondary></indexterm>
+<para><computeroutput>void radix_sort_pushswap (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__radixsort_8c_ab6eef28b44540c8e841c0549a0ce8432_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__radixsort_8c_ab6eef28b44540c8e841c0549a0ce8432_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__3__radixsort_8c_1a3c78219d9c39f549c7c051d6f3df2de2"/><section>
+    <title>radix_sort_step()</title>
+<indexterm><primary>radix_sort_step</primary><secondary>3_3_radixsort.c</secondary></indexterm>
+<indexterm><primary>3_3_radixsort.c</primary><secondary>radix_sort_step</secondary></indexterm>
+<para><computeroutput>void radix_sort_step (int bit, int size, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__radixsort_8c_a3c78219d9c39f549c7c051d6f3df2de2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__radixsort_8c_a3c78219d9c39f549c7c051d6f3df2de2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

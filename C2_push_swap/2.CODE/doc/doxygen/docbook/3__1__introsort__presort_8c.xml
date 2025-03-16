@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__1__introsort__presort_8c" xml:lang="en-US">
+<title>src/push_swap/sort/presorting/3_1_introsort_presort.c File Reference</title>
+<indexterm><primary>src/push_swap/sort/presorting/3_1_introsort_presort.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_1_introsort_presort.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__1__introsort__presort_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

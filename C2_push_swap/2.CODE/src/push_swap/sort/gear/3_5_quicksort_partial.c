@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 09:38:21 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/16 15:05:46 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,11 @@ void	pivot_calculation_partial(t_chunk *chunk_to_sort, \
 static void	merge_back_and_sort(t_chunk *chunk_to_sort, \
 				t_splits *split_chunks, t_list_program *list_program)
 {
-	t_list_dls	**stack_a;
 	t_list_dls	**stack_b;
 	int			i;
 	t_chunk		chunk_to_sort_new;
 
 	printer_dbg_split(MERGE_AS, split_chunks, list_program);
-	stack_a = list_program->stack_a;
 	stack_b = list_program->stack_b;
 	i = split_chunks->mid.size;
 	while (i-- > 0)

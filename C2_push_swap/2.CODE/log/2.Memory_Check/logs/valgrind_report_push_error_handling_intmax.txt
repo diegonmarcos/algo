@@ -1,0 +1,75 @@
+==533928== Memcheck, a memory error detector
+==533928== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==533928== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==533928== Command: ./log/4.Bins_folder/push_swap_g 2147483648\ 3\ 2\ 1
+==533928== Parent PID: 533927
+==533928== 
+==533928== 
+==533928== Process terminating with default action of signal 2 (SIGINT)
+==533928==    at 0x10CA82: ft_memset (src/src_all/1c_0_ft_memset.c:57)
+==533928==    by 0x10CA4E: ft_bzero (src/src_all/1c_0_ft_memset.c:47)
+==533928==    by 0x10BEB7: ft_calloc (src/src_all/1a_ft_calloc.c:46)
+==533928==    by 0x10BEF0: ft_calloc_ (src/src_all/1a_ft_calloc.c:52)
+==533928==    by 0x10BF93: ft_calloc_2d (src/src_all/1a_ft_calloc.c:68)
+==533928==    by 0x1092FC: data_alloc (src/src_all/1_0_mem_alloc.c:31)
+==533928==    by 0x10925C: main (src/src_all/push_swap.c:79)
+==533928== 
+==533928== HEAP SUMMARY:
+==533928==     in use at exit: 63,260,081 bytes in 6,326 blocks
+==533928==   total heap usage: 6,326 allocs, 0 frees, 63,260,081 bytes allocated
+==533928== 
+==533928== 8 bytes in 1 blocks are still reachable in loss record 1 of 6
+==533928==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==533928==    by 0x109362: data_alloc_vars (src/src_all/1_0_mem_alloc.c:44)
+==533928==    by 0x1092E2: data_alloc (src/src_all/1_0_mem_alloc.c:30)
+==533928==    by 0x10925C: main (src/src_all/push_swap.c:79)
+==533928== 
+==533928== 8 bytes in 1 blocks are still reachable in loss record 2 of 6
+==533928==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==533928==    by 0x109377: data_alloc_vars (src/src_all/1_0_mem_alloc.c:45)
+==533928==    by 0x1092E2: data_alloc (src/src_all/1_0_mem_alloc.c:30)
+==533928==    by 0x10925C: main (src/src_all/push_swap.c:79)
+==533928== 
+==533928== 17 bytes in 4 blocks are still reachable in loss record 3 of 6
+==533928==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==533928==    by 0x10BE89: ft_calloc (src/src_all/1a_ft_calloc.c:43)
+==533928==    by 0x1105F0: ft_calloc_fd (src/src_all/1a_ft_calloc_fd.c:23)
+==533928==    by 0x10DF7C: ft_substr (src/src_all/1d_ft_strtok_split1.c:44)
+==533928==    by 0x10DB5D: ft_split (src/src_all/1d_ft_strtok_split.c:80)
+==533928==    by 0x109409: data_alloc_vars (src/src_all/1_0_mem_alloc.c:56)
+==533928==    by 0x1092E2: data_alloc (src/src_all/1_0_mem_alloc.c:30)
+==533928==    by 0x10925C: main (src/src_all/push_swap.c:79)
+==533928== 
+==533928== 40 bytes in 1 blocks are still reachable in loss record 4 of 6
+==533928==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==533928==    by 0x10BE89: ft_calloc (src/src_all/1a_ft_calloc.c:43)
+==533928==    by 0x1105F0: ft_calloc_fd (src/src_all/1a_ft_calloc_fd.c:23)
+==533928==    by 0x10DA3D: ft_split (src/src_all/1d_ft_strtok_split.c:66)
+==533928==    by 0x109409: data_alloc_vars (src/src_all/1_0_mem_alloc.c:56)
+==533928==    by 0x1092E2: data_alloc (src/src_all/1_0_mem_alloc.c:30)
+==533928==    by 0x10925C: main (src/src_all/push_swap.c:79)
+==533928== 
+==533928== 80,008 bytes in 1 blocks are still reachable in loss record 5 of 6
+==533928==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==533928==    by 0x10BE89: ft_calloc (src/src_all/1a_ft_calloc.c:43)
+==533928==    by 0x10BEF0: ft_calloc_ (src/src_all/1a_ft_calloc.c:52)
+==533928==    by 0x10BF4B: ft_calloc_2d (src/src_all/1a_ft_calloc.c:62)
+==533928==    by 0x1092FC: data_alloc (src/src_all/1_0_mem_alloc.c:31)
+==533928==    by 0x10925C: main (src/src_all/push_swap.c:79)
+==533928== 
+==533928== 63,180,000 bytes in 6,318 blocks are still reachable in loss record 6 of 6
+==533928==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==533928==    by 0x10BE89: ft_calloc (src/src_all/1a_ft_calloc.c:43)
+==533928==    by 0x10BEF0: ft_calloc_ (src/src_all/1a_ft_calloc.c:52)
+==533928==    by 0x10BF93: ft_calloc_2d (src/src_all/1a_ft_calloc.c:68)
+==533928==    by 0x1092FC: data_alloc (src/src_all/1_0_mem_alloc.c:31)
+==533928==    by 0x10925C: main (src/src_all/push_swap.c:79)
+==533928== 
+==533928== LEAK SUMMARY:
+==533928==    definitely lost: 0 bytes in 0 blocks
+==533928==    indirectly lost: 0 bytes in 0 blocks
+==533928==      possibly lost: 0 bytes in 0 blocks
+==533928==    still reachable: 63,260,081 bytes in 6,326 blocks
+==533928==         suppressed: 0 bytes in 0 blocks
+==533928== 
+==533928== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

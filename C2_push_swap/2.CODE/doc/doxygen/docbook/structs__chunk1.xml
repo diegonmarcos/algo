@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structs__chunk1" xml:lang="en-US">
+<title>s_chunk1 Struct Reference</title>
+<indexterm><primary>s_chunk1</primary></indexterm>
+<para>
+<computeroutput>#include &lt;push_swap_data.h&gt;</computeroutput>
+</para>
+Collaboration diagram for s_chunk1:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structs__chunk1__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structs__chunk1_1a3e202b201e6255d975cd6d3aff1f5a4d">min</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__chunk1_1ae1e1dde676c120fa6d10f3bb2c14059e">max</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__chunk1_1ae8a0f863600c41c1992ce3f5d8dd5934">pivot1</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__chunk1_1aa4398c7e0d664cbbaea70944740343b1">pivot2</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structs__chunk1">s_chunk1</link> * <link linkend="_structs__chunk1_1a9ad8081ef0d1f3c29c4aeb59630dd00a">split_chunks_max</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structs__chunk1">s_chunk1</link> * <link linkend="_structs__chunk1_1a106e100ab6ff0a1bef7ba7e3c9b004fb">split_chunks_mid</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structs__chunk1">s_chunk1</link> * <link linkend="_structs__chunk1_1a1a3f4b31128868fb572f74c59f34911f">split_chunks_min</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structs__chunk1_1ae1e1dde676c120fa6d10f3bb2c14059e"/><section>
+    <title>max</title>
+<indexterm><primary>max</primary><secondary>s_chunk1</secondary></indexterm>
+<indexterm><primary>s_chunk1</primary><secondary>max</secondary></indexterm>
+<para><computeroutput>int max</computeroutput></para></section>
+<anchor xml:id="_structs__chunk1_1a3e202b201e6255d975cd6d3aff1f5a4d"/><section>
+    <title>min</title>
+<indexterm><primary>min</primary><secondary>s_chunk1</secondary></indexterm>
+<indexterm><primary>s_chunk1</primary><secondary>min</secondary></indexterm>
+<para><computeroutput>int min</computeroutput></para></section>
+<anchor xml:id="_structs__chunk1_1ae8a0f863600c41c1992ce3f5d8dd5934"/><section>
+    <title>pivot1</title>
+<indexterm><primary>pivot1</primary><secondary>s_chunk1</secondary></indexterm>
+<indexterm><primary>s_chunk1</primary><secondary>pivot1</secondary></indexterm>
+<para><computeroutput>int pivot1</computeroutput></para></section>
+<anchor xml:id="_structs__chunk1_1aa4398c7e0d664cbbaea70944740343b1"/><section>
+    <title>pivot2</title>
+<indexterm><primary>pivot2</primary><secondary>s_chunk1</secondary></indexterm>
+<indexterm><primary>s_chunk1</primary><secondary>pivot2</secondary></indexterm>
+<para><computeroutput>int pivot2</computeroutput></para></section>
+<anchor xml:id="_structs__chunk1_1a9ad8081ef0d1f3c29c4aeb59630dd00a"/><section>
+    <title>split_chunks_max</title>
+<indexterm><primary>split_chunks_max</primary><secondary>s_chunk1</secondary></indexterm>
+<indexterm><primary>s_chunk1</primary><secondary>split_chunks_max</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_structs__chunk1">s_chunk1</link>* split_chunks_max</computeroutput></para></section>
+<anchor xml:id="_structs__chunk1_1a106e100ab6ff0a1bef7ba7e3c9b004fb"/><section>
+    <title>split_chunks_mid</title>
+<indexterm><primary>split_chunks_mid</primary><secondary>s_chunk1</secondary></indexterm>
+<indexterm><primary>s_chunk1</primary><secondary>split_chunks_mid</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_structs__chunk1">s_chunk1</link>* split_chunks_mid</computeroutput></para></section>
+<anchor xml:id="_structs__chunk1_1a1a3f4b31128868fb572f74c59f34911f"/><section>
+    <title>split_chunks_min</title>
+<indexterm><primary>split_chunks_min</primary><secondary>s_chunk1</secondary></indexterm>
+<indexterm><primary>s_chunk1</primary><secondary>split_chunks_min</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_structs__chunk1">s_chunk1</link>* split_chunks_min</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/<link linkend="_push__swap__data_8h">push_swap_data.h</link></section>
+</section>

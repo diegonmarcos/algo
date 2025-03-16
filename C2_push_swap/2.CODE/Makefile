@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/16 13:57:44 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/16 17:25:54 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,6 +104,8 @@ INCLUDE_LIB 			= 1
 BUILD_LIBRARY 			= 1
 BONUS 					= 1
 VERBOSE 				= 0
+DOCKER					= 0
+DBG 					= 0
 
 # ************************************************************************ #
 # *** Files source *.c *** #
@@ -150,9 +152,9 @@ LIBS_SO 		=
 LIBS_DIR 	= libs
 
 LIB_1_NAME 	= mylibc
-LIB_1_PATH 	= libs/mylibc
+LIB_1_PATH 	= libs/mylibs/mylibc
 LIB_1_FILE 	= $(LIB_1_PATH)/lib$(LIB_1_NAME).a
-LIB_1_REPO 	= https://github.com/diegonmarcos/mylib.git
+LIB_1_REPO 	= https://github.com/diegonmarcos/mylibs.git
 
 LIB_2_NAME 	= 0
 LIB_2_PATH 	= 
@@ -274,9 +276,9 @@ LIB_PROGRAM 	= -Llibs -l$(NAME0)
 #                         VERBOSE AND DEBUG		                           #
 # ************************************************************************ #
 # *** VERBOSE MAKE? *** #
+MAKEFLAGS		:= --no-print-directory --silent
+ifeq ($(VERBOSE), 2)
 MAKEFLAGS		:=
-ifeq ($(VERBOSE), 0)
-MAKEFLAGS		+= --no-print-directory --silent
 #MAKE 			+= --trace all --warn-undefined-variables
 #MAKE			+= --debug=b -j1 --warn-undefined-variables
 #MAKE			+= --debug=v -j1 --warn-undefined-variables
@@ -405,46 +407,56 @@ build_dependencies_docker:
 #	$(MAKE) docker_install
 
 build_enviroment_docker:
-	$(MAKE) build_docker
+ifeq ($(DOCKER),1)
+	$(MAKE) build_docker || true
+endif
 #	$(MAKE) run_docker
 
 build_dependencies_libraries:
 ifneq ($(LIB_1_NAME), 0)
-	$(GCL) $(LIB_1_REPO) $(LIB_1_PATH) || true
-	git -C $(LIB_1_PATH) pull
+	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && git -C $(LIB_1_PATH) config remote.origin.pushurl "no_push" && $(MAKE) mylibs_clean 
+	git -C $(LIB_1_PATH) pull > /dev/null 2>&1 || true
 	$(MAKE) -C $(LIB_1_PATH) MAKEFLAGS=""
 endif
 ifneq ($(LIB_2_NAME), 0)
-	$(GCL) $(LIB_2_REPO) $(LIB_2_PATH)
-	git -C $(LIB_2_PATH) pull
+	cd libs && $(GCL) $(LIB_2_REPO) $(LIBS_DIR) > /dev/null 2>&1 || true
+	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
 	$(MAKE) -C $(LIB_2_PATH) MAKEFLAGS=""
 endif
 ifneq ($(LIB_3_NAME), 0)
-	$(GCL) $(LIB_3_REPO) $(LIB_3_PATH)
-	git -C $(LIB_3_PATH) pull
+	cd libs && $(GCL) $(LIB_3_REPO) $(LIBS_DIR) > /dev/null 2>&1 || true
+	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
 	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS=""
 endif
 ifneq ($(LIB_4_NAME), 0)
-	$(GCL) $(LIB_4_REPO) $(LIB_4_PATH)
-	git -C $(LIB_4_PATH) pull
+	cd libs && $(GCL) $(LIB_4_REPO) $(LIBS_DIR) > /dev/null 2>&1 || true
+	git -C $(LIB_4_PATH) pull > /dev/null 2>&1 || true
 	$(MAKE) -C $(LIB_4_PATH) MAKEFLAGS=""
 endif
+ifneq ($(VERBOSE), 0)
 	@echo "$(GRAY)(•̀ᴗ•́)و $@ Build Dependencies done!$(RESET)"
+endif
 
 #compile_program_lib_objects:
 objs/%.o:	%.c
 	$(COMPILER) $(PIC) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) $(MACROS) -c $< -o $@
+ifneq ($(VERBOSE), 0)
 	@echo "$(GRAY)()و $@ $(NAME) Compiling Objects done!$(RESET)"
+endif
 
 LIB_OUTPUT_0="libs/lib$(NAME0)_0.a"
 archive_lib_program: $(OBJECTS_LIB)
 	$(LIB_LINK_STATIC) $(LIB_OUTPUT_0) $(OBJECTS_LIB)
+ifneq ($(VERBOSE), 0)
 	@echo "  $(GRAY)(•̀ᴗ•́)و lib$(NAME)_0.a Library done!$(RESET)"
+endif
 
 LIB_OUTPUT="libs/lib$(NAME0).a"
 archive_lib_program_merged:
 	echo "GROUP ( $(LIB_OUTPUT_0) $(LIBS_PATH) )" > $(LIB_OUTPUT)
+ifneq ($(VERBOSE), 0)
 	echo "  $(GRAY)(•̀ᴗ•́)و lib$(NAME).a Library Merged Referenced done!$(RESET)"
+endif
 
 #compile_program_main_object:
 
@@ -453,10 +465,14 @@ ifeq ($(IS_PROGRAM_AND_NOT_LIB), 1)
 	$(MAKE) compile_program_main_object1
 compile_program_main_object1: $(OBJECTS_MAIN)
 	$(COMPILER) $(OBJECTS_MAIN) $(LIB_PROGRAM) $(LDFLAGS) $(CFLAG_ASAN) -o $(NAME)
+ifneq ($(VERBOSE), 0)
 	@echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
+endif
 else
 	cp $(LIB_OUTPUT) $(NAME)
+ifneq ($(VERBOSE), 0)
 	@echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Library Generated!$(RESET)"
+endif
 endif
 
 
@@ -482,7 +498,9 @@ bonus:
 	$(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 
 
-
+mylibs_clean:
+	git -C $(LIB_1_PATH) config remote.origin.pushurl "no_push"
+	$(RM) libs/mylibs/mylibcpp libs/mylibs/mylibx libs/mylibs/mytools libs/mylibs/myunittest
 
 
 
@@ -549,6 +567,7 @@ re_all: fclean_all build_system_pipeline
 # *** Build folders *** #
 folders_build:
 	$(MAKE) folders_make_build
+	$(MAKE) folders_doc
 	$(MAKE) folders_log_build
 
 # *** Build folders Make *** #
@@ -556,6 +575,11 @@ folders_make_build:
 	mkdir -p inc
 	mkdir -p libs
 	mkdir -p objs
+
+# *** Build folders Doc *** #
+folders_doc:
+	mkdir -p doc/doxygen
+	mkdir -p doc/md
 
 # *** Build folders Log *** #
 folders_log_build:
@@ -590,7 +614,7 @@ folders_log_build:
 			testing_alles test_export 							\
 			make_dbg create_bins								\
 			leaks valgrind asan time_and_perfomance				\
-			help bonus											\
+			help bonus mylibs_clean								\
 			bonus bonus_re										\
 			run_visualizer										\
 
@@ -623,7 +647,8 @@ DARK_YELLOW =	\033[38;5;143m
 #                         DOCKER AND DEPENDENCIES                          	   #
 # **************************************************************************** #
 
-build_docker:
+build_docker: log/8.Docker/Makedocker.sh
+log/8.Docker/Makedocker.sh:
 	mkdir -p log/8.Docker
 	wget \
 	-O log/8.Docker/Makedocker.sh \
@@ -895,18 +920,19 @@ werror_bonus:
 # ############################################################################ #
 #                                 LEAKS                                        #
 # ############################################################################ #
-# *** Leaks analyzer *** #
-log_leaks:
-	mkdir -p log/4.Bins_folder
-	$(MAKE) create_bins_leaks || true
-	$(MAKE) valgrind || true
-	$(MAKE) asan || true
+# # *** Leaks analyzer *** #
+# #log_leaks:
+# #	mkdir -p log/4.Bins_folder
+# 	$(MAKE)
+# 	$(MAKE) create_bins_leaks
+# 	$(MAKE) valgrind
+# 	$(MAKE) asan || true
 
 leaks_bonus:
 		$(MAKE) create_bins_leaks_bonus
 
 # *** Create bins for the leaks analyzer *** #
-.PHONY: create_bins_leaks
+
 create_bins_leaks: log/4.Bins_folder/${NAME0}_g $(OBJECTS)
 log/4.Bins_folder/$(NAME0)_g: $(OBJECTS)
 
@@ -930,7 +956,9 @@ create_bins_leaks_bonus:
 # *** Runing Valgrind *** #
 VALGRIND = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s
 VALGRIND_EXPORT = --log-file=log/2.Memory_Check/logs/valgrind_report_.txt
-valgrind:
+#valgrind:
+log_leaks:
+	$(MAKE)
 	$(MAKE) create_bins_leaks
 	@echo "$(RED)\n# RUNNING VALGRIND: ERROR_HANDLING_INPUTS$(RESET)"
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
@@ -1100,10 +1128,11 @@ asan:
 log_dynamic_analysis_tests:
 	$(MAKE) testers_folder_build
 	$(MAKE) bonus
-	$(MAKE) tests_run 2>&1 | sed -r 's/\x1B\[[0-9;]*[mGKH]//g'| tee log/3.Unit_Testing/Testing_Report.txt
+	$(MAKE) tests_run | tee log/3.Unit_Testing/Testing_Report.txt
 	$(MAKE) test_performance
 	$(MAKE) create_bins_dbg
 
+#sed -r 's/\x1B\[[0-9;]*[mGKH]//g'
 # ************************************************************************ #
 #                               TESTERS_FOLDER                             #
 # ************************************************************************ #
@@ -1258,7 +1287,8 @@ tests_run:
 	-echo -n "$(YELLOW)a5. ARG_EMPTY $(GREEN): | " ; ./checker $(ARG_EMPTY) <<EOF 2>&1 | tr '\n' ' ' ; echo -n " | " ; ./checker $(ARG_EMPTY) <<EOF 2>&1 | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	-echo -n "$(YELLOW)a6. ARG_1$(GREEN): | " ; ./checker $(ARG_1) <<EOF 2>&1 | tr '\n' ' ' ; echo -n " | " ; ./checker $(ARG_1) <<EOF 2>&1 | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	-echo -n "$(YELLOW)a7. ARG_SORTED$(GREEN): | " ; ./checker $(ARG_SORTED) <<EOF 2>&1 | tr '\n' ' ' ; echo -n " | " ; ./checker $(ARG_SORTED) <<EOF 2>&1 | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
-
+	-echo -n "---------------------------------------------------------------------------------------------------------------------------$(RESET)"; echo"";
+	
 test_performance:
 	$(MAKE)
 	/usr/bin/time -v ./push_swap $(ARG_500) 2> log/3.Unit_Testing/perfomance_time_push_ARG500.txt 1> /dev/null
@@ -1411,14 +1441,15 @@ make_dbg:
 # **************************************************************************** #
 #                                DOXYGEN         	                      	   #
 # **************************************************************************** #
-DOXYGEN_FILE = log/7.Doxygen/Doxygen
-DOXYGEN_PATH = log/7.Doxygen
+DOXYGEN_FILE	= log/7.Doxygen/Doxygen
+DOXYGEN_PATH 	= log/7.Doxygen
+DOXYGEN_OUTPUT	= doc/doxygen
 doxygen:
 	rm -rf $(DOXYGEN_PATH)
 	$(MAKE) create_Doxyfile
 	$(MAKE) doxfile_mod
 	doxygen ./$(DOXYGEN_FILE)
-	xdg-open log/7.Doxygen/html/index.html
+	xdg-open doc/doxygen/html/index.html
 
 
 create_Doxyfile:
@@ -1428,7 +1459,7 @@ create_Doxyfile:
 doxfile_mod:
 	sed -i 's/PROJECT_NAME           = "My Project"/PROJECT_NAME           = "$(NAME)"/g' ./$(DOXYGEN_FILE)
 	sed -i 's/PROJECT_BRIEF          = "My Project Brief"/PROJECT_BRIEF          = "$(NAME)"/g' ./$(DOXYGEN_FILE)
-	sed -i 's/OUTPUT_DIRECTORY       =/OUTPUT_DIRECTORY       = log\/7.Doxygen/g' ./$(DOXYGEN_FILE)
+	sed -i 's/OUTPUT_DIRECTORY       =/OUTPUT_DIRECTORY       = doc\/doxygen/g' ./$(DOXYGEN_FILE)
 	sed -i 's/OPTIMIZE_OUTPUT_FOR_C  = NO/OPTIMIZE_OUTPUT_FOR_C  = YES/g' ./$(DOXYGEN_FILE)
 	sed -i 's/EXTRACT_ALL            = NO/EXTRACT_ALL            = YES/g' ./$(DOXYGEN_FILE)
 	sed -i 's/HIDE_SCOPE_NAMES       = NO/HIDE_SCOPE_NAMES       = YES/g' ./$(DOXYGEN_FILE)
@@ -1513,14 +1544,17 @@ test_visualizer_run: testers/push_swap_visualizer/build/bin/visualizer
 # ############################################################################ #
 # *** Hello message *** #
 hello:
+ifneq ($(VERBOSE), 0)
 	@echo "$(GRAY)\n################################################$(RESET)"
 	@echo "$(GRAY)# Hello, $(USER)! $(shell date)$(RESET)"
 	@echo "$(GRAY)# Welcome to Makefile for:$(BLUE) $(NAME)!$(RESET)"
 	@echo "$(GRAY)################################################$(RESET)"
 	echo ""
+endif
 
 # *** Build message of timestamps changes *** #
 check_up_to_date:
+ifneq ($(VERBOSE), 0)
 	if [ ! -f "$(NAME)" ]; then \
 		echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
 		echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(YELLOW)STATUS: Bin does not exist. Building...$(RESET)"; \
@@ -1537,6 +1571,7 @@ check_up_to_date:
 			exit 0; \
 		fi; \
 	fi
+endif
 
 # *** Build folders *** #
 folders_lns_build:

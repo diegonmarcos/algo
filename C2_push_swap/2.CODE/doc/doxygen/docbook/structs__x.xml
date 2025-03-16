@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structs__x" xml:lang="en-US">
+<title>s_x Struct Reference</title>
+<indexterm><primary>s_x</primary></indexterm>
+<para>
+<computeroutput>#include &lt;push_swap_data.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structs__x_1acb559820d9ca11295b4500f179ef6392">int</link> <link linkend="_structs__x_1a6150e0515f7202e2fb518f7206ed97dc">x</link></para>
+</listitem>
+            <listitem><para><link linkend="_structs__x_1acb559820d9ca11295b4500f179ef6392">int</link> <link linkend="_structs__x_1a0a2f84ed7838f07779ae24c5a9086d33">y</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__x_1acb559820d9ca11295b4500f179ef6392">i</link></para>
+</listitem>
+            <listitem><para><link linkend="_structs__x_1acb559820d9ca11295b4500f179ef6392">int</link> <link linkend="_structs__x_1a37d972ae0b47b9099e30983131d31916">j</link></para>
+</listitem>
+            <listitem><para><link linkend="_structs__x_1acb559820d9ca11295b4500f179ef6392">int</link> <link linkend="_structs__x_1ab66ed8e0098c0a86b458672a55a9cca9">k</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structs__x_1acb559820d9ca11295b4500f179ef6392"/><section>
+    <title>i</title>
+<indexterm><primary>i</primary><secondary>s_x</secondary></indexterm>
+<indexterm><primary>s_x</primary><secondary>i</secondary></indexterm>
+<para><computeroutput>int i</computeroutput></para></section>
+<anchor xml:id="_structs__x_1a37d972ae0b47b9099e30983131d31916"/><section>
+    <title>j</title>
+<indexterm><primary>j</primary><secondary>s_x</secondary></indexterm>
+<indexterm><primary>s_x</primary><secondary>j</secondary></indexterm>
+<para><computeroutput><link linkend="_structs__x_1acb559820d9ca11295b4500f179ef6392">int</link> j</computeroutput></para></section>
+<anchor xml:id="_structs__x_1ab66ed8e0098c0a86b458672a55a9cca9"/><section>
+    <title>k</title>
+<indexterm><primary>k</primary><secondary>s_x</secondary></indexterm>
+<indexterm><primary>s_x</primary><secondary>k</secondary></indexterm>
+<para><computeroutput><link linkend="_structs__x_1acb559820d9ca11295b4500f179ef6392">int</link> k</computeroutput></para></section>
+<anchor xml:id="_structs__x_1a6150e0515f7202e2fb518f7206ed97dc"/><section>
+    <title>x</title>
+<indexterm><primary>x</primary><secondary>s_x</secondary></indexterm>
+<indexterm><primary>s_x</primary><secondary>x</secondary></indexterm>
+<para><computeroutput><link linkend="_structs__x_1acb559820d9ca11295b4500f179ef6392">int</link> x</computeroutput></para></section>
+<anchor xml:id="_structs__x_1a0a2f84ed7838f07779ae24c5a9086d33"/><section>
+    <title>y</title>
+<indexterm><primary>y</primary><secondary>s_x</secondary></indexterm>
+<indexterm><primary>s_x</primary><secondary>y</secondary></indexterm>
+<para><computeroutput><link linkend="_structs__x_1acb559820d9ca11295b4500f179ef6392">int</link> y</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/<link linkend="_push__swap__data_8h">push_swap_data.h</link></section>
+</section>

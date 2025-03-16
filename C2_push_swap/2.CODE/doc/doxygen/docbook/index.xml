@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>push_swap</title>
+    </info>
+<chapter>
+    <title>Data Structure Documentation</title>
+    <xi:include href="structs__chunk.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structs__chunk1.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structs__list__program.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structs__move__lower__cost.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structs__node__pos__locator.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structs__sort__gearing.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structs__splits.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structs__x.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="push__swap_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="push__swap_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="push__swap__data_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="push__swap__data_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="push__swap__defines_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="push__swap__defines_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="checker__bonus_8d.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="checker__bonus_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="2__0__input__check_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="1__0__mem__alloc_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="1__1__mem__clear_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="4__0__moves__direction_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="4__1__moves__both_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="4__2__moves__fromto_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="push__swap_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="3__0__sort__stack_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="3__5__gearsort__pricing_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="3__5__gearsort__pricing2_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="3__5__quicksort__partial_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="3__7__moves__optim_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="3__1__hash__map_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="3__1__introsort__presort_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="3__1__presorting__getmin_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="3__4__quicksort_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="3__4__sort3__chunk_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="3__3__radixsort_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="3__2__selectionsort_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="1__2__debugger__helpers_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="1__2__printers__tracers_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

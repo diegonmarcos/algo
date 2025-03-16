@@ -1,0 +1,9 @@
+<map id="moves_optimizations" name="moves_optimizations">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,168,56"/>
+<area shape="rect" id="Node000002" href="$3__7__moves__optim_8c.html#aff6439ec780f390764e11b0c17a80d3d" title=" " alt="" coords="216,5,393,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,31,202,27,203,33,168,37"/>
+<area shape="rect" id="Node000004" href="$3__7__moves__optim_8c.html#a8575f0f67c9bb68bf9cde07ab0f8e831" title=" " alt="" coords="216,55,393,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="168,50,203,53,202,59,168,55"/>
+<area shape="rect" id="Node000003" href="$3__7__moves__optim_8c.html#a3946706a56440251d9babecb1099dad1" title=" " alt="" coords="441,5,564,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="393,15,428,15,428,21,393,21"/>
+</map>

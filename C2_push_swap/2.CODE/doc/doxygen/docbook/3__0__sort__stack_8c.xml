@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__0__sort__stack_8c" xml:lang="en-US">
+<title>src/push_swap/sort/3_0_sort_stack.c File Reference</title>
+<indexterm><primary>src/push_swap/sort/3_0_sort_stack.c</primary></indexterm>
+<para>
+
+<para>Implements the main sorting logic for the push_swap program. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_0_sort_stack.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__0__sort__stack_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_3__0__sort__stack_8c_1acc93a52a98064d4a94d9e795db0461e1">sort_stack</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Implements the main sorting logic for the push_swap program. </para>
+
+<para><formalpara>
+<title>Details:</title>
+<para>This module selects and applies the appropriate sorting algorithm based on the size of stack A:</para>
+</formalpara>
+<itemizedlist>
+<listitem>
+<para>Selection Sort of sorting algorithm for below 50 elements</para>
+</listitem><listitem>
+<para>Radix for 50 to 65 elements</para>
+</listitem><listitem>
+<para>Quick Sort for 65 to 75 elements</para>
+</listitem><listitem>
+<para>Gear Sort for 75 to 100 elements</para>
+</listitem><listitem>
+<para>Gear Sort for 100 to 500 elements</para>
+</listitem><listitem>
+<para>Optimization of moves after sorting:<itemizedlist>
+<listitem>
+<para>Replace with double rotate or double reverse rotate when possible</para>
+</listitem><listitem>
+<para>Remove unnecessary moves(canceling moves)</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara>
+<title>Functions:</title>
+<para><itemizedlist>
+<listitem>
+<para>void <link linkend="_3__0__sort__stack_8c_1acc93a52a98064d4a94d9e795db0461e1">sort_stack(t_list_program *list_program)</link>: Main function to sort the stack using the appropriate algorithm.</para>
+</listitem><listitem>
+<para>void <link linkend="_push__swap_8h_1a8c475357a8f515fc57ec9c6ae6e9cee3">selection_sort(t_list_program *list_program)</link>: Sorts the stack using the selection sort algorithm.</para>
+</listitem><listitem>
+<para>void <link linkend="_push__swap_8h_1ab6eef28b44540c8e841c0549a0ce8432">radix_sort_pushswap(t_list_program *list_program)</link>: Sorts the stack using the radix sort algorithm.</para>
+</listitem><listitem>
+<para>void <link linkend="_push__swap_8h_1aa3ace5cfa01a8732fe50b2a306016ca3">quick_sort_pushswap(t_list_program *list_program)</link>: Sorts the stack using the quick sort algorithm.</para>
+</listitem><listitem>
+<para>void <link linkend="_push__swap_8h_1a94dad898050e696fa4f545c5639799f0">gear_sort_pushswap(t_list_program *list_program)</link>: Sorts the stack using the gear sort algorithm.</para>
+</listitem><listitem>
+<para>void <link linkend="_push__swap_8h_1adde75d21b7e1086952250fc733726608">sort_stack_dbg(t_list_program *list_program)</link>: Debug function for sorting the stack.</para>
+</listitem><listitem>
+<para>void <link linkend="_push__swap_8h_1a278415184cb5e8a7eea684b2d06805ee">moves_optimizations(t_list_program *list_program)</link>: Optimizes the moves after sorting. </para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_3__0__sort__stack_8c_1acc93a52a98064d4a94d9e795db0461e1"/><section>
+    <title>sort_stack()</title>
+<indexterm><primary>sort_stack</primary><secondary>3_0_sort_stack.c</secondary></indexterm>
+<indexterm><primary>3_0_sort_stack.c</primary><secondary>sort_stack</secondary></indexterm>
+<para><computeroutput>void sort_stack (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__0__sort__stack_8c_acc93a52a98064d4a94d9e795db0461e1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__0__sort__stack_8c_acc93a52a98064d4a94d9e795db0461e1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

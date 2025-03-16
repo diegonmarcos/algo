@@ -1,0 +1,293 @@
+All defined functions:
+
+File src/src_all/1_0_mem_alloc.c:
+27:	void data_alloc(int, char **, t_list_program *);
+40:	void data_alloc_vars(int, char **, t_list_program *);
+
+File src/src_all/1_1_mem_clear.c:
+22:	void ft_free_push_swap_end(t_list_program *);
+42:	void ft_free_push_swap_halt(t_list_program *);
+
+File src/src_all/1_2_debugger_helpers.c:
+19:	void sort_stack_dbg(t_list_program *);
+
+File src/src_all/1_2_printers_tracers.c:
+32:	void ft_printers(t_ft_printers_db, t_list_program *);
+84:	void ft_printers_gearsort(t_ft_printers_db, t_move_lower_cost *, t_list_program *);
+21:	void print_results(t_list_program *);
+92:	void printer_dbg_split(t_ft_printers_db, t_splits *, t_list_program *);
+60:	static void ft_printers1(t_ft_printers_db, t_list_program *);
+
+File src/src_all/1a_ft_calloc.c:
+35:	void *ft_calloc(size_t, size_t);
+50:	void ft_calloc_(size_t, size_t, void **);
+55:	void ft_calloc_2d(size_t, char, void ***);
+76:	void ft_calloc_2d_sizetype(size_t *, size_t *, char);
+105:	int is_error_calloc_2d(void **, size_t);
+
+File src/src_all/1a_ft_calloc_fd.c:
+19:	void *ft_calloc_fd(char *, size_t, size_t);
+
+File src/src_all/1a_ft_free.c:
+15:	void ft_free_array_2d(char **);
+43:	void ft_free_array_halt(char **, int);
+27:	void ft_free_array_int(int **, int);
+
+File src/src_all/1a_ft_garbage_collector_1.c:
+51:	void ft_free_gb(void *, t_list_garbage *);
+59:	void ft_free_gb_all(t_list_garbage *);
+31:	t_list_garbage *ft_initializator_list_gargabe(void);
+
+File src/src_all/1a_ft_garbage_collector_2.c:
+35:	int add_allocation(void *, t_list_garbage *);
+87:	void *ft_malloc_gb(size_t, t_list_garbage *);
+72:	int is_allocated(void *, t_list_garbage *);
+54:	void remove_allocation(void *, t_list_garbage *);
+
+File src/src_all/1a_halt_exit.c:
+26:	void halt_exit_(int);
+15:	void halt_exit_fd(int);
+
+File src/src_all/1c_0_ft_memcpy.c:
+101:	void *ft_memccpy(void *, const void *, int, size_t);
+70:	void *ft_memcpy(void *, const void *, size_t);
+87:	void *ft_memcpy_(void *, const void *);
+30:	void *ft_memmove(void *, const void *, size_t);
+15:	size_t ft_strlcpy(char *, const char *, size_t);
+
+File src/src_all/1c_0_ft_memset.c:
+45:	void ft_bzero(void *, size_t);
+33:	void ft_bzero_2d(void **, size_t, size_t);
+50:	void *ft_memset(void *, int, size_t);
+
+File src/src_all/1c_1_ft_memcmp.c:
+107:	int ft_memcmp(const void *, const void *, size_t);
+44:	int ft_strcmp(const char *, const char *);
+58:	int ft_strcmp_duplicate(char *, char **);
+72:	int ft_strcmp_duplicate_inter(char **);
+30:	int ft_strncmp(const char *, const char *, size_t);
+
+File src/src_all/1c_ft_atoi.c:
+32:	int ft_atoi(const char *);
+57:	long ft_atoi_long(const char *);
+82:	long *ft_atoi_long_array(const char **);
+103:	int ft_atoi_safe(const char *);
+
+File src/src_all/1c_ft_is_sorted.c:
+28:	int ft_is_sorted_array_char(char **);
+15:	int ft_is_sorted_array_int(int *, int);
+
+File src/src_all/1c_ft_isdigit.c:
+62:	int ft_is_array_int(char **);
+31:	int ft_isdigit(int);
+38:	int ft_isnum(const char *);
+
+File src/src_all/1c_ft_itoa.c:
+32:	int digits_to_bits(int);
+67:	long ft_abs_comp(long, char *);
+49:	int ft_digit_count(long);
+77:	char *ft_itoa(int);
+
+File src/src_all/1c_ft_math.c:
+25:	int ft_abs(int);
+15:	int ft_round(double);
+
+File src/src_all/1c_ft_snprintf.c:
+97:	int ft_snprintf(char *, size_t, const char *, ...);
+55:	static void handle_format_specifier(const char **, t_list_snprintf *);
+15:	static void handle_integer_specifier(t_list_snprintf *);
+34:	static void handle_string_specifier(t_list_snprintf *);
+72:	static void process_format(t_list_snprintf *);
+
+File src/src_all/1c_ft_strlen.c:
+42:	int ft_array_size(char **);
+32:	size_t ft_strlen(const char *);
+52:	size_t ft_strlen_gnl(char *, int);
+
+File src/src_all/1d_0_ft_strdup.c:
+33:	char *ft_strdup(char *, const char *);
+
+File src/src_all/1d_ft_strtok_split.c:
+88:	int ft_countwords(const char *, char);
+59:	char **ft_split(char *, const char *, char);
+35:	long *ft_split_long(char *, const char *, char, int *);
+128:	char *ft_strtrim(const char *, const char *);
+153:	static int ft_char_in_set(char, const char *);
+
+File src/src_all/1d_ft_strtok_split1.c:
+31:	char *ft_substr(char *, const char *, unsigned int, size_t);
+
+File src/src_all/1e_ft_fprintf.c:
+97:	int ft_dprintf(long, const char *, ...);
+77:	int ft_fprintf(FILE *, const char *, ...);
+15:	static int type_var(long, char, struct __va_list_tag *);
+52:	static int w_str(long, const char *, struct __va_list_tag *, int);
+32:	static int w_str_percent(long, char, struct __va_list_tag *);
+
+File src/src_all/1e_ft_fprintf1.c:
+77:	int ft_fprintf1(char *, const char *, ...);
+106:	int ft_fprintf2(char *, char *, const char *, ...);
+15:	static int type_var(long, char, struct __va_list_tag *);
+52:	static int w_str(long, const char *, struct __va_list_tag *, int);
+32:	static int w_str_percent(long, char, struct __va_list_tag *);
+
+File src/src_all/1e_ft_hexa_mayusc.c:
+61:	int ft_hexa_mayusc(int);
+15:	static int puthexa_long(char *, unsigned long long, int);
+38:	static int puthexa_uns(char *, unsigned int, int);
+
+File src/src_all/1e_ft_hexa_minusc.c:
+61:	int ft_hexa_minusc(int);
+15:	static int puthexa_long(char *, unsigned long long, int);
+38:	static int puthexa_uns(char *, unsigned int, int);
+
+File src/src_all/1e_ft_num_unsign.c:
+15:	size_t ft_num_unsign(size_t);
+
+File src/src_all/1e_ft_pointer_hexa.c:
+38:	int ft_pointer_hexa(void *);
+15:	static int hexa_pointer(char *, unsigned long long, int);
+
+File src/src_all/1e_ft_pointer_hexa_fd_fpr.c:
+38:	int ft_pointer_hexa_fpr(long, void *);
+15:	static int hexa_pointer_fd(long, char *, unsigned long long, int);
+
+File src/src_all/1e_ft_printf.c:
+83:	int ft_printf(const char *, ...);
+15:	static int type_var(char, struct __va_list_tag *);
+58:	static int w_str(const char *, struct __va_list_tag *, int);
+38:	static int w_str_percent(char, struct __va_list_tag *);
+
+File src/src_all/1e_ft_putchar.c:
+30:	int ft_putchar(char);
+42:	void ft_putchar_fd(char, int);
+47:	int ft_putchar_fd_fpr(long, int);
+35:	int ft_putchar_int(int);
+
+File src/src_all/1e_ft_putnbr.c:
+23:	int ft_putnbr(int);
+63:	void ft_putnbr_fd(int, int);
+82:	int ft_putnbr_fd_fpr(long, int);
+52:	int ft_putnbr_nbr(int *, int);
+15:	static int int_min(int, int);
+
+File src/src_all/1e_ft_putstr1.c:
+30:	int ft_putstr(char *);
+68:	void ft_putstr_fd(char *, int);
+82:	int ft_putstr_fd_fpr(long, char *);
+43:	int ft_putstr_str(char **);
+102:	int ft_putstrstr_fd_fpr(long, char **);
+
+File src/src_all/2_0_input_check.c:
+74:	void error_handling_input_0(int, char **);
+50:	void error_handling_input_1(t_list_program *);
+82:	void is_sorted_linked_list_push(t_list_program *);
+
+File src/src_all/2_1_ft_array_to_d_linked_list.c:
+38:	t_list_dls *array_int_to_d_linked_list(int *, int);
+18:	t_list_dls *array_to_d_linked_list(char **);
+
+File src/src_all/2_1_ft_free_list_doubly.c:
+18:	void ft_free_ls_doubly(t_list_dls *);
+
+File src/src_all/2_1_linked_list_doubly1.c:
+39:	void ft_lstadd_back(t_list_dls **, t_list_dls *);
+19:	t_list_dls *ft_lstnew(int, int);
+62:	int ft_lstsize(t_list_dls *);
+79:	void ft_print_ls_doubly(t_list_dls *);
+98:	int ft_print_ls_doubly_fd_int(long, t_list_dls *);
+
+File src/src_all/2_1_linked_list_doubly2.c:
+19:	t_list_dls *find_min_node(t_list_dls *);
+40:	int find_min_node1(t_list_dls *);
+66:	int is_sorted_linked_list(t_list_dls *);
+82:	int max_node_finder(t_list_dls **);
+
+File src/src_all/3_0_sort_stack.c:
+61:	void sort_stack(t_list_program *);
+
+File src/src_all/3_1_presorting_getmin.c:
+55:	void add_index_numbers(t_list_dls *);
+30:	t_list_dls *get_next_min(t_list_dls **);
+
+File src/src_all/3_2_selectionsort.c:
+114:	int min_node_pos(t_list_program *);
+26:	void selection_sort(t_list_program *);
+108:	void selection_sort_merge_back(int *, t_list_program *);
+42:	void selection_sort_recursion(int *, t_list_program *);
+79:	void sort_3(t_list_dls **, t_list_program *);
+
+File src/src_all/3_3_radixsort.c:
+30:	void radix_sort_pushswap(t_list_program *);
+49:	void radix_sort_step(int, int, t_list_program *);
+
+File src/src_all/3_4_quicksort.c:
+19:	void quick_sort_pushswap(t_list_program *);
+
+File src/src_all/3_5_gearsort_pricing.c:
+19:	void gear_sort_pushswap(t_list_program *);
+93:	int node_pos_locator(int, t_list_program *, char, char);
+34:	void sort_gearing(char, char, int, t_list_program *);
+117:	int sort_gearing_is_base_case(int, t_list_program *);
+63:	void sort_move_lower_cost(char, t_move_lower_cost *, t_list_program *);
+
+File src/src_all/3_5_gearsort_pricing2.c:
+38:	void high_up_stack(t_list_program *);
+60:	void low_up_stack(t_list_program *);
+19:	int node_pos_locator_is_in_place(char, int, t_node_pos_locator *);
+
+File src/src_all/3_5_quicksort_partial.c:
+19:	void pivot_calculation_partial(t_chunk *, t_splits *);
+98:	void quick_sort_partial(t_list_program *);
+88:	void recursive_split_chunk_partial(t_chunk *, t_list_program *);
+45:	static void merge_back_and_sort(t_chunk *, t_splits *, t_list_program *);
+63:	static void split_chunk(t_chunk *, t_splits *, t_list_program *);
+
+File src/src_all/3_7_moves_optim.c:
+91:	void ft_strlcpy_optm(int *, char *, int *, t_list_program *);
+24:	void moves_optimizations(t_list_program *);
+35:	void moves_optimizations_0(int *, t_list_program *);
+63:	void moves_optimizations_1(int *, t_list_program *);
+
+File src/src_all/4_0_moves_direction.c:
+51:	void push(char, t_list_program *);
+150:	void rotate(char *, char, t_list_program *);
+104:	void swap(char, t_list_program *);
+77:	static void push2(t_list_dls **, t_list_dls *, char, t_list_program *);
+
+File src/src_all/4_1_moves_both.c:
+60:	void move_stack_fromto_case(char *, t_list_program *);
+43:	void rotate_both(char *, t_list_program *);
+31:	void swap_both(t_list_program *);
+
+File src/src_all/4_2_moves_fromto.c:
+25:	void move_stack_fromto(t_position, t_position, t_list_program *);
+44:	void move_stack_fromto1(t_position, t_position, t_list_program *);
+67:	void move_stack_fromto2(t_position, t_position, t_list_program *);
+
+File src/src_all/push_swap.c:
+73:	int main(int, char **);
+
+Non-debugging symbols:
+0x0000000000001000  _init
+0x0000000000001030  free@plt
+0x0000000000001040  __errno_location@plt
+0x0000000000001050  write@plt
+0x0000000000001060  fclose@plt
+0x0000000000001070  memset@plt
+0x0000000000001080  close@plt
+0x0000000000001090  fprintf@plt
+0x00000000000010a0  fileno@plt
+0x00000000000010b0  malloc@plt
+0x00000000000010c0  fflush@plt
+0x00000000000010d0  fopen@plt
+0x00000000000010e0  perror@plt
+0x00000000000010f0  flock@plt
+0x0000000000001100  exit@plt
+0x0000000000001110  __cxa_finalize@plt
+0x0000000000001120  _start
+0x0000000000001150  deregister_tm_clones
+0x0000000000001180  register_tm_clones
+0x00000000000011c0  __do_global_dtors_aux
+0x0000000000001200  frame_dummy
+0x0000000000009250  _fini

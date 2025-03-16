@@ -1,0 +1,1138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_push__swap_8h" xml:lang="en-US">
+<title>inc/push_swap.h File Reference</title>
+<indexterm><primary>inc/push_swap.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap_defines.h&quot;<?linebreak?>#include &quot;push_swap_data.h&quot;<?linebreak?>#include &quot;../libs/mylibc/inc/mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for push_swap.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef enum <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbd">e_ft_printers_db</link> <link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbd">e_ft_printers_db</link> { <?linebreak?><link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda13d000b4d7dc70d90239b7430d1eb6b2">START</link>
+, <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbdadc6f24fd6915a3f2786a1b7045406924">END</link>
+, <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda212984698f4e408302d0f8830c838a60">MOVEF</link>
+, <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda3394745a542349c8dd142242d4a58a5b">MOVES</link>
+, <?linebreak?><link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda8e4561d7ccf7a66c49ff0f7bef69f78c">SELEC</link>
+, <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda9a4084441c1568887684a4e6acc91948">RADIX</link>
+, <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbdaef079160a47f3cf267a177cc6400cf1d">QUICK</link>
+, <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbdae1a5a6a4f78bdf5e9332f96399203fd9">GEAR</link>
+, <?linebreak?><link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda7cf1f5924560c2c48f72f6e1a462e9c9">SPLIT</link>
+, <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda1314a9b4a687e32795713508d0813d5b">MERGE_NS</link>
+, <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda657ad413e20f69f4a2613e8e2e997c57">MERGE_AS</link>
+, <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbdad19b70a62f57cd7873f792cffcad687b">PRICES</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_push__swap_8h_1a1852976558d65cb628d7e7f4e7f7b5ee">data_alloc</link> (int argc, char **argv, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a63c99fe8c2bacae4b7ef83c6917266bf">ft_free_push_swap</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program, char **argv, <link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> *stack_a, int argc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a559e3ef871c76e86b25be9e59343ed1b">ft_free_push_swap_end</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a8f24a43da60686f9c097bf3e2e383693">ft_free_push_swap_halt</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_programm)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1acc93a52a98064d4a94d9e795db0461e1">sort_stack</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a8c475357a8f515fc57ec9c6ae6e9cee3">selection_sort</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a8d7a0d46a67405d91816a7b6c5dfd476">selection_sort_recursion</link> (int *pushes, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1afc65a8ff615d5f010c90a77d43e99901">sort_3</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> **stack_a, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a903c705fc4ddf8716c63da4b393d5e66">selection_sort_merge_back</link> (int *pushes, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>int <link linkend="_push__swap_8h_1aa5355356a38fe129c21e05d54bc4b9d4">min_node_pos</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1ab6eef28b44540c8e841c0549a0ce8432">radix_sort_pushswap</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a3c78219d9c39f549c7c051d6f3df2de2">radix_sort_step</link> (int bit, int size, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1aa3ace5cfa01a8732fe50b2a306016ca3">quick_sort_pushswap</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1af226d4d533a1b37b32cce426a743418b">sort_3_chunk</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a94dad898050e696fa4f545c5639799f0">gear_sort_pushswap</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1ae86baab4f6dd3dc1ac734b5a3a862839">sort_gearing</link> (char stack_from, char stack_to, int base_case, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1af9133ed1b514fc90860dce150471e4cb">sort_move_lower_cost</link> (char stack_from, <link linkend="_push__swap__data_8h_1a8e0066cb4526b2d7f286d40f1489739f">t_move_lower_cost</link> *v, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>int <link linkend="_push__swap_8h_1af609451518018dfea744bcf6d0914c82">node_pos_locator</link> (int value, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program, char type, char stack_from)</para>
+</listitem>
+            <listitem><para>int <link linkend="_push__swap_8h_1a6e6fbdc2b632f680e9d9bd82897ae254">sort_gearing_is_base_case</link> (int base_case, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>int <link linkend="_push__swap_8h_1a499b0d7d62f18ca9a7d33c016b97ffff">node_pos_locator_is_in_place</link> (char stack_from, int value, <link linkend="_push__swap__data_8h_1a49a6dee79e2446514c8dfb32e48983b4">t_node_pos_locator</link> *v)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a38a7b3158cdf772254cf9e63f31c3fbc">high_up_stack</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a6860e9765129c5ba9e49e1b94ecbe4f7">low_up_stack</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>int <link linkend="_push__swap_8h_1afe4cfd19820a440051688b50dec1b4ce">max_node_finder</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> **stack, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a52d4f4cb31fbd8cbc7d92d0276647275">quick_sort_partial</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a212e81ec76b01d1d7dcc4e3ab23a21a5">pivot_calculation</link> (<link linkend="_push__swap__data_8h_1aab9f2c508f96e3939767a8b7edb8d00d">t_chunk</link> *chunk_to_sort, <link linkend="_push__swap__data_8h_1aee1523a9bd24edbe53338d4da7aeadc0">t_splits</link> *split_chunks)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a446f354f779f421f069d3755485f57e7">selection_sort_chunk</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_dls_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a278415184cb5e8a7eea684b2d06805ee">moves_optimizations</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a52d7746c8b7628a2e18e1069db470556">rotate</link> (char *direction, char stack_name, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+
+<para>Rotates the specified stack. </para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1afccc17cf6947e8045b7157ace02a1457">push</link> (char direction, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+
+<para>Numbers moved from one stack to another using: push, swap, rotate. </para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1aa2036f5bf4b8d176da973726dd806078">swap</link> (char stack_name, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a3f183f4dffa1387ae0726c9d33625fb5">swap_both</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a3358149993390c4484d5ae6a8ada9cf5">rotate_both</link> (char *direction, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1abfb1a630b30cf90941d0d68d61e3512c">move_stack_fromto</link> (<link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> from, <link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> to, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1ac834ac3f6087884281c23c5938452799">move_stack_fromto_case</link> (char *move_case, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1ae141e32930f0bad65f58459a3c7449dc">add_index_numbers</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> *list)</para>
+</listitem>
+            <listitem><para>int <link linkend="_push__swap_8h_1ab7f8f4d324a03186d01493e2dc757f7e">digits_to_bits</link> (int digits)</para>
+</listitem>
+            <listitem><para>int <link linkend="_push__swap_8h_1a86efa6bf454fe3d9c4638043d276603b">is_sorted_array_int</link> (int *arr, int size)</para>
+</listitem>
+            <listitem><para>int <link linkend="_push__swap_8h_1ad20dad35a06abceff43bb0f1ddc64700">is_sorted_linked_list</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> *stack)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1ad93321e5938c4618cee960c0a3878fc1">is_sorted_linked_list_push</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1af1f154e261fd1c167f2dcbdf952ea1d9">print_results</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a485614ab5a13c8271c688910e4728047">error_handling_input_0</link> (int argc, char **argv)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a788f5366d812d5836a70746e7ab64897">error_handling_input_1</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+
+<para>Error handling and egde cases. </para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1adde75d21b7e1086952250fc733726608">sort_stack_dbg</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a4cfb30dfa1b732308fb83936337b274c">ft_printers</link> (<link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link> s, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a414192e5b97946d1620c336080c7cad0">ft_printers_gearsort</link> (<link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link> s, <link linkend="_push__swap__data_8h_1a8e0066cb4526b2d7f286d40f1489739f">t_move_lower_cost</link> *v, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a73a471f4371439f8f37cb6ecdf86f32f">printer_dbg_split</link> (<link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link> s, <link linkend="_push__swap__data_8h_1aee1523a9bd24edbe53338d4da7aeadc0">t_splits</link> *split_chunks, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_push__swap_8h_1a59d14dd7e421f30f5a4484598a93d733">printer_dbg_split1</link> (<link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link> s, <link linkend="_push__swap__data_8h_1a923962a30563c78a5b2e7989f217c172">t_chunk1</link> *split_chunks, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0"/><section>
+    <title>t_ft_printers_db</title>
+<indexterm><primary>t_ft_printers_db</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>t_ft_printers_db</secondary></indexterm>
+<para><computeroutput>typedef enum <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbd">e_ft_printers_db</link> <link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link></computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbd"/><section>
+    <title>e_ft_printers_db</title>
+<indexterm><primary>e_ft_printers_db</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>e_ft_printers_db</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbd">e_ft_printers_db</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>START</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>START</secondary></indexterm>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda13d000b4d7dc70d90239b7430d1eb6b2"/>START</entry><entry></entry></row><row><entry><indexterm><primary>END</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>END</secondary></indexterm>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbdadc6f24fd6915a3f2786a1b7045406924"/>END</entry><entry></entry></row><row><entry><indexterm><primary>MOVEF</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>MOVEF</secondary></indexterm>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda212984698f4e408302d0f8830c838a60"/>MOVEF</entry><entry></entry></row><row><entry><indexterm><primary>MOVES</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>MOVES</secondary></indexterm>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda3394745a542349c8dd142242d4a58a5b"/>MOVES</entry><entry></entry></row><row><entry><indexterm><primary>SELEC</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>SELEC</secondary></indexterm>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda8e4561d7ccf7a66c49ff0f7bef69f78c"/>SELEC</entry><entry></entry></row><row><entry><indexterm><primary>RADIX</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>RADIX</secondary></indexterm>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda9a4084441c1568887684a4e6acc91948"/>RADIX</entry><entry></entry></row><row><entry><indexterm><primary>QUICK</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>QUICK</secondary></indexterm>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbdaef079160a47f3cf267a177cc6400cf1d"/>QUICK</entry><entry></entry></row><row><entry><indexterm><primary>GEAR</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>GEAR</secondary></indexterm>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbdae1a5a6a4f78bdf5e9332f96399203fd9"/>GEAR</entry><entry></entry></row><row><entry><indexterm><primary>SPLIT</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>SPLIT</secondary></indexterm>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda7cf1f5924560c2c48f72f6e1a462e9c9"/>SPLIT</entry><entry></entry></row><row><entry><indexterm><primary>MERGE_NS</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>MERGE_NS</secondary></indexterm>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda1314a9b4a687e32795713508d0813d5b"/>MERGE_NS</entry><entry></entry></row><row><entry><indexterm><primary>MERGE_AS</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>MERGE_AS</secondary></indexterm>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbda657ad413e20f69f4a2613e8e2e997c57"/>MERGE_AS</entry><entry></entry></row><row><entry><indexterm><primary>PRICES</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>PRICES</secondary></indexterm>
+<anchor xml:id="_push__swap_8h_1aed1446a52a83e76b91ffd27be12a1fbdad19b70a62f57cd7873f792cffcad687b"/>PRICES</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_push__swap_8h_1ae141e32930f0bad65f58459a3c7449dc"/><section>
+    <title>add_index_numbers()</title>
+<indexterm><primary>add_index_numbers</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>add_index_numbers</secondary></indexterm>
+<para><computeroutput>void add_index_numbers (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> * list)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_ae141e32930f0bad65f58459a3c7449dc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_ae141e32930f0bad65f58459a3c7449dc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a1852976558d65cb628d7e7f4e7f7b5ee"/><section>
+    <title>data_alloc()</title>
+<indexterm><primary>data_alloc</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>data_alloc</secondary></indexterm>
+<para><computeroutput>void data_alloc (int argc, char ** argv, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a1852976558d65cb628d7e7f4e7f7b5ee_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a1852976558d65cb628d7e7f4e7f7b5ee_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1ab7f8f4d324a03186d01493e2dc757f7e"/><section>
+    <title>digits_to_bits()</title>
+<indexterm><primary>digits_to_bits</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>digits_to_bits</secondary></indexterm>
+<para><computeroutput>int digits_to_bits (int digits)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_ab7f8f4d324a03186d01493e2dc757f7e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a485614ab5a13c8271c688910e4728047"/><section>
+    <title>error_handling_input_0()</title>
+<indexterm><primary>error_handling_input_0</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>error_handling_input_0</secondary></indexterm>
+<para><computeroutput>void error_handling_input_0 (int argc, char ** argv)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a485614ab5a13c8271c688910e4728047_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a788f5366d812d5836a70746e7ab64897"/><section>
+    <title>error_handling_input_1()</title>
+<indexterm><primary>error_handling_input_1</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>error_handling_input_1</secondary></indexterm>
+<para><computeroutput>void error_handling_input_1 (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para><para>
+
+<para>Error handling and egde cases. </para>
+</para>
+
+<para><formalpara>
+<title>Details:</title>
+<para>This module provides functions to handle errors and edge cases in the input for the push_swap program. It includes checks for the following:</para>
+</formalpara>
+<itemizedlist>
+<listitem>
+<para>Duplicate values in the input</para>
+</listitem><listitem>
+<para>Non-integer values in the input</para>
+</listitem><listitem>
+<para>Insufficient number of arguments</para>
+</listitem><listitem>
+<para>Empty or null arguments</para>
+</listitem><listitem>
+<para>Already sorted input</para>
+</listitem><listitem>
+<para>Single element input</para>
+</listitem><listitem>
+<para>Sorted linked list in stack_a</para>
+</listitem><listitem>
+<para>Non-empty stack_b</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara>
+<title>Functions:</title>
+<para><itemizedlist>
+<listitem>
+<para>error_handling_input_1: for duplicates, non-integers, and sorted input.</para>
+</listitem><listitem>
+<para>error_handling_input_0: for the number of arguments and empty arguments.</para>
+</listitem><listitem>
+<para>is_sorted_linked_list_push: Checks if stack_a is sorted, if stack_b is empty, and handles memory release for termination. </para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a788f5366d812d5836a70746e7ab64897_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a788f5366d812d5836a70746e7ab64897_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a63c99fe8c2bacae4b7ef83c6917266bf"/><section>
+    <title>ft_free_push_swap()</title>
+<indexterm><primary>ft_free_push_swap</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>ft_free_push_swap</secondary></indexterm>
+<para><computeroutput>void ft_free_push_swap (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program, char ** argv, <link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> * stack_a, int argc)</computeroutput></para></section>
+<anchor xml:id="_push__swap_8h_1a559e3ef871c76e86b25be9e59343ed1b"/><section>
+    <title>ft_free_push_swap_end()</title>
+<indexterm><primary>ft_free_push_swap_end</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>ft_free_push_swap_end</secondary></indexterm>
+<para><computeroutput>void ft_free_push_swap_end (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a559e3ef871c76e86b25be9e59343ed1b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a8f24a43da60686f9c097bf3e2e383693"/><section>
+    <title>ft_free_push_swap_halt()</title>
+<indexterm><primary>ft_free_push_swap_halt</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>ft_free_push_swap_halt</secondary></indexterm>
+<para><computeroutput>void ft_free_push_swap_halt (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_programm)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a8f24a43da60686f9c097bf3e2e383693_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a4cfb30dfa1b732308fb83936337b274c"/><section>
+    <title>ft_printers()</title>
+<indexterm><primary>ft_printers</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>ft_printers</secondary></indexterm>
+<para><computeroutput>void ft_printers (<link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link> s, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a4cfb30dfa1b732308fb83936337b274c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a414192e5b97946d1620c336080c7cad0"/><section>
+    <title>ft_printers_gearsort()</title>
+<indexterm><primary>ft_printers_gearsort</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>ft_printers_gearsort</secondary></indexterm>
+<para><computeroutput>void ft_printers_gearsort (<link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link> s, <link linkend="_push__swap__data_8h_1a8e0066cb4526b2d7f286d40f1489739f">t_move_lower_cost</link> * v, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a414192e5b97946d1620c336080c7cad0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a94dad898050e696fa4f545c5639799f0"/><section>
+    <title>gear_sort_pushswap()</title>
+<indexterm><primary>gear_sort_pushswap</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>gear_sort_pushswap</secondary></indexterm>
+<para><computeroutput>void gear_sort_pushswap (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a94dad898050e696fa4f545c5639799f0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a94dad898050e696fa4f545c5639799f0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a38a7b3158cdf772254cf9e63f31c3fbc"/><section>
+    <title>high_up_stack()</title>
+<indexterm><primary>high_up_stack</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>high_up_stack</secondary></indexterm>
+<para><computeroutput>void high_up_stack (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a38a7b3158cdf772254cf9e63f31c3fbc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a86efa6bf454fe3d9c4638043d276603b"/><section>
+    <title>is_sorted_array_int()</title>
+<indexterm><primary>is_sorted_array_int</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>is_sorted_array_int</secondary></indexterm>
+<para><computeroutput>int is_sorted_array_int (int * arr, int size)</computeroutput></para></section>
+<anchor xml:id="_push__swap_8h_1ad20dad35a06abceff43bb0f1ddc64700"/><section>
+    <title>is_sorted_linked_list()</title>
+<indexterm><primary>is_sorted_linked_list</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>is_sorted_linked_list</secondary></indexterm>
+<para><computeroutput>int is_sorted_linked_list (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> * stack)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_ad20dad35a06abceff43bb0f1ddc64700_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1ad93321e5938c4618cee960c0a3878fc1"/><section>
+    <title>is_sorted_linked_list_push()</title>
+<indexterm><primary>is_sorted_linked_list_push</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>is_sorted_linked_list_push</secondary></indexterm>
+<para><computeroutput>void is_sorted_linked_list_push (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_ad93321e5938c4618cee960c0a3878fc1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a6860e9765129c5ba9e49e1b94ecbe4f7"/><section>
+    <title>low_up_stack()</title>
+<indexterm><primary>low_up_stack</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>low_up_stack</secondary></indexterm>
+<para><computeroutput>void low_up_stack (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a6860e9765129c5ba9e49e1b94ecbe4f7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a6860e9765129c5ba9e49e1b94ecbe4f7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1afe4cfd19820a440051688b50dec1b4ce"/><section>
+    <title>max_node_finder()</title>
+<indexterm><primary>max_node_finder</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>max_node_finder</secondary></indexterm>
+<para><computeroutput>int max_node_finder (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> ** stack, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_afe4cfd19820a440051688b50dec1b4ce_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1aa5355356a38fe129c21e05d54bc4b9d4"/><section>
+    <title>min_node_pos()</title>
+<indexterm><primary>min_node_pos</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>min_node_pos</secondary></indexterm>
+<para><computeroutput>int min_node_pos (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_aa5355356a38fe129c21e05d54bc4b9d4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1abfb1a630b30cf90941d0d68d61e3512c"/><section>
+    <title>move_stack_fromto()</title>
+<indexterm><primary>move_stack_fromto</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>move_stack_fromto</secondary></indexterm>
+<para><computeroutput>void move_stack_fromto (<link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> from, <link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> to, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_abfb1a630b30cf90941d0d68d61e3512c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1ac834ac3f6087884281c23c5938452799"/><section>
+    <title>move_stack_fromto_case()</title>
+<indexterm><primary>move_stack_fromto_case</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>move_stack_fromto_case</secondary></indexterm>
+<para><computeroutput>void move_stack_fromto_case (char * move_case, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_ac834ac3f6087884281c23c5938452799_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_ac834ac3f6087884281c23c5938452799_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a278415184cb5e8a7eea684b2d06805ee"/><section>
+    <title>moves_optimizations()</title>
+<indexterm><primary>moves_optimizations</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>moves_optimizations</secondary></indexterm>
+<para><computeroutput>void moves_optimizations (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a278415184cb5e8a7eea684b2d06805ee_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a278415184cb5e8a7eea684b2d06805ee_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1af609451518018dfea744bcf6d0914c82"/><section>
+    <title>node_pos_locator()</title>
+<indexterm><primary>node_pos_locator</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>node_pos_locator</secondary></indexterm>
+<para><computeroutput>int node_pos_locator (int value, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program, char type, char stack_from)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_af609451518018dfea744bcf6d0914c82_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_af609451518018dfea744bcf6d0914c82_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a499b0d7d62f18ca9a7d33c016b97ffff"/><section>
+    <title>node_pos_locator_is_in_place()</title>
+<indexterm><primary>node_pos_locator_is_in_place</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>node_pos_locator_is_in_place</secondary></indexterm>
+<para><computeroutput>int node_pos_locator_is_in_place (char stack_from, int value, <link linkend="_push__swap__data_8h_1a49a6dee79e2446514c8dfb32e48983b4">t_node_pos_locator</link> * v)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a499b0d7d62f18ca9a7d33c016b97ffff_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a212e81ec76b01d1d7dcc4e3ab23a21a5"/><section>
+    <title>pivot_calculation()</title>
+<indexterm><primary>pivot_calculation</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>pivot_calculation</secondary></indexterm>
+<para><computeroutput>void pivot_calculation (<link linkend="_push__swap__data_8h_1aab9f2c508f96e3939767a8b7edb8d00d">t_chunk</link> * chunk_to_sort, <link linkend="_push__swap__data_8h_1aee1523a9bd24edbe53338d4da7aeadc0">t_splits</link> * split_chunks)</computeroutput></para></section>
+<anchor xml:id="_push__swap_8h_1af1f154e261fd1c167f2dcbdf952ea1d9"/><section>
+    <title>print_results()</title>
+<indexterm><primary>print_results</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>print_results</secondary></indexterm>
+<para><computeroutput>void print_results (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_af1f154e261fd1c167f2dcbdf952ea1d9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a73a471f4371439f8f37cb6ecdf86f32f"/><section>
+    <title>printer_dbg_split()</title>
+<indexterm><primary>printer_dbg_split</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>printer_dbg_split</secondary></indexterm>
+<para><computeroutput>void printer_dbg_split (<link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link> s, <link linkend="_push__swap__data_8h_1aee1523a9bd24edbe53338d4da7aeadc0">t_splits</link> * split_chunks, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a73a471f4371439f8f37cb6ecdf86f32f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a59d14dd7e421f30f5a4484598a93d733"/><section>
+    <title>printer_dbg_split1()</title>
+<indexterm><primary>printer_dbg_split1</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>printer_dbg_split1</secondary></indexterm>
+<para><computeroutput>void printer_dbg_split1 (<link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link> s, <link linkend="_push__swap__data_8h_1a923962a30563c78a5b2e7989f217c172">t_chunk1</link> * split_chunks, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para></section>
+<anchor xml:id="_push__swap_8h_1afccc17cf6947e8045b7157ace02a1457"/><section>
+    <title>push()</title>
+<indexterm><primary>push</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>push</secondary></indexterm>
+<para><computeroutput>void push (char direction, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para><para>
+
+<para>Numbers moved from one stack to another using: push, swap, rotate. </para>
+</para>
+
+<para><formalpara>
+<title>Details:</title>
+<para>This module provides functions to perform various stack operations for the push_swap program. It includes the following functionalities:</para>
+</formalpara>
+<itemizedlist>
+<listitem>
+<para>push(A to B or B to A),</para>
+</listitem><listitem>
+<para>swap(A or B or both),</para>
+</listitem><listitem>
+<para>rotate(Tail to head or Next to head, one stack or both at the same time ).</para>
+</listitem><listitem>
+<para>Handling edge cases such as empty stacks or stacks with a single element</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara>
+<title>Functions:</title>
+<para><itemizedlist>
+<listitem>
+<para>void <link linkend="_4__0__moves__direction_8c_1afccc17cf6947e8045b7157ace02a1457">push(char direction, t_list_program *list_program)</link>: Moves the top element from one stack to another.</para>
+</listitem><listitem>
+<para>void <link linkend="_4__0__moves__direction_8c_1aa2036f5bf4b8d176da973726dd806078">swap(char stack_name, t_list_program *list_program)</link>: Swaps the top two elements of a stack.</para>
+</listitem><listitem>
+<para>void <link linkend="_4__0__moves__direction_8c_1a52d7746c8b7628a2e18e1069db470556">rotate(char *direction, char stack_name, t_list_program *list_program)</link>: Rotates a stack in both directions. </para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_afccc17cf6947e8045b7157ace02a1457_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a52d4f4cb31fbd8cbc7d92d0276647275"/><section>
+    <title>quick_sort_partial()</title>
+<indexterm><primary>quick_sort_partial</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>quick_sort_partial</secondary></indexterm>
+<para><computeroutput>void quick_sort_partial (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a52d4f4cb31fbd8cbc7d92d0276647275_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a52d4f4cb31fbd8cbc7d92d0276647275_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1aa3ace5cfa01a8732fe50b2a306016ca3"/><section>
+    <title>quick_sort_pushswap()</title>
+<indexterm><primary>quick_sort_pushswap</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>quick_sort_pushswap</secondary></indexterm>
+<para><computeroutput>void quick_sort_pushswap (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_aa3ace5cfa01a8732fe50b2a306016ca3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_aa3ace5cfa01a8732fe50b2a306016ca3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1ab6eef28b44540c8e841c0549a0ce8432"/><section>
+    <title>radix_sort_pushswap()</title>
+<indexterm><primary>radix_sort_pushswap</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>radix_sort_pushswap</secondary></indexterm>
+<para><computeroutput>void radix_sort_pushswap (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_ab6eef28b44540c8e841c0549a0ce8432_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_ab6eef28b44540c8e841c0549a0ce8432_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a3c78219d9c39f549c7c051d6f3df2de2"/><section>
+    <title>radix_sort_step()</title>
+<indexterm><primary>radix_sort_step</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>radix_sort_step</secondary></indexterm>
+<para><computeroutput>void radix_sort_step (int bit, int size, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a3c78219d9c39f549c7c051d6f3df2de2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a3c78219d9c39f549c7c051d6f3df2de2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a52d7746c8b7628a2e18e1069db470556"/><section>
+    <title>rotate()</title>
+<indexterm><primary>rotate</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>rotate</secondary></indexterm>
+<para><computeroutput>void rotate (char * direction, char stack_name, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para><para>
+
+<para>Rotates the specified stack. </para>
+</para>
+
+<para><formalpara>
+<title>Details:</title>
+<para><itemizedlist>
+<listitem>
+<para>function rotates the given stack based on the provided direction.</para>
+</listitem><listitem>
+<para>The direction &quot;r&quot; rotates the stack upward (counter-clockwise, head to tail).</para>
+</listitem><listitem>
+<para>The direction &quot;rr&quot; rotates the stack downward (clockwise, tail to head).</para>
+</listitem><listitem>
+<para>The stack_name &apos;a&apos; refers to stack_a and &apos;b&apos; refers to stack_b.</para>
+</listitem><listitem>
+<para>If the specified stack is empty or contains only one element, no rotation is performed.</para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+<formalpara>
+<title>Usage:</title>
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">direction</emphasis> The rotation direction: &quot;r&quot; or &quot;rr&quot;.</para>
+</listitem><listitem>
+<para><emphasis role="bold">stack_name</emphasis> The identifier for the stack: &apos;a&apos; or &apos;b&apos;.</para>
+</listitem><listitem>
+<para><emphasis role="bold">list_program</emphasis> Pointer to the structure containing the stacks.</para>
+</listitem><listitem>
+<para><emphasis role="bold">return</emphasis> is void. </para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a52d7746c8b7628a2e18e1069db470556_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a52d7746c8b7628a2e18e1069db470556_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a3358149993390c4484d5ae6a8ada9cf5"/><section>
+    <title>rotate_both()</title>
+<indexterm><primary>rotate_both</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>rotate_both</secondary></indexterm>
+<para><computeroutput>void rotate_both (char * direction, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * t_list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a3358149993390c4484d5ae6a8ada9cf5_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a8c475357a8f515fc57ec9c6ae6e9cee3"/><section>
+    <title>selection_sort()</title>
+<indexterm><primary>selection_sort</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>selection_sort</secondary></indexterm>
+<para><computeroutput>void selection_sort (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a8c475357a8f515fc57ec9c6ae6e9cee3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a8c475357a8f515fc57ec9c6ae6e9cee3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a446f354f779f421f069d3755485f57e7"/><section>
+    <title>selection_sort_chunk()</title>
+<indexterm><primary>selection_sort_chunk</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>selection_sort_chunk</secondary></indexterm>
+<para><computeroutput>void selection_sort_chunk (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_dls_program)</computeroutput></para></section>
+<anchor xml:id="_push__swap_8h_1a903c705fc4ddf8716c63da4b393d5e66"/><section>
+    <title>selection_sort_merge_back()</title>
+<indexterm><primary>selection_sort_merge_back</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>selection_sort_merge_back</secondary></indexterm>
+<para><computeroutput>void selection_sort_merge_back (int * pushes, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a903c705fc4ddf8716c63da4b393d5e66_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a903c705fc4ddf8716c63da4b393d5e66_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a8d7a0d46a67405d91816a7b6c5dfd476"/><section>
+    <title>selection_sort_recursion()</title>
+<indexterm><primary>selection_sort_recursion</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>selection_sort_recursion</secondary></indexterm>
+<para><computeroutput>void selection_sort_recursion (int * pushes, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a8d7a0d46a67405d91816a7b6c5dfd476_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a8d7a0d46a67405d91816a7b6c5dfd476_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1afc65a8ff615d5f010c90a77d43e99901"/><section>
+    <title>sort_3()</title>
+<indexterm><primary>sort_3</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>sort_3</secondary></indexterm>
+<para><computeroutput>void sort_3 (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> ** stack_a, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_afc65a8ff615d5f010c90a77d43e99901_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_afc65a8ff615d5f010c90a77d43e99901_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1af226d4d533a1b37b32cce426a743418b"/><section>
+    <title>sort_3_chunk()</title>
+<indexterm><primary>sort_3_chunk</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>sort_3_chunk</secondary></indexterm>
+<para><computeroutput>void sort_3_chunk (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_af226d4d533a1b37b32cce426a743418b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1ae86baab4f6dd3dc1ac734b5a3a862839"/><section>
+    <title>sort_gearing()</title>
+<indexterm><primary>sort_gearing</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>sort_gearing</secondary></indexterm>
+<para><computeroutput>void sort_gearing (char stack_from, char stack_to, int base_case, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_ae86baab4f6dd3dc1ac734b5a3a862839_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_ae86baab4f6dd3dc1ac734b5a3a862839_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a6e6fbdc2b632f680e9d9bd82897ae254"/><section>
+    <title>sort_gearing_is_base_case()</title>
+<indexterm><primary>sort_gearing_is_base_case</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>sort_gearing_is_base_case</secondary></indexterm>
+<para><computeroutput>int sort_gearing_is_base_case (int base_case, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a6e6fbdc2b632f680e9d9bd82897ae254_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a6e6fbdc2b632f680e9d9bd82897ae254_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1af9133ed1b514fc90860dce150471e4cb"/><section>
+    <title>sort_move_lower_cost()</title>
+<indexterm><primary>sort_move_lower_cost</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>sort_move_lower_cost</secondary></indexterm>
+<para><computeroutput>void sort_move_lower_cost (char stack_from, <link linkend="_push__swap__data_8h_1a8e0066cb4526b2d7f286d40f1489739f">t_move_lower_cost</link> * v, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_af9133ed1b514fc90860dce150471e4cb_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_af9133ed1b514fc90860dce150471e4cb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1acc93a52a98064d4a94d9e795db0461e1"/><section>
+    <title>sort_stack()</title>
+<indexterm><primary>sort_stack</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>sort_stack</secondary></indexterm>
+<para><computeroutput>void sort_stack (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_acc93a52a98064d4a94d9e795db0461e1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_acc93a52a98064d4a94d9e795db0461e1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1adde75d21b7e1086952250fc733726608"/><section>
+    <title>sort_stack_dbg()</title>
+<indexterm><primary>sort_stack_dbg</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>sort_stack_dbg</secondary></indexterm>
+<para><computeroutput>void sort_stack_dbg (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_adde75d21b7e1086952250fc733726608_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_adde75d21b7e1086952250fc733726608_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1aa2036f5bf4b8d176da973726dd806078"/><section>
+    <title>swap()</title>
+<indexterm><primary>swap</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>swap</secondary></indexterm>
+<para><computeroutput>void swap (char stack_name, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_aa2036f5bf4b8d176da973726dd806078_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_aa2036f5bf4b8d176da973726dd806078_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_push__swap_8h_1a3f183f4dffa1387ae0726c9d33625fb5"/><section>
+    <title>swap_both()</title>
+<indexterm><primary>swap_both</primary><secondary>push_swap.h</secondary></indexterm>
+<indexterm><primary>push_swap.h</primary><secondary>swap_both</secondary></indexterm>
+<para><computeroutput>void swap_both (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * t_list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a3f183f4dffa1387ae0726c9d33625fb5_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,102 @@
+.TH "src/push_swap/moves/4_0_moves_direction.c" 3 "Sun Mar 16 2025 16:17:05" "push_swap" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/push_swap/moves/4_0_moves_direction.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'push_swap\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpush\fP (char direction, \fBt_list_program\fP *list_program)"
+.br
+.RI "Numbers moved from one stack to another using: push, swap, rotate\&. "
+.ti -1c
+.RI "void \fBswap\fP (char stack_name, \fBt_list_program\fP *list_program)"
+.br
+.ti -1c
+.RI "void \fBrotate\fP (char *direction, char stack_name, \fBt_list_program\fP *list_program)"
+.br
+.RI "Rotates the specified stack\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void push (char direction, \fBt_list_program\fP * list_program)"
+
+.PP
+Numbers moved from one stack to another using: push, swap, rotate\&. 
+.PP
+\fBDetails:\fP
+.RS 4
+This module provides functions to perform various stack operations for the push_swap program\&. It includes the following functionalities:
+.RE
+.PP
+.IP "\(bu" 2
+push(A to B or B to A),
+.IP "\(bu" 2
+swap(A or B or both),
+.IP "\(bu" 2
+rotate(Tail to head or Next to head, one stack or both at the same time )\&.
+.IP "\(bu" 2
+Handling edge cases such as empty stacks or stacks with a single element
+.PP
+.PP
+\fBFunctions:\fP
+.RS 4
+
+.IP "\(bu" 2
+void \fBpush(char direction, t_list_program *list_program)\fP: Moves the top element from one stack to another\&.
+.IP "\(bu" 2
+void \fBswap(char stack_name, t_list_program *list_program)\fP: Swaps the top two elements of a stack\&.
+.IP "\(bu" 2
+void \fBrotate(char *direction, char stack_name, t_list_program *list_program)\fP: Rotates a stack in both directions\&. 
+.PP
+.RE
+.PP
+
+.SS "void rotate (char * direction, char stack_name, \fBt_list_program\fP * list_program)"
+
+.PP
+Rotates the specified stack\&. 
+.PP
+\fBDetails:\fP
+.RS 4
+
+.IP "\(bu" 2
+function rotates the given stack based on the provided direction\&.
+.IP "\(bu" 2
+The direction 'r' rotates the stack upward (counter-clockwise, head to tail)\&.
+.IP "\(bu" 2
+The direction 'rr' rotates the stack downward (clockwise, tail to head)\&.
+.IP "\(bu" 2
+The stack_name 'a' refers to stack_a and 'b' refers to stack_b\&.
+.IP "\(bu" 2
+If the specified stack is empty or contains only one element, no rotation is performed\&.
+.PP
+.RE
+.PP
+\fBUsage:\fP
+.RS 4
+
+.IP "\(bu" 2
+\fBdirection\fP The rotation direction: 'r' or 'rr'\&.
+.IP "\(bu" 2
+\fBstack_name\fP The identifier for the stack: 'a' or 'b'\&.
+.IP "\(bu" 2
+\fBlist_program\fP Pointer to the structure containing the stacks\&.
+.IP "\(bu" 2
+\fBreturn\fP is void\&. 
+.PP
+.RE
+.PP
+
+.SS "void swap (char stack_name, \fBt_list_program\fP * list_program)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for push_swap from the source code\&.

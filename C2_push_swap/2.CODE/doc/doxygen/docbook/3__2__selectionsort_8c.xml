@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__2__selectionsort_8c" xml:lang="en-US">
+<title>src/push_swap/sort/selection/3_2_selectionsort.c File Reference</title>
+<indexterm><primary>src/push_swap/sort/selection/3_2_selectionsort.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_2_selectionsort.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__selectionsort_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_3__2__selectionsort_8c_1a8c475357a8f515fc57ec9c6ae6e9cee3">selection_sort</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__2__selectionsort_8c_1a8d7a0d46a67405d91816a7b6c5dfd476">selection_sort_recursion</link> (int *pushes, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__2__selectionsort_8c_1afc65a8ff615d5f010c90a77d43e99901">sort_3</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> **stack_a, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__2__selectionsort_8c_1a903c705fc4ddf8716c63da4b393d5e66">selection_sort_merge_back</link> (int *pushes, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>int <link linkend="_3__2__selectionsort_8c_1aa5355356a38fe129c21e05d54bc4b9d4">min_node_pos</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_3__2__selectionsort_8c_1aa5355356a38fe129c21e05d54bc4b9d4"/><section>
+    <title>min_node_pos()</title>
+<indexterm><primary>min_node_pos</primary><secondary>3_2_selectionsort.c</secondary></indexterm>
+<indexterm><primary>3_2_selectionsort.c</primary><secondary>min_node_pos</secondary></indexterm>
+<para><computeroutput>int min_node_pos (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__selectionsort_8c_aa5355356a38fe129c21e05d54bc4b9d4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__2__selectionsort_8c_1a8c475357a8f515fc57ec9c6ae6e9cee3"/><section>
+    <title>selection_sort()</title>
+<indexterm><primary>selection_sort</primary><secondary>3_2_selectionsort.c</secondary></indexterm>
+<indexterm><primary>3_2_selectionsort.c</primary><secondary>selection_sort</secondary></indexterm>
+<para><computeroutput>void selection_sort (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__selectionsort_8c_a8c475357a8f515fc57ec9c6ae6e9cee3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__selectionsort_8c_a8c475357a8f515fc57ec9c6ae6e9cee3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__2__selectionsort_8c_1a903c705fc4ddf8716c63da4b393d5e66"/><section>
+    <title>selection_sort_merge_back()</title>
+<indexterm><primary>selection_sort_merge_back</primary><secondary>3_2_selectionsort.c</secondary></indexterm>
+<indexterm><primary>3_2_selectionsort.c</primary><secondary>selection_sort_merge_back</secondary></indexterm>
+<para><computeroutput>void selection_sort_merge_back (int * pushes, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__selectionsort_8c_a903c705fc4ddf8716c63da4b393d5e66_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__selectionsort_8c_a903c705fc4ddf8716c63da4b393d5e66_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__2__selectionsort_8c_1a8d7a0d46a67405d91816a7b6c5dfd476"/><section>
+    <title>selection_sort_recursion()</title>
+<indexterm><primary>selection_sort_recursion</primary><secondary>3_2_selectionsort.c</secondary></indexterm>
+<indexterm><primary>3_2_selectionsort.c</primary><secondary>selection_sort_recursion</secondary></indexterm>
+<para><computeroutput>void selection_sort_recursion (int * pushes, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__selectionsort_8c_a8d7a0d46a67405d91816a7b6c5dfd476_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__selectionsort_8c_a8d7a0d46a67405d91816a7b6c5dfd476_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__2__selectionsort_8c_1afc65a8ff615d5f010c90a77d43e99901"/><section>
+    <title>sort_3()</title>
+<indexterm><primary>sort_3</primary><secondary>3_2_selectionsort.c</secondary></indexterm>
+<indexterm><primary>3_2_selectionsort.c</primary><secondary>sort_3</secondary></indexterm>
+<para><computeroutput>void sort_3 (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> ** stack_a, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__selectionsort_8c_afc65a8ff615d5f010c90a77d43e99901_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__selectionsort_8c_afc65a8ff615d5f010c90a77d43e99901_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

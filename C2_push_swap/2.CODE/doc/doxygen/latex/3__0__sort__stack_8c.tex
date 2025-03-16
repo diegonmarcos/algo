@@ -1,0 +1,77 @@
+\doxysection{src/push\+\_\+swap/sort/3\+\_\+0\+\_\+sort\+\_\+stack.c File Reference}
+\hypertarget{3__0__sort__stack_8c}{}\label{3__0__sort__stack_8c}\index{src/push\_swap/sort/3\_0\_sort\_stack.c@{src/push\_swap/sort/3\_0\_sort\_stack.c}}
+
+
+Implements the main sorting logic for the push\+\_\+swap program.  
+
+
+{\ttfamily \#include "{}push\+\_\+swap.\+h"{}}\newline
+Include dependency graph for 3\+\_\+0\+\_\+sort\+\_\+stack.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__0__sort__stack_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{3__0__sort__stack_8c_acc93a52a98064d4a94d9e795db0461e1}{sort\+\_\+stack}} (\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the main sorting logic for the push\+\_\+swap program. 
+
+\begin{DoxyParagraph}{Details\+:}
+This module selects and applies the appropriate sorting algorithm based on the size of stack A\+:
+\end{DoxyParagraph}
+
+\begin{DoxyItemize}
+\item Selection Sort of sorting algorithm for below 50 elements
+\item Radix for 50 to 65 elements
+\item Quick Sort for 65 to 75 elements
+\item Gear Sort for 75 to 100 elements
+\item Gear Sort for 100 to 500 elements
+\item Optimization of moves after sorting\+:
+\begin{DoxyItemize}
+\item Replace with double rotate or double reverse rotate when possible
+\item Remove unnecessary moves(canceling moves)
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Functions\+:}
+
+\begin{DoxyItemize}
+\item void \doxylink{3__0__sort__stack_8c_acc93a52a98064d4a94d9e795db0461e1}{sort\+\_\+stack(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Main function to sort the stack using the appropriate algorithm.
+\item void \doxylink{push__swap_8h_a8c475357a8f515fc57ec9c6ae6e9cee3}{selection\+\_\+sort(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Sorts the stack using the selection sort algorithm.
+\item void \doxylink{push__swap_8h_ab6eef28b44540c8e841c0549a0ce8432}{radix\+\_\+sort\+\_\+pushswap(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Sorts the stack using the radix sort algorithm.
+\item void \doxylink{push__swap_8h_aa3ace5cfa01a8732fe50b2a306016ca3}{quick\+\_\+sort\+\_\+pushswap(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Sorts the stack using the quick sort algorithm.
+\item void \doxylink{push__swap_8h_a94dad898050e696fa4f545c5639799f0}{gear\+\_\+sort\+\_\+pushswap(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Sorts the stack using the gear sort algorithm.
+\item void \doxylink{push__swap_8h_adde75d21b7e1086952250fc733726608}{sort\+\_\+stack\+\_\+dbg(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Debug function for sorting the stack.
+\item void \doxylink{push__swap_8h_a278415184cb5e8a7eea684b2d06805ee}{moves\+\_\+optimizations(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Optimizes the moves after sorting. 
+\end{DoxyItemize}
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{3__0__sort__stack_8c_acc93a52a98064d4a94d9e795db0461e1}\label{3__0__sort__stack_8c_acc93a52a98064d4a94d9e795db0461e1} 
+\index{3\_0\_sort\_stack.c@{3\_0\_sort\_stack.c}!sort\_stack@{sort\_stack}}
+\index{sort\_stack@{sort\_stack}!3\_0\_sort\_stack.c@{3\_0\_sort\_stack.c}}
+\doxysubsubsection{\texorpdfstring{sort\_stack()}{sort\_stack()}}
+{\footnotesize\ttfamily void sort\+\_\+stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__0__sort__stack_8c_acc93a52a98064d4a94d9e795db0461e1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{3__0__sort__stack_8c_acc93a52a98064d4a94d9e795db0461e1_icgraph}
+\end{center}
+\end{figure}

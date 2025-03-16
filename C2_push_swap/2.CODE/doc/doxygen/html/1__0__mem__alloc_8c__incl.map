@@ -1,0 +1,13 @@
+<map id="src/push_swap/memory/1_0_mem_alloc.c" name="src/push_swap/memory/1_0_mem_alloc.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="173,5,349,45"/>
+<area shape="rect" id="Node000002" href="$push__swap_8h.html" title=" " alt="" coords="208,93,315,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="264,46,264,79,259,79,259,46"/>
+<area shape="rect" id="Node000003" href="$push__swap__defines_8h.html" title=" " alt="" coords="5,174,165,199"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="237,121,124,171,122,166,235,116"/>
+<area shape="rect" id="Node000004" href="$push__swap__data_8h.html" title=" " alt="" coords="190,174,333,199"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="264,119,264,160,259,160,259,119"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="357,167,485,207"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="286,116,371,158,369,163,283,121"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="220,255,303,280"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="264,200,264,241,259,241,259,200"/>
+</map>

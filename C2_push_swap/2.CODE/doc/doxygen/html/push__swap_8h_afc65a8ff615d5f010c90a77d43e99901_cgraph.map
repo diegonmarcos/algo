@@ -1,0 +1,10 @@
+<map id="sort_3" name="sort_3">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,68,56"/>
+<area shape="rect" id="Node000002" href="$4__0__moves__direction_8c.html#a52d7746c8b7628a2e18e1069db470556" title="Rotates the specified stack." alt="" coords="116,5,177,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,34,102,25,103,31,69,39"/>
+<area shape="rect" id="Node000004" href="$4__0__moves__direction_8c.html#aa2036f5bf4b8d176da973726dd806078" title=" " alt="" coords="119,55,175,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="69,48,106,56,105,61,68,53"/>
+<area shape="rect" id="Node000003" href="$1__2__printers__tracers_8c.html#a4cfb30dfa1b732308fb83936337b274c" title=" " alt="" coords="225,31,313,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,22,212,29,211,34,177,27"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="175,59,211,52,212,57,176,65"/>
+</map>

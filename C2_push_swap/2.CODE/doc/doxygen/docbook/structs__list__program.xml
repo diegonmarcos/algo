@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structs__list__program" xml:lang="en-US">
+<title>s_list_program Struct Reference</title>
+<indexterm><primary>s_list_program</primary></indexterm>
+<para>
+<computeroutput>#include &lt;push_swap_data.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structs__list__program_1a3d5e8a5e14aedecc2ae73f9ccc98bac5">dbg</link></para>
+</listitem>
+            <listitem><para><link linkend="_push__swap__data_8h_1a99ef35a30f94abb8960cfa09342f9ab6">t_list_garbage</link> * <link linkend="_structs__list__program_1ae53afdf158094b5ea5d1ccc5766512ad">list_garbage</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__list__program_1ad1447518f4372828b8435ae82e48499e">argc</link></para>
+</listitem>
+            <listitem><para>char ** <link linkend="_structs__list__program_1af2efa898e9eed6fe6715279cb1ec35b0">argv</link></para>
+</listitem>
+            <listitem><para>char ** <link linkend="_structs__list__program_1a2db6226a993d7e8fea5b75dd266f7754">stack_a_array</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__list__program_1a6e57ee187cecd7ccbc71ee05cf75c190">stack_a_size</link></para>
+</listitem>
+            <listitem><para><link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> ** <link linkend="_structs__list__program_1a208ed47f057bd43a29182b8a3c61325e">stack_a</link></para>
+</listitem>
+            <listitem><para><link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> ** <link linkend="_structs__list__program_1a44a203d2d7966e38943d2221e0a47791">stack_b</link></para>
+</listitem>
+            <listitem><para>char ** <link linkend="_structs__list__program_1ad978db9e47f49b6ca9dea62895dc2153">moves</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__list__program_1adf3583cafd0c566da4747331439cef4f">max_moves</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__list__program_1ae5677761147bba99196329cce0586254">move_count</link></para>
+</listitem>
+            <listitem><para>char ** <link linkend="_structs__list__program_1a2c2ffe14e7fc2ee35e898b04240fdd96">moves_optim</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__list__program_1a03f2eca93208eb5cc499df067fb739cd">move_optim_count</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structs__list__program_1ad1447518f4372828b8435ae82e48499e"/><section>
+    <title>argc</title>
+<indexterm><primary>argc</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>argc</secondary></indexterm>
+<para><computeroutput>int argc</computeroutput></para></section>
+<anchor xml:id="_structs__list__program_1af2efa898e9eed6fe6715279cb1ec35b0"/><section>
+    <title>argv</title>
+<indexterm><primary>argv</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>argv</secondary></indexterm>
+<para><computeroutput>char** argv</computeroutput></para></section>
+<anchor xml:id="_structs__list__program_1a3d5e8a5e14aedecc2ae73f9ccc98bac5"/><section>
+    <title>dbg</title>
+<indexterm><primary>dbg</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>dbg</secondary></indexterm>
+<para><computeroutput>int dbg</computeroutput></para></section>
+<anchor xml:id="_structs__list__program_1ae53afdf158094b5ea5d1ccc5766512ad"/><section>
+    <title>list_garbage</title>
+<indexterm><primary>list_garbage</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>list_garbage</secondary></indexterm>
+<para><computeroutput><link linkend="_push__swap__data_8h_1a99ef35a30f94abb8960cfa09342f9ab6">t_list_garbage</link>* list_garbage</computeroutput></para></section>
+<anchor xml:id="_structs__list__program_1adf3583cafd0c566da4747331439cef4f"/><section>
+    <title>max_moves</title>
+<indexterm><primary>max_moves</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>max_moves</secondary></indexterm>
+<para><computeroutput>int max_moves</computeroutput></para></section>
+<anchor xml:id="_structs__list__program_1ae5677761147bba99196329cce0586254"/><section>
+    <title>move_count</title>
+<indexterm><primary>move_count</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>move_count</secondary></indexterm>
+<para><computeroutput>int move_count</computeroutput></para></section>
+<anchor xml:id="_structs__list__program_1a03f2eca93208eb5cc499df067fb739cd"/><section>
+    <title>move_optim_count</title>
+<indexterm><primary>move_optim_count</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>move_optim_count</secondary></indexterm>
+<para><computeroutput>int move_optim_count</computeroutput></para></section>
+<anchor xml:id="_structs__list__program_1ad978db9e47f49b6ca9dea62895dc2153"/><section>
+    <title>moves</title>
+<indexterm><primary>moves</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>moves</secondary></indexterm>
+<para><computeroutput>char** moves</computeroutput></para></section>
+<anchor xml:id="_structs__list__program_1a2c2ffe14e7fc2ee35e898b04240fdd96"/><section>
+    <title>moves_optim</title>
+<indexterm><primary>moves_optim</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>moves_optim</secondary></indexterm>
+<para><computeroutput>char** moves_optim</computeroutput></para></section>
+<anchor xml:id="_structs__list__program_1a208ed47f057bd43a29182b8a3c61325e"/><section>
+    <title>stack_a</title>
+<indexterm><primary>stack_a</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>stack_a</secondary></indexterm>
+<para><computeroutput><link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link>** stack_a</computeroutput></para></section>
+<anchor xml:id="_structs__list__program_1a2db6226a993d7e8fea5b75dd266f7754"/><section>
+    <title>stack_a_array</title>
+<indexterm><primary>stack_a_array</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>stack_a_array</secondary></indexterm>
+<para><computeroutput>char** stack_a_array</computeroutput></para></section>
+<anchor xml:id="_structs__list__program_1a6e57ee187cecd7ccbc71ee05cf75c190"/><section>
+    <title>stack_a_size</title>
+<indexterm><primary>stack_a_size</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>stack_a_size</secondary></indexterm>
+<para><computeroutput>int stack_a_size</computeroutput></para></section>
+<anchor xml:id="_structs__list__program_1a44a203d2d7966e38943d2221e0a47791"/><section>
+    <title>stack_b</title>
+<indexterm><primary>stack_b</primary><secondary>s_list_program</secondary></indexterm>
+<indexterm><primary>s_list_program</primary><secondary>stack_b</secondary></indexterm>
+<para><computeroutput><link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link>** stack_b</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/<link linkend="_push__swap__data_8h">push_swap_data.h</link></section>
+</section>

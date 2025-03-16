@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/12 15:22:35 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/16 14:51:41 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,22 +58,22 @@ CHECKER_BONUS_DIR =
 CHECKER_BUILD = $(MAKE) -C $(CHECKER_BONUS_DIR)
 
 # *** DEBUG MAKE? *** #
-MAKEFLAGS += --silent
+MAKEFLAGS += --silent --no-print-directory
 
 # ************************************************************************ #
 # *** Library *.a (libraries to be included) THE ORDER MATTERS!!! *** #
 LIBS_DIR = libs
 LIB_2_NAME = mylibc
 LIB_2_PATH = $(LIBS_DIR)/$(LIB_1_NAME)
-LIB_1_NAME = push_swap
-LIB_1_PATH = $(LIBS_DIR)/$(LIB_1_NAME)
+LIB_1_NAME = push_swap_0
+LIB_1_PATH = ../../libs
 LIB_1_BUILD_PATH = ../../
 
 # *** Include or not a library (REMEBER TO MANAGE DEPENDECIES OF THE LIBRARIES, the root library comes after the child)
 LDFLAGS +=
 ifeq ($(INCLUDE_LIB), 1)
-	LDFLAGS += -L$(LIBS_DIR) -l$(LIB_1_NAME)
-	LDFLAGS += -l$(LIB_2_NAME)
+	LDFLAGS += -L$(LIB_1_PATH) -l$(LIB_1_NAME)
+	LDFLAGS += -L$(LIBS_DIR) -l$(LIB_2_NAME)
 endif
 
 # *** Type of the Lib *** #

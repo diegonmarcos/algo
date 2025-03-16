@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__5__quicksort__partial_8c" xml:lang="en-US">
+<title>src/push_swap/sort/gear/3_5_quicksort_partial.c File Reference</title>
+<indexterm><primary>src/push_swap/sort/gear/3_5_quicksort_partial.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_5_quicksort_partial.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__quicksort__partial_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_3__5__quicksort__partial_8c_1a03ea3cbb5647bc38f5ca2115810d6def">pivot_calculation_partial</link> (<link linkend="_push__swap__data_8h_1aab9f2c508f96e3939767a8b7edb8d00d">t_chunk</link> *chunk_to_sort, <link linkend="_push__swap__data_8h_1aee1523a9bd24edbe53338d4da7aeadc0">t_splits</link> *split_chunks)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__5__quicksort__partial_8c_1acaf4451e3fdd09ac2c34506682d4d170">recursive_split_chunk_partial</link> (<link linkend="_push__swap__data_8h_1aab9f2c508f96e3939767a8b7edb8d00d">t_chunk</link> *chunk_to_sort, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__5__quicksort__partial_8c_1a52d4f4cb31fbd8cbc7d92d0276647275">quick_sort_partial</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_3__5__quicksort__partial_8c_1a03ea3cbb5647bc38f5ca2115810d6def"/><section>
+    <title>pivot_calculation_partial()</title>
+<indexterm><primary>pivot_calculation_partial</primary><secondary>3_5_quicksort_partial.c</secondary></indexterm>
+<indexterm><primary>3_5_quicksort_partial.c</primary><secondary>pivot_calculation_partial</secondary></indexterm>
+<para><computeroutput>void pivot_calculation_partial (<link linkend="_push__swap__data_8h_1aab9f2c508f96e3939767a8b7edb8d00d">t_chunk</link> * chunk_to_sort, <link linkend="_push__swap__data_8h_1aee1523a9bd24edbe53338d4da7aeadc0">t_splits</link> * split_chunks)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__quicksort__partial_8c_a03ea3cbb5647bc38f5ca2115810d6def_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__5__quicksort__partial_8c_1a52d4f4cb31fbd8cbc7d92d0276647275"/><section>
+    <title>quick_sort_partial()</title>
+<indexterm><primary>quick_sort_partial</primary><secondary>3_5_quicksort_partial.c</secondary></indexterm>
+<indexterm><primary>3_5_quicksort_partial.c</primary><secondary>quick_sort_partial</secondary></indexterm>
+<para><computeroutput>void quick_sort_partial (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__quicksort__partial_8c_a52d4f4cb31fbd8cbc7d92d0276647275_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__quicksort__partial_8c_a52d4f4cb31fbd8cbc7d92d0276647275_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__5__quicksort__partial_8c_1acaf4451e3fdd09ac2c34506682d4d170"/><section>
+    <title>recursive_split_chunk_partial()</title>
+<indexterm><primary>recursive_split_chunk_partial</primary><secondary>3_5_quicksort_partial.c</secondary></indexterm>
+<indexterm><primary>3_5_quicksort_partial.c</primary><secondary>recursive_split_chunk_partial</secondary></indexterm>
+<para><computeroutput>void recursive_split_chunk_partial (<link linkend="_push__swap__data_8h_1aab9f2c508f96e3939767a8b7edb8d00d">t_chunk</link> * chunk_to_sort, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__quicksort__partial_8c_acaf4451e3fdd09ac2c34506682d4d170_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__quicksort__partial_8c_acaf4451e3fdd09ac2c34506682d4d170_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,75 @@
+.TH "src/push_swap/errors/2_0_input_check.c" 3 "Sun Mar 16 2025 16:17:05" "push_swap" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/push_swap/errors/2_0_input_check.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'push_swap\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBerror_handling_input_1\fP (\fBt_list_program\fP *list_program)"
+.br
+.RI "Error handling and egde cases\&. "
+.ti -1c
+.RI "void \fBerror_handling_input_0\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "void \fBis_sorted_linked_list_push\fP (\fBt_list_program\fP *list_program)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void error_handling_input_0 (int argc, char ** argv)"
+
+.SS "void error_handling_input_1 (\fBt_list_program\fP * list_program)"
+
+.PP
+Error handling and egde cases\&. 
+.PP
+\fBDetails:\fP
+.RS 4
+This module provides functions to handle errors and edge cases in the input for the push_swap program\&. It includes checks for the following:
+.RE
+.PP
+.IP "\(bu" 2
+Duplicate values in the input
+.IP "\(bu" 2
+Non-integer values in the input
+.IP "\(bu" 2
+Insufficient number of arguments
+.IP "\(bu" 2
+Empty or null arguments
+.IP "\(bu" 2
+Already sorted input
+.IP "\(bu" 2
+Single element input
+.IP "\(bu" 2
+Sorted linked list in stack_a
+.IP "\(bu" 2
+Non-empty stack_b
+.PP
+.PP
+\fBFunctions:\fP
+.RS 4
+
+.IP "\(bu" 2
+error_handling_input_1: for duplicates, non-integers, and sorted input\&.
+.IP "\(bu" 2
+error_handling_input_0: for the number of arguments and empty arguments\&.
+.IP "\(bu" 2
+is_sorted_linked_list_push: Checks if stack_a is sorted, if stack_b is empty, and handles memory release for termination\&. 
+.PP
+.RE
+.PP
+
+.SS "void is_sorted_linked_list_push (\fBt_list_program\fP * list_program)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for push_swap from the source code\&.

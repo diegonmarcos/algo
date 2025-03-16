@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_30bce0263c51f5e5875f9ef929e3f701" xml:lang="en-US">
+<title>src/push_swap/sort/gear Directory Reference</title>
+<indexterm><primary>src/push_swap/sort/gear Directory Reference</primary></indexterm>
+Directory dependency graph for gear:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_30bce0263c51f5e5875f9ef929e3f701_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_3__5__gearsort__pricing_8c">3_5_gearsort_pricing.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__5__gearsort__pricing2_8c">3_5_gearsort_pricing2.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__5__quicksort__partial_8c">3_5_quicksort_partial.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>
