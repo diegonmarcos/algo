@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/16 17:25:54 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/16 17:49:50 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -531,10 +531,7 @@ endif
 # *** Clean+Bins+Libs *** #
 fclean:	clean
 	$(RM) $(NAME)
-	$(RM) libs/lib$(NAME1).a
-	$(RM) libs/lib$(NAME0)_g.a
-	$(RM) libs/lib$(NAME0)_asan.a
-	$(RM) libs/lib$(NAME0)_g3.a
+	$(RM) libs/*.a
 ifeq ($(BONUS),1)
 	$(MAKE) fclean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 endif
