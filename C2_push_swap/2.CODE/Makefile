@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/16 17:49:50 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/17 09:18:28 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -99,13 +99,13 @@ NAME_REPO				= https://github.com/diegonmarcos/algo
 OUTPUT_PLACE 			=
 
 # ***Is? *** #
-IS_PROGRAM_AND_NOT_LIB 	= 1
-INCLUDE_LIB 			= 1
-BUILD_LIBRARY 			= 1
-BONUS 					= 1
-VERBOSE 				= 0
-DOCKER					= 0
-DBG 					= 0
+IS_PROGRAM_AND_NOT_LIB 	= 1# 0 or 1
+INCLUDE_LIB 			= 1# 0 or 1
+BUILD_LIBRARY 			= 1# 0 or 1
+BONUS 					= 1# 0 or 1
+VERBOSE 				= 1# 0, 1 or 2 - Vebosity of the makefile
+DOCKER					= 0# 0 or 1
+DBG 					= 0# 0 or 1 - Debug mode for the program
 
 # ************************************************************************ #
 # *** Files source *.c *** #
@@ -248,26 +248,27 @@ OBJECTS = $(OBJECTS_MAIN) $(OBJECTS_LIB)
 # *** Include or not a library (REMEBER TO MANAGE DEPENDECIES OF THE LIBRARIES, the root library comes after the child)
 LDFLAGS			:=
 CFLAGS_INCL 	= -I$(HEADER_DIR)
-LIBS_PATH 		:= $(LIBS_SO)
+LIBS_PATH 		:=
 ifneq ($(LIB_1_NAME), 0)
+	LIBS_PATH 	+= $(LIB_1_FILE)
 	LDFLAGS 	+= -L$(LIB_1_PATH) -l$(LIB_1_NAME)
 	CFLAGS_INCL += -I$(LIB_1_PATH)/inc
-	LIBS_PATH 	+= $(LIB_1_FILE)
+
 endif
 ifneq ($(LIB_2_NAME), 0)
+	LIBS_PATH 	+= $(LIB_2_FILE)
 	LDFLAGS 	+= -L$(LIB_2_PATH) -l$(LIB_2_NAME)
 	CFLAGS_INCL += -I$(LIB_2_PATH)/inc
-	LIBS_PATH 	+= $(LIB_2_FILE)
 endif
 ifneq ($(LIB_3_NAME), 0)
+	LIBS_PATH 	+= $(LIB_3_FILE)
 	LDFLAGS 	+= -L$(LIB_3_PATH) -l$(LIB_3_NAME)
 	CFLAGS_INCL += -I$(LIB_3_PATH)/inc
-	LIBS_PATH 	+= $(LIB_3_FILE)
 endif
 ifneq ($(LIB_4_NAME), 0)
+	LIBS_PATH 	+= $(LIB_4_FILE)
 	LDFLAGS 	+= -L$(LIB_4_PATH) -l$(LIB_4_NAME)
 	CFLAGS_INCL += -I$(LIB_4_PATH)/inc
-	LIBS_PATH 	+= $(LIB_4_FILE)
 endif
 
 LIB_PROGRAM 	= -Llibs -l$(NAME0)
@@ -300,6 +301,7 @@ ifneq ($(ALGO),0)
 	M2			= ALGO
 	MACROS 		+= -D$(M2)=\"$(ALGO)\"
 endif
+
 
 
 # ************************************************************************ #
@@ -385,11 +387,11 @@ CHECKER_BUILD 	= $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 
 build_system_pipeline:
 	$(MAKE) hello
-	$(MAKE) check_up_to_date
 	$(MAKE) build_enviroment_folders
 	$(MAKE) build_dependencies_docker
 	$(MAKE) build_enviroment_docker
 	$(MAKE) build_dependencies_libraries
+	$(MAKE) check_up_to_date
 #	$(MAKE) compile_program_lib_objects
 	$(MAKE) archive_lib_program
 	$(MAKE) archive_lib_program_merged
@@ -397,6 +399,7 @@ build_system_pipeline:
 	$(MAKE) link_main_program
 	$(MAKE) dbg_rules
 	$(MAKE) check_up_to_date
+	$(MAKE) folders_ls_la
 
 # ************************************************************************ #
 
@@ -414,8 +417,8 @@ endif
 
 build_dependencies_libraries:
 ifneq ($(LIB_1_NAME), 0)
-	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && git -C $(LIB_1_PATH) config remote.origin.pushurl "no_push" && $(MAKE) mylibs_clean 
-	git -C $(LIB_1_PATH) pull > /dev/null 2>&1 || true
+	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && git -C $(LIB_1_PATH) config remote.origin.pushurl "no_push" || true && $(MAKE) mylibs_clean
+	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1|| true
 	$(MAKE) -C $(LIB_1_PATH) MAKEFLAGS=""
 endif
 ifneq ($(LIB_2_NAME), 0)
@@ -437,6 +440,9 @@ ifneq ($(VERBOSE), 0)
 	@echo "$(GRAY)(•̀ᴗ•́)و $@ Build Dependencies done!$(RESET)"
 endif
 
+LIB_OUTPUT_0=libs/lib$(NAME0)_0.a
+LIB_OUTPUT_MERGED=libs/lib$(NAME0).a
+
 #compile_program_lib_objects:
 objs/%.o:	%.c
 	$(COMPILER) $(PIC) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) $(MACROS) -c $< -o $@
@@ -444,16 +450,18 @@ ifneq ($(VERBOSE), 0)
 	@echo "$(GRAY)()و $@ $(NAME) Compiling Objects done!$(RESET)"
 endif
 
-LIB_OUTPUT_0="libs/lib$(NAME0)_0.a"
-archive_lib_program: $(OBJECTS_LIB)
+
+archive_lib_program: $(LIB_OUTPUT_0)
+$(LIB_OUTPUT_0): $(OBJECTS_LIB)
 	$(LIB_LINK_STATIC) $(LIB_OUTPUT_0) $(OBJECTS_LIB)
 ifneq ($(VERBOSE), 0)
 	@echo "  $(GRAY)(•̀ᴗ•́)و lib$(NAME)_0.a Library done!$(RESET)"
 endif
 
-LIB_OUTPUT="libs/lib$(NAME0).a"
-archive_lib_program_merged:
-	echo "GROUP ( $(LIB_OUTPUT_0) $(LIBS_PATH) )" > $(LIB_OUTPUT)
+
+archive_lib_program_merged:$(LIB_OUTPUT_MERGED)
+$(LIB_OUTPUT_MERGED): $(LIB_OUTPUT_0) $(LIBS_PATH)
+	echo "GROUP ( $(LIB_OUTPUT_0) $(LIBS_SO) $(LIBS_PATH) )" > $(LIB_OUTPUT_MERGED)
 ifneq ($(VERBOSE), 0)
 	echo "  $(GRAY)(•̀ᴗ•́)و lib$(NAME).a Library Merged Referenced done!$(RESET)"
 endif
@@ -463,18 +471,20 @@ endif
 link_main_program:
 ifeq ($(IS_PROGRAM_AND_NOT_LIB), 1)
 	$(MAKE) compile_program_main_object1
-compile_program_main_object1: $(OBJECTS_MAIN)
-	$(COMPILER) $(OBJECTS_MAIN) $(LIB_PROGRAM) $(LDFLAGS) $(CFLAG_ASAN) -o $(NAME)
+compile_program_main_object1: $(NAME)
+$(NAME): $(OBJECTS_MAIN) $(LIB_OUTPUT_MERGED)
+	$(COMPILER) $(OBJECTS_MAIN) $(LIB_OUTPUT_MERGED) $(CFLAG_ASAN) -o $(NAME)
 ifneq ($(VERBOSE), 0)
 	@echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
 endif
+
 else
 	cp $(LIB_OUTPUT) $(NAME)
 ifneq ($(VERBOSE), 0)
 	@echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Library Generated!$(RESET)"
 endif
-endif
 
+endif
 
 
 # ************************************************************************ #
@@ -483,11 +493,9 @@ ifeq ($(DBG),1)
 	cp $(NAME0) log/4.Bins_folder/push_swap_g3
 endif
 
-#Name NO USE!
+#Name
 all: $(NAME)
 
-$(NAME):
-	$(MAKE) build_system_pipeline
 
 # ************************************************************************ #
 
@@ -499,7 +507,7 @@ bonus:
 
 
 mylibs_clean:
-	git -C $(LIB_1_PATH) config remote.origin.pushurl "no_push"
+	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
 	$(RM) libs/mylibs/mylibcpp libs/mylibs/mylibx libs/mylibs/mytools libs/mylibs/myunittest
 
 
@@ -602,7 +610,7 @@ folders_log_build:
 #                                DEFS/PHONNY                               	   #
 # **************************************************************************** #
 # *** Phony *** #
-.PHONY:		all build program_or_lib libs_build program	$(NAME)	\
+.PHONY:		all build program_or_lib libs_build program 		\
 			clean fclean fclean_all re 							\
 			library_clean library_fclean library_re 			\
 			folder_lns_builder folders_build check_up_to_date 	\
@@ -658,18 +666,6 @@ log/8.Docker/Makedocker.sh:
 run_docker:
 	./log/8.Docker/Makedocker.sh run
 
-build_dependencies_libs:
-#	sudo apt update
-#gdown
-#	pipx install gdown
-#bear
-#	sudo apt install bear
-#doxygen
-#	sudo apt install doxygen
-#graphvitz	
-#	sudo apt install graphviz
-#xdotool
-#	sudo apt-get install xdotool > /dev/null 2>&1
 
 
 
@@ -1557,7 +1553,7 @@ ifneq ($(VERBOSE), 0)
 		echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(YELLOW)STATUS: Bin does not exist. Building...$(RESET)"; \
 		echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
 	else \
-		if find -L src/ inc/ libs/ -newer "$(NAME)" -print | grep -q .; then \
+		if find -L src/ inc/ $(LIBS_PATH) -newer "$(NAME)" -print | grep -q .; then \
 			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
 			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(RED)STATUS: Some files have changed. Rebuilding...$(RESET)"; \
 			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
@@ -1568,6 +1564,17 @@ ifneq ($(VERBOSE), 0)
 			exit 0; \
 		fi; \
 	fi
+endif
+
+folders_ls_la:
+ifneq ($(VERBOSE), 0)
+	echo "$(GRAY)\n# ############################################################################ #$(RESET)"
+	echo "$(YELLOW)Folders and Files:$(RESET)"
+	echo "$(GRAY)# ############################################################################ #"
+	ls -l | awk '{print $$6, $$7, $$8, $$NF}' | sort
+	ls -l libs/ | awk '{print $$6, $$7, $$8, $$NF}' | sort
+	ls -l libs/mylibs/mylibc | awk '{print $$6, $$7, $$8, $$NF}' | sort
+	echo "# ############################################################################ #$(RESET)"
 endif
 
 # *** Build folders *** #
