@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/18 11:30:42 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/18 12:16:48 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,7 +110,7 @@ DBG 					= 0# 0 or 1 - Debug mode for the program
 # ************************************************************************ #
 # *** Files source *.c *** #
 SOURCE_MAIN 	=						\
-				push_swap.c				
+				push_swap.c		
 
 SOURCE_FILES 	= 						\
 				1_0_mem_alloc.c			\
