@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/18 12:58:06 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/18 17:05:05 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -272,6 +272,8 @@ ifneq ($(LIB_4_NAME), 0)
 endif
 
 LIB_PROGRAM 	= -Llibs -l$(NAME0)
+LIB_OUTPUT_0=libs/lib$(NAME0)_0.a
+LIB_OUTPUT_MERGED=libs/lib$(NAME0).a
 
 # ************************************************************************ #
 #                         VERBOSE AND DEBUG		                           #
@@ -302,6 +304,11 @@ ifneq ($(ALGO),0)
 	MACROS 		+= -D$(M2)=\"$(ALGO)\"
 endif
 
+run_program:
+	$(MAKE) testers_folder_build
+	echo "#######################"
+	$(MAKE) tests_run_5
+	echo "$(RESET)#######################"
 
 
 # ************************************************************************ #
@@ -390,68 +397,71 @@ build_system_pipeline:
 	$(MAKE) build_enviroment_folders
 	$(MAKE) build_dependencies_docker
 	$(MAKE) build_enviroment_docker
-	$(MAKE) build_dependencies_libraries
 	$(MAKE) check_up_to_date
-#	$(MAKE) compile_program_lib_objects
-	$(MAKE) archive_lib_program
-	$(MAKE) archive_lib_program_merged
-#	$(MAKE) compile_program_main_object
-	$(MAKE) link_main_program
+	$(MAKE) $(NAME)
 	$(MAKE) dbg_rules
 	$(MAKE) check_up_to_date_2
 	$(MAKE) folders_ls_la
+	if [ "$(IS_PROGRAM_AND_NOT_LIB)" -eq "1" ]; then \
+		$(MAKE) run_program; \
+	fi
 
 # ************************************************************************ #
-
 build_enviroment_folders:
 	$(MAKE) folders_build
-
 build_dependencies_docker:
 #	$(MAKE) docker_install
-
 build_enviroment_docker:
 ifeq ($(DOCKER),1)
 	$(MAKE) build_docker || true
 endif
 #	$(MAKE) run_docker
 
-build_dependencies_libraries:
-ifneq ($(LIB_1_NAME), 0)
+# ************************************************************************ #
+$(NAME):
+	if [ "$(IS_PROGRAM_AND_NOT_LIB)" -eq "1" ]; then \
+		$(MAKE) linking; \
+		chmod +x $(NAME); \
+	else \
+		$(MAKE) archiving; \
+	fi
+
+
+
+linking: $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
+	$(COMPILER) $(OBJECTS) $(LIBS_PATH) $(CFLAGS_DBG) $(CFLAGS_INCL) $(LDFLAGS) -o $(NAME)
+	echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
+
+
+
+archiving:$(LIB_OUTPUT_MERGED)
+	cp $(LIB_OUTPUT_MERGED) $(NAME)
+
+
+
+$(LIB_OUTPUT_MERGED): $(LIBS_PATH) $(LIB_OUTPUT_0) 
+	echo "GROUP ( $(LIB_OUTPUT_0) $(LIBS_SO) $(LIBS_PATH) )" > $(LIB_OUTPUT_MERGED)
+ifneq ($(VERBOSE), 0)
+	echo "  $(GRAY)(•̀ᴗ•́)و lib$(NAME).a Library Merged Referenced done!$(RESET)"
+endif
+
+
+
+$(LIB_1_FILE):
 	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
 	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
 	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE)
-endif
-ifneq ($(LIB_2_NAME), 0)
+$(LIB_2_FILE):
 	cd libs && $(GCL) $(LIB_2_REPO) $(LIBS_DIR) > /dev/null 2>&1 || true
 	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
 	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE)
-endif
-ifneq ($(LIB_3_NAME), 0)
+$(LIB_3_FILE):
 	cd libs && $(GCL) $(LIB_3_REPO) $(LIBS_DIR) > /dev/null 2>&1 || true
 	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
 	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS=""
-endif
-ifneq ($(LIB_4_NAME), 0)
-	cd libs && $(GCL) $(LIB_4_REPO) $(LIBS_DIR) > /dev/null 2>&1 || true
-	git -C $(LIB_4_PATH) pull > /dev/null 2>&1 || true
-	$(MAKE) -C $(LIB_4_PATH) MAKEFLAGS=""
-endif
-ifneq ($(VERBOSE), 0)
-	@echo "$(GRAY)(•̀ᴗ•́)و $@ Build Dependencies done!$(RESET)"
-endif
-
-LIB_OUTPUT_0=libs/lib$(NAME0)_0.a
-LIB_OUTPUT_MERGED=libs/lib$(NAME0).a
-
-#compile_program_lib_objects:
-objs/%.o:	%.c
-	$(COMPILER) $(PIC) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) $(MACROS) -c $< -o $@
-ifneq ($(VERBOSE), 0)
-	@echo "$(GRAY)()و $@ $(NAME) Compiling Objects done!$(RESET)"
-endif
 
 
-archive_lib_program: $(LIB_OUTPUT_0)
+
 $(LIB_OUTPUT_0): $(OBJECTS_LIB)
 	$(LIB_LINK_STATIC) $(LIB_OUTPUT_0) $(OBJECTS_LIB)
 ifneq ($(VERBOSE), 0)
@@ -459,32 +469,13 @@ ifneq ($(VERBOSE), 0)
 endif
 
 
-archive_lib_program_merged:$(LIB_OUTPUT_MERGED)
-$(LIB_OUTPUT_MERGED): $(LIB_OUTPUT_0) $(LIBS_PATH)
-	echo "GROUP ( $(LIB_OUTPUT_0) $(LIBS_SO) $(LIBS_PATH) )" > $(LIB_OUTPUT_MERGED)
+
+objs/%.o:	%.c
+	$(COMPILER) $(PIC) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) $(MACROS) -c $< -o $@
 ifneq ($(VERBOSE), 0)
-	echo "  $(GRAY)(•̀ᴗ•́)و lib$(NAME).a Library Merged Referenced done!$(RESET)"
+	@echo "$(GRAY)()و $@ $(NAME) Compiling Objects done!$(RESET)"
 endif
 
-#compile_program_main_object:
-
-link_main_program:
-ifeq ($(IS_PROGRAM_AND_NOT_LIB), 1)
-	$(MAKE) compile_program_main_object1
-compile_program_main_object1: $(NAME)
-$(NAME): $(OBJECTS_MAIN) $(LIB_OUTPUT_MERGED)
-	$(COMPILER) $(OBJECTS_MAIN) $(LIB_OUTPUT_MERGED) $(CFLAG_ASAN) -o $(NAME)
-ifneq ($(VERBOSE), 0)
-	@echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
-endif
-
-else
-	cp $(LIB_OUTPUT_0) $(NAME)
-ifneq ($(VERBOSE), 0)
-	@echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Library Generated!$(RESET)"
-endif
-
-endif
 
 
 # ************************************************************************ #
@@ -498,17 +489,18 @@ all: $(NAME)
 
 
 # ************************************************************************ #
-
-
 # *** Bonus Rule *** #
-bonus:
-	$(MAKE)
-	$(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
-
-
+bonus:		
+			$(MAKE) clean
+			$(MAKE) BONUS=1
 mylibs_clean:
 	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
-	$(RM) libs/mylibs/mylibcpp libs/mylibs/mylibx libs/mylibs/mytools libs/mylibs/myunittest
+	$(RM) libs/mylibs/mylibcpp libs/mylibs/mytools libs/mylibs/myunittest
+# ************************************************************************ #
+
+
+
+
 
 
 
