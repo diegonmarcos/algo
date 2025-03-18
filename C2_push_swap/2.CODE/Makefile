@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/17 09:20:21 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/18 11:21:40 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -398,7 +398,7 @@ build_system_pipeline:
 #	$(MAKE) compile_program_main_object
 	$(MAKE) link_main_program
 	$(MAKE) dbg_rules
-	$(MAKE) check_up_to_date
+	$(MAKE) check_up_to_date_2
 	$(MAKE) folders_ls_la
 
 # ************************************************************************ #
@@ -479,7 +479,7 @@ ifneq ($(VERBOSE), 0)
 endif
 
 else
-	cp $(LIB_OUTPUT) $(NAME)
+	cp $(LIB_OUTPUT_0) $(NAME)
 ifneq ($(VERBOSE), 0)
 	@echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Library Generated!$(RESET)"
 endif
@@ -600,6 +600,7 @@ folders_log_build:
 	mkdir -p log/6.Make_dbg
 	mkdir -p log/7.Doxygen
 	mkdir -p log/8.Docker
+
 
 
 
@@ -1546,24 +1547,58 @@ ifneq ($(VERBOSE), 0)
 endif
 
 # *** Build message of timestamps changes *** #
+
 check_up_to_date:
 ifneq ($(VERBOSE), 0)
 	if [ ! -f "$(NAME)" ]; then \
 		echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
 		echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(YELLOW)STATUS: Bin does not exist. Building...$(RESET)"; \
 		echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
+		echo 1 > log/outdate.txt; \
 	else \
 		if find -L src/ inc/ $(LIBS_PATH) -newer "$(NAME)" -print | grep -q .; then \
 			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
 			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(RED)STATUS: Some files have changed. Rebuilding...$(RESET)"; \
 			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
+			echo 1 > log/outdate.txt; \
+			make folders_ls_la; \
 		else \
 			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
 			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(GREEN)STATUS: is up-to-date.$(RESET)"; \
 			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
+			echo 0 > log/outdate.txt; \
 			exit 0; \
 		fi; \
-	fi
+	fi;
+endif
+
+
+check_up_to_date_2:
+	if [ "$(shell cat log/outdate.txt)" -eq "1" ]; then \
+		make check_up_to_date_21; \
+	fi;
+
+check_up_to_date_21:
+ifneq ($(VERBOSE), 0)
+	if [ ! -f "$(NAME)" ]; then \
+		echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
+		echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(YELLOW)STATUS: Bin does not exist. Building...$(RESET)"; \
+		echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
+		echo 1 > log/outdate.txt; \
+	else \
+		if find -L src/ inc/ $(LIBS_PATH) -newer "$(NAME)" -print | grep -q .; then \
+			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
+			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(RED)STATUS: Some files have changed. Rebuilding...$(RESET)"; \
+			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
+			echo 1 > log/outdate.txt; \
+		else \
+			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
+			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(GREEN)STATUS: is up-to-date.$(RESET)"; \
+			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
+			echo 0 > log/outdate.txt; \
+			exit 0; \
+		fi; \
+	fi;
 endif
 
 folders_ls_la:
