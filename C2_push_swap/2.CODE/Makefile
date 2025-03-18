@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/18 17:05:05 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/18 18:12:54 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -279,7 +279,7 @@ LIB_OUTPUT_MERGED=libs/lib$(NAME0).a
 #                         VERBOSE AND DEBUG		                           #
 # ************************************************************************ #
 # *** VERBOSE MAKE? *** #
-MAKEFLAGS		:= --no-print-directory --silent
+MAKEFLAGS		:= --no-print-directory --silent -r -R
 ifeq ($(VERBOSE), 2)
 MAKEFLAGS		:=
 #MAKE 			+= --trace all --warn-undefined-variables
@@ -418,33 +418,35 @@ endif
 #	$(MAKE) run_docker
 
 # ************************************************************************ #
-$(NAME):
-	if [ "$(IS_PROGRAM_AND_NOT_LIB)" -eq "1" ]; then \
-		$(MAKE) linking; \
-		chmod +x $(NAME); \
-	else \
-		$(MAKE) archiving; \
-	fi
-
-
-
-linking: $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
+NAME_PRGM = $(OUTPUT_PLACE)$(NAME0)
+$(NAME_PRGM): $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
 	$(COMPILER) $(OBJECTS) $(LIBS_PATH) $(CFLAGS_DBG) $(CFLAGS_INCL) $(LDFLAGS) -o $(NAME)
 	echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
 
 
-
-archiving:$(LIB_OUTPUT_MERGED)
+NAME_LIB = lib$(NAME0).a
+$(NAME_LIB):$(LIB_OUTPUT_MERGED)
 	cp $(LIB_OUTPUT_MERGED) $(NAME)
 
 
 
-$(LIB_OUTPUT_MERGED): $(LIBS_PATH) $(LIB_OUTPUT_0) 
+$(LIB_OUTPUT_MERGED): build_deps $(LIBS_PATH) $(LIB_OUTPUT_0)
 	echo "GROUP ( $(LIB_OUTPUT_0) $(LIBS_SO) $(LIBS_PATH) )" > $(LIB_OUTPUT_MERGED)
 ifneq ($(VERBOSE), 0)
 	echo "  $(GRAY)(•̀ᴗ•́)و lib$(NAME).a Library Merged Referenced done!$(RESET)"
 endif
 
+
+build_deps:
+	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
+	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
+	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE) || true
+	cd libs && $(GCL) $(LIB_2_REPO) $(LIBS_DIR) > /dev/null 2>&1 || true
+	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
+	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE) || true
+	cd libs && $(GCL) $(LIB_3_REPO) $(LIBS_DIR) > /dev/null 2>&1 || true
+	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
+	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS="" || true
 
 
 $(LIB_1_FILE):
@@ -497,7 +499,6 @@ mylibs_clean:
 	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
 	$(RM) libs/mylibs/mylibcpp libs/mylibs/mytools libs/mylibs/myunittest
 # ************************************************************************ #
-
 
 
 
