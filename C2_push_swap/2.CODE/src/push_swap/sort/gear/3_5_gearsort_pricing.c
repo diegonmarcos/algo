@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 09:38:21 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/19 10:46:58 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	gear_sort_pushswap(t_list_program *list_program)
 	else if (list_program->stack_a_size >= 100)
 		sort_gearing('a', 'b', 25, list_program);
 	else
-		sort_gearing('a', 'b', 5, list_program);
+		sort_gearing('a', 'b', 1, list_program);
 }
 
 void	sort_gearing(char stack_from, char stack_to, int base_case, \
@@ -116,15 +116,9 @@ int	node_pos_locator(int value, t_list_program *list_program, char type, \
 
 int	sort_gearing_is_base_case(int base_case, t_list_program *list_program)
 {
-	if (base_case == 25 && ft_lstsize(*list_program->stack_a) == base_case)
-	{
-		selection_sort(list_program);
-		ft_printers(GEAR, list_program);
-		sort_gearing('b', 'a', 0, list_program);
-		low_up_stack(list_program);
-		return (1);
-	}
-	else if (base_case == 75 && ft_lstsize(*list_program->stack_a) == base_case)
+	if ((base_case == 25 && ft_lstsize(*list_program->stack_a) == base_case) || \
+		(base_case == 1 && ft_lstsize(*list_program->stack_a) == base_case) || \
+		(base_case == 75 && ft_lstsize(*list_program->stack_a) == base_case))
 	{
 		selection_sort(list_program);
 		ft_printers(GEAR, list_program);

@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:31:23 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 09:38:21 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/19 10:27:32 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 //##############################################################################
 
 // LIBRARIES
-//#include "all_inc_inc.h"
 #include "push_swap.h"
 
 //##############################################################################
@@ -66,5 +65,10 @@ void	radix_sort_step(int bit, int size, t_list_program *list_program)
 		}
 	}
 	while (pushes-- > 0)
+	{
 		push('a', list_program);
+		if (list_program->stack_a_size < 10 && \
+			(*list_program->stack_a)->index == list_program->stack_a_size - 1)
+			rotate("r", 'a', list_program);
+	}
 }

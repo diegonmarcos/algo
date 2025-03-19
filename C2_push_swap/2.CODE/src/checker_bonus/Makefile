@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/16 14:51:41 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/19 09:45:29 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,14 +44,14 @@ BONUS = 0
 
 # ************************************************************************ #
 # *** Files source *.c *** #
-SOURCE_MAIN =									\
-					checker_bonus.c					\
+SOURCE_MAIN =						\
+					checker_bonus.c	\
 
-SOURCE_FILES = 								\
+SOURCE_FILES = 						\
 
 #SOURCE_MAIN = $(wildcard src/*.c) $(wildcard src/*/*.c)
 
-VPATH = src:							\
+VPATH = src:						\
 
 # *** Extra Rules (Bonus) *** #
 CHECKER_BONUS_DIR =
@@ -62,11 +62,11 @@ MAKEFLAGS += --silent --no-print-directory
 
 # ************************************************************************ #
 # *** Library *.a (libraries to be included) THE ORDER MATTERS!!! *** #
-LIBS_DIR = libs
-LIB_2_NAME = mylibc
-LIB_2_PATH = $(LIBS_DIR)/$(LIB_1_NAME)
-LIB_1_NAME = push_swap_0
-LIB_1_PATH = ../../libs
+LIBS_DIR 		= libs
+LIB_2_NAME		= mylibc
+LIB_2_PATH		= $(LIBS_DIR)/$(LIB_1_NAME)
+LIB_1_NAME		= push_swap_0
+LIB_1_PATH		= ../../libs
 LIB_1_BUILD_PATH = ../../
 
 # *** Include or not a library (REMEBER TO MANAGE DEPENDECIES OF THE LIBRARIES, the root library comes after the child)
