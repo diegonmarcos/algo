@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/18 18:12:54 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/19 09:08:21 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -149,27 +149,26 @@ LIBS_SO 		=
 
 
 # *** Library *.a (libraries to be included) THE ORDER MATTERS!!! *** #
-LIBS_DIR 	= libs
+LIBS_DIR 		= libs
 
-LIB_1_NAME 	= mylibc
-LIB_1_PATH 	= libs/mylibs/mylibc
-LIB_1_FILE 	= $(LIB_1_PATH)/lib$(LIB_1_NAME).a
-LIB_1_REPO 	= https://github.com/diegonmarcos/mylibs.git
+LIB_1_NAME 		= mylibc
+LIB_1_PATH 		= libs/mylibs/mylibc
+LIB_1_FILE 		= $(LIB_1_PATH)/lib$(LIB_1_NAME).a
+LIB_1_REPO 		= https://github.com/diegonmarcos/mylibs.git
+LIB_1_CONFIG	=
 
-LIB_2_NAME 	= 0
-LIB_2_PATH 	= 
-LIB_2_FILE 	=
-LIB_2_REPO 	=
+LIB_2_NAME 		= 0
+LIB_2_PATH 		= 
+LIB_2_FILE 		= 
+LIB_2_REPO 		=
+LIB_2_CONFIG	=
 
-LIB_3_NAME 	= 0
-LIB_3_PATH 	= 
-LIB_3_FILE 	=
-LIB_3_REPO 	= 
 
-LIB_4_NAME 	= 0
-LIB_4_PATH 	= 
-LIB_4_FILE 	=
-LIBR_4_REPO =
+LIB_3_NAME 		= 0
+LIB_3_PATH 		= 
+LIB_3_FILE 		=
+LIB_3_REPO 		=
+LIB_3_CONFIG	= 
 
 # ************************************************************************ #
 # COMPILER AND LINKER VARS												   #
@@ -397,6 +396,7 @@ build_system_pipeline:
 	$(MAKE) build_enviroment_folders
 	$(MAKE) build_dependencies_docker
 	$(MAKE) build_enviroment_docker
+	$(MAKE) build_deps
 	$(MAKE) check_up_to_date
 	$(MAKE) $(NAME)
 	$(MAKE) dbg_rules
@@ -416,7 +416,22 @@ ifeq ($(DOCKER),1)
 	$(MAKE) build_docker || true
 endif
 #	$(MAKE) run_docker
+build_deps:
+	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
+	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
+	$(LIB_1_CONFIG)
+	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE) || true
+	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
+	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
+	$(LIB_2_CONFIG)
+	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE) || true
+	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
+	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
+	$(LIB_3_CONFIG)
+	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS="" || true
 
+# ************************************************************************ #
+# ************************************************************************ #
 # ************************************************************************ #
 NAME_PRGM = $(OUTPUT_PLACE)$(NAME0)
 $(NAME_PRGM): $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
@@ -425,28 +440,18 @@ $(NAME_PRGM): $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN)
 
 
 NAME_LIB = lib$(NAME0).a
-$(NAME_LIB):$(LIB_OUTPUT_MERGED)
+$(NAME_LIB): $(OBJECTS_LIB) $(LIBS_PATH) $(LIB_OUTPUT_0) $(LIB_OUTPUT_MERGED)
 	cp $(LIB_OUTPUT_MERGED) $(NAME)
+	echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Lib Generated!$(RESET)"
 
 
 
-$(LIB_OUTPUT_MERGED): build_deps $(LIBS_PATH) $(LIB_OUTPUT_0)
+$(LIB_OUTPUT_MERGED): $(LIBS_PATH) $(LIB_OUTPUT_0) 
 	echo "GROUP ( $(LIB_OUTPUT_0) $(LIBS_SO) $(LIBS_PATH) )" > $(LIB_OUTPUT_MERGED)
 ifneq ($(VERBOSE), 0)
 	echo "  $(GRAY)(•̀ᴗ•́)و lib$(NAME).a Library Merged Referenced done!$(RESET)"
 endif
 
-
-build_deps:
-	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
-	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
-	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE) || true
-	cd libs && $(GCL) $(LIB_2_REPO) $(LIBS_DIR) > /dev/null 2>&1 || true
-	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
-	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE) || true
-	cd libs && $(GCL) $(LIB_3_REPO) $(LIBS_DIR) > /dev/null 2>&1 || true
-	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
-	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS="" || true
 
 
 $(LIB_1_FILE):
@@ -454,11 +459,11 @@ $(LIB_1_FILE):
 	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
 	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE)
 $(LIB_2_FILE):
-	cd libs && $(GCL) $(LIB_2_REPO) $(LIBS_DIR) > /dev/null 2>&1 || true
+	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
 	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
 	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE)
 $(LIB_3_FILE):
-	cd libs && $(GCL) $(LIB_3_REPO) $(LIBS_DIR) > /dev/null 2>&1 || true
+	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
 	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
 	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS=""
 
@@ -497,7 +502,7 @@ bonus:
 			$(MAKE) BONUS=1
 mylibs_clean:
 	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
-	$(RM) libs/mylibs/mylibcpp libs/mylibs/mytools libs/mylibs/myunittest
+	$(RM) libs/mylibs/mylibcpp libs/mylibs/mylibx libs/mylibs/mytools libs/mylibs/myunittest
 # ************************************************************************ #
 
 
