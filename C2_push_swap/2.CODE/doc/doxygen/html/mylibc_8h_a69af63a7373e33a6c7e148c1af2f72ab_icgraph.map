@@ -1,0 +1,9 @@
+<map id="ft_isnum" name="ft_isnum">
+<area shape="rect" id="Node000001" title=" " alt="" coords="489,5,568,31"/>
+<area shape="rect" id="Node000002" href="$src__all_21c__ft__isdigit_8c.html#a1c6a73d3c1782fe836f5e026742379a8" title=" " alt="" coords="327,5,441,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="476,21,442,21,442,15,476,15"/>
+<area shape="rect" id="Node000003" href="$2__0__input__check_8c.html#a788f5366d812d5836a70746e7ab64897" title="Error handling and egde cases." alt="" coords="108,5,279,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="313,21,279,21,279,15,313,15"/>
+<area shape="rect" id="Node000004" href="$checker__bonus_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

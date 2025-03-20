@@ -1,0 +1,109 @@
+.TH "md_src_2checker__bonus_2testers_2push__swap__visulaize" 3 "Thu Mar 20 2025 16:01:03" "push_swap" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md_src_2checker__bonus_2testers_2push__swap__visulaize \- Push Swap Visualizer 
+.PP
+ This project is a visualizer for the **'PUSH_SWAP'** 42 School Project\&.
+.PP
+\fBPush Swap\fP is a program that takes as argument a space separated list of numbers and outputs a list of commands that can be used to sort them\&.
+.PP
+You can read the subject \fChere\fP\&.
+.SH "Install"
+.PP
+.IP "\(bu" 2
+Clone the \fCpush_swap_visualizer\fP repository into the directory where your \fCpush_swap\fP project is located:
+.PP
+.PP
+.PP
+.nf
+git clone https://github\&.com/o\-reo/push_swap_visualizer\&.git
+.fi
+.PP
+.PP
+This project uses C++17, cmake, SFML and ImGui\&.
+.PP
+.IP "\(bu" 2
+Install required packages (if not already installed) For Debian-based systems, you can install the necessary packages using the following commands:
+.PP
+.PP
+.PP
+.nf
+sudo apt\-get update
+sudo apt\-get install cmake
+sudo apt\-get install g++
+sudo apt\-get install clang
+sudo apt\-get install libgl1\-mesa\-dev libglu1\-mesa\-dev
+sudo apt\-get install libx11\-dev libxrandr\-dev
+sudo apt\-get install libudev\-dev
+sudo apt\-get install libfreetype\-dev
+.fi
+.PP
+.PP
+.IP "\(bu" 2
+Navigate to the \fCpush_swap_visualizer\fP directory, create \fCbuild\fP directory, and navigate into the build directory:
+.PP
+.PP
+.PP
+.nf
+cd push_swap_visualizer
+mkdir build
+cd build
+.fi
+.PP
+.PP
+.IP "\(bu" 2
+Generate the build files using CMake and compile the visualizer:
+.PP
+.PP
+.PP
+.nf
+cmake \&.\&.
+make
+.fi
+.PP
+.PP
+.IP "\(bu" 2
+Run the visualizer:
+.PP
+.PP
+.PP
+.nf
+\&./bin/visualizer
+.fi
+.PP
+.SH "Usage"
+.PP
+.IP "\(bu" 2
+If you've relocated your push_swap program, simply update the visualizer's menu directory from '\&.\&./\&.\&./push_swap' to the new path of your push_swap program\&. For instance, '\&.\&./\&.\&./new_directory/push_swap'\&.
+.IP "\(bu" 2
+In the \fBValues\fP window
+.IP "  \(bu" 4
+Choose the size of the push swap input with the slider [Optional]
+.IP "  \(bu" 4
+\fBShuffle\fP the input [Optional]
+.IP "  \(bu" 4
+The space separated values should be filled automatically, you can also put your own values
+.IP "  \(bu" 4
+Set the Push Swap program path (Absolute or relative path)\&.
+.IP "  \(bu" 4
+\fBCompute\fP the sort commands, it will display OK when done\&.
+.PP
+
+.IP "\(bu" 2
+In the \fBControls\fP window
+.IP "  \(bu" 4
+\fBLoad\fP the commands in the visualizer
+.IP "  \(bu" 4
+\fBStart\fP the animation
+.IP "  \(bu" 4
+Adjust the \fBSpeed\fP as needed
+.IP "  \(bu" 4
+\fBPause\fP and go \fBStep\fP by step to see the details of your algorithm\&.
+.IP "  \(bu" 4
+\fBLoad\fP to restart the animation
+.PP
+
+.PP
+.PP
+ 

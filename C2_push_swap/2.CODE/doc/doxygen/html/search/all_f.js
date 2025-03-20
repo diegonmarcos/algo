@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['list_5fgarbage_0',['list_garbage',['../structs__list__program.html#ae53afdf158094b5ea5d1ccc5766512ad',1,'s_list_program']]],
-  ['low_5fup_5fstack_1',['low_up_stack',['../push__swap_8h.html#a6860e9765129c5ba9e49e1b94ecbe4f7',1,'low_up_stack(t_list_program *list_program):&#160;3_5_gearsort_pricing2.c'],['../3__5__gearsort__pricing2_8c.html#a6860e9765129c5ba9e49e1b94ecbe4f7',1,'low_up_stack(t_list_program *list_program):&#160;3_5_gearsort_pricing2.c']]]
+  ['quick_5fsort_5fpartial_0',['quick_sort_partial',['../3__5__quicksort__partial_8c.html#a52d4f4cb31fbd8cbc7d92d0276647275',1,'3_5_quicksort_partial.c']]],
+  ['quick_5fsort_5fpushswap_1',['quick_sort_pushswap',['../3__4__quicksort_8c.html#aa3ace5cfa01a8732fe50b2a306016ca3',1,'3_4_quicksort.c']]]
 ];

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structs__bresenham" xml:lang="en-US">
+<title>s_bresenham Struct Reference</title>
+<indexterm><primary>s_bresenham</primary></indexterm>
+<para>
+<computeroutput>#include &lt;mylibc_data.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structs__bresenham_1a97650a9c1395589a56789a90b5bf8d0c">x0</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__bresenham_1a6172bea3fd23fa3631c9e19851754db6">y0</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__bresenham_1a97fcb0e1731b36905e90757f211b1340">x1</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__bresenham_1a886daa12d11655f342168e87c7c0b1cb">y1</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__bresenham_1a6a0d40b2ed6d9e674f93396212f0028f">dx</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__bresenham_1a4817151aee120cc100c400d3076f4b93">dy</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__bresenham_1a699a96985661e4518b86127b4e63c3a8">sx</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__bresenham_1affcd3fe43d73220dd7b3e6bde969e65c">sy</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__bresenham_1a6ce68847c12434f60d1b2654a3dc3409">err</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structs__bresenham_1a6a0d40b2ed6d9e674f93396212f0028f"/><section>
+    <title>dx</title>
+<indexterm><primary>dx</primary><secondary>s_bresenham</secondary></indexterm>
+<indexterm><primary>s_bresenham</primary><secondary>dx</secondary></indexterm>
+<para><computeroutput>int dx</computeroutput></para></section>
+<anchor xml:id="_structs__bresenham_1a4817151aee120cc100c400d3076f4b93"/><section>
+    <title>dy</title>
+<indexterm><primary>dy</primary><secondary>s_bresenham</secondary></indexterm>
+<indexterm><primary>s_bresenham</primary><secondary>dy</secondary></indexterm>
+<para><computeroutput>int dy</computeroutput></para></section>
+<anchor xml:id="_structs__bresenham_1a6ce68847c12434f60d1b2654a3dc3409"/><section>
+    <title>err</title>
+<indexterm><primary>err</primary><secondary>s_bresenham</secondary></indexterm>
+<indexterm><primary>s_bresenham</primary><secondary>err</secondary></indexterm>
+<para><computeroutput>int err</computeroutput></para></section>
+<anchor xml:id="_structs__bresenham_1a699a96985661e4518b86127b4e63c3a8"/><section>
+    <title>sx</title>
+<indexterm><primary>sx</primary><secondary>s_bresenham</secondary></indexterm>
+<indexterm><primary>s_bresenham</primary><secondary>sx</secondary></indexterm>
+<para><computeroutput>int sx</computeroutput></para></section>
+<anchor xml:id="_structs__bresenham_1affcd3fe43d73220dd7b3e6bde969e65c"/><section>
+    <title>sy</title>
+<indexterm><primary>sy</primary><secondary>s_bresenham</secondary></indexterm>
+<indexterm><primary>s_bresenham</primary><secondary>sy</secondary></indexterm>
+<para><computeroutput>int sy</computeroutput></para></section>
+<anchor xml:id="_structs__bresenham_1a97650a9c1395589a56789a90b5bf8d0c"/><section>
+    <title>x0</title>
+<indexterm><primary>x0</primary><secondary>s_bresenham</secondary></indexterm>
+<indexterm><primary>s_bresenham</primary><secondary>x0</secondary></indexterm>
+<para><computeroutput>int x0</computeroutput></para></section>
+<anchor xml:id="_structs__bresenham_1a97fcb0e1731b36905e90757f211b1340"/><section>
+    <title>x1</title>
+<indexterm><primary>x1</primary><secondary>s_bresenham</secondary></indexterm>
+<indexterm><primary>s_bresenham</primary><secondary>x1</secondary></indexterm>
+<para><computeroutput>int x1</computeroutput></para></section>
+<anchor xml:id="_structs__bresenham_1a6172bea3fd23fa3631c9e19851754db6"/><section>
+    <title>y0</title>
+<indexterm><primary>y0</primary><secondary>s_bresenham</secondary></indexterm>
+<indexterm><primary>s_bresenham</primary><secondary>y0</secondary></indexterm>
+<para><computeroutput>int y0</computeroutput></para></section>
+<anchor xml:id="_structs__bresenham_1a886daa12d11655f342168e87c7c0b1cb"/><section>
+    <title>y1</title>
+<indexterm><primary>y1</primary><secondary>s_bresenham</secondary></indexterm>
+<indexterm><primary>s_bresenham</primary><secondary>y1</secondary></indexterm>
+<para><computeroutput>int y1</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/checker_bonus/libs/mylibs/mylibc/inc/<link linkend="_mylibc__data_8h">mylibc_data.h</link></section>
+</section>

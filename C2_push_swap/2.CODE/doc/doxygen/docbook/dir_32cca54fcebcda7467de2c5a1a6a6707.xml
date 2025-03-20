@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_32cca54fcebcda7467de2c5a1a6a6707" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/4__data_parser Directory Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/4__data_parser Directory Reference</primary></indexterm>
+Directory dependency graph for 4__data_parser:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_32cca54fcebcda7467de2c5a1a6a6707_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_b4aa1d08d6bf9b48d4f3ff20c9d8ee53">0_memory</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_b74d9f647ffcfaf5140d89b004c6b8c1">1_readers</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_31c4f712020154ccc4df6766429e58ea">2_trimmers</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_4____data__parser_24__ft__data__parser_8c">4_ft_data_parser.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

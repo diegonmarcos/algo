@@ -14,7 +14,7 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>void <link linkend="_3__4__quicksort_8c_1aa3ace5cfa01a8732fe50b2a306016ca3">quick_sort_pushswap</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_3__4__quicksort_8c_1aa3ace5cfa01a8732fe50b2a306016ca3">quick_sort_pushswap</link> (t_list_program *list_program)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -24,7 +24,7 @@
     <title>quick_sort_pushswap()</title>
 <indexterm><primary>quick_sort_pushswap</primary><secondary>3_4_quicksort.c</secondary></indexterm>
 <indexterm><primary>3_4_quicksort.c</primary><secondary>quick_sort_pushswap</secondary></indexterm>
-<para><computeroutput>void quick_sort_pushswap (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void quick_sort_pushswap (t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>

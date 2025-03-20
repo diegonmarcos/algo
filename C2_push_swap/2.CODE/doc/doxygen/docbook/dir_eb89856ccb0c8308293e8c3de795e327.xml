@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_eb89856ccb0c8308293e8c3de795e327" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/1b_input/1_ft_fgets_heap Directory Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/1b_input/1_ft_fgets_heap Directory Reference</primary></indexterm>
+Directory dependency graph for 1_ft_fgets_heap:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_eb89856ccb0c8308293e8c3de795e327_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_1b__input_21__ft__fgets__heap_21b__ft__fgets__gnl_8c">1b_ft_fgets_gnl.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_1b__input_21__ft__fgets__heap_21b__gnl__join__split_8c">1b_gnl_join_split.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

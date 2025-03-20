@@ -1,5 +1,8 @@
 <map id="s_sort_gearing" name="s_sort_gearing">
-<area shape="rect" id="Node000001" title=" " alt="" coords="22,93,139,119"/>
-<area shape="rect" id="Node000002" href="$structs__move__lower__cost.html" title=" " alt="" coords="5,5,156,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,45,83,93,78,93,78,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="22,185,139,211"/>
+<area shape="rect" id="Node000002" href="$structs__move__lower__cost.html" title=" " alt="" coords="5,97,156,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,137,83,185,78,185,78,137"/>
+<area shape="rect" id="Node000003" href="$structs__list__dls.html" title=" " alt="" coords="39,7,122,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,46,83,97,78,97,78,46"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="136,10,145,13,149,20,140,29,122,31,122,26,138,24,143,20,141,18,135,15"/>
 </map>

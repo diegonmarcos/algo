@@ -14,11 +14,11 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>int <link linkend="_3__5__gearsort__pricing2_8c_1a499b0d7d62f18ca9a7d33c016b97ffff">node_pos_locator_is_in_place</link> (char stack_from, int value, <link linkend="_push__swap__data_8h_1a49a6dee79e2446514c8dfb32e48983b4">t_node_pos_locator</link> *v)</para>
+            <listitem><para>int <link linkend="_3__5__gearsort__pricing2_8c_1a499b0d7d62f18ca9a7d33c016b97ffff">node_pos_locator_is_in_place</link> (char stack_from, int value, t_node_pos_locator *v)</para>
 </listitem>
-            <listitem><para>void <link linkend="_3__5__gearsort__pricing2_8c_1a38a7b3158cdf772254cf9e63f31c3fbc">high_up_stack</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_3__5__gearsort__pricing2_8c_1a38a7b3158cdf772254cf9e63f31c3fbc">high_up_stack</link> (t_list_program *list_program)</para>
 </listitem>
-            <listitem><para>void <link linkend="_3__5__gearsort__pricing2_8c_1a6860e9765129c5ba9e49e1b94ecbe4f7">low_up_stack</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_3__5__gearsort__pricing2_8c_1a6860e9765129c5ba9e49e1b94ecbe4f7">low_up_stack</link> (t_list_program *list_program)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -28,7 +28,7 @@
     <title>high_up_stack()</title>
 <indexterm><primary>high_up_stack</primary><secondary>3_5_gearsort_pricing2.c</secondary></indexterm>
 <indexterm><primary>3_5_gearsort_pricing2.c</primary><secondary>high_up_stack</secondary></indexterm>
-<para><computeroutput>void high_up_stack (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void high_up_stack (t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -42,7 +42,7 @@
     <title>low_up_stack()</title>
 <indexterm><primary>low_up_stack</primary><secondary>3_5_gearsort_pricing2.c</secondary></indexterm>
 <indexterm><primary>3_5_gearsort_pricing2.c</primary><secondary>low_up_stack</secondary></indexterm>
-<para><computeroutput>void low_up_stack (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void low_up_stack (t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -65,7 +65,7 @@ Here is the caller graph for this function:<para>
     <title>node_pos_locator_is_in_place()</title>
 <indexterm><primary>node_pos_locator_is_in_place</primary><secondary>3_5_gearsort_pricing2.c</secondary></indexterm>
 <indexterm><primary>3_5_gearsort_pricing2.c</primary><secondary>node_pos_locator_is_in_place</secondary></indexterm>
-<para><computeroutput>int node_pos_locator_is_in_place (char stack_from, int value, <link linkend="_push__swap__data_8h_1a49a6dee79e2446514c8dfb32e48983b4">t_node_pos_locator</link> * v)</computeroutput></para>Here is the caller graph for this function:<para>
+<para><computeroutput>int node_pos_locator_is_in_place (char stack_from, int value, t_node_pos_locator * v)</computeroutput></para>Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>

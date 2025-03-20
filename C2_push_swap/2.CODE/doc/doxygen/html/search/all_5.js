@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['bottom_5fa_0',['BOTTOM_A',['../push__swap__data_8h.html#a294095a663be30ccdac5ade60b67be2fa05ba4646cf46b3676d96cc699106a9e6',1,'push_swap_data.h']]],
-  ['bottom_5fb_1',['BOTTOM_B',['../push__swap__data_8h.html#a294095a663be30ccdac5ade60b67be2fa8a5841c5e8f2ab21c024de48ed7f5561',1,'push_swap_data.h']]]
+  ['data_5falloc_0',['data_alloc',['../1__0__mem__alloc_8c.html#a1852976558d65cb628d7e7f4e7f7b5ee',1,'1_0_mem_alloc.c']]],
+  ['data_5falloc_5f1_1',['data_alloc_1',['../1__0__mem__alloc_8c.html#abe7da947f35f514adffbcf41eace0598',1,'1_0_mem_alloc.c']]],
+  ['data_5falloc_5f2_2',['data_alloc_2',['../1__0__mem__alloc_8c.html#a83892871ab621bdc34dafae1d77254de',1,'1_0_mem_alloc.c']]],
+  ['data_5falloc_5fvars_3',['data_alloc_vars',['../1__0__mem__alloc_8c.html#a3e81e0a181d9e021f35edbd35e5ab298',1,'1_0_mem_alloc.c']]]
 ];

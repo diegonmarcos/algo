@@ -1,0 +1,61 @@
+\doxysection{\+\_\+algo.\+h}
+\hypertarget{__algo_8h_source}{}\label{__algo_8h_source}\index{src/checker\_bonus/libs/mylibs/mylibc/inc/\_algo.h@{src/checker\_bonus/libs/mylibs/mylibc/inc/\_algo.h}}
+\mbox{\hyperlink{__algo_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ **************************************************************************\ */}}
+\DoxyCodeLine{00002\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00003\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :::\ \ \ \ \ \ ::::::::\ \ \ */}}
+\DoxyCodeLine{00004\ \textcolor{comment}{/*\ \ \ \_algo.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :+:\ \ \ \ \ \ :+:\ \ \ \ :+:\ \ \ */}}
+\DoxyCodeLine{00005\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +:+\ +:+\ \ \ \ \ \ \ \ \ +:+\ \ \ \ \ */}}
+\DoxyCodeLine{00006\ \textcolor{comment}{/*\ \ \ By:\ dinepomu\ <dinepomu@student.42berlin.de>\ \ \ \ +\#+\ \ +:+\ \ \ \ \ \ \ +\#+\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00007\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\#+\#+\#+\#+\#+\ \ \ +\#+\ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00008\ \textcolor{comment}{/*\ \ \ Created:\ 2025/03/10\ 08:37:33\ by\ dinepomu\ \ \ \ \ \ \ \ \ \ \#+\#\ \ \ \ \#+\#\ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00009\ \textcolor{comment}{/*\ \ \ Updated:\ 2025/03/10\ 10:58:22\ by\ dinepomu\ \ \ \ \ \ \ \ \ \#\#\#\ \ \ \#\#\#\#\#\#\#\#.fr\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00010\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00011\ \textcolor{comment}{/*\ **************************************************************************\ */}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{/*\ **************************************************************************\ */}}
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ https://linktr.ee/diegonmarcos\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00015\ \textcolor{comment}{/*\ **************************************************************************\ */}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifndef\ \_ALGO\_H}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#\ define\ \_ALGO\_H}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#\ include\ <unistd.h>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓\ //}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/*\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\ */}}
+\DoxyCodeLine{00025\ \textcolor{comment}{/*\ 3.\ ALGOS\ graphic\ sorting\ parser\ others\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00026\ \textcolor{comment}{/*\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\ */}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/*\ *************************************************************\ */}}
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ ALGOS/SORTING\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00030\ \textcolor{comment}{/*\ *************************************************************\ */}}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{__algo_8h_a1c6c3862fc82db2087497b88d1457411}{heapify}}(\textcolor{keywordtype}{int}\ arr[],\ \textcolor{keywordtype}{int}\ n,\ \textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{__algo_8h_a0467fe1d4cf5835a03840e3998eceae0}{heap\_sort}}(\textcolor{keywordtype}{int}\ arr[],\ \textcolor{keywordtype}{int}\ n);}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{__algo_8h_a64ad59a88d29daf3d81305ade3627975}{quick\_sort}}(\textcolor{keywordtype}{int}\ arr[],\ \textcolor{keywordtype}{int}\ low,\ \textcolor{keywordtype}{int}\ high,\ \textcolor{keywordtype}{int}\ depthlimit);}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{__algo_8h_af3d8997b18410a08b5c5e982a24e363a}{ft\_log\_introsort}}(\textcolor{keywordtype}{int}\ n);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{__algo_8h_a307734c126897c09e919eb65119bb102}{intro\_sort}}(\textcolor{keywordtype}{int}\ arr[],\ \textcolor{keywordtype}{int}\ n);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{__algo_8h_ad38d9c701da937aa7644a2053e512863}{swap\_introsort}}(\textcolor{keywordtype}{int}\ *a,\ \textcolor{keywordtype}{int}\ *b);}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{__algo_8h_a2f0658d814c1e14b49d419add95c79b9}{partition}}(\textcolor{keywordtype}{int}\ arr[],\ \textcolor{keywordtype}{int}\ low,\ \textcolor{keywordtype}{int}\ high);}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{__algo_8h_a1c6c3862fc82db2087497b88d1457411}{heapify}}(\textcolor{keywordtype}{int}\ arr[],\ \textcolor{keywordtype}{int}\ n,\ \textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{/*\ *************************************************************\ */}}
+\DoxyCodeLine{00041\ \textcolor{comment}{/*\ ARITHMETIC/MATH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00042\ \textcolor{comment}{/*\ *************************************************************\ */}}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{__algo_8h_aa08d9f8fd59789cc722de1f2bdfe48a1}{ft\_abs}}(\textcolor{keywordtype}{int}\ number);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{__algo_8h_a24712ac200c27af6c4baca2e646a476f}{matrix3\_init}}(\textcolor{keywordtype}{float}\ (*matrix)[3]);}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{__algo_8h_a444f95ef474736b965e5eb10e81d88e7}{print\_bits}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ octet);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{/*\ *************************************************************\ */}}
+\DoxyCodeLine{00048\ \textcolor{comment}{/*\ ARITHMETIC/STATISTICS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00049\ \textcolor{comment}{/*\ *************************************************************\ */}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{/*\ *************************************************************\ */}}
+\DoxyCodeLine{00052\ \textcolor{comment}{/*\ ARITHMETIC/PROBABILITY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00053\ \textcolor{comment}{/*\ *************************************************************\ */}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

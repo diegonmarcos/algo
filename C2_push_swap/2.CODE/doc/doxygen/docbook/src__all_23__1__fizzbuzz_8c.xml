@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_src__all_23__1__fizzbuzz_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/src_all/3_1_fizzbuzz.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/src_all/3_1_fizzbuzz.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;unistd.h&gt;<?linebreak?></programlisting>Include dependency graph for 3_1_fizzbuzz.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_23__1__fizzbuzz_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_src__all_23__1__fizzbuzz_8c_1a1bfd31856206f199910091c43867012a">ft_write_number</link> (int number)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_23__1__fizzbuzz_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_src__all_23__1__fizzbuzz_8c_1a1bfd31856206f199910091c43867012a"/><section>
+    <title>ft_write_number()</title>
+<indexterm><primary>ft_write_number</primary><secondary>3_1_fizzbuzz.c</secondary></indexterm>
+<indexterm><primary>3_1_fizzbuzz.c</primary><secondary>ft_write_number</secondary></indexterm>
+<para><computeroutput>void ft_write_number (int number)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_23__1__fizzbuzz_8c_a1bfd31856206f199910091c43867012a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_src__all_23__1__fizzbuzz_8c_1a840291bc02cba5474a4cb46a9b9566fe"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>3_1_fizzbuzz.c</secondary></indexterm>
+<indexterm><primary>3_1_fizzbuzz.c</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (void )</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_23__1__fizzbuzz_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1e__output_20__putchar_21e__ft__putstr1_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/1e_output/0_putchar/1e_ft_putstr1.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/1e_output/0_putchar/1e_ft_putstr1.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for 1e_ft_putstr1.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1e__output_20__putchar_21e__ft__putstr1_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_1e__output_20__putchar_21e__ft__putstr1_8c_1ae07c9c3acc8313cfbea5cf3092ffe6a4">ft_putstr</link> (char *str)</para>
+</listitem>
+            <listitem><para>int <link linkend="_1e__output_20__putchar_21e__ft__putstr1_8c_1ad68d7f4bd08039a3e0516d435b1059d5">ft_putstr_str</link> (char **str)</para>
+</listitem>
+            <listitem><para>void <link linkend="_1e__output_20__putchar_21e__ft__putstr1_8c_1a33ba4b055150fa15d7697945db20cb12">ft_putstr_fd</link> (char *str, int fd)</para>
+</listitem>
+            <listitem><para>int <link linkend="_1e__output_20__putchar_21e__ft__putstr1_8c_1acd7460946eff57f27671a7208eac9437">ft_putstr_fd_fpr</link> (long fd, char *s)</para>
+</listitem>
+            <listitem><para>int <link linkend="_1e__output_20__putchar_21e__ft__putstr1_8c_1ad91f9a4c11e9dcd122e88fe8c19557e6">ft_putstrstr_fd_fpr</link> (long fd, char **str)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1e__output_20__putchar_21e__ft__putstr1_8c_1ae07c9c3acc8313cfbea5cf3092ffe6a4"/><section>
+    <title>ft_putstr()</title>
+<indexterm><primary>ft_putstr</primary><secondary>1e_ft_putstr1.c</secondary></indexterm>
+<indexterm><primary>1e_ft_putstr1.c</primary><secondary>ft_putstr</secondary></indexterm>
+<para><computeroutput>int ft_putstr (char * str)</computeroutput></para></section>
+<anchor xml:id="_1e__output_20__putchar_21e__ft__putstr1_8c_1a33ba4b055150fa15d7697945db20cb12"/><section>
+    <title>ft_putstr_fd()</title>
+<indexterm><primary>ft_putstr_fd</primary><secondary>1e_ft_putstr1.c</secondary></indexterm>
+<indexterm><primary>1e_ft_putstr1.c</primary><secondary>ft_putstr_fd</secondary></indexterm>
+<para><computeroutput>void ft_putstr_fd (char * str, int fd)</computeroutput></para></section>
+<anchor xml:id="_1e__output_20__putchar_21e__ft__putstr1_8c_1acd7460946eff57f27671a7208eac9437"/><section>
+    <title>ft_putstr_fd_fpr()</title>
+<indexterm><primary>ft_putstr_fd_fpr</primary><secondary>1e_ft_putstr1.c</secondary></indexterm>
+<indexterm><primary>1e_ft_putstr1.c</primary><secondary>ft_putstr_fd_fpr</secondary></indexterm>
+<para><computeroutput>int ft_putstr_fd_fpr (long fd, char * s)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1e__output_20__putchar_21e__ft__putstr1_8c_acd7460946eff57f27671a7208eac9437_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_1e__output_20__putchar_21e__ft__putstr1_8c_1ad68d7f4bd08039a3e0516d435b1059d5"/><section>
+    <title>ft_putstr_str()</title>
+<indexterm><primary>ft_putstr_str</primary><secondary>1e_ft_putstr1.c</secondary></indexterm>
+<indexterm><primary>1e_ft_putstr1.c</primary><secondary>ft_putstr_str</secondary></indexterm>
+<para><computeroutput>int ft_putstr_str (char ** str)</computeroutput></para></section>
+<anchor xml:id="_1e__output_20__putchar_21e__ft__putstr1_8c_1ad91f9a4c11e9dcd122e88fe8c19557e6"/><section>
+    <title>ft_putstrstr_fd_fpr()</title>
+<indexterm><primary>ft_putstrstr_fd_fpr</primary><secondary>1e_ft_putstr1.c</secondary></indexterm>
+<indexterm><primary>1e_ft_putstr1.c</primary><secondary>ft_putstrstr_fd_fpr</secondary></indexterm>
+<para><computeroutput>int ft_putstrstr_fd_fpr (long fd, char ** str)</computeroutput></para></section>
+</section>
+</section>

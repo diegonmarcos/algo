@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_src__all_22__0__ft__slinked__list3_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/src_all/2_0_ft_slinked_list3.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/src_all/2_0_ft_slinked_list3.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for 2_0_ft_slinked_list3.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_22__0__ft__slinked__list3_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_src__all_22__0__ft__slinked__list3_8c_1a33aff2e2125f56fee46c82e3c3b7a9aa">ft_lstdelone_s</link> (<link linkend="_mylibc__data_8h_1ab4eb3158d2af72143b6d52db2d9a3eeb">t_list_s</link> *lst, void(*del)(void *))</para>
+</listitem>
+            <listitem><para>void <link linkend="_src__all_22__0__ft__slinked__list3_8c_1a2db243f45e4ab42d4a7a8fd3128e4b5d">ft_lstiter_s</link> (<link linkend="_mylibc__data_8h_1ab4eb3158d2af72143b6d52db2d9a3eeb">t_list_s</link> *lst, void(*f)(void *))</para>
+</listitem>
+            <listitem><para><link linkend="_mylibc__data_8h_1ab4eb3158d2af72143b6d52db2d9a3eeb">t_list_s</link> * <link linkend="_src__all_22__0__ft__slinked__list3_8c_1a940520a5d11ffc84c845901f20834c74">ft_lstmap_s</link> (<link linkend="_mylibc__data_8h_1ab4eb3158d2af72143b6d52db2d9a3eeb">t_list_s</link> *lst, void *(*f)(void *), void(*del)(void *))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_src__all_22__0__ft__slinked__list3_8c_1a33aff2e2125f56fee46c82e3c3b7a9aa"/><section>
+    <title>ft_lstdelone_s()</title>
+<indexterm><primary>ft_lstdelone_s</primary><secondary>2_0_ft_slinked_list3.c</secondary></indexterm>
+<indexterm><primary>2_0_ft_slinked_list3.c</primary><secondary>ft_lstdelone_s</secondary></indexterm>
+<para><computeroutput>void ft_lstdelone_s (<link linkend="_mylibc__data_8h_1ab4eb3158d2af72143b6d52db2d9a3eeb">t_list_s</link> * lst, void(*)(void *) del)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_22__0__ft__slinked__list3_8c_a33aff2e2125f56fee46c82e3c3b7a9aa_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_src__all_22__0__ft__slinked__list3_8c_1a2db243f45e4ab42d4a7a8fd3128e4b5d"/><section>
+    <title>ft_lstiter_s()</title>
+<indexterm><primary>ft_lstiter_s</primary><secondary>2_0_ft_slinked_list3.c</secondary></indexterm>
+<indexterm><primary>2_0_ft_slinked_list3.c</primary><secondary>ft_lstiter_s</secondary></indexterm>
+<para><computeroutput>void ft_lstiter_s (<link linkend="_mylibc__data_8h_1ab4eb3158d2af72143b6d52db2d9a3eeb">t_list_s</link> * lst, void(*)(void *) f)</computeroutput></para></section>
+<anchor xml:id="_src__all_22__0__ft__slinked__list3_8c_1a940520a5d11ffc84c845901f20834c74"/><section>
+    <title>ft_lstmap_s()</title>
+<indexterm><primary>ft_lstmap_s</primary><secondary>2_0_ft_slinked_list3.c</secondary></indexterm>
+<indexterm><primary>2_0_ft_slinked_list3.c</primary><secondary>ft_lstmap_s</secondary></indexterm>
+<para><computeroutput><link linkend="_mylibc__data_8h_1ab4eb3158d2af72143b6d52db2d9a3eeb">t_list_s</link> * ft_lstmap_s (<link linkend="_mylibc__data_8h_1ab4eb3158d2af72143b6d52db2d9a3eeb">t_list_s</link> * lst, void *(*)(void *) f, void(*)(void *) del)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_22__0__ft__slinked__list3_8c_a940520a5d11ffc84c845901f20834c74_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

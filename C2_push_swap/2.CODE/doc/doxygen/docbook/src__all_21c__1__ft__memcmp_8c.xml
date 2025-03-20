@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_src__all_21c__1__ft__memcmp_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/src_all/1c_1_ft_memcmp.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/src_all/1c_1_ft_memcmp.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for 1c_1_ft_memcmp.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21c__1__ft__memcmp_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_src__all_21c__1__ft__memcmp_8c_1a9d2fe792187aa4ed08e5864fb2c4d6dc">ft_strncmp</link> (const char *s1, const char *s2, size_t n)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_21c__1__ft__memcmp_8c_1a1f2ff2312e5994560c9537cd9173be94">ft_strcmp</link> (const char *s1, const char *s2)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_21c__1__ft__memcmp_8c_1a0cd77da46560d400cb77aa518771d909">ft_strcmp_duplicate</link> (char *str, char **array)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_21c__1__ft__memcmp_8c_1a26e848e1206c9a84971bd0477158ec58">ft_strcmp_duplicate_inter</link> (char **array)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_21c__1__ft__memcmp_8c_1a08f665a1828c402f2ffe2e2187f135fc">ft_memcmp</link> (const void *s1, const void *s2, size_t n)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_src__all_21c__1__ft__memcmp_8c_1a08f665a1828c402f2ffe2e2187f135fc"/><section>
+    <title>ft_memcmp()</title>
+<indexterm><primary>ft_memcmp</primary><secondary>1c_1_ft_memcmp.c</secondary></indexterm>
+<indexterm><primary>1c_1_ft_memcmp.c</primary><secondary>ft_memcmp</secondary></indexterm>
+<para><computeroutput>int ft_memcmp (const void * s1, const void * s2, size_t n)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21c__1__ft__memcmp_8c_a08f665a1828c402f2ffe2e2187f135fc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_src__all_21c__1__ft__memcmp_8c_1a1f2ff2312e5994560c9537cd9173be94"/><section>
+    <title>ft_strcmp()</title>
+<indexterm><primary>ft_strcmp</primary><secondary>1c_1_ft_memcmp.c</secondary></indexterm>
+<indexterm><primary>1c_1_ft_memcmp.c</primary><secondary>ft_strcmp</secondary></indexterm>
+<para><computeroutput>int ft_strcmp (const char * s1, const char * s2)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21c__1__ft__memcmp_8c_a1f2ff2312e5994560c9537cd9173be94_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_src__all_21c__1__ft__memcmp_8c_1a0cd77da46560d400cb77aa518771d909"/><section>
+    <title>ft_strcmp_duplicate()</title>
+<indexterm><primary>ft_strcmp_duplicate</primary><secondary>1c_1_ft_memcmp.c</secondary></indexterm>
+<indexterm><primary>1c_1_ft_memcmp.c</primary><secondary>ft_strcmp_duplicate</secondary></indexterm>
+<para><computeroutput>int ft_strcmp_duplicate (char * str, char ** array)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21c__1__ft__memcmp_8c_a0cd77da46560d400cb77aa518771d909_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_src__all_21c__1__ft__memcmp_8c_1a26e848e1206c9a84971bd0477158ec58"/><section>
+    <title>ft_strcmp_duplicate_inter()</title>
+<indexterm><primary>ft_strcmp_duplicate_inter</primary><secondary>1c_1_ft_memcmp.c</secondary></indexterm>
+<indexterm><primary>1c_1_ft_memcmp.c</primary><secondary>ft_strcmp_duplicate_inter</secondary></indexterm>
+<para><computeroutput>int ft_strcmp_duplicate_inter (char ** array)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21c__1__ft__memcmp_8c_a26e848e1206c9a84971bd0477158ec58_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21c__1__ft__memcmp_8c_a26e848e1206c9a84971bd0477158ec58_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_src__all_21c__1__ft__memcmp_8c_1a9d2fe792187aa4ed08e5864fb2c4d6dc"/><section>
+    <title>ft_strncmp()</title>
+<indexterm><primary>ft_strncmp</primary><secondary>1c_1_ft_memcmp.c</secondary></indexterm>
+<indexterm><primary>1c_1_ft_memcmp.c</primary><secondary>ft_strncmp</secondary></indexterm>
+<para><computeroutput>int ft_strncmp (const char * s1, const char * s2, size_t n)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21c__1__ft__memcmp_8c_a9d2fe792187aa4ed08e5864fb2c4d6dc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

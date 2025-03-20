@@ -1,5 +1,23 @@
 <map id="error_handling_input_1" name="error_handling_input_1">
-<area shape="rect" id="Node000001" title="Error handling and egde cases." alt="" coords="5,5,176,31"/>
-<area shape="rect" id="Node000002" href="$1__1__mem__clear_8c.html#ac6d7aa906875ca4cc39f8506e2c104cf" title=" " alt="" coords="224,5,399,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,15,210,15,210,21,176,21"/>
+<area shape="rect" id="Node000001" title="Error handling and egde cases." alt="" coords="5,149,176,175"/>
+<area shape="rect" id="Node000002" href="$1__1__mem__clear_8c.html#ac6d7aa906875ca4cc39f8506e2c104cf" title=" " alt="" coords="224,28,399,53"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,147,223,85,273,57,276,62,225,90,116,152"/>
+<area shape="rect" id="Node000004" href="$src__all_21c__ft__isdigit_8c.html#a1c6a73d3c1782fe836f5e026742379a8" title=" " alt="" coords="254,100,369,125"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="148,147,240,126,241,131,149,152"/>
+<area shape="rect" id="Node000007" href="$src__all_21c__ft__is__sorted_8c.html#a54d92af0584f22ec121c60c301a864d7" title=" " alt="" coords="225,149,398,175"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="176,159,211,159,211,165,176,165"/>
+<area shape="rect" id="Node000009" href="$src__all_21c__1__ft__memcmp_8c.html#a26e848e1206c9a84971bd0477158ec58" title=" " alt="" coords="236,199,387,239"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="141,172,223,194,222,199,140,177"/>
+<area shape="rect" id="Node000011" href="$src__all_21a__halt__exit_8c.html#a04122333003213c232d5e261e0301b61" title=" " alt="" coords="268,264,355,289"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="109,173,159,210,225,249,256,261,254,266,223,254,156,214,106,177"/>
+<area shape="rect" id="Node000003" href="$src__all_21a__ft__free_8c.html#afaf2556003cc74b024a4cbc6df5e7eb3" title=" " alt="" coords="447,5,575,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="399,28,433,24,433,29,399,33"/>
+<area shape="rect" id="Node000005" href="$src__all_21c__ft__atoi_8c.html#aaede2a3980a50f2726e34af8c2dc60a0" title=" " alt="" coords="461,55,560,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="367,97,448,79,449,84,369,103"/>
+<area shape="rect" id="Node000006" href="$1c__string__manip_24__data__is_21c__ft__isdigit_8c.html#a69af63a7373e33a6c7e148c1af2f72ab" title=" " alt="" coords="471,104,550,129"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="369,111,457,113,457,118,369,116"/>
+<area shape="rect" id="Node000008" href="$src__all_21c__ft__atoi_8c.html#a702ac2cc4c220ee18905bb616aa4c4b3" title=" " alt="" coords="479,153,542,179"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="398,161,465,162,465,168,398,166"/>
+<area shape="rect" id="Node000010" href="$1c__string__manip_22__search__cmp_21c__1__ft__memcmp_8c.html#a1f2ff2312e5994560c9537cd9173be94" title=" " alt="" coords="469,207,552,232"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="387,217,456,217,456,222,387,222"/>
 </map>

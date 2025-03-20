@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="___algo_8h" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/inc/_algo.h File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/inc/_algo.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;unistd.h&gt;<?linebreak?></programlisting>Include dependency graph for _algo.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="__algo_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="___algo_8h_1a1c6c3862fc82db2087497b88d1457411">heapify</link> (int arr[], int n, int i)</para>
+</listitem>
+            <listitem><para>void <link linkend="___algo_8h_1a0467fe1d4cf5835a03840e3998eceae0">heap_sort</link> (int arr[], int n)</para>
+</listitem>
+            <listitem><para>void <link linkend="___algo_8h_1a64ad59a88d29daf3d81305ade3627975">quick_sort</link> (int arr[], int low, int high, int depthlimit)</para>
+</listitem>
+            <listitem><para>int <link linkend="___algo_8h_1af3d8997b18410a08b5c5e982a24e363a">ft_log_introsort</link> (int n)</para>
+</listitem>
+            <listitem><para>void <link linkend="___algo_8h_1a307734c126897c09e919eb65119bb102">intro_sort</link> (int arr[], int n)</para>
+</listitem>
+            <listitem><para>void <link linkend="___algo_8h_1ad38d9c701da937aa7644a2053e512863">swap_introsort</link> (int *a, int *b)</para>
+</listitem>
+            <listitem><para>int <link linkend="___algo_8h_1a2f0658d814c1e14b49d419add95c79b9">partition</link> (int arr[], int low, int high)</para>
+</listitem>
+            <listitem><para>int <link linkend="___algo_8h_1aa08d9f8fd59789cc722de1f2bdfe48a1">ft_abs</link> (int number)</para>
+</listitem>
+            <listitem><para>void <link linkend="___algo_8h_1a24712ac200c27af6c4baca2e646a476f">matrix3_init</link> (float(*matrix)[3])</para>
+</listitem>
+            <listitem><para>void <link linkend="___algo_8h_1a444f95ef474736b965e5eb10e81d88e7">print_bits</link> (unsigned char octet)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="___algo_8h_1aa08d9f8fd59789cc722de1f2bdfe48a1"/><section>
+    <title>ft_abs()</title>
+<indexterm><primary>ft_abs</primary><secondary>_algo.h</secondary></indexterm>
+<indexterm><primary>_algo.h</primary><secondary>ft_abs</secondary></indexterm>
+<para><computeroutput>int ft_abs (int number)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="__algo_8h_aa08d9f8fd59789cc722de1f2bdfe48a1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="___algo_8h_1af3d8997b18410a08b5c5e982a24e363a"/><section>
+    <title>ft_log_introsort()</title>
+<indexterm><primary>ft_log_introsort</primary><secondary>_algo.h</secondary></indexterm>
+<indexterm><primary>_algo.h</primary><secondary>ft_log_introsort</secondary></indexterm>
+<para><computeroutput>int ft_log_introsort (int n)</computeroutput></para></section>
+<anchor xml:id="___algo_8h_1a0467fe1d4cf5835a03840e3998eceae0"/><section>
+    <title>heap_sort()</title>
+<indexterm><primary>heap_sort</primary><secondary>_algo.h</secondary></indexterm>
+<indexterm><primary>_algo.h</primary><secondary>heap_sort</secondary></indexterm>
+<para><computeroutput>void heap_sort (int arr[], int n)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="__algo_8h_a0467fe1d4cf5835a03840e3998eceae0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="___algo_8h_1a1c6c3862fc82db2087497b88d1457411"/><section>
+    <title>heapify()</title>
+<indexterm><primary>heapify</primary><secondary>_algo.h</secondary></indexterm>
+<indexterm><primary>_algo.h</primary><secondary>heapify</secondary></indexterm>
+<para><computeroutput>void heapify (int arr[], int n, int i)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="__algo_8h_a1c6c3862fc82db2087497b88d1457411_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="__algo_8h_a1c6c3862fc82db2087497b88d1457411_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="___algo_8h_1a307734c126897c09e919eb65119bb102"/><section>
+    <title>intro_sort()</title>
+<indexterm><primary>intro_sort</primary><secondary>_algo.h</secondary></indexterm>
+<indexterm><primary>_algo.h</primary><secondary>intro_sort</secondary></indexterm>
+<para><computeroutput>void intro_sort (int arr[], int n)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="__algo_8h_a307734c126897c09e919eb65119bb102_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="___algo_8h_1a24712ac200c27af6c4baca2e646a476f"/><section>
+    <title>matrix3_init()</title>
+<indexterm><primary>matrix3_init</primary><secondary>_algo.h</secondary></indexterm>
+<indexterm><primary>_algo.h</primary><secondary>matrix3_init</secondary></indexterm>
+<para><computeroutput>void matrix3_init (float(*) matrix[3])</computeroutput></para></section>
+<anchor xml:id="___algo_8h_1a2f0658d814c1e14b49d419add95c79b9"/><section>
+    <title>partition()</title>
+<indexterm><primary>partition</primary><secondary>_algo.h</secondary></indexterm>
+<indexterm><primary>_algo.h</primary><secondary>partition</secondary></indexterm>
+<para><computeroutput>int partition (int arr[], int low, int high)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="__algo_8h_a2f0658d814c1e14b49d419add95c79b9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="__algo_8h_a2f0658d814c1e14b49d419add95c79b9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="___algo_8h_1a444f95ef474736b965e5eb10e81d88e7"/><section>
+    <title>print_bits()</title>
+<indexterm><primary>print_bits</primary><secondary>_algo.h</secondary></indexterm>
+<indexterm><primary>_algo.h</primary><secondary>print_bits</secondary></indexterm>
+<para><computeroutput>void print_bits (unsigned char octet)</computeroutput></para></section>
+<anchor xml:id="___algo_8h_1a64ad59a88d29daf3d81305ade3627975"/><section>
+    <title>quick_sort()</title>
+<indexterm><primary>quick_sort</primary><secondary>_algo.h</secondary></indexterm>
+<indexterm><primary>_algo.h</primary><secondary>quick_sort</secondary></indexterm>
+<para><computeroutput>void quick_sort (int arr[], int low, int high, int depthlimit)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="__algo_8h_a64ad59a88d29daf3d81305ade3627975_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="___algo_8h_1ad38d9c701da937aa7644a2053e512863"/><section>
+    <title>swap_introsort()</title>
+<indexterm><primary>swap_introsort</primary><secondary>_algo.h</secondary></indexterm>
+<indexterm><primary>_algo.h</primary><secondary>swap_introsort</secondary></indexterm>
+<para><computeroutput>void swap_introsort (int * a, int * b)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="__algo_8h_ad38d9c701da937aa7644a2053e512863_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

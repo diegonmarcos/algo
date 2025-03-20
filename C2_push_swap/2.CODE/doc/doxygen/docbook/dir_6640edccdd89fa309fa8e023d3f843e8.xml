@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_6640edccdd89fa309fa8e023d3f843e8" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/1c_string_manip/3_converters_math Directory Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/1c_string_manip/3_converters_math Directory Reference</primary></indexterm>
+Directory dependency graph for 3_converters_math:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_6640edccdd89fa309fa8e023d3f843e8_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_1c__string__manip_23__converters__math_21c__ft__atoi_8c">1c_ft_atoi.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_1c__string__manip_23__converters__math_21c__ft__atoi__base_8c">1c_ft_atoi_base.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_1c__string__manip_23__converters__math_21c__ft__itoa_8c">1c_ft_itoa.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_1c__string__manip_23__converters__math_21c__ft__math_8c">1c_ft_math.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

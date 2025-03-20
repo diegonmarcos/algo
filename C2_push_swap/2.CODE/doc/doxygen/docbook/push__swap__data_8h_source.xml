@@ -48,20 +48,20 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 44 <emphasis role="comment">&#32;&#32;&#32;&#32;struct&#32;s_list_dls&#32;&#32;&#32;*prev;</emphasis>
 45 <emphasis role="comment">}&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t_list_dls;&#32;*/</emphasis>
 46 
-47 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>s_list_dls&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link>;
-48 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>s_list_garbage&#32;&#32;&#32;<link linkend="_push__swap__data_8h_1a99ef35a30f94abb8960cfa09342f9ab6">t_list_garbage</link>;
+47 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structs__list__dls">s_list_dls</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structs__list__dls">t_list_dls</link>;
+48 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structs__list__garbage">s_list_garbage</link>&#32;&#32;&#32;<link linkend="_structs__list__garbage">t_list_garbage</link>;
 49 
 50 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structs__list__program">s_list_program</link>
 51 {
 52 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structs__list__program_1a3d5e8a5e14aedecc2ae73f9ccc98bac5">dbg</link>;
-53 &#32;&#32;&#32;&#32;<link linkend="_push__swap__data_8h_1a99ef35a30f94abb8960cfa09342f9ab6">t_list_garbage</link>&#32;&#32;*<link linkend="_structs__list__program_1ae53afdf158094b5ea5d1ccc5766512ad">list_garbage</link>;
+53 &#32;&#32;&#32;&#32;<link linkend="_structs__list__garbage">t_list_garbage</link>&#32;&#32;*<link linkend="_structs__list__program_1ae53afdf158094b5ea5d1ccc5766512ad">list_garbage</link>;
 54 
 55 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structs__list__program_1ad1447518f4372828b8435ae82e48499e">argc</link>;
 56 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;**<link linkend="_structs__list__program_1af2efa898e9eed6fe6715279cb1ec35b0">argv</link>;
 57 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;**<link linkend="_structs__list__program_1a2db6226a993d7e8fea5b75dd266f7754">stack_a_array</link>;
 58 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structs__list__program_1a6e57ee187cecd7ccbc71ee05cf75c190">stack_a_size</link>;
-59 &#32;&#32;&#32;&#32;<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link>&#32;&#32;&#32;&#32;&#32;&#32;**<link linkend="_structs__list__program_1a208ed47f057bd43a29182b8a3c61325e">stack_a</link>;
-60 &#32;&#32;&#32;&#32;<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link>&#32;&#32;&#32;&#32;&#32;&#32;**<link linkend="_structs__list__program_1a44a203d2d7966e38943d2221e0a47791">stack_b</link>;
+59 &#32;&#32;&#32;&#32;<link linkend="_structs__list__dls">t_list_dls</link>&#32;&#32;&#32;&#32;&#32;&#32;**<link linkend="_structs__list__program_1a208ed47f057bd43a29182b8a3c61325e">stack_a</link>;
+60 &#32;&#32;&#32;&#32;<link linkend="_structs__list__dls">t_list_dls</link>&#32;&#32;&#32;&#32;&#32;&#32;**<link linkend="_structs__list__program_1a44a203d2d7966e38943d2221e0a47791">stack_b</link>;
 61 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;**<link linkend="_structs__list__program_1ad978db9e47f49b6ca9dea62895dc2153">moves</link>;
 62 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structs__list__program_1adf3583cafd0c566da4747331439cef4f">max_moves</link>;
 63 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structs__list__program_1ae5677761147bba99196329cce0586254">move_count</link>;
@@ -118,8 +118,8 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 114 <emphasis role="comment">/*&#32;*****************************************************************&#32;*/</emphasis>
 115 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structs__node__pos__locator">s_node_pos_locator</link>
 116 {
-117 &#32;&#32;&#32;&#32;<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link>&#32;&#32;*<link linkend="_structs__node__pos__locator_1a5dbdc72600339e85b8bf2d711bd91972">current</link>;
-118 &#32;&#32;&#32;&#32;<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link>&#32;&#32;**<link linkend="_structs__node__pos__locator_1a44a203d2d7966e38943d2221e0a47791">stack_b</link>;
+117 &#32;&#32;&#32;&#32;<link linkend="_structs__list__dls">t_list_dls</link>&#32;&#32;*<link linkend="_structs__node__pos__locator_1a5dbdc72600339e85b8bf2d711bd91972">current</link>;
+118 &#32;&#32;&#32;&#32;<link linkend="_structs__list__dls">t_list_dls</link>&#32;&#32;**<link linkend="_structs__node__pos__locator_1a44a203d2d7966e38943d2221e0a47791">stack_b</link>;
 119 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structs__node__pos__locator_1a439227feff9d7f55384e8780cfc2eb82">size</link>;
 120 
 121 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structs__node__pos__locator_1a1910d262855b71da353ed0d07a6c7823">pos</link>;
@@ -128,7 +128,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 124 
 125 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structs__move__lower__cost">s_move_lower_cost</link>
 126 {
-127 &#32;&#32;&#32;&#32;<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link>&#32;&#32;*<link linkend="_structs__move__lower__cost_1a5dbdc72600339e85b8bf2d711bd91972">current</link>;
+127 &#32;&#32;&#32;&#32;<link linkend="_structs__list__dls">t_list_dls</link>&#32;&#32;*<link linkend="_structs__move__lower__cost_1a5dbdc72600339e85b8bf2d711bd91972">current</link>;
 128 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structs__move__lower__cost_1aef3ceee4f4ecf2fb1d4c106ceea7dc46">current_rotations</link>;
 129 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structs__move__lower__cost_1a27878cd9c633a443201d1b25718c7acd">current_price</link>;
 130 

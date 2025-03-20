@@ -1,9 +1,7 @@
 <map id="is_sorted_linked_list_push" name="is_sorted_linked_list_push">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,197,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,197,56"/>
 <area shape="rect" id="Node000002" href="$1__1__mem__clear_8c.html#a559e3ef871c76e86b25be9e59343ed1b" title=" " alt="" coords="245,5,420,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,52,259,31,260,36,162,57"/>
-<area shape="rect" id="Node000003" href="$push__swap_8h.html#ad20dad35a06abceff43bb0f1ddc64700" title=" " alt="" coords="255,55,410,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,65,241,65,241,70,198,70"/>
-<area shape="rect" id="Node000004" href="$1__2__printers__tracers_8c.html#af1f154e261fd1c167f2dcbdf952ea1d9" title=" " alt="" coords="281,104,384,129"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="162,77,268,100,267,106,161,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,30,231,26,232,32,198,35"/>
+<area shape="rect" id="Node000003" href="$1__2__printers__tracers_8c.html#af1f154e261fd1c167f2dcbdf952ea1d9" title=" " alt="" coords="281,55,384,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,51,268,58,267,63,197,56"/>
 </map>

@@ -1,21 +1,35 @@
 <map id="selection_sort_recursion" name="selection_sort_recursion">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,107,185,132"/>
-<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="57,108,48,98,53,88,69,82,95,80,129,84,141,93,138,98,127,89,95,85,70,87,56,92,54,98,61,105"/>
-<area shape="rect" id="Node000002" href="$3__2__selectionsort_8c.html#aa5355356a38fe129c21e05d54bc4b9d4" title=" " alt="" coords="275,5,391,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,104,170,77,232,48,274,32,276,37,234,52,172,81,121,109"/>
-<area shape="rect" id="Node000003" href="$4__0__moves__direction_8c.html#afccc17cf6947e8045b7157ace02a1457" title="Numbers moved from one stack to another using: push, swap, rotate." alt="" coords="485,81,539,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,104,233,91,364,86,471,89,471,94,364,92,234,97,153,109"/>
-<area shape="rect" id="Node000004" href="$4__0__moves__direction_8c.html#a52d7746c8b7628a2e18e1069db470556" title="Rotates the specified stack." alt="" coords="481,159,543,184"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="164,129,234,141,361,156,468,165,467,171,361,161,233,146,163,135"/>
-<area shape="rect" id="Node000006" href="$3__2__selectionsort_8c.html#a903c705fc4ddf8716c63da4b393d5e66" title=" " alt="" coords="233,107,433,132"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="186,117,220,117,220,122,186,122"/>
-<area shape="rect" id="Node000007" href="$3__2__selectionsort_8c.html#afc65a8ff615d5f010c90a77d43e99901" title=" " alt="" coords="302,208,365,233"/>
-<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="121,130,172,157,234,186,289,206,288,211,232,191,170,162,118,135"/>
-<area shape="rect" id="Node000005" href="$1__2__printers__tracers_8c.html#a4cfb30dfa1b732308fb83936337b274c" title=" " alt="" coords="591,184,679,209"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="544,175,578,182,577,187,542,180"/>
-<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="423,104,471,97,472,102,424,109"/>
-<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="364,210,467,181,469,186,366,215"/>
-<area shape="rect" id="Node000008" href="$4__0__moves__direction_8c.html#aa2036f5bf4b8d176da973726dd806078" title=" " alt="" coords="484,208,540,233"/>
-<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="365,218,470,218,470,223,365,223"/>
-<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="540,213,577,205,578,211,541,218"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,156,185,181"/>
+<area shape="poly" id="edge14_Node000001_Node000001" title=" " alt="" coords="57,158,48,148,53,138,69,132,95,129,129,133,141,143,138,147,127,138,95,135,70,137,56,142,54,147,61,154"/>
+<area shape="rect" id="Node000002" href="$src__all_22__1__linked__list__doubly2_8c.html#a3e1cdaa6773961f611986f1a682e3a90" title=" " alt="" coords="481,31,599,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,154,166,122,232,92,293,74,356,61,467,46,468,51,356,66,294,79,234,96,168,127,117,158"/>
+<area shape="rect" id="Node000003" href="$src__all_22__1__linked__list__doubly1_8c.html#a05000302246b576df33f1f89ae3d4f18" title=" " alt="" coords="293,107,373,132"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,153,279,128,280,133,158,159"/>
+<area shape="rect" id="Node000004" href="$3__2__selectionsort_8c.html#aa5355356a38fe129c21e05d54bc4b9d4" title=" " alt="" coords="275,5,391,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="106,154,158,103,193,74,232,48,266,33,268,37,235,52,196,78,161,107,110,158"/>
+<area shape="rect" id="Node000005" href="$4__0__moves__direction_8c.html#afccc17cf6947e8045b7157ace02a1457" title="Numbers moved from one stack to another using: push, swap, rotate." alt="" coords="513,181,567,207"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="157,179,234,190,381,196,500,193,500,199,380,201,233,195,156,184"/>
+<area shape="rect" id="Node000006" href="$4__0__moves__direction_8c.html#a52d7746c8b7628a2e18e1069db470556" title="Rotates the specified stack." alt="" coords="509,307,571,332"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="108,180,157,236,193,267,234,292,303,313,374,323,441,324,495,322,495,327,441,330,374,328,302,318,232,296,190,272,153,240,104,183"/>
+<area shape="rect" id="Node000012" href="$3__2__selectionsort_8c.html#a903c705fc4ddf8716c63da4b393d5e66" title=" " alt="" coords="233,156,433,181"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="186,166,220,166,220,171,186,171"/>
+<area shape="rect" id="Node000013" href="$3__2__selectionsort_8c.html#afc65a8ff615d5f010c90a77d43e99901" title=" " alt="" coords="302,257,365,283"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="121,179,172,207,234,236,289,255,288,260,232,240,170,211,118,184"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="392,22,468,32,467,37,391,28"/>
+<area shape="rect" id="Node000007" href="$1__2__printers__tracers_8c.html#a4cfb30dfa1b732308fb83936337b274c" title=" " alt="" coords="648,307,736,332"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="571,317,634,317,634,322,571,322"/>
+<area shape="rect" id="Node000010" href="$src__all_21c__ft__snprintf_8c.html#a68db9cc02f54dad4f0b1e09874383ff1" title=" " alt="" coords="648,257,736,283"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="570,307,638,284,640,290,572,312"/>
+<area shape="rect" id="Node000011" href="$src__all_21c__1__ft__memcmp_8c.html#a9d2fe792187aa4ed08e5864fb2c4d6dc" title=" " alt="" coords="647,356,737,381"/>
+<area shape="poly" id="edge11_Node000006_Node000011" title=" " alt="" coords="572,327,640,349,638,354,570,332"/>
+<area shape="rect" id="Node000008" href="$src__all_21e__ft__fprintf1_8c.html#ab6d4c8a0b10cc233e4b22ca7668d3345" title=" " alt="" coords="785,307,872,332"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="736,317,771,317,771,322,736,322"/>
+<area shape="rect" id="Node000009" href="$src__all_21c__1__ft__memcmp_8c.html#a1f2ff2312e5994560c9537cd9173be94" title=" " alt="" coords="920,307,1003,332"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="872,317,906,317,906,322,872,322"/>
+<area shape="poly" id="edge13_Node000012_Node000005" title=" " alt="" coords="434,178,500,187,499,192,433,184"/>
+<area shape="poly" id="edge16_Node000013_Node000006" title=" " alt="" coords="365,275,497,306,495,312,364,280"/>
+<area shape="rect" id="Node000014" href="$4__0__moves__direction_8c.html#aa2036f5bf4b8d176da973726dd806078" title=" " alt="" coords="512,257,568,283"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="365,267,498,267,498,273,365,273"/>
+<area shape="poly" id="edge18_Node000014_Node000007" title=" " alt="" coords="569,276,640,300,638,305,567,281"/>
+<area shape="poly" id="edge19_Node000014_Node000010" title=" " alt="" coords="568,267,634,267,634,273,568,273"/>
 </map>

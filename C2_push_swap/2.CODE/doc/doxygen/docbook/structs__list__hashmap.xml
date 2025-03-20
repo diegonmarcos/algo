@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structs__list__hashmap" xml:lang="en-US">
+<title>s_list_hashmap Struct Reference</title>
+<indexterm><primary>s_list_hashmap</primary></indexterm>
+<para>
+<computeroutput>#include &lt;mylibc_data.h&gt;</computeroutput>
+</para>
+Collaboration diagram for s_list_hashmap:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structs__list__hashmap__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structs__list__hashmap_1ac4f474c82e82cbb89ca7c36dd52be0ed">char</link> * <link linkend="_structs__list__hashmap_1a5892a9181e6a332f84d27aecd41dcd12">key</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__list__hashmap_1ac4f474c82e82cbb89ca7c36dd52be0ed">value</link></para>
+</listitem>
+            <listitem><para><link linkend="_structs__list__hashmap_1ac4f474c82e82cbb89ca7c36dd52be0ed">struct</link> <link linkend="_structs__list__hashmap">s_list_hashmap</link> * <link linkend="_structs__list__hashmap_1a41b6e951e6a60ebcba758072caf4cebb">next</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structs__list__hashmap_1a5892a9181e6a332f84d27aecd41dcd12"/><section>
+    <title>key</title>
+<indexterm><primary>key</primary><secondary>s_list_hashmap</secondary></indexterm>
+<indexterm><primary>s_list_hashmap</primary><secondary>key</secondary></indexterm>
+<para><computeroutput><link linkend="_structs__list__hashmap_1ac4f474c82e82cbb89ca7c36dd52be0ed">char</link>* key</computeroutput></para></section>
+<anchor xml:id="_structs__list__hashmap_1a41b6e951e6a60ebcba758072caf4cebb"/><section>
+    <title>next</title>
+<indexterm><primary>next</primary><secondary>s_list_hashmap</secondary></indexterm>
+<indexterm><primary>s_list_hashmap</primary><secondary>next</secondary></indexterm>
+<para><computeroutput><link linkend="_structs__list__hashmap_1ac4f474c82e82cbb89ca7c36dd52be0ed">struct</link> <link linkend="_structs__list__hashmap">s_list_hashmap</link>* next</computeroutput></para></section>
+<anchor xml:id="_structs__list__hashmap_1ac4f474c82e82cbb89ca7c36dd52be0ed"/><section>
+    <title>value</title>
+<indexterm><primary>value</primary><secondary>s_list_hashmap</secondary></indexterm>
+<indexterm><primary>s_list_hashmap</primary><secondary>value</secondary></indexterm>
+<para><computeroutput>int value</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/checker_bonus/libs/mylibs/mylibc/inc/<link linkend="_mylibc__data_8h">mylibc_data.h</link></section>
+</section>

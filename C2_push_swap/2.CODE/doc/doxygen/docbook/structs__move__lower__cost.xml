@@ -5,6 +5,15 @@
 <para>
 <computeroutput>#include &lt;push_swap_data.h&gt;</computeroutput>
 </para>
+Collaboration diagram for s_move_lower_cost:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structs__move__lower__cost__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 <simplesect>
     <title>Data Fields    </title>
         <itemizedlist>

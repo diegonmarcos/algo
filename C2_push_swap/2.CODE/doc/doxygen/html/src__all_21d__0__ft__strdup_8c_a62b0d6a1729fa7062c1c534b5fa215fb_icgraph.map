@@ -1,0 +1,17 @@
+<map id="ft_strdup" name="ft_strdup">
+<area shape="rect" id="Node000001" title=" " alt="" coords="721,5,800,31"/>
+<area shape="rect" id="Node000002" href="$src__all_21d__ft__strtok__split1_8c.html#a358b8865e576515c08abf6e2209e8e7f" title="Extracts a substring from a given string." alt="" coords="563,5,642,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="707,29,642,29,643,23,708,24"/>
+<area shape="poly" id="edge7_Node000001_Node000002" title=" " alt="" coords="708,12,643,13,642,7,707,7"/>
+<area shape="rect" id="Node000007" href="$src__all_21b__gnl__join__split_8c.html#a723946586cc34d81829190a49541b441" title=" " alt="" coords="532,55,673,80"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="709,37,645,57,643,52,707,32"/>
+<area shape="rect" id="Node000003" href="$src__all_21d__ft__strtok__split_8c.html#a3f66d7fe88166a46cad116a76f6673dc" title=" " alt="" coords="417,5,484,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="550,29,484,28,484,23,550,24"/>
+<area shape="poly" id="edge6_Node000002_Node000003" title=" " alt="" coords="550,12,484,13,484,8,550,7"/>
+<area shape="rect" id="Node000004" href="$1__0__mem__alloc_8c.html#a3e81e0a181d9e021f35edbd35e5ab298" title=" " alt="" coords="245,5,369,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="403,21,370,21,370,15,403,15"/>
+<area shape="rect" id="Node000005" href="$1__0__mem__alloc_8c.html#a1852976558d65cb628d7e7f4e7f7b5ee" title=" " alt="" coords="108,5,197,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="232,21,198,21,198,15,232,15"/>
+<area shape="rect" id="Node000006" href="$checker__bonus_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

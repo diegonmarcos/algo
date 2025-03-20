@@ -5,6 +5,15 @@
 <para>
 <computeroutput>#include &lt;push_swap_data.h&gt;</computeroutput>
 </para>
+Collaboration diagram for s_node_pos_locator:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structs__node__pos__locator__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 <simplesect>
     <title>Data Fields    </title>
         <itemizedlist>

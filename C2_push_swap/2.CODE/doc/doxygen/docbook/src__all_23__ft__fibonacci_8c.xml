@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_src__all_23__ft__fibonacci_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/src_all/3_ft_fibonacci.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/src_all/3_ft_fibonacci.c</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_src__all_23__ft__fibonacci_8c_1a18f050811f2c6a730eab891eebd2516d">ft_fibonacci</link> (int index)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_src__all_23__ft__fibonacci_8c_1a18f050811f2c6a730eab891eebd2516d"/><section>
+    <title>ft_fibonacci()</title>
+<indexterm><primary>ft_fibonacci</primary><secondary>3_ft_fibonacci.c</secondary></indexterm>
+<indexterm><primary>3_ft_fibonacci.c</primary><secondary>ft_fibonacci</secondary></indexterm>
+<para><computeroutput>int ft_fibonacci (int index)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_23__ft__fibonacci_8c_a18f050811f2c6a730eab891eebd2516d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

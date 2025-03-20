@@ -4,6 +4,14 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,30,166,23,167,28,129,35"/>
 <area shape="rect" id="Node000003" href="$4__0__moves__direction_8c.html#a52d7746c8b7628a2e18e1069db470556" title="Rotates the specified stack." alt="" coords="176,55,237,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,51,163,57,162,62,128,56"/>
-<area shape="rect" id="Node000004" href="$1__2__printers__tracers_8c.html#a4cfb30dfa1b732308fb83936337b274c" title=" " alt="" coords="285,55,373,80"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="238,65,272,65,272,70,238,70"/>
+<area shape="rect" id="Node000004" href="$1__2__printers__tracers_8c.html#a4cfb30dfa1b732308fb83936337b274c" title=" " alt="" coords="287,5,375,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="236,53,285,33,287,38,238,58"/>
+<area shape="rect" id="Node000007" href="$src__all_21c__ft__snprintf_8c.html#a68db9cc02f54dad4f0b1e09874383ff1" title=" " alt="" coords="287,55,375,80"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="237,65,273,65,273,70,237,70"/>
+<area shape="rect" id="Node000008" href="$src__all_21c__1__ft__memcmp_8c.html#a9d2fe792187aa4ed08e5864fb2c4d6dc" title=" " alt="" coords="285,104,376,129"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="238,77,287,96,285,101,236,82"/>
+<area shape="rect" id="Node000005" href="$src__all_21e__ft__fprintf1_8c.html#ab6d4c8a0b10cc233e4b22ca7668d3345" title=" " alt="" coords="424,5,511,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="375,15,410,15,410,21,375,21"/>
+<area shape="rect" id="Node000006" href="$src__all_21c__1__ft__memcmp_8c.html#a1f2ff2312e5994560c9537cd9173be94" title=" " alt="" coords="559,5,641,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="511,15,545,15,545,21,511,21"/>
 </map>

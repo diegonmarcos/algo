@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_src__all_21c__ft__math_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/src_all/1c_ft_math.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/src_all/1c_ft_math.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for 1c_ft_math.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21c__ft__math_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_src__all_21c__ft__math_8c_1a9d4d1f47840c693f9b7e819e00cefce0">ft_round</link> (double num)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_21c__ft__math_8c_1aa08d9f8fd59789cc722de1f2bdfe48a1">ft_abs</link> (int number)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_src__all_21c__ft__math_8c_1aa08d9f8fd59789cc722de1f2bdfe48a1"/><section>
+    <title>ft_abs()</title>
+<indexterm><primary>ft_abs</primary><secondary>1c_ft_math.c</secondary></indexterm>
+<indexterm><primary>1c_ft_math.c</primary><secondary>ft_abs</secondary></indexterm>
+<para><computeroutput>int ft_abs (int number)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21c__ft__math_8c_aa08d9f8fd59789cc722de1f2bdfe48a1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_src__all_21c__ft__math_8c_1a9d4d1f47840c693f9b7e819e00cefce0"/><section>
+    <title>ft_round()</title>
+<indexterm><primary>ft_round</primary><secondary>1c_ft_math.c</secondary></indexterm>
+<indexterm><primary>1c_ft_math.c</primary><secondary>ft_round</secondary></indexterm>
+<para><computeroutput>int ft_round (double num)</computeroutput></para></section>
+</section>
+</section>

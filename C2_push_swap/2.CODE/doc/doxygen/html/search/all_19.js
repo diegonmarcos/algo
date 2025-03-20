@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../structs__x.html#a0a2f84ed7838f07779ae24c5a9086d33',1,'s_x']]]
+  ['usage_0',['usage',['../md_src_2checker__bonus_2testers_2push__swap__visulaize.html#autotoc_md4',1,'Usage'],['../md_src_2checker__bonus_2testers_2push__swp__tester.html#autotoc_md6',1,'Usage']]]
 ];

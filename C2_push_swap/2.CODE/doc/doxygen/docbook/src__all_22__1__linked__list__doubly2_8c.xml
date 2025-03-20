@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_src__all_22__1__linked__list__doubly2_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/src_all/2_1_linked_list_doubly2.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/src_all/2_1_linked_list_doubly2.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for 2_1_linked_list_doubly2.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_22__1__linked__list__doubly2_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> * <link linkend="_src__all_22__1__linked__list__doubly2_8c_1a3e1cdaa6773961f611986f1a682e3a90">find_min_node</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> *stack)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_22__1__linked__list__doubly2_8c_1addccbd0db729b75aff320d1825e9bc50">find_min_node1</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> *stack)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_22__1__linked__list__doubly2_8c_1ad20dad35a06abceff43bb0f1ddc64700">is_sorted_linked_list</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> *stack)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_22__1__linked__list__doubly2_8c_1a6c785ac699e534e27be0a99b7cdf2929">max_node_finder</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> **stack)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_src__all_22__1__linked__list__doubly2_8c_1a3e1cdaa6773961f611986f1a682e3a90"/><section>
+    <title>find_min_node()</title>
+<indexterm><primary>find_min_node</primary><secondary>2_1_linked_list_doubly2.c</secondary></indexterm>
+<indexterm><primary>2_1_linked_list_doubly2.c</primary><secondary>find_min_node</secondary></indexterm>
+<para><computeroutput><link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> * find_min_node (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> * stack)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_22__1__linked__list__doubly2_8c_a3e1cdaa6773961f611986f1a682e3a90_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_src__all_22__1__linked__list__doubly2_8c_1addccbd0db729b75aff320d1825e9bc50"/><section>
+    <title>find_min_node1()</title>
+<indexterm><primary>find_min_node1</primary><secondary>2_1_linked_list_doubly2.c</secondary></indexterm>
+<indexterm><primary>2_1_linked_list_doubly2.c</primary><secondary>find_min_node1</secondary></indexterm>
+<para><computeroutput>int find_min_node1 (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> * stack)</computeroutput></para></section>
+<anchor xml:id="_src__all_22__1__linked__list__doubly2_8c_1ad20dad35a06abceff43bb0f1ddc64700"/><section>
+    <title>is_sorted_linked_list()</title>
+<indexterm><primary>is_sorted_linked_list</primary><secondary>2_1_linked_list_doubly2.c</secondary></indexterm>
+<indexterm><primary>2_1_linked_list_doubly2.c</primary><secondary>is_sorted_linked_list</secondary></indexterm>
+<para><computeroutput>int is_sorted_linked_list (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> * stack)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_22__1__linked__list__doubly2_8c_ad20dad35a06abceff43bb0f1ddc64700_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_src__all_22__1__linked__list__doubly2_8c_1a6c785ac699e534e27be0a99b7cdf2929"/><section>
+    <title>max_node_finder()</title>
+<indexterm><primary>max_node_finder</primary><secondary>2_1_linked_list_doubly2.c</secondary></indexterm>
+<indexterm><primary>2_1_linked_list_doubly2.c</primary><secondary>max_node_finder</secondary></indexterm>
+<para><computeroutput>int max_node_finder (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> ** stack)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_22__1__linked__list__doubly2_8c_a6c785ac699e534e27be0a99b7cdf2929_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

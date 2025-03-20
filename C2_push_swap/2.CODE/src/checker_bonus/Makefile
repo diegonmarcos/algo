@@ -6,216 +6,508 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/19 09:45:29 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/20 15:40:17 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+# **************************************************************************** #
+# https://linktr.ee/diegonmarcos											   #
+# **************************************************************************** #
+
+###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
 #                                 MAKEFILE                                     #
 # ############################################################################ #
-
-#1. DESCRIPTION:
-#	This is make file for build either PROGRAM, LIBRARY, PROGRAM+LIBRARY 
-#		with their dependecies connect.
 #
-# - This Makefile is a template for a project with the following structure:
-#	1. Headers.h, files all them must be placed inside the folder "include".
-#	2. Library.a, files all them must be inside of the folder "libs"
-#	3. The library makefile must be inside of the folder "libs/mylib"
+# 1. DESCRIPTION:
+# -	This is make file for build either PROGRAM, LIBRARY, PROGRAM+LIBRARY 
+#		with their dependecies connected.
+#
+#
+# 2. USAGE:
+#	2.1 OPTIONS:
+#	 - To build the program, run the command "make"
+#	 - To generate the log files, run the command "make log_alles"
+#	 - To clean the project, run the command "make fclean_all"
+#
+#	2.2 INPUTS::
+#	 - Headers.h, files all them must be placed inside the folder "inc".
+#	 - The source files must be inside of the folder "src/"
+#	 - Library.a, files all them must be inside of the folder "libs"
+#	 - The library makefile must be inside of the folder "libs/[LIB_NAME]"
+#	 - The expcted file structure is:
+#	  - inc/
+#	  - src/
+#	  - libs/
+#	  - Makefile
+#
+#	2.3 OPTIONS MORE:
+#
+#	- LOG ALLES
+#	  - STATIC ANALYSIS
+#	  - LEAKS
+#	  - DYNAMIC ANALYSIS
+#	  - DEBUGGERS
+#	  - DOC
+#	  - TOOLS
+#	  - EXTRAS
+#
+#	- ENV, COMPILING AND LINKING PIPELINE
+#	  - DEFINITIONS VARIABLES
+#	  - ENVIROMENT SET
+#	  - COMPILING PIPELINE
+#	  - LINKING PIPELINE
+#
+#	- HELPERS
+#	  - hello, check_up_to_date, code_cleaner, files_lns_creator
+#	  -	library_clean, library_fclean, library_re
+#
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
 #                          VARIABLES INITIALIZATIONS                           #
 # ############################################################################ #
 # ************************************************************************ #
-MAKEFLAGS :=
-
+# MAIN (NAME, IS? AND SOURCE FILES)										   #
+# ************************************************************************ #
 # *** Name Output *** #
-NAME0 = checker
+NAME0 					= checker
+NAME_REPO				= https://github.com/diegonmarcos/algo
 
 # *** ../ or ../../ or empty *** # Libraries autocmactly already have the ../
-OUTPUT_PLACE = ../../
+OUTPUT_PLACE 			= ../../
 
 # ***Is? *** #
-IS_PROGRAM_AND_NOT_LIB = 1
-INCLUDE_LIB = 1
-BUILD_LIBRARY = 1
-BONUS = 0
+IS_PROGRAM_AND_NOT_LIB 	= 1# 0 or 1
+INCLUDE_LIB 			= 1# 0 or 1
+BUILD_LIBRARY 			= 1# 0 or 1
+BONUS 					= 0# 0 or 1
+VERBOSE 				= 0# 0, 1 or 2 - Vebosity of the makefile
+DOCKER					= 0# 0 or 1
+DBG 					= 0# 0 or 1 - Debug mode for the program
 
 # ************************************************************************ #
 # *** Files source *.c *** #
-SOURCE_MAIN =						\
-					checker_bonus.c	\
+SOURCE_MAIN 	=						\
+					checker_bonus.c		\
 
-SOURCE_FILES = 						\
+SOURCE_FILES 	= 						\
 
-#SOURCE_MAIN = $(wildcard src/*.c) $(wildcard src/*/*.c)
 
-VPATH = src:						\
-
-# *** Extra Rules (Bonus) *** #
-CHECKER_BONUS_DIR =
-CHECKER_BUILD = $(MAKE) -C $(CHECKER_BONUS_DIR)
-
-# *** DEBUG MAKE? *** #
-MAKEFLAGS += --silent --no-print-directory
-
-# ************************************************************************ #
-# *** Library *.a (libraries to be included) THE ORDER MATTERS!!! *** #
-LIBS_DIR 		= libs
-LIB_2_NAME		= mylibc
-LIB_2_PATH		= $(LIBS_DIR)/$(LIB_1_NAME)
-LIB_1_NAME		= push_swap_0
-LIB_1_PATH		= ../../libs
-LIB_1_BUILD_PATH = ../../
-
-# *** Include or not a library (REMEBER TO MANAGE DEPENDECIES OF THE LIBRARIES, the root library comes after the child)
-LDFLAGS +=
-ifeq ($(INCLUDE_LIB), 1)
-	LDFLAGS += -L$(LIB_1_PATH) -l$(LIB_1_NAME)
-	LDFLAGS += -L$(LIBS_DIR) -l$(LIB_2_NAME)
-endif
-
-# *** Type of the Lib *** #
-#IS_LIB_STATIC_AND_NOT_DYNAMIC = 1
+VPATH 			= src:					\
 
 # *** HEADERS *.h *** #
-CFLAGS_INCL = -Iinc -Ilibs/$(LIB_1_NAME)/inc
+HEADER_DIR 		= inc
 
+# ************************************************************************ #
+# *** Extra Rules (Bonus) ***	 #
+CHECKER_BONUS_DIR = src/checker_bonus
+
+# ************************************************************************ #
+# DEPENDENCIES (NAMES AND SOURCES)										   #
+# ************************************************************************ #
+# *** Shared Libraries *** #
+LIBS_SO 		=
+
+
+# *** Library *.a (libraries to be included) THE ORDER MATTERS!!! *** #
+LIBS_DIR 		= libs
+
+LIB_1_NAME 		= mylibc
+LIB_1_PATH 		= libs/mylibs/mylibc
+LIB_1_FILE 		= $(LIB_1_PATH)/lib$(LIB_1_NAME).a
+LIB_1_REPO 		= https://github.com/diegonmarcos/mylibs.git
+LIB_1_CONFIG	=
+
+LIB_2_NAME 		= push_swap_0
+LIB_2_PATH 		= ../../libs
+LIB_2_FILE 		= $(LIB_2_PATH)/lib$(LIB_2_NAME).a
+LIB_2_REPO 		=
+LIB_2_CONFIG	=
+
+
+LIB_3_NAME 		= 0
+LIB_3_PATH 		= 
+LIB_3_FILE 		=
+LIB_3_REPO 		=
+LIB_3_CONFIG	= 
+
+# ************************************************************************ #
+# COMPILER AND LINKER VARS												   #
 # ************************************************************************ #
 # *** Compiler, Make and Library compilers Declar *** #
-MAKE = make -j#												# Number of jobs to run simultaneously amout of cores in the CPU wihtou the numbers it takes the max
-MAKE += -O --no-print-directory
-#MAKE += --trace all --warn-undefined-variables
-#MAKE += --debug=b -j1 --warn-undefined-variables
-#MAKE += --debug=v -j1 --warn-undefined-variables
-#MAKE += --debug=t -j1 --warn-undefined-variables
+MAKE 				= make -j -O
+COMPILER 			= clang
+PIC 				= -fPIC
+LIB_LINK_STATIC 	= ar rcs
+#LIB_LINK_DYNAMIC 	= shared
+RM 					= rm -rf
+GCL 				= git clone --depth=1
+WGET 				= wget
 
-COMPILER = clang
-LIB_COMP_STATIC = ar rcs
-#LIB_COMP_DYNAMIC_obj = fPIC
-#LIB_COMP_DYNAMIC_lib = shared
-RM = rm -rf
-CFLAG_ASAN =
-CFLAGS_DBG = -g3 -o0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # ############################################################################ #
-#                                 HELPERS                                      #
+#                                 VARIABLES HELPERS                            #
 # ############################################################################ #
 # ************************************************************************ #
+#                         NAME AND SOURCES  	                           #
+# ************************************************************************ #
 # *** Name definition *** #
-NAME1 = $(OUTPUT_PLACE)$(NAME0)
+NAME1 			= $(OUTPUT_PLACE)$(NAME0)
 
 ifeq ($(IS_PROGRAM_AND_NOT_LIB), 1)
-	NAME = $(NAME1)
+	NAME 		= $(NAME1)
 else
-	NAME = ../lib$(NAME1).a
+	NAME		= lib$(NAME1).a
 endif
 
 # *** Source Files .c Definition path *** #
-SOURCES = $(SOURCE_MAIN) $(SOURCE_FILES)
-
+SOURCE_SRC_ALL 	= $(addprefix src/src_all/,$(SOURCE_MAIN)) $(addprefix src/src_all/,$(SOURCE_FILES))
+SOURCES			= $(SOURCE_MAIN) $(SOURCE_FILES)
 
 # ************************************************************************ #
 #                         OBJECTS AND DEPENDENCIES                         #
 # ************************************************************************ #
 #Object Files and Dependency Files Definition path Main *** #
-OBJECTS_MAIN =  $(patsubst %.c,objs/%.o,$(notdir $(SOURCE_MAIN)))
-DEPS_MAIN = $(OBJECTS_MAIN:.o=.d)
-DEPFLAGS = -MMD -MP#															# This will create the files(headers) as dependendcy and track them
+OBJECTS_MAIN 	=  $(patsubst %.c,objs/%.o,$(notdir $(SOURCE_MAIN)))
+DEPS_MAIN 		= $(OBJECTS_MAIN:.o=.d)
+DEPFLAGS 		= -MMD -MP#															# This will create the files(headers) as dependendcy and track them
 -include $(DEPS_MAIN)
 
 #Object Files and Dependency Files Definition path Lib *** #
-OBJECTS_LIB =  $(patsubst %.c,objs/%.o,$(notdir $(SOURCE_FILES)))
-DEPS_LIB = $(OBJECTS_LIB:.o=.d)
-#DEPFLAGS = -MMD -MP#															# This will create the files(headers) as dependendcy and track them
+OBJECTS_LIB 	=  $(patsubst %.c,objs/%.o,$(notdir $(SOURCE_FILES)))
+DEPS_LIB 		= $(OBJECTS_LIB:.o=.d)
+#DEPFLAGS 		= -MMD -MP#															# This will create the files(headers) as dependendcy and track them
 -include $(DEPS_LIB)
 
 OBJECTS = $(OBJECTS_MAIN) $(OBJECTS_LIB) 
 
+# ************************************************************************ #
+#                         HEADERS AND LIBS		                           #
+# ************************************************************************ #
+# *** Include or not a library (REMEBER TO MANAGE DEPENDECIES OF THE LIBRARIES, the root library comes after the child)
+LDFLAGS			:=
+CFLAGS_INCL 	= -I$(HEADER_DIR)
+LIBS_PATH 		:=
+ifneq ($(LIB_1_NAME), 0)
+	LIBS_PATH 	+= $(LIB_1_FILE)
+	LDFLAGS 	+= -L$(LIB_1_PATH) -l$(LIB_1_NAME)
+	CFLAGS_INCL += -I$(LIB_1_PATH)/inc
+
+endif
+ifneq ($(LIB_2_NAME), 0)
+	LIBS_PATH 	+= $(LIB_2_FILE)
+	LDFLAGS 	+= -L$(LIB_2_PATH) -l$(LIB_2_NAME)
+	CFLAGS_INCL += -I$(LIB_2_PATH)/inc
+endif
+ifneq ($(LIB_3_NAME), 0)
+	LIBS_PATH 	+= $(LIB_3_FILE)
+	LDFLAGS 	+= -L$(LIB_3_PATH) -l$(LIB_3_NAME)
+	CFLAGS_INCL += -I$(LIB_3_PATH)/inc
+endif
+ifneq ($(LIB_4_NAME), 0)
+	LIBS_PATH 	+= $(LIB_4_FILE)
+	LDFLAGS 	+= -L$(LIB_4_PATH) -l$(LIB_4_NAME)
+	CFLAGS_INCL += -I$(LIB_4_PATH)/inc
+endif
+
+LIB_PROGRAM 	= -Llibs -l$(NAME0)
+LIB_OUTPUT_0=libs/lib$(NAME0)_0.a
+LIB_OUTPUT_MERGED=libs/lib$(NAME0).a
+
+# ************************************************************************ #
+#                         VERBOSE AND DEBUG		                           #
+# ************************************************************************ #
+# *** VERBOSE MAKE? *** #
+MAKEFLAGS		:= --no-print-directory --silent -r -R
+ifeq ($(VERBOSE), 2)
+MAKEFLAGS		:=
+#MAKE 			+= --trace all --warn-undefined-variables
+#MAKE			+= --debug=b -j1 --warn-undefined-variables
+#MAKE			+= --debug=v -j1 --warn-undefined-variables
+#MAKE			+= --debug=t -j1 --warn-undefined-variables
+else
+MAKEFLAGS 		+=
+endif
+
+# *** PROGRAM DBG MODE *** #
+ifeq ($(DBG),1)
+	DBG			= 1
+	CFLAGS_DBG	+= -g3
+	MACROS 		+= -DDBG=$(DBG)
+endif
+
+# *** PROGRAM OPTIONS *** #
+ALGO = 0
+ifneq ($(ALGO),0)
+	M2			= ALGO
+	MACROS 		+= -D$(M2)=\"$(ALGO)\"
+endif
+
+run_program:
+	$(MAKE) testers_folder_build
+	echo "#######################"
+#	$(MAKE) tests_run_5
+	echo "$(RESET)#######################"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
-#                                 RULES/ALL                                    #
+#            VAR, ENV, COMPILING AND LINKING PIPELINE                          #
 # ############################################################################ #
-.DEFAULT_GOAL:= build
+#	
+#	#### *** ENV, COMPILING AND LINKING PIPELINE *** #####
+#	### * DEFINITIONS VARIABLES *
+#	### * ENVIROMENT SET *
+#	### * COMPILING PIPELINE *
+#	### * LINKING PIPELINE * 
+#	
+#	
+#	### * DEFINITIONS VARIABLES *
+#	## MAKE_VERBOSE	= 0
+#	## PRGM_DBG 		= 0
+#	## PRGM_ALGO 		= 0
+#	
+#	
+#	#### * ENVIROMENT SET *
+#	### folders_build
+#	### * Build Docker *
+#	## Build the Dockerfile
+#	## Run the Dockerfile
+#	
+#	### * GCL Repos *
+#	## gcl program repo
+#	## gcl libs depencies repo
+#	
+#	
+#	#### * COMPILING PIPELINE *
+#	### * External Dependencies *
+#	## Build(run make -C) Deps Libs, 
+#	##		if uptdated(): extrct its news objs
+#	
+#	### * Objs Program *
+#	## Compile the program objs: $(OBJS)
+#	
+#	
+#	#### * LINKING PIPELINE *
+#	### * Library Linking *
+#	## Link a program Lib0
+#	## Link a program and external libs Lib1
+#	## Link a program, external and shared libs Lib2
+#	## Create the Lib_program
+#	
+#	### * Executable linking *
+#	## Link the lib_program with main.file
+#	
+#	
 
-# *** Default rule *** #
-build:
+
+
+# ************************************************************************ #
+#                      BUILD SYSTEM PIPELINE                               #
+# ************************************************************************ #
+
+# ************************************************************************ #
+.DEFAULT_GOAL:= build_system_pipeline
+
+build_system_pipeline:
 	$(MAKE) hello
-	$(MAKE) folders_build
-#	$(MAKE) folders_lns_build
-	$(MAKE) libs_build
-	$(MAKE) program_or_lib
-
-# *** Compiling the source files into object files *** #
-objs/%.o:	%.c
-	mkdir -p objs
-	$(COMPILER) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) -c $< -o $@
-	@echo "$(GRAY)()و $@ $(NAME) Compiling Objects !$(RESET)"
-
-program_or_lib:
-	if [ ! -f "$(NAME)" ]; then \
-		echo "$(RED)No binary found$(RESET)"; \
-		touch src ; \
-	fi;
-
-# *** Build the library included (MAKEFLAGS="" this not inherit env variables from father*** #
-libs_build:
-ifeq ($(BUILD_LIBRARY), 1)
-	$(MAKE) -C $(LIB_1_BUILD_PATH) MAKEFLAGS=""
-#	$(MAKE) -C $(LIB_2_PATH) MAKEFLAGS=""
-	@echo "$(YELLOW)(•̀ᴗ•́)و $@ Done!$(RESET)"
-else
-#	@echo "$(GRAY)Skipping library build$(RESET)"
-endif
-
-# *** Is program or a Lib? *** #
-ifeq ($(IS_PROGRAM_AND_NOT_LIB), 1)
-	echo "  $(YELLOW)Linking a Program$(RESET)"
-	$(MAKE) LIB_OUTPUT="libs/lib$(NAME0).a" lib
-	$(MAKE) program
-else
-	echo "  $(YELLOW)Linking a Lib$(RESET)"
-	$(MAKE) LIB_OUTPUT=$(NAME) lib
-endif
-
-
-# *** Linking the object files into a library *** #
-lib:	$(OBJECTS_LIB)
-	$(LIB_COMP_STATIC) $(LIB_OUTPUT) $(OBJECTS_LIB)
-	@echo "  $(YELLOW)(•̀ᴗ•́)و lib$(NAME).a LIBRARY GENERATED!$(RESET)"
-
-# *** Linking the object files into the program *** #
-program:	$(OBJECTS)
-	$(COMPILER) $(OBJECTS_MAIN) -Llibs -l$(NAME0) $(LDFLAGS) $(CFLAG_ASAN) -o $(NAME)
-	@echo "  $(YELLOW)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
+	$(MAKE) build_enviroment_folders
+	$(MAKE) build_dependencies_docker
+	$(MAKE) build_enviroment_docker
+	$(MAKE) build_deps
 	$(MAKE) check_up_to_date
+	$(MAKE) $(NAME)
+	$(MAKE) dbg_rules
+	$(MAKE) check_up_to_date_2
+	$(MAKE) folders_ls_la
+	if [ "$(IS_PROGRAM_AND_NOT_LIB)" -eq "1" ]; then \
+		$(MAKE) run_program; \
+	fi
 
-# *** Combine the program library with the included libraries *** #
-combine_libs:
-ifeq ($(INCLUDE_LIB), 1)
-	$(MAKE) libs_build
-	$(LIB_COMP_STATIC) lib$(NAME1)_c.a $(NAME) libs/lib$(LIB_1_NAME).a
-	@echo "$(YELLOW)(•̀ᴗ•́)و $@ Done!$(RESET)"
-else
-	@echo "$(GRAY)Skipping library merge$(RESET)"
+# ************************************************************************ #
+build_enviroment_folders:
+	$(MAKE) folders_build
+build_dependencies_docker:
+#	$(MAKE) docker_install
+build_enviroment_docker:
+ifeq ($(DOCKER),1)
+	$(MAKE) build_docker || true
+endif
+#	$(MAKE) run_docker
+build_deps:
+ifneq ($(LIB_1_NAME),0)
+	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
+	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
+	$(LIB_1_CONFIG)
+	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE) || true
+endif
+ifneq ($(LIB_2_NAME),0)
+#	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
+#	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
+#	$(LIB_2_CONFIG)
+#	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE) || true
+endif
+ifneq ($(LIB_3_NAME), 0)
+	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
+	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
+	$(LIB_3_CONFIG)
+	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS="" || true
 endif
 
-# *** Phony *** #
-.PHONY:		all build program_or_lib libs_build					\
-			clean fclean fclean_all re 							\
-			library_clean library_fclean library_re 			\
-			folder_lns_builder folders_build check_up_to_date 	\
-			hello debug 										\
-			werror norm_1 norm_2 log_all werror_bonus			\
-			testing_alles test_export 							\
-			make_dbg create_bins								\
-			leaks valgrind asan time_and_perfomance				\
-			help bonus											\
-			bonus bonus_re										\
-			run_visualizer										\
+# ************************************************************************ #
+# ************************************************************************ #
+# ************************************************************************ #
+NAME_PRGM = $(OUTPUT_PLACE)$(NAME0)
+$(NAME_PRGM): $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
+	$(COMPILER) $(OBJECTS) $(LIBS_PATH) $(CFLAGS_DBG) $(CFLAGS_INCL) $(LDFLAGS) -o $(NAME)
+	echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
 
-#NOT PHONY:	program lib
+
+NAME_LIB = lib$(NAME0).a
+$(NAME_LIB): $(OBJECTS_LIB) $(LIBS_PATH) $(LIB_OUTPUT_0) $(LIB_OUTPUT_MERGED)
+	cp $(LIB_OUTPUT_MERGED) $(NAME)
+	echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Lib Generated!$(RESET)"
+
+
+
+$(LIB_OUTPUT_MERGED): $(LIBS_PATH) $(LIB_OUTPUT_0) 
+	echo "GROUP ( $(LIB_OUTPUT_0) $(LIBS_SO) $(LIBS_PATH) )" > $(LIB_OUTPUT_MERGED)
+ifneq ($(VERBOSE), 0)
+	echo "  $(GRAY)(•̀ᴗ•́)و lib$(NAME).a Library Merged Referenced done!$(RESET)"
+endif
+
+
+
+$(LIB_1_FILE):
+	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
+	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
+	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE)
+$(LIB_2_FILE):
+#	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
+#	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
+#	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE)
+$(LIB_3_FILE):
+	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
+	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
+	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS=""
+
+
+
+$(LIB_OUTPUT_0): $(OBJECTS_LIB)
+	$(LIB_LINK_STATIC) $(LIB_OUTPUT_0) $(OBJECTS_LIB)
+ifneq ($(VERBOSE), 0)
+	@echo "  $(GRAY)(•̀ᴗ•́)و lib$(NAME)_0.a Library done!$(RESET)"
+endif
+
+
+
+objs/%.o:	%.c
+	$(COMPILER) $(PIC) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) $(MACROS) -c $< -o $@
+ifneq ($(VERBOSE), 0)
+	@echo "$(GRAY)()و $@ $(NAME) Compiling Objects done!$(RESET)"
+endif
+
+
+
+# ************************************************************************ #
+dbg_rules:
+ifeq ($(DBG),1)
+	cp $(NAME0) log/4.Bins_folder/push_swap_g3
+endif
+
+#Name
+all: $(NAME)
+
+
+# ************************************************************************ #
+# *** Bonus Rule *** #
+
+BONUS_BUILD 	= $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
+
+bonus:		
+			$(MAKE) clean
+			$(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS="" BONUS=1
+mylibs_clean:
+	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
+	$(RM) libs/mylibs/mylibcpp libs/mylibs/mylibx libs/mylibs/mytools libs/mylibs/myunittest
+# ************************************************************************ #
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # ############################################################################ #
 #                                 RULES/RECLEAN                                #
@@ -224,228 +516,520 @@ endif
 clean:
 	$(RM) objs
 ifeq ($(BONUS),1)
-	$(MAKE) clean -C $(CHECKER_BONUS_DIR)
+	$(MAKE) clean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 endif
 	@echo	"$(RED)	¯\_(ツ)_/¯ OBJECTS REMOVED!$(RESET)"
 
 # *** Clean+Bins+Libs *** #
 fclean:	clean
 	$(RM) $(NAME)
-	$(RM) libs/lib$(NAME1).a
-	$(RM) testers
-	$(RM) libs/lib$(NAME0)_g.a
-	$(RM) libs/lib$(NAME0)_asan.a
-	$(RM) libs/lib$(NAME0)_g3.a
+	$(RM) libs/*.a
 ifeq ($(BONUS),1)
-	$(MAKE) fclean -C $(CHECKER_BONUS_DIR)
+	$(MAKE) fclean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 endif
-	@echo	"$(RED)	¯\_(ツ)_/¯ OBJECTS REMOVED!$(RESET)"
 	@echo	"$(RED)		(╯°□°）╯︵ ┻━┻ FILE, OBJ REMOVED!$(RESET)"
 
 # *** FClean+Build *** #
-re: fclean build
+re: fclean build_system_pipeline
+
+
 
 # *** FClean+logs_folder *** #
 fclean_all:	fclean
 	$(RM) log
+	$(RM) testers
+	$(RM) Makedocker.sh
 	if [ -f imgui.ini ]; then \
 		rm imgui.ini; \
 	fi
 	@echo	"$(RED)			(╯°□°）╯︵ ┻━┻ FILE, OBJ AND LOG REMOVED!$(RESET)"
 
 # *** Re_all *** #
-re_all: fclean_all build
+re_all: fclean_all build_system_pipeline
+
+
+
 
 # ############################################################################ #
-#                                EXTRAS		                                   #
+#                                FOLDER BUILDER                                #
 # ############################################################################ #
-# *** Bonus Rule *** #
-bonus:
-	$(MAKE)
-	$(MAKE) -C $(CHECKER_BONUS_DIR)
+# *** Build folders *** #
+folders_build:
+	$(MAKE) folders_make_build
+	$(MAKE) folders_doc
+	$(MAKE) folders_log_build
+
+# *** Build folders Make *** #
+folders_make_build:
+	mkdir -p inc
+	mkdir -p libs
+	mkdir -p objs
+
+# *** Build folders Doc *** #
+folders_doc:
+	mkdir -p doc/doxygen
+	mkdir -p doc/md
+
+# *** Build folders Log *** #
+folders_log_build:
+	mkdir -p log/1.Warning_linting
+	mkdir -p log/2.Memory_Check/logs
+	mkdir -p log/2.Memory_Check/allocs
+	mkdir -p log/3.Unit_Testing
+	mkdir -p log/3.Unit_Testing/moves
+	mkdir -p log/4.Bins_folder
+	mkdir -p log/4.Bins_folder/log
+	mkdir -p log/4.Bins_folder/log/2.Memory_Check/allocs
+	mkdir -p log/5.Libs_nmart
+	mkdir -p log/6.Make_dbg
+	mkdir -p log/7.Doxygen
+	mkdir -p log/8.Docker
+
+
+
+
+# ############################################################################ #
+#                                DEFS		                                   #
+# ############################################################################ #
+# **************************************************************************** #
+#                                DEFS/PHONNY                               	   #
+# **************************************************************************** #
+# *** Phony *** #
+.PHONY:		all build program_or_lib libs_build program 		\
+			clean fclean fclean_all re 							\
+			library_clean library_fclean library_re 			\
+			folder_lns_builder folders_build check_up_to_date 	\
+			hello debug 										\
+			werror norm_1 norm_2 log_all werror_bonus			\
+			testing_alles test_export 							\
+			make_dbg create_bins								\
+			leaks valgrind asan time_and_perfomance				\
+			help bonus mylibs_clean								\
+			bonus bonus_re										\
+			run_visualizer										\
+
+# **************************************************************************** #
+#                                DEFS/COLORS                               	   #
+# **************************************************************************** #
+DEL_LINE =		\033[2K
+ITALIC =		\033[3m
+BOLD =			\033[1m
+RESET =			\033[0;39m
+GRAY =			\033[0;90m
+RED =			\033[0;91m
+GREEN =			\033[0;92m
+YELLOW =		\033[0;93m
+BLUE =			\033[0;94m
+MAGENTA =		\033[0;95m
+CYAN =			\033[0;96m
+WHITE =			\033[0;97m
+BLACK =			\033[0;99m
+ORANGE =		\033[38;5;209m
+BROWN =			\033[38;2;184;143;29m
+DARK_GRAY =		\033[38;5;234m
+MID_GRAY =		\033[38;5;245m
+DARK_GREEN =	\033[38;2;75;179;82m
+DARK_YELLOW =	\033[38;5;143m
+
+
+
+# **************************************************************************** #
+#                         DOCKER AND DEPENDENCIES                          	   #
+# **************************************************************************** #
+
+build_docker: log/8.Docker/Makedocker.sh
+log/8.Docker/Makedocker.sh:
+	mkdir -p log/8.Docker
+	wget \
+	-O log/8.Docker/Makedocker.sh \
+	https://raw.githubusercontent.com/diegonmarcos/system/refs/heads/main/S2_docker/src/Makedocker_.sh
+	chmod +x log/8.Docker/Makedocker.sh
+	ln -s log/8.Docker/Makedocker.sh Makedocker.sh
+	./Makedocker.sh clear
+	./Makedocker.sh build
+
+run_docker:
+	./log/8.Docker/Makedocker.sh run
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
 #                                LOG ALLES                                     #
 # ############################################################################ #
-# *** Log Alles *** #
+#
+#	#### *** LOG ALLES *** ####
+#	### * STATIC ANALYSIS *
+#	### * LEAKS **
+#	### * DYNAMIC ANALYSIS *
+#	### * DEBUGGERS *
+#	### * DOC *
+#	### * TOOLS *
+#	### * EXTRAS *
+#
+#
+#	### * STATIC ANALYSIS *
+#	## log_static_analysis
+#	## bear
+#	##-Wall -Wextra
+#	##-Wformat -Warray-bounds -Wnull-dereference -Wvla
+#	##-Weverything"
+#	##clang-tidy
+#	##--analyze -Xanalyzer -analyzer-checker=core
+#	## norminette
+#
+#
+#	### * LEAKS *
+#	## create_bins_leaks
+#	## log_leaks
+#	## VALGRIND = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s
+#	##--tool=massif
+#	##--tool=cachegrind 
+#	##--tool=callgrind
+#	## ASAN = -fsanitize=address
+#
+#
+#	### * DYNAMIC ANALYSIS *
+#	## test_egde_cases
+#	## test_main_cases
+#	## test_performance
+#
+#
+#	### * DEBUGGERS *
+#	## create_bins_dbg
+#	## run_debug-gdb
+#	## run_debug-lldb
+#	## run_debug-vscode
+#	## log_libs_nm_art
+#	## log_dbg_info
+#
+#
+#	### * DOC *
+#	##doxygen
+#
+#
+#	### * TOOLS *
+#	##test_make_performance
+#
+#
+#	### * EXTRAS *
+#	##test_run_visualizer
+#	##log_alles_bonus
+#
+#
+
 log_alles:
-	$(MAKE) || true
-	$(MAKE) bonus || true
-	$(MAKE) warning_linting || true
-	$(MAKE) leaks || true
-	$(MAKE) test_build || true
-	$(MAKE) testing_alles || true
-	$(MAKE) debuggers_info || true
-
-#build:
-#	$(MAKE) hello
-#	$(MAKE) check_up_to_date
-#	$(MAKE) folders_build
-#	$(MAKE) libs_build
-#	$(MAKE) program_or_lib
-
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
-# ############################################################################ #
-#                                 LINTING                                      #
-# ############################################################################ #
-# *** Liting analyzer *** #
-warning_linting:
 	$(MAKE)
+	$(MAKE) log_static_analysis || true
+	$(MAKE) log_leaks || true
+	$(MAKE) log_dynamic_analysis_tests || true
+	$(MAKE) log_dbg_info || true
+	$(MAKE) log_doxygen || true
+	$(MAKE) log_make_performance || true
+	$(MAKE) test_run_visualizer || true
+
+log_alles_bonus:
+	$(MAKE) bonus
+	$(MAKE) log_static_analysis_bonus || true
+	$(MAKE) log_leaks_bonus || true
+	$(MAKE) log_dynamic_analysis_tests_bonus || true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ############################################################################ #
+#                          STATIC ANALYZERS                                    #
+# ############################################################################ #
+# *** static analyzer *** #
+log_static_analysis:
+#	$(MAKE) bear || true
 	$(MAKE) bonus
 	$(MAKE) werror
 	$(MAKE) norm
-	$(MAKE) norm_bonus
-	$(MAKE) werror_bonus
+#	$(MAKE) norm_bonus
+#	$(MAKE) werror_bonus
 #	$(MAKE) clang_tidy_fix
 
+# *** Bear *** #
+bear:
+	bear --output log/6.Make_dbg/compile_commands.json -- make re
 
 # *** Wall Wextra *** #
 werror:
-	@echo "$(GREEN)\n·Clang Litings$(RESET)"
+	
+	@echo "$(GREEN)\n·Clang lintings$(RESET)"
 	echo "\n##Clang Wall Wextra - fsyntaxOnly"
 	echo "############################################\n"
-	$(MAKE) CFLAGS_DBG=" -Wall -Wextra" 2>&1 | sed 's/\x1b\[//g'| sed 's/\0;93m//g'| sed 's/\0;90m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_Linting/clang_www.txt
+	$(MAKE) VERBOSE="0" CFLAGS_DBG="-Wall -Wextra" 2>&1 | sed 's/\x1b\[//g'| sed 's/\0;93m//g'| sed 's/\0;90m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_www.txt
 
 	@echo "\n##Clang Fron-End Semantic Wcore - fsyntaxOnly"
 	echo "############################################\n"
-	$(MAKE) CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_Linting/clang_wcore.txt
+	$(MAKE) VERBOSE="0" CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_wcore.txt
 
 	@echo "\n##Clang Fron-End Semantic wEverything - fsyntaxOnly"
 	echo "############################################\n"
-	$(MAKE) CFLAGS_DBG="-Weverything" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_Linting/clang_wevery.txt
+	$(MAKE) VERBOSE="0" CFLAGS_DBG="-Weverything" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_wevery.txt
 
 	@echo "\n##Clang Fron-End Semantic Clang-Tidy - fsyntaxOnly"
 	echo "############################################\n"
-	clang-tidy $(SOURCE_MAIN) $(SOURCE_FILES) 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_Linting/clang_tidy.txt
+	clang-tidy -p log/6.Make_dbg/compile_commands.json $(SOURCE_SRC_ALL) 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_tidy.txt
 	
 	@echo "\n###Clang Static Analyzer Wcore"
 	echo  "#########################\n"
-	$(MAKE) CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_Linting/clang_analyzer.txt
+	$(MAKE) VERBOSE="0" CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_linting/clang_analyzer.txt
 
 # *** Norminette on Project*** #
 norm:
 	@echo "$(GREEN)\n····Running Norminette····$(RESET)"
-	norminette src/push_swap > log/1.Warning_Linting/norminette.txt; \
-	norminette inc >> log/1.Warning_Linting/norminette.txt ; cat log/1.Warning_Linting/norminette.txt
+	norminette src > log/1.Warning_linting/norminette.txt; \
+	norminette inc >> log/1.Warning_linting/norminette.txt ; cat log/1.Warning_linting/norminette.txt
+
+# *** Clang tidy fix*** #
+clang_tidy_fix:
+		clang-tidy $(SOURCE_MAIN) $(SOURCE_FILES) --fix
 
 # *** Norminette on Bonus*** #
 norm_bonus:
 	@echo "$(GREEN)\n····Running Norminette····$(RESET)"
-	norminette src/checker_bonus > log/1.Warning_Linting/norminette_bonus.txt ; cat log/1.Warning_Linting/norminette_bonus.txt \
+	norminette src/checker_bonus > log/1.Warning_linting/norminette_bonus.txt ; cat log/1.Warning_linting/norminette_bonus.txt \
+
 
 werror_bonus:
-	@echo "$(GREEN)\n·Clang Litings$(RESET)"
+	@echo "$(GREEN)\n·Clang lintings$(RESET)"
 	echo "\n## BONUS Clang Wall Wextra - fsyntaxOnly"
 	echo "############################################\n"
-	$(CHECKER_BUILD) CFLAGS_DBG="-Wall -Wextra" || true > log/1.Warning_Linting/bonus_clang_www.txt
+	BONUSER_BUILD) CFLAGS_DBG="-Wall -Wextra" || true > log/1.Warning_linting/bonus_clang_www.txt
+	
 	@echo "\n## BONUS Clang Fron-End Semantic - fsyntaxOnly"
 	echo "############################################\n"
-	$(CHECKER_BUILD) CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_Linting/bonus_clang_wevery.txt
+	BONUSER_BUILD) CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/bonus_clang_wevery.txt
+	
 	@echo "\n### BONUS Clang Static Analyzer"
 	echo  "#########################\n"
-	$(MAKE) CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core " 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_Linting/bonus_clang_analyzer.txt
+	BONUSER_BUILD) CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core " 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_linting/bonus_clang_analyzer.txt
 
-clang_tidy_fix:
-		clang-tidy $(SOURCE_MAIN) $(SOURCE_FILES) --fix
 
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ############################################################################ #
 #                                 LEAKS                                        #
 # ############################################################################ #
-# *** Leaks analyzer *** #
-leaks:
-	mkdir -p log/4.Bins_folder
-	$(MAKE) create_bins_leaks
-	$(MAKE) valgrind
-	$(MAKE) asan
+# # *** Leaks analyzer *** #
+# #log_leaks:
+# #	mkdir -p log/4.Bins_folder
+# 	$(MAKE)
+# 	$(MAKE) create_bins_leaks
+# 	$(MAKE) valgrind
+# 	$(MAKE) asan || true
+
+leaks_bonus:
+		$(MAKE) create_bins_leaks_bonus
 
 # *** Create bins for the leaks analyzer *** #
-.PHONY: create_bins_leaks
-create_bins_leaks: log/4.Bins_folder/${NAME0}_g $(OBJECTS)
-log/4.Bins_folder/$(NAME0)_g: $(OBJECTS)
 
+create_bins_leaks: log/4.Bins_folder/${NAME}_g $(OBJECTS)
+
+log/4.Bins_folder/$(NAME)_g: $(OBJECTS)
 # *** _g *** #
-	$(MAKE) CFLAGS_DBG=" -g" OUTPUT_PLACE="log/4.Bins_folder/" NAME0=$(NAME0)_g
+	$(MAKE) fclean
+	$(MAKE) CFLAGS_DBG=" -g"
+	mv $(NAME) log/4.Bins_folder/$(NAME)_g
+	gdb -batch -ex "info functions" log/4.Bins_folder/$(NAME)_g > log/4.Bins_folder/log/gdb_functions_$(NAME)_g.txt
+	$(MAKE) fclean
 
 # *** Asan *** #
-	$(MAKE) CFLAG_ASAN=" -g -fsanitize=address -fno-omit-frame-pointer" OUTPUT_PLACE="log/4.Bins_folder/" NAME0=$(NAME0)_asan
+	$(MAKE) fclean
+	$(MAKE) CFLAG_DBG="-g -fsanitize=address -fno-omit-frame-pointer"
+	mv $(NAME) log/4.Bins_folder/$(NAME)_asan
+	gdb -batch -ex "info functions" log/4.Bins_folder/$(NAME0)_asan > log/4.Bins_folder/log/gdb_functions_$(NAME0)_asan.txt
+	$(MAKE) fclean
 
 # *** BONUS _g *** #
-	$(MAKE) CFLAGS_DBG=" -g" OUTPUT_PLACE="log/4.Bins_folder/" NAME0=$(NAME0)_g -C $(CHECKER_BONUS_DIR)
-
+create_bins_leaks_bonus:
+	$(MAKE) clean -C $(CHECKER_BONUS_DIR)
+	$(MAKE) CFLAGS_DBG=" -g" -C $(CHECKER_BONUS_DIR)
+	mv $(CHECKER_BONUS_DIR)/checker log/4.Bins_folder/$(CHECKER_BONUS_DIR)/checker_g
+	gdb -batch -ex "info functions" log/4.Bins_folder/checker_g > log/4.Bins_folder/log/gdb_functions_checker_g_asan.txt
 
 # *** Runing Valgrind *** #
 VALGRIND = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s
-valgrind:
+VALGRIND_EXPORT = --log-file=log/2.Memory_Check/logs/valgrind_report_.txt
+#valgrind:
+log_leaks:
+	$(MAKE)
 	$(MAKE) create_bins_leaks
 	@echo "$(RED)\n# RUNNING VALGRIND: ERROR_HANDLING_INPUTS$(RESET)"
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_EMPTY$(RESET)"
 	
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt ./log/4.Bins_folder/push_swap_g $(ARG_EMPTY) 2>&1 || true
 	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: ok" > log/2.Memory_Check/Valgrind_Report.txt || true
-
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true	
+	
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_ONE$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt ./log/4.Bins_folder/push_swap_g $(ARG_1) 2>&1 || true
 	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+
 	@echo "$(BOLD)\n# RUNNING VALGRIND INT_MAX$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt ./log/4.Bins_folder/push_swap_g $(ARG_INT_MAX) 2>&1 || true
 	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+
 	@echo "$(BOLD)\n# RUNNING VALGRIND INT_MIN$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt ./log/4.Bins_folder/push_swap_g $(ARG_INT_MIN) 2>&1 || true
 	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_SORTED$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt ./log/4.Bins_folder/push_swap_g $(ARG_SORTED) 2>&1 || true
 	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt && echo "5: Sort: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt && echo "5: Sort: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_DUPLICATED$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt ./log/4.Bins_folder/push_swap_g $(ARG_DUPLICATED) 2>&1 || true
 	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt && echo "6. Dupl: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt && echo "6. Dupl: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_NON_NUMERIC$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt ./log/4.Bins_folder/push_swap_g $(ARG_NON_NUMERIC) 2>&1 || true
 	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt && echo "7. Alpha: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt && echo "7. Alpha: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
 	echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	
 	@echo "$(RED)\n# RUNNING VALGRIND: PERFORMANCE_CHECK$(RESET)"
 	@echo "---------------------------------------------------------------------------------------------------------------------------"
 	
 	@echo "$(BOLD)\n# RUNNING VALGRIND 5 NUMBERS$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_5.txt ./log/4.Bins_folder/push_swap_g $(ARG_5)  2>&1 || true
 	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	
 
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	
 	@echo "$(BOLD)\n# RUNNING VALGRIND 6 NUMBERS$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_6.txt ./log/4.Bins_folder/push_swap_g $(ARG_6) 2>&1 || true
 	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	
 	@echo "$(BOLD)\n# RUNNING VALGRIND 6 NUMBERS_NO_SPLIT$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_6_not_split.txt ./log/4.Bins_folder/push_swap_g 0 9 1 8 2 6 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_6_not_split.txt && echo "10. ARG_6_Nsplit: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@if grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_6_not_split.txt; then \
+		echo "10. ARG_6_Nsplit: Leaks: Ok" >> log/2.Memory_Check/Valgrind_Report.txt; \
+	else \
+		echo "10. ARG_6_Nsplit: Leaks: Nok" >> log/2.Memory_Check/Valgrind_Report.txt; \
+	fi
+	@if grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_6_not_split.txt; then \
+		echo "10. ARG_6_Nsplit: Errors: Ok" >> log/2.Memory_Check/Valgrind_Report.txt; \
+	else \
+		echo "10. ARG_6_Nsplit: Errors: Nok" >> log/2.Memory_Check/Valgrind_Report.txt; \
+	fi
 
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	
 	@echo "$(BOLD)\n# RUNNING VALGRIND ON CHECKER$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
-	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_checker_6.txt ./log/4.Bins_folder/push_swap_g $(ARG_6) | ./log/4.Bins_folder/checker_g $(ARG_6)
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0005; done; echo " ✓$(RESET)"
+	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_checker_6.txt ./log/4.Bins_folder/push_swap_g $(ARG_6) | ./log/4.Bins_folder/checker_g $(ARG_6) || true
+	@echo "11. ARG_6 Checker:" >> log/2.Memory_Check/Valgrind_Report.txt || true
 	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_checker_6.txt && echo "11. ARG_6 Checker: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_checker_6.txt && echo "11. ARG_6 Checker: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
 
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	
@@ -460,100 +1044,97 @@ valgrind:
 # *** Callgrind Target *** #
 	valgrind --tool=callgrind --callgrind-out-file=log/2.Memory_Check/logs/val_callgrind.out ./log/4.Bins_folder/push_swap_g $(ARG_6)
 
-#	@echo "";
-#	ARG="50000000 400000000 -300000000 200000000 100000000 -42";\
-#	echo "$(YELLOW)1. 6 numbers VALGRIND PUSH(ARG)$(GREEN)" ;
-#	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_6.txt ./log/4.Bins_folder/push_swap_g $$ARG > /dev/null ; \
-	awk 'NR >= 8' log/2.Memory_Check/logs/valgrind_report_push_6.txt
-
 # *** runing Asan *** #
 asan:
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	@echo "$(BOLD)\n# RUNNING ASAN$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0005; done; echo " ✓$(RESET)"
 	export ASAN_OPTIONS="halt_on_error=0:log_path=log/2.Memory_Check/logs/Asan_report.txt";
 	./log/4.Bins_folder/push_swap_asan $(ARG_6)
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	export ASAN_OPTIONS="halt_on_error=0:log_path=log/2.Memory_Check/logs/Asan_report_2.txt";
-	./log/4.Bins_folder/push_swap_asan "5 4 3 2 1 5"
+	./log/4.Bins_folder/push_swap_asan 5 4 3 2 1
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ############################################################################ #
-#                                DEBUGGERS                                     #
-# ############################################################################ #
-# *** Debuggers *** #
-debuggers:
-	$(MAKE) create_bins_dbg
-	$(MAKE) debuggers_info
-
-# ************************************************************************ #
-#                                                                          #
-# ************************************************************************ #
-# *** Create the bin for G3 debugging *** #
-create_bins_dbg: log/4.Bins_folder/$(NAME1)_g3
-log/4.Bins_folder/$(NAME1)_g3: $(OBJECTS)
-# *** debugging _g3 *** #
-	$(MAKE) CFLAGS_DBG=" -g3" OUTPUT_PLACE="log/4.Bins_folder/" NAME0=$(NAME0)_g3
-	cd log/4.Bins_folder
-	ln -s ../../src/push_swap/main/push_swap.c log/4.Bins_folder/push_swap.c || true
-	ln -s ../../src/checker_bonus/src/checker_bonus.c log/4.Bins_folder/checker_bonus.c || true
-
-.PHONY: create_bins_dbg
-
-# *** Librarys info and make=debug *** #
-debuggers_info:
-	$(MAKE) libs_nm_art
-#	$(MAKE) make_dbg
-
-
-libs_nm_art:
-	nm libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_nm.txt
-	ar t libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_art.txt
-	nm libs/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_nm.txt
-	ar t libs/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_art.txt
-
-make_dbg:
-	$(MAKE) -d > log/6.Make_dbg/make_d.txt
-	$(MAKE) CFLAGS_DBG="-v" > log/6.Make_dbg/clang_v.txt
-	$(MAKE) --debug=b -j1 re > log/6.Make_dbg/make_debug_b.txt
-	$(MAKE) --debug=v -j1 re > log/6.Make_dbg/make_debug_v.txt
-
-# ************************************************************************ #
-#                                 RUN DEBUGGER                              #
-# ************************************************************************ #
-# *** Command to run especif debug *** #
-ARG_DBG = "500 400 300 200 100 1000"
-debug: $(MAKE) CFLAGS="$(CFLAGS) -g3" $(NAME)
-	lldb ./$(NAME) -o "b main" -o run -o gui -o "run $(ARG_DBG)" 
-
-###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
-# ############################################################################ #
-#                             TESTING_ALLES                                    #
+#                             DYNAMIC ANALYSIS TESTERS                         #
 # ############################################################################ #
 # *** Command to run all tests *** #
-testing_alles:
+log_dynamic_analysis_tests:
 	$(MAKE) testers_folder_build
 	$(MAKE) bonus
-	$(MAKE) tests_run
+	$(MAKE) tests_run | tee log/3.Unit_Testing/Testing_Report.txt
+	$(MAKE) test_performance
 	$(MAKE) create_bins_dbg
 
+#sed -r 's/\x1B\[[0-9;]*[mGKH]//g'
 # ************************************************************************ #
 #                               TESTERS_FOLDER                             #
 # ************************************************************************ #
 # *** Folder builder testers *** #
 testers/testers.tar.gz:
-	pipx install gdown
 	mkdir -p testers
-	gdown 'https://drive.google.com/uc?id=10rQ0zUPZZFOO4epDa62sx_2kUUrl1EFo' -O $@
+	wget -O testers/testers.tar.gz https://raw.githubusercontent.com/diegonmarcos/algo/refs/heads/main/C2_push_swap/1.RM/rsc/testers.tar.gz
+#https://github.com/diegonmarcos/algo/blob/main/C2_push_swap/1.RM/rsc/testers.tar.gz
+#pipx install gdown
+#gdown 'https://drive.google.com/uc?id=10rQ0zUPZZFOO4epDa62sx_2kUUrl1EFo' -O $@
 #https://drive.google.com/file/d/10rQ0zUPZZFOO4epDa62sx_2kUUrl1EFo/view?usp=sharing
 
-testers: testers/testers.tar.gz
-		tar -xzf $< -C .
+testers/checker_linux: testers/testers.tar.gz
+	tar -xzf testers/testers.tar.gz -C .
 
-checker_linux: testers
-testers_folder_build: checker_linux
-.PHONY: test_run
+testers_folder_build: testers/checker_linux
+
+
+#testers: testers/testers.tar.gz 
+#		tar -xzf $< -C .
 
 # ************************************************************************ #
 #                                   TESTS RUN                              #
@@ -566,17 +1147,70 @@ ARG_INT_MIN="-2147483649 3 2 1"
 ARG_SORTED="1 2 3 4 2147483647"
 ARG_DUPLICATED=	"5 4 3 2 1 1"
 ARG_NON_NUMERIC="a 1 3 4 5"
-ARG_2="0 9"
+
+ARG_2="9 -1"
 ARG_3="0 9 2"
-ARG_4="0 9 2 8"
-ARG_5="0 9 2 8 3"
+ARG_4="0 9 -2 8"
+ARG_5="3 9 2 8 0"
+
 ARG_6="0 9 2 8 3"
-ARG_6_=0 9 2 8 3
-ARG_100="212710023 986781593 -696505162 -697772949 163158489 20730884 -974873791 433823587 -821700607 -577271177 -845816937 642872502 -38427609 379698130 542919419 94513872 802435190 256366261 -388868047 523305894 902033793 361493411 -312892761 238798632 -544395033 -916888931 857242650 -938149113 937859398 782299023 -152438703 105436742 484415778 -497421154 -965438810 275733505 -42903052 -283624876 -155530411 -584589099 248953144 267090942 249014822 709393969 -532736522 269785342 -626217395 558457329 -231801523 -745034309 -205138703 952480231 489930891 -837976400 193590696 902970108 -161884624 715769492 460247859 658382120 869373884 -345009361 166265788 -712307688 26099976 490666783 -897464550 -918369107 25978938 -580570130 -27390761 117409894 969627571 -473690591 -480042277 -57613226 -622657768 -274858784 -56062030 -927729186 -561021644 -234588375 -92249412 449515401 -187714857 -629146709 -29880497 -962559720 645723247 457172511 -987311436 -76781137 -646421526 765798094 -574146273 -330402836 475003585 48881686 971109339 -20600967"
-ARG_500="161644880 79101196 -466814793 -136237612 289155967 -915290009 187996535 -620305300 768941090 209423567 406389564 339485405 -841947060 570422808 41725038 260838117 810165583 -251302402 -510877702 -587941708 -731803947 -627589912 -207929780 469299828 -479290036 -877960023 285774390 501117398 763026145 603420191 -507794776 176682860 -640954253 74234638 -15997564 -887983311 562140182 308118552 887848896 669538918 950093577 617068602 531847363 -792582653 -77040018 870451556 625283177 261351482 141129587 803633397 -330340165 667428520 785457292 571922187 -782794423 -802816722 -683026066 919309372 -623446542 355689038 427289389 -934507655 -38247998 367858134 -611462990 -597094177 -417149016 -482587791 324321748 626420042 -359407106 -407505611 -457866678 274628619 -841615865 609751077 474287630 -287111167 379504434 114257693 -834686866 -370125434 -394096303 423347718 -644901407 561020861 -143033136 -454635491 231991268 -664899721 494705719 82128013 -711388079 -966296234 -267829945 -819045949 -538880791 -703904929 -626692262 -860149272 -203633348 747525528 -969136087 259093531 -768944417 -945117429 -704982450 -746846007 347567388 249491699 -613443167 215268882 874177629 977470375 -4814957 577608043 968928427 462614235 862140293 683013595 -993205564 312581545 -113663522 758888883 -181131845 -924700952 -283977535 961691252 294330991 396189796 863513726 -3790587 -863582760 -809672150 -538591658 -917624912 272783698 -522947724 -478594890 -162813257 -101758788 -818309818 90074991 -48269407 755668349 -662672856 -420644362 892690322 853151450 126389795 125117456 -717414847 -920020012 -952011812 -415417376 -398364584 -52757598 -579410193 -352627123 137137703 -94299217 -888016985 133278824 -242142994 -904594645 -898836400 -172600279 -731044332 810794363 308939113 604576193 -714780899 959275933 46530445 -678372156 157774698 529914035 -673421674 267572305 -787174642 594091757 -176435755 662347888 216211021 801555595 204135619 827097079 333256900 -524176077 -17551780 -534471280 572635216 -250360985 406750389 643682476 192863096 -318342502 798439242 -644281906 171317597 887885292 834979650 416306247 122599091 -668792859 847067263 804303245 -166977681 -641795388 796859494 232540272 578959862 666421127 794519908 687983624 -223355753 -829597237 -429471023 -552889315 792634358 -924104340 709167110 -17990542 855203653 -361513174 235857788 -165481375 -702770858 -953907424 122781780 786147219 -473109184 -849788760 125390237 131636521 873211891 -608038749 552010333 666934094 -866475426 291525318 732597253 117311604 -880574080 278682430 -140673993 -512792166 809057277 250282902 714859944 896619495 615393842 -619146905 642557243 -446509263 -52791236 -580297002 -61922720 -448898118 608729523 649968030 191749510 -340687307 -13190096 250438328 480555808 215324645 452469709 -208001802 -868147633 437557168 -544444097 750346053 306354436 204733991 -643533635 632545180 639376495 -293347984 349476412 903934402 213901862 90315576 577616438 -155603111 962658096 -489333019 876820374 800425104 685357798 516821635 -710276879 119408617 198479358 551304105 -143482777 -707261683 -232121475 -515658696 878001821 -405920881 696358602 -110714173 860984306 -152511967 273112199 675065036 -893177813 -15248781 17560273 -106856378 313146529 890271551 -710897467 673229348 -961936766 302550309 588154609 821843516 714074481 126835627 -611444101 911564625 471747403 614879350 -986286370 83368884 611777120 -518272177 -297221486 809010932 -515975535 978191207 157252017 -548908080 9680354 855785387 845397903 95452042 863091565 963616016 -375712063 -678978176 283310827 -939975248 480888381 -583099335 -922229523 916914330 -321370203 -82876620 -612614569 -379969716 387010968 815131556 -800352553 755703986 961995648 877130545 -595342010 227378411 388108927 -39824946 582501825 708537734 -348470361 908414786 835924964 -913523673 226580451 382983683 -541850768 521324496 -367968827 -328193261 -374432175 -257512933 -767586852 -302926107 483870969 -1207662 -924413095 773774117 -449882153 -826294184 -42886208 -216963084 356375919 -606841392 -544416045 -230338449 -361498154 -583491160 -372938809 -221308582 -494253200 546852756 621050344 -444934934 546797973 -986490790 708414053 -495974651 77114442 362064023 -775901245 -447114026 -839057876 -735702703 909348641 -297248286 -389793416 -87550083 -429931665 189700273 864043299 804251865 693522198 528680720 5098703 -757755804 -218931420 -154608868 445169960 65197690 -319275534 804762641 104811235 -159637369 569981758 435801158 -853775772 -728310828 -578958528 45172399 988602854 -863555460 -662003754 950655992 560976427 -677902043 516242518 -797920541 500468548 -516094769 -655597739 782801784 969638197 651707831 989991387 996233440 -773647353 94601891 565515848 -110681027 -309856422 164339253 684791262 -46681030 645466380 64093137 -640453668 25310470 838191551 -723725662 -584957724 936461607 -377139041 -430318531 -61913054 -646140255 931367166 248910485 275065908 371527256 4182481 806519972 -996943141 -621961312 622612051 276310498 702294721 -431024372 323830662 -104745217 345693478 580516783 -570078232 -193873589 -595756840 842653932 798996585 -488184149 -316887408 665671629 -836836424 901437480 -472366489 -364515282 890372178"
+ARG_9="0 9 2 8 1 4 5 3 6"
+ARG_12="150 20 124 -80 100 123 -139 -27 59 91 186 212"
+ARG_24="-8 -121 178 236 -131 -185 117 26 86 -156 -148 213 -216 102 -61 -126 93 -42 200 79 -116 78 -198 216"
+ARG_50="-47 139 204 167 -95 76 203 67 -60 -12 -238 191 -105 -7 28 235 -54 239 189 -141 135 104 202 -226 -165 -9 101 -88 78 250 124 -157 163 40 -210 192 136 -99 137 157 72 -66 -33 -235 -118 -17 170 -49 -101 174"
+ARG_75="-89 126 228 -14 -33 109 247 -242 -133 148 1 147 -201 -46 42 6 115 -52 249 -130 -215 67 12 202 17 -188 92 -47 -39 87 -44 -124 45 -158 11 -163 -129 38 36 -106 188 149 -235 171 -92 213 -195 -115 96 -81 4 -231 223 -216 25 229 244 208 -228 -179 -144 137 -116 91 59 -205 -237 95 -97 -229 -82 193 -113 -30 -40"
+ARG_250="-35 -43 -206 -42 -37 137 -212 171 -19 -31 90 5 -201 87 158 -8 -198 226 141 222 -4 -165 103 76 33 188 61 175 62 -85 -54 -94 31 -121 4 -205 219 -66 102 -101 -32 46 -214 -108 -141 -86 127 -131 -166 8 -167 -2 78 -190 96 -74 -160 -172 -178 55 -73 218 238 -106 -238 -142 -105 -227 201 -230 -69 -118 -162 101 21 -17 -149 -114 7 -29 149 100 -120 126 117 209 -197 -152 233 235 27 189 -144 98 243 56 191 -221 71 -169 -6 30 12 -103 186 -91 134 -202 -48 -243 -41 216 -240 10 35 227 26 155 -193 195 -25 -67 -112 -236 180 142 -128 -139 123 97 -129 213 -231 3 174 166 236 -33 29 -250 194 95 228 43 -80 139 190 -217 168 144 210 -70 -123 239 13 -218 -87 -170 199 -195 208 207 -50 -163 -137 -81 -55 -220 -176 -99 -116 -30 47 -232 -204 -117 -188 19 -148 198 130 -9 22 -222 -210 0 -225 -26 -175 -20 -207 -1 -223 80 -159 -78 -111 -125 200 32 -219 -77 88 41 -53 72 122 160 -110 206 -249 132 -75 193 -96 44 111 151 66 203 -246 -44 1 -203 192 -171 40 6 -145 -211 -28 -88 185 110 154 -234 68 183 128 -62 217 -61 -104 45 -102 187 246 159 181 162"
+ARG_375="210 -5 171 242 -140 -1 173 -64 -78 230 -249 175 -83 -25 -124 -106 -206 -193 -70 181 -89 -8 -234 -188 134 -76 194 43 -27 -242 -131 -137 183 -19 -204 -109 -34 -233 -148 -149 -133 -208 127 -52 71 203 88 -99 -47 -179 31 -50 -139 241 115 -192 153 8 -197 94 63 -42 -67 -102 110 -128 38 235 247 120 -153 -96 -176 -143 136 239 20 39 -101 -20 21 91 124 109 -26 -138 135 -207 -32 84 -232 19 37 57 -146 -223 -145 151 172 144 -90 143 221 54 145 -13 176 -155 48 204 -135 -161 166 1 49 -41 121 93 248 180 100 36 -141 -201 102 -53 -173 3 -172 245 238 162 -94 -11 244 -121 196 -228 -40 -190 -81 98 41 -49 -85 -127 -3 101 158 129 -241 -37 152 -62 26 -168 -45 206 -113 87 -29 -56 -15 -196 56 128 157 170 131 -244 190 -222 -105 -183 -158 104 35 -250 154 11 -210 51 122 189 -166 187 -123 218 59 -80 -134 -243 -46 96 -28 68 10 224 -247 -69 -152 77 -112 -248 249 -21 -227 -35 132 -212 -194 227 58 -97 -43 164 14 -55 -114 184 156 -163 105 -209 -239 250 220 -225 17 146 -73 199 -167 147 -39 216 228 139 29 82 -182 46 222 119 28 -211 60 -198 195 -154 32 69 74 -84 -18 -130 112 -82 178 -33 163 -180 130 89 214 -205 90 -200 -63 27 149 18 114 12 -51 229 -117 -61 -66 -65 -226 167 -129 15 -38 113 -12 -10 -22 106 -7 -71 -110 -74 -77 -177 225 117 -220 -237 142 -118 -57 44 236 86 -151 83 -75 179 -185 186 -98 -231 92 165 148 -72 207 231 45 234 -23 -174 -246 -92 -100 53 95 7 67 -171 13 -93 -147 141 -132 -111 226 -14 -86 -218 237 209 16 9 -162 65 198 -184 -17 197 33 182 223 -107 -48 116 34 200 -24 -178 79 -189 -68 111 47 212 107 205 -2 -216 -88 25 168"
+
+ARG_100="-132 192 -136 -182 135 169 -194 -201 52 217 156 36 236 -55 -139 0 238 -227 221 -177 -87 -95 214 -34 -102 -154 191 83 -105 -144 244 -137 -186 -199 240 150 -113 -180 -36 175 -164 -110 -115 20 -235 237 87 -130 122 61 -239 -225 -206 14 -45 176 57 -121 10 -100 60 168 -86 -210 -134 -91 204 72 -205 53 -195 -40 -23 -141 243 209 212 142 -82 -187 -5 22 112 132 178 163 -250 222 -170 -248 216 126 234 218 194 76 170 224 67 -219"
+ARG_500="-230 159 -202 -148 73 -210 28 -176 -134 143 -7 203 -99 -145 6 -239 97 -155 -215 117 -124 17 151 152 110 176 148 131 244 -235 207 -82 41 162 101 21 115 -138 -86 231 -122 -217 26 -43 192 -116 64 -29 -49 -200 4 -168 -53 19 -78 -234 -137 -63 0 -170 -172 -109 39 -192 -125 -95 -25 185 -160 11 220 -169 -249 98 -203 -102 -117 184 212 -83 -227 116 114 168 -245 156 142 126 -101 70 -178 113 -237 -91 -98 -64 193 -158 242 -15 -68 227 -24 108 88 -163 -119 -76 -244 -62 23 -151 58 210 -90 -129 -65 -193 89 197 -74 60 208 -16 57 124 169 111 -243 232 -162 -198 24 2 -58 141 -84 174 87 31 -180 122 -60 -85 -108 -126 -154 -139 33 129 132 -87 -32 -114 -52 27 -56 3 37 -128 99 -183 204 -132 -118 186 -105 -103 133 62 72 -174 137 -42 170 -34 199 -167 120 29 -27 196 -142 61 50 -50 74 130 -241 -40 -204 10 -199 233 243 -75 -21 -77 161 112 35 95 248 181 249 250 -106 84 157 167 194 -228 14 175 -222 -166 -236 107 -189 177 53 106 -112 245 -110 206 -18 155 -224 -72 102 -93 -17 -111 -209 -10 94 -153 18 -69 118 -94 123 160 -226 77 -104 -159 149 216 79 164 -36 90 -173 96 -141 -48 40 158 223 -35 -135 -184 -156 -196 -181 179 -123 -13 -71 -195 -44 -66 -150 -161 146 150 85 -38 38 171 144 153 54 16 236 136 205 134 125 -19 -6 -133 69 -225 86 219 119 32 -31 -131 -57 -61 83 172 -214 91 -20 -33 56 -186 154 -4 145 -238 25 209 36 -89 92 228 -140 -187 -231 138 200 -37 -143 225 -149 -45 214 34 -177 -1 13 -127 81 -107 -120 -46 182 -121 -146 43 75 -136 -54 239 -190 -247 229 -152 189 188 -97 -70 100 -113 -179 237 55 65 -73 211 -194 7 -144 230 -212 45 -51 201 238 22 -246 -191 20 -182 -9 109 127 -28 246 -147 183 198 -211 51 49 -8 67 63 147 46 -30 78 202 -5 -171 128 213 66 -220 76 -81 -175 247 135 -157 -223 42 -248 -67 -115 -88 166 -219 165 -208 71 52 8 -197 -79 -41 -250 -188 222 68 180 -26 226 -216 -232 -23 105 235 59 -22 103 173 224 -3 -207 -130 93 190 44 -11 191 221 9 104 -2 240 -59 241 139 178 5 215 -240 -201 217 30 -165 12 80 163 47 187 -92 -14 -242 -206 82 234 -39 140 195 121 15 -233 -100 -96 1 -164 -55 -47 48 -80 -185 -229 -218 -205 218 -12 -221"
+
+
+
+tests_run_12:
+	-echo -n "$(YELLOW)b1. ARG_12$(GREEN): | " ; ./push_swap $(ARG_12) 2>&1 | ./testers/checker_linux $(ARG_12) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_12) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+tests_run_12_valgrind:
+		$(VALGRIND) $(VALGRIND_EXPORT) ./log/4.Bins_folder/push_swap_g3 $(ARG_12) 2>&1
+
+tests_run_24:
+	-echo -n "$(YELLOW)b1. ARG_24$(GREEN): | " ; ./push_swap $(ARG_24) 2>&1 | ./testers/checker_linux $(ARG_24) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_24) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+tests_run_24_valgrind:
+		$(VALGRIND) $(VALGRIND_EXPORT) ./log/4.Bins_folder/push_swap_g3 $(ARG_24) 2>&1
+
+tests_run_50:
+	-echo -n "$(YELLOW)b1. ARG_50$(GREEN): | " ; ./push_swap $(ARG_50) 2>&1 | ./testers/checker_linux $(ARG_50) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_50) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+tests_run_50_valgrind:
+		$(VALGRIND) $(VALGRIND_EXPORT) ./log/4.Bins_folder/push_swap_g3 $(ARG_50) 2>&1
+		$(VALGRIND) ./log/4.Bins_folder/push_swap_g3 $(ARG_50) 2>&1
+tests_run_75:
+	-echo -n "$(YELLOW)b1. ARG_75$(GREEN): | " ; ./push_swap $(ARG_75) 2>&1 | ./testers/checker_linux $(ARG_75) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_75) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+
+tests_run_250:
+	-echo -n "$(YELLOW)b2. ARG_250$(BLUE): | " ; ./push_swap $(ARG_250) 2>&1 | ./testers/checker_linux $(ARG_250) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_250) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+tests_run_250_valgrind:
+	-echo -n "$(YELLOW)b3. ARG_250$(BLUE): | " ; $(VALGRIND) $(VALGRIND_EXPORT) ./push_swap $(ARG_250)  2>&1 ;
+tests_run_375:
+	-echo -n "$(YELLOW)b2. ARG_375$(BLUE): | " ; ./push_swap $(ARG_375) 2>&1 | ./testers/checker_linux $(ARG_375) | tr '\n' ' ' ; echo -n " | " ; /push_swap $(ARG_375) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+tests_run_375_valgrind:
+	-echo -n "$(YELLOW)b3. ARG_375$(BLUE): | " ; $(VALGRIND) $(VALGRIND_EXPORT) ./push_swap $(ARG_375)  2>&1 ;
+
+
+
+tests_run_5:
+	-echo -n "$(YELLOW)b1. ARG_5$(BLUE): | " ; ./push_swap $(ARG_5) 2>&1 | ./testers/checker_linux $(ARG_5) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) > log/3.Unit_Testing/moves/moves_5.txt; echo "";
+
+tests_run_100:
+	-echo -n "$(YELLOW)b2. ARG_100$(BLUE): | " ; ./push_swap $(ARG_100) 2>&1 | ./testers/checker_linux $(ARG_100) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+tests_run_100_valgrind:
+	-echo -n "$(YELLOW)b3. ARG_100$(BLUE): | " ; $(VALGRIND) $(VALGRIND_EXPORT) ./push_swap $(ARG_100)  2>&1 ;
+
+tests_run_500:
+	-echo -n "$(YELLOW)b3. ARG_500$(BLUE): | " ; ./push_swap $(ARG_500) 2>&1 | ./testers/checker_linux $(ARG_500) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+tests_run_500_valgrind:
+	-echo -n "$(YELLOW)b3. ARG_500$(BLUE): | " ; $(VALGRIND) $(VALGRIND_EXPORT) ./push_swap $(ARG_500)  2>&1 ;
 
 # *** Run only the tests *** #
-i=1
+.PHONY: test_run
 tests_run:
 	@echo "$(RED)\n# RUNNING TESTS$(RESET)"
 	@echo ""
@@ -603,6 +1237,7 @@ tests_run:
 	@echo "Min Points: 8"
 	@echo "---------------------------------------------------------------------------------------------------------------------------"
 	echo"";
+	-echo -n "$(GRAY) MAIN $(RESET)"; echo"";
 	-echo -n "$(GRAY)A ERROR_HANDLING_INPUTS $(RESET)"; echo"";
 	-echo -n "$(YELLOW)a1. ARG_DUPLICATED$(GREEN): | " ; ./push_swap $(ARG_DUPLICATED) 2>&1  | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_DUPLICATED) 2>&1 | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	-echo -n "$(YELLOW)a2. ARG_NON_NUMERIC$(GREEN): | " ; ./push_swap $(ARG_NON_NUMERIC) 2>&1 | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_NON_NUMERIC) 2>&1  | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
@@ -617,16 +1252,19 @@ tests_run:
 	-echo -n "$(YELLOW)b1. ARG_6_NOT_SPLIT$(GREEN): | " ; ./push_swap 0 9 2 8 3 -42 2>&1 | ./testers/checker_linux 0 9 2 8 3 -42 | tr '\n' ' ' ; echo -n " | " ; ./push_swap 0 9 2 8 3 -42 | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	echo"";
 	-echo -n "$(GRAY)B PERFORMANCE_CHECK $(RESET)"; echo""
-	-echo -n "$(YELLOW)b1. ARG_2$(BLUE): | " ; ./push_swap $(ARG_2) 2>&1 | ./testers/checker_linux $(ARG_2) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_2) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_2) > log/3.Unit_Testing/moves_2.txt; echo "";
-	-echo -n "$(YELLOW)b1. ARG_3$(BLUE): | " ; ./push_swap $(ARG_3) 2>&1 | ./testers/checker_linux $(ARG_3) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_3) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_3) > log/3.Unit_Testing/moves_3.txt; echo "";
-	-echo -n "$(YELLOW)b1. ARG_4$(BLUE): | " ; ./push_swap $(ARG_4) 2>&1 | ./testers/checker_linux $(ARG_4) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_4) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_4) > log/3.Unit_Testing/moves_4.txt; echo "";
-	-echo -n "$(YELLOW)b1. ARG_5$(BLUE): | " ; ./push_swap $(ARG_5) 2>&1 | ./testers/checker_linux $(ARG_5) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) > log/3.Unit_Testing/moves_5.txt; echo "";
-	-echo -n "$(YELLOW)b2. ARG_100$(BLUE): | " ; ./push_swap $(ARG_100) 2>&1 | ./testers/checker_linux $(ARG_100) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) > log/3.Unit_Testing/moves_100.txt; echo "";
-	-echo -n "$(YELLOW)b3. ARG_500$(BLUE): | " ; ./push_swap $(ARG_500) 2>&1 | ./testers/checker_linux $(ARG_500) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) > log/3.Unit_Testing/moves_500.txt; echo "";
+	-echo -n "$(YELLOW)b1. ARG_2$(BLUE): | " ; ./push_swap $(ARG_2) 2>&1 | ./testers/checker_linux $(ARG_2) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_2) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_2) > log/3.Unit_Testing/moves/moves_2.txt; echo "";
+	-echo -n "$(YELLOW)b1. ARG_3$(BLUE): | " ; ./push_swap $(ARG_3) 2>&1 | ./testers/checker_linux $(ARG_3) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_3) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_3) > log/3.Unit_Testing/moves/moves_3.txt; echo "";
+	-echo -n "$(YELLOW)b1. ARG_4$(BLUE): | " ; ./push_swap $(ARG_4) 2>&1 | ./testers/checker_linux $(ARG_4) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_4) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_4) > log/3.Unit_Testing/moves/moves_4.txt; echo "";
+	-echo -n "$(YELLOW)b1. ARG_5$(BLUE): | " ; ./push_swap $(ARG_5) 2>&1 | ./testers/checker_linux $(ARG_5) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) > log/3.Unit_Testing/moves/moves_5.txt; echo "";
+	-echo -n "$(YELLOW)b2. ARG_100$(BLUE): | " ; ./push_swap $(ARG_100) 2>&1 | ./testers/checker_linux $(ARG_100) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) > log/3.Unit_Testing/moves/moves_100.txt; echo "";
+	-echo -n "$(YELLOW)b3. ARG_500$(BLUE): | " ; ./push_swap $(ARG_500) 2>&1 | ./testers/checker_linux $(ARG_500) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) > log/3.Unit_Testing/moves/moves_500.txt; echo "";
 	echo""
 	-echo -n "$(GRAY)B PERFORMANCE_CHECK_BONUS $(RESET)"; echo""
+	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_5) | ./checker $(ARG_5) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_100) | ./checker $(ARG_100) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_500) | ./checker $(ARG_500) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	echo"";
+	-echo -n "$(GRAY) BONUS $(RESET)"; echo"";
 	-echo -n "$(GRAY)C ERROR_HANDLING_INPUTS_BONUS $(RESET)"; echo"";
 	-echo -n "$(YELLOW)a1. ARG_INT_MAX$(GREEN): | " ; ./checker $(ARG_INT_MAX) 2>&1 | tr '\n' ' ' ; echo -n " | " ; ./checker $(ARG_INT_MAX) 2>&1 | wc -l | tr '\n' ' ' ; echo -n " | "  ; echo "";
 	-echo -n "$(YELLOW)a2. ARG_INT_MIN$(GREEN): | " ; ./checker $(ARG_INT_MIN) 2>&1 | tr '\n' ' ' ; echo -n " | " ; ./checker $(ARG_INT_MIN) 2>&1 | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
@@ -636,14 +1274,8 @@ tests_run:
 	-echo -n "$(YELLOW)a5. ARG_EMPTY $(GREEN): | " ; ./checker $(ARG_EMPTY) <<EOF 2>&1 | tr '\n' ' ' ; echo -n " | " ; ./checker $(ARG_EMPTY) <<EOF 2>&1 | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	-echo -n "$(YELLOW)a6. ARG_1$(GREEN): | " ; ./checker $(ARG_1) <<EOF 2>&1 | tr '\n' ' ' ; echo -n " | " ; ./checker $(ARG_1) <<EOF 2>&1 | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	-echo -n "$(YELLOW)a7. ARG_SORTED$(GREEN): | " ; ./checker $(ARG_SORTED) <<EOF 2>&1 | tr '\n' ' ' ; echo -n " | " ; ./checker $(ARG_SORTED) <<EOF 2>&1 | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
-ifeq ($(i), 1)
-	$(MAKE) test_export1
-	$(MAKE) test_performance
-endif
-
-test_export1:
-	$(MAKE) testing_alles i=0 2>&1 | sed 's/\x1b//g'| sed 's/\x1b\[0;92m//g'| sed 's/033//g'| sed 's/\[0;93m//g'| sed 's/\[0;92m//g'| sed 's/\[0;39m//g' | sed 's/\[0;39m//g' | sed 's/\[0;90m//g'| sed 's/\[0;91m//g'| sed 's/\[1m//g'| sed 's/\[0;91m//g'| sed 's/\[0;94m//g' > log/3.Unit_Testing/1.Unit_Testing.txt
-
+	-echo -n "---------------------------------------------------------------------------------------------------------------------------$(RESET)"; echo"";
+	
 test_performance:
 	$(MAKE)
 	/usr/bin/time -v ./push_swap $(ARG_500) 2> log/3.Unit_Testing/perfomance_time_push_ARG500.txt 1> /dev/null
@@ -653,10 +1285,216 @@ perfomance:
 	mkdir -p log/3.Unit_Testing
 	/usr/bin/time -v $(MAKE) log_alles 2> log/3.Unit_Testing/perfomance_time_log_all.txt 1> /dev/null
 
+tests_run_small:
+	-echo -n "$(GRAY)B PERFORMANCE_CHECK $(RESET)"; echo""
+	-echo -n "$(YELLOW)b1. ARG_2$(BLUE): | " ; ./push_swap $(ARG_2) 2>&1 | ./testers/checker_linux $(ARG_2) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_2) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_2) > log/3.Unit_Testing/moves/moves_2.txt; echo "";
+	-echo -n "$(YELLOW)b1. ARG_3$(BLUE): | " ; ./push_swap $(ARG_3) 2>&1 | ./testers/checker_linux $(ARG_3) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_3) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_3) > log/3.Unit_Testing/moves/moves_3.txt; echo "";
+	-echo -n "$(YELLOW)b1. ARG_4$(BLUE): | " ; ./push_swap $(ARG_4) 2>&1 | ./testers/checker_linux $(ARG_4) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_4) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_4) > log/3.Unit_Testing/moves/moves_4.txt; echo "";
+	-echo -n "$(YELLOW)b1. ARG_5$(BLUE): | " ; ./push_swap $(ARG_5) 2>&1 | ./testers/checker_linux $(ARG_5) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) > log/3.Unit_Testing/moves/moves_5.txt; echo "";
+
+
+test_bonus:
+	$(MAKE) testers_folder_build
+	$(MAKE) bonus
+	-echo -n "$(GRAY)B PERFORMANCE_CHECK_LINUX $(RESET)"; echo""
+	-echo -n "$(YELLOW)b2. ARG_100$(BLUE): | " ; ./push_swap $(ARG_100) 2>&1 | ./testers/checker_linux $(ARG_100) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) | wc -l | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) > log/3.Unit_Testing/moves/moves_100.txt; echo "";
+	-echo -n "$(GRAY)B PERFORMANCE_CHECK_BONUS $(RESET)"; echo""
+	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_5) | ./checker $(ARG_5) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_5) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_100) | ./checker $(ARG_100) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_500) | ./checker $(ARG_500) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ############################################################################ #
+#                                DEBUGGERS                                     #
+# ############################################################################ #
+
+# ************************************************************************ #
+#                                 RUN DEBUGGER                             #
+# ************************************************************************ #
+# *** Command to run especif debug *** #
+debug-gdb: 
+	$(MAKE) CFLAGS="$(CFLAGS) -g3"
+	gdb ./$(NAME) -o "b main" -o run -o gui -o "run $(ARG_12)" 
+
+debug-lldb: 
+	$(MAKE) CFLAGS="$(CFLAGS) -g3"
+	lldb ./$(NAME) -o "b main" -o run -o gui -o "run $(ARG_12)" 
+
+debug-vscode:
+ifeq ($(ALGO), 0)
+	$(MAKE) create_bins_dbg
+endif
+	code -r -g log/4.Bins_folder/push_swap.c:1
+	sleep 1
+	xdotool key F5
+#   code --open-url "vscode://ms-vscode.cpptools/debug/launch?name=PUSHSWAP_DBG"
+#	code --open-url "vscode://ms-vscode.cpptools/debug?name=Debug%20Push%20Swap&program=$(CURDIR)/$(NAME)&args=$(ARG_12)"
+
+
+
+# *** Debuggers *** #
+debuggers:
+	$(MAKE) create_bins_dbg
+	$(MAKE) debuggers_info
+
+# ************************************************************************ #
+#                                                                          #
+# ************************************************************************ #
+# *** Create the bin for G3 debugging *** #
+create_bins_dbg: log/4.Bins_folder/$(NAME0)_g3
+log/4.Bins_folder/$(NAME0)_g3: $(OBJECTS)
+# *** debugging _g3 *** #
+	$(MAKE) fclean
+	$(MAKE) CFLAGS_DBG=" -g3" OUTPUT_PLACE="log/4.Bins_folder/" NAME0=$(NAME0)_g3
+	gdb -batch -ex "info functions" log/4.Bins_folder/$(NAME0)_g3 > log/4.Bins_folder/log/gdb_functions_$(NAME0)_g3.txt
+	cd log/4.Bins_folder
+	ln -s ../../src/push_swap/push_swap.c log/4.Bins_folder/push_swap.c || true
+	ln -s ../../src/checker_bonus/src/checker_bonus.c log/4.Bins_folder/checker_bonus.c || true
+
+.PHONY: create_bins_dbg
+
+# *** Librarys info and make=debug *** #
+debuggers_info:
+	$(MAKE) libs_nm_art
+#	$(MAKE) make_dbg
+
+
+libs_nm_art:
+	nm libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_nm.txt
+	ar t libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_art.txt
+	nm libs/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_nm.txt
+	ar t libs/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_art.txt
+
+make_dbg:
+	$(MAKE) -d > log/6.Make_dbg/make_d.txt
+	$(MAKE) CFLAGS_DBG="-v" > log/6.Make_dbg/clang_v.txt
+	$(MAKE) --debug=b -j1 re > log/6.Make_dbg/make_debug_b.txt
+	$(MAKE) --debug=v -j1 re > log/6.Make_dbg/make_debug_v.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# **************************************************************************** #
+#                                DOXYGEN         	                      	   #
+# **************************************************************************** #
+DOXYGEN_FILE	= log/7.Doxygen/Doxygen
+DOXYGEN_PATH 	= log/7.Doxygen
+DOXYGEN_OUTPUT	= doc/doxygen
+doxygen:
+	rm -rf $(DOXYGEN_PATH)
+	$(MAKE) create_Doxyfile
+	$(MAKE) doxfile_mod
+	doxygen ./$(DOXYGEN_FILE)
+	xdg-open doc/doxygen/html/index.html
+
+
+create_Doxyfile:
+	mkdir -p log/7.Doxygen
+	doxygen -g $(DOXYGEN_FILE)
+
+doxfile_mod:
+	sed -i 's/PROJECT_NAME           = "My Project"/PROJECT_NAME           = "$(NAME)"/g' ./$(DOXYGEN_FILE)
+	sed -i 's/PROJECT_BRIEF          = "My Project Brief"/PROJECT_BRIEF          = "$(NAME)"/g' ./$(DOXYGEN_FILE)
+	sed -i 's/OUTPUT_DIRECTORY       =/OUTPUT_DIRECTORY       = doc\/doxygen/g' ./$(DOXYGEN_FILE)
+	sed -i 's/OPTIMIZE_OUTPUT_FOR_C  = NO/OPTIMIZE_OUTPUT_FOR_C  = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/EXTRACT_ALL            = NO/EXTRACT_ALL            = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/HIDE_SCOPE_NAMES       = NO/HIDE_SCOPE_NAMES       = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/INPUT                  =/INPUT                  = src/g' ./$(DOXYGEN_FILE)
+	sed -i 's/RECURSIVE              = NO/RECURSIVE              = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/EXCLUDE                =/EXCLUDE                = src\/src_all/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_LATEX         = NO/GENERATE_LATEX         = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_TREEVIEW      = NO/GENERATE_TREEVIEW      = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_MAN           = NO/GENERATE_MAN           = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/GENERATE_DOCBOOK       = NO/GENERATE_DOCBOOK       = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/CALL_GRAPH             = NO/CALL_GRAPH             = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/CALLER_GRAPH           = NO/CALLER_GRAPH           = YES/g' ./$(DOXYGEN_FILE)
+	sed -i 's/TIMESTAMP              = NO/TIMESTAMP              = YES/g' ./$(DOXYGEN_FILE)
+#	sed -i 's/STRIP_FROM_PATH        =/STRIP_FROM_PATH        = ..\/..\/..\//g' ./$(DOXYGEN_FILE)
+
+
+
+.PHONY: doxygen create_Doxyfile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ************************************************************************ #
 #                          TESTERS VISUALIZER                              #
 # ************************************************************************ #
-test_visualizer: testers/push_swap_visualizer/build/bin/visualizer
+test_visualizer_build: testers/push_swap_visualizer/build/bin/visualizer
 
 testers/push_swap_visualizer.tar.gz:
 	pipx install gdown
@@ -670,25 +1508,102 @@ testers/push_swap_visualizer: testers/push_swap_visualizer.tar.gz
 
 testers/push_swap_visualizer/build/bin/visualizer: testers/push_swap_visualizer
 
-run_visualizer: testers/push_swap_visualizer/build/bin/visualizer
+test_visualizer_run: testers/push_swap_visualizer/build/bin/visualizer
 	./testers/push_swap_visualizer/build/bin/visualizer
 
 .PHONY: run_visualizer
 
+
+
+
+
+
+
+
+
+
+
+
+
 ###  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ###
 # ############################################################################ #
-#                                FOLDER BUILDER                                #
+#                                HELPER                                        #
 # ############################################################################ #
-# *** Build folders *** #
-folders_build:
-	$(MAKE) folders_make_build
-	$(MAKE) folders_log_build
+# *** Hello message *** #
+hello:
+ifneq ($(VERBOSE), 0)
+	@echo "$(GRAY)\n################################################$(RESET)"
+	@echo "$(GRAY)# Hello, $(USER)! $(shell date)$(RESET)"
+	@echo "$(GRAY)# Welcome to Makefile for:$(BLUE) $(NAME)!$(RESET)"
+	@echo "$(GRAY)################################################$(RESET)"
+	echo ""
+endif
 
-# *** Build folders *** #
-folders_make_build:
-	mkdir -p inc
-	mkdir -p libs
-	mkdir -p objs
+# *** Build message of timestamps changes *** #
+
+check_up_to_date:
+ifneq ($(VERBOSE), 0)
+	if [ ! -f "$(NAME)" ]; then \
+		echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
+		echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(YELLOW)STATUS: Bin does not exist. Building...$(RESET)"; \
+		echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
+		echo 1 > log/outdate.txt; \
+	else \
+		if find -L src/ inc/ $(LIBS_PATH) -newer "$(NAME)" -print | grep -q .; then \
+			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
+			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(RED)STATUS: Some files have changed. Rebuilding...$(RESET)"; \
+			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
+			echo 1 > log/outdate.txt; \
+			make folders_ls_la; \
+		else \
+			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
+			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(GREEN)STATUS: is up-to-date.$(RESET)"; \
+			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
+			echo 0 > log/outdate.txt; \
+			exit 0; \
+		fi; \
+	fi;
+endif
+
+
+check_up_to_date_2:
+	if [ "$(shell cat log/outdate.txt)" -eq "1" ]; then \
+		make check_up_to_date_21; \
+	fi;
+
+check_up_to_date_21:
+ifneq ($(VERBOSE), 0)
+	if [ ! -f "$(NAME)" ]; then \
+		echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
+		echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(YELLOW)STATUS: Bin does not exist. Building...$(RESET)"; \
+		echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
+		echo 1 > log/outdate.txt; \
+	else \
+		if find -L src/ inc/ $(LIBS_PATH) -newer "$(NAME)" -print | grep -q .; then \
+			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
+			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(RED)STATUS: Some files have changed. Rebuilding...$(RESET)"; \
+			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
+			echo 1 > log/outdate.txt; \
+		else \
+			echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
+			echo "$(BLUE)$(NAME)$(RESET)					$(shell date)\n$(GREEN)STATUS: is up-to-date.$(RESET)"; \
+			echo "$(GRAY)# ############################################################################ #\n$(RESET)"; \
+			echo 0 > log/outdate.txt; \
+			exit 0; \
+		fi; \
+	fi;
+endif
+
+folders_ls_la:
+ifneq ($(VERBOSE), 0)
+	echo "$(GRAY)\n# ############################################################################ #$(RESET)"
+	echo "$(YELLOW)Folders and Files:$(RESET)"
+	echo "$(GRAY)# ############################################################################ #"
+	ls -l | awk '{print $$6, $$7, $$8, $$NF}' | sort
+	ls -l libs/ | awk '{print $$6, $$7, $$8, $$NF}' | sort
+	ls -l libs/mylibs/mylibc | awk '{print $$6, $$7, $$8, $$NF}' | sort
+	echo "# ############################################################################ #$(RESET)"
+endif
 
 # *** Build folders *** #
 folders_lns_build:
@@ -708,55 +1623,6 @@ folders_lns_build:
 	@(cd src/src_all; \
 		find . -name "*.c" -print0 | xargs -0  printf "%s\t\t\\ \n"  > ../../log/list_files_c.txt)
 	@echo "folder_lns_builder completed successfully."
-
-# *** Build folders *** #
-folders_log_build:
-	mkdir -p log/1.Warning_Linting
-	mkdir -p log/2.Memory_Check/logs
-	mkdir -p log/2.Memory_Check/allocs
-	mkdir -p log/3.Unit_Testing
-	mkdir -p log/4.Bins_folder
-	mkdir -p log/4.Bins_folder/log/5.bff
-	mkdir -p log/5.Libs_nmart
-	mkdir -p log/6.Make_dbg
-#	mkdir -p log/5.bff
-
-# ############################################################################ #
-#                                HELPER                                        #
-# ############################################################################ #
-# *** Hello message *** #
-hello:
-	@echo "$(GRAY)\n################################################$(RESET)"
-	@echo "$(GRAY)# Hello, $(USER)! $(shell date)$(RESET)"
-	@echo "$(GRAY)# Welcome to Makefile for:$(BLUE) $(NAME)!$(RESET)"
-	@echo "$(GRAY)################################################$(RESET)"
-	$(MAKE) check_up_to_date
-	echo "---"
-
-# *** Build message of timestamps changes *** #
-check_up_to_date:
-ifeq ($(MAKECMDGOALS),all) # Only check if 'all' is the explicit goal
-	@# Check if $(NAME) exists. If not, skip the up-to-date check.
-	@if [ ! -f "$(NAME)" ]; then \
-		echo "$(YELLOW)$(NAME) does not exist. Building...$(RESET)"; \
-	else \
-		# If $(NAME) exists, check if any source files are newer.
-		@if find src/ inc/ -newer "$(NAME)" -print | grep -q .; then \
-			echo "$(RED)$(NAME) Some files have changed. Rebuilding...$(RESET)"; \
-		else \
-			echo "$(GREEN)Everything up-to-date.$(RESET)"; \
-			exit 0; \
-		fi \
-	fi
-endif
-ifeq ($(MAKECMDGOALS),check_up_to_date) # Special handling for 'make check_up_to_date'
-	@if [ -f "$(NAME)" ] && find src/ inc/ -newer "$(NAME)" -print | grep -q .; then \
-		echo "$(RED)$(NAME) Some files have changed. Run 'make all' to rebuild.$(RESET)"; \
-	else \
-		echo "$(GREEN)$(NAME) is up-to-date.$(RESET)"; \
-		exit 0; \
-	fi
-endif
 
 # *** help message *** #
 help:
@@ -801,8 +1667,8 @@ help:
 	@echo "$(GREEN)	2. program_or_lib, program, lib, libs_build $(RESET)"
 	@echo "$(GREEN)	3. library_clean, library_fclean, library_re $(RESET)"
 	@echo "$(GREEN)	4. hello, check_up_to_date, code_cleaner, files_lns_creator $(RESET)"
-	@echo "$(GRAY) LINTING(static/Wflags):$(RESET)"
-	@echo "$(GREEN)	5. liting: werror, norm_1, norm_2$(RESET)"
+	@echo "$(GRAY) linting(static/Wflags):$(RESET)"
+	@echo "$(GREEN)	5. linting: werror, norm_1, norm_2$(RESET)"
 	@echo "$(GRAY) SANITIZATION(static/Asan) & RUNTIME ERROR(dynamic/Valgrind):$(RESET)"
 	@echo "$(GREEN)	6. leaks: create_bins, valgrind, asan$(RESET)"
 	@echo "$(GRAY) UNIT TESTS:$(RESET)"
@@ -815,52 +1681,95 @@ help:
 	@echo "$(GREEN)	10. bonus\n$(RESET)"
 	
 
-# **************************************************************************** #
-#                                DEFS/COLORS                               	   #
-# **************************************************************************** #
-DEL_LINE =		\033[2K
-ITALIC =		\033[3m
-BOLD =			\033[1m
-RESET =			\033[0;39m
-GRAY =			\033[0;90m
-RED =			\033[0;91m
-GREEN =			\033[0;92m
-YELLOW =		\033[0;93m
-BLUE =			\033[0;94m
-MAGENTA =		\033[0;95m
-CYAN =			\033[0;96m
-WHITE =			\033[0;97m
-BLACK =			\033[0;99m
-ORANGE =		\033[38;5;209m
-BROWN =			\033[38;2;184;143;29m
-DARK_GRAY =		\033[38;5;234m
-MID_GRAY =		\033[38;5;245m
-DARK_GREEN =	\033[38;2;75;179;82m
-DARK_YELLOW =	\033[38;5;143m
 
-# **************************************************************************** #
-#                                TRASH		                               	   #
-# **************************************************************************** #
 
-#Name NO USE!
-all: $(NAME)
 
-$(NAME):	$(OBJECTS)
-	echo "$(RED) _MAKE BUILD_ IS THE CORRECT!$(RESET)"
-	$(COMPILER) $(OBJECTS) $(LDFLAGS) $(CFLAG_ASAN) -o $(NAME)
-	@echo "$(YELLOW)(•̀ᴗ•́)و $(NAME) BIN GENERATED!$(RESET)"
-	$(MAKE) check_up_to_date
 
-program_or_lib1:
-ifeq ($(IS_PROGRAM_AND_NOT_LIB), 1)
-	$(MAKE) check_up_to_date
-	$(MAKE) libs_build
-	$(MAKE) program
-else
-	$(MAKE) check_up_to_date
-	$(MAKE) lib
-	$(MAKE) combine_libs
-endif
+
+
+
+#####OLD TRASH
+
+
+# # ************************************************************************ #
+# # *** Default rule *** #
+# #.DEFAULT_GOAL:= build_dependencies
+
+# # *** Default rule *** #
+# build_dependencies:
+# 	$(MAKE) libs_build
+# 	$(MAKE) check_up_to_date
+
+# # *** Build the library included (MAKEFLAGS="" this not inherit env variables from father*** #
+# libs_build:
+# ifeq ($(BUILD_LIBRARY), 1)
+# 	$(MAKE) -C $(LIB_1_PATH) MAKEFLAGS=""
+# #	@echo "$(YELLOW)(•̀ᴗ•́)و $@ Done!$(RESET)"
+# else
+# #	@echo "$(GRAY)Skipping library build$(RESET)"
+# endif
+
+
+# # ************************************************************************ #
+# #                               MAIN                                       #
+# # ************************************************************************ #
+# # *** Default rule *** #
+# build_project:
+# 	$(MAKE) hello
+# 	$(MAKE) folders_build
+# #	$(MAKE) folders_lns_build
+# 	$(MAKE) program_or_lib
+# 	$(MAKE) dbg_rules
+
+# # *** Compiling the source files into object files *** #
+# #objs/%.o:	%.c
+# #	mkdir -p objs
+# #	$(COMPILER) $(PIC) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) $(MACROS) -c $< -o $@
+# #	@echo "$(GRAY)()و $@ $(NAME) Compiling Objects !$(RESET)"
+
+# # *** Is program or a Lib? ***
+# program_or_lib:
+# ifeq ($(IS_PROGRAM_AND_NOT_LIB), 1)
+# 	echo "  $(YELLOW)Linking a Program$(RESET)"
+# 	$(MAKE) LIB_OUTPUT="libs/lib$(NAME0).a" lib
+# 	$(MAKE) program
+# else
+# 	echo "  $(YELLOW)Linking a Lib$(RESET)"
+# 	$(MAKE) LIB_OUTPUT=$(NAME) lib
+# endif
+
+# # *** Linking the object files into a library *** #
+# lib:	$(OBJECTS_LIB)
+# 	$(LIB_LINK_STATIC) $(LIB_OUTPUT) $(OBJECTS_LIB)
+# 	@echo "  $(YELLOW)(•̀ᴗ•́)و lib$(NAME).a Library Generated!$(RESET)"
+
+# # *** Linking the object files into the program *** #
+# program: $(OBJECTS)
+# 	$(COMPILER) $(OBJECTS_MAIN) -Llibs -l$(NAME0) $(LDFLAGS) $(CFLAG_ASAN) -o $(NAME)
+# 	@echo "  $(YELLOW)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
+# 	$(MAKE) check_up_to_date
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -917,7 +1826,7 @@ endif
 #	- FUNCTIONS BUILD:
 #		2. program_or_lib, program, lib, libs_build, folders_build
 #
-#	- LINTING(static/Wflags) & SANITIZATION(static/Asan) & RUNTIME ERROR(dynamic/Valgrind) & UNIT_TESTING :
+#	- linting(static/Wflags) & SANITIZATION(static/Asan) & RUNTIME ERROR(dynamic/Valgrind) & UNIT_TESTING :
 #		3. log_all: norm_1, norm_2, leaks: valgrind, asan
 #		4. test, test5
 #

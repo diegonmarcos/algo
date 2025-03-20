@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_ea0d120f8d75c9f08655f391b6b05384" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/3_algos_others/0_arithmetic_algos Directory Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/3_algos_others/0_arithmetic_algos Directory Reference</primary></indexterm>
+Directory dependency graph for 0_arithmetic_algos:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_ea0d120f8d75c9f08655f391b6b05384_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_3__algos__others_20__arithmetic__algos_23__ft__fibonacci_8c">3_ft_fibonacci.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__algos__others_20__arithmetic__algos_23__ft__prime_8c">3_ft_prime.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__algos__others_20__arithmetic__algos_23__math_8c">3_math.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__algos__others_20__arithmetic__algos_23__probability_8c">3_probability.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__algos__others_20__arithmetic__algos_23__statistics_8c">3_statistics.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__algos__others_20__arithmetic__algos_23__statistics1_8c">3_statistics1.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__algos__others_20__arithmetic__algos_23__statistics2_8c">3_statistics2.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,23 +1,24 @@
 \doxysection{src/push\+\_\+swap/tracers/1\+\_\+2\+\_\+printers\+\_\+tracers.c File Reference}
 \hypertarget{1__2__printers__tracers_8c}{}\label{1__2__printers__tracers_8c}\index{src/push\_swap/tracers/1\_2\_printers\_tracers.c@{src/push\_swap/tracers/1\_2\_printers\_tracers.c}}
 {\ttfamily \#include "{}push\+\_\+swap.\+h"{}}\newline
-Include dependency graph for 1\+\_\+2\+\_\+printers\+\_\+tracers.\+c\+:\nopagebreak
+Include dependency graph for 1\+\_\+2\+\_\+printers\+\_\+tracers.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{1__2__printers__tracers_8c__incl}
+\includegraphics[width=207pt]{1__2__printers__tracers_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{1__2__printers__tracers_8c_af1f154e261fd1c167f2dcbdf952ea1d9}{print\+\_\+results}} (\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+void \mbox{\hyperlink{1__2__printers__tracers_8c_af1f154e261fd1c167f2dcbdf952ea1d9}{print\+\_\+results}} (t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)
 \item 
-void \mbox{\hyperlink{1__2__printers__tracers_8c_a4cfb30dfa1b732308fb83936337b274c}{ft\+\_\+printers}} (\mbox{\hyperlink{push__swap_8h_a725c14c4f0e63785e0c50ef6dd054ee0}{t\+\_\+ft\+\_\+printers\+\_\+db}} s, \mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+void \mbox{\hyperlink{1__2__printers__tracers_8c_a4cfb30dfa1b732308fb83936337b274c}{ft\+\_\+printers}} (t\+\_\+ft\+\_\+printers\+\_\+db s, t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)
 \item 
-void \mbox{\hyperlink{1__2__printers__tracers_8c_a414192e5b97946d1620c336080c7cad0}{ft\+\_\+printers\+\_\+gearsort}} (\mbox{\hyperlink{push__swap_8h_a725c14c4f0e63785e0c50ef6dd054ee0}{t\+\_\+ft\+\_\+printers\+\_\+db}} s, \mbox{\hyperlink{push__swap__data_8h_a8e0066cb4526b2d7f286d40f1489739f}{t\+\_\+move\+\_\+lower\+\_\+cost}} \texorpdfstring{$\ast$}{*}v, \mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+void \mbox{\hyperlink{1__2__printers__tracers_8c_a414192e5b97946d1620c336080c7cad0}{ft\+\_\+printers\+\_\+gearsort}} (t\+\_\+ft\+\_\+printers\+\_\+db s, t\+\_\+move\+\_\+lower\+\_\+cost \texorpdfstring{$\ast$}{*}v, t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)
 \item 
-void \mbox{\hyperlink{1__2__printers__tracers_8c_a73a471f4371439f8f37cb6ecdf86f32f}{printer\+\_\+dbg\+\_\+split}} (\mbox{\hyperlink{push__swap_8h_a725c14c4f0e63785e0c50ef6dd054ee0}{t\+\_\+ft\+\_\+printers\+\_\+db}} s, \mbox{\hyperlink{push__swap__data_8h_aee1523a9bd24edbe53338d4da7aeadc0}{t\+\_\+splits}} \texorpdfstring{$\ast$}{*}split\+\_\+chunks, \mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+void \mbox{\hyperlink{1__2__printers__tracers_8c_a73a471f4371439f8f37cb6ecdf86f32f}{printer\+\_\+dbg\+\_\+split}} (t\+\_\+ft\+\_\+printers\+\_\+db s, t\+\_\+splits \texorpdfstring{$\ast$}{*}split\+\_\+chunks, t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)
 \end{DoxyCompactItemize}
 
 
@@ -26,7 +27,7 @@ void \mbox{\hyperlink{1__2__printers__tracers_8c_a73a471f4371439f8f37cb6ecdf86f3
 \index{1\_2\_printers\_tracers.c@{1\_2\_printers\_tracers.c}!ft\_printers@{ft\_printers}}
 \index{ft\_printers@{ft\_printers}!1\_2\_printers\_tracers.c@{1\_2\_printers\_tracers.c}}
 \doxysubsubsection{\texorpdfstring{ft\_printers()}{ft\_printers()}}
-{\footnotesize\ttfamily void ft\+\_\+printers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{push__swap_8h_a725c14c4f0e63785e0c50ef6dd054ee0}{t\+\_\+ft\+\_\+printers\+\_\+db}}}]{s,  }\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ft\+\_\+printers (\begin{DoxyParamCaption}\item[{t\+\_\+ft\+\_\+printers\+\_\+db}]{s,  }\item[{t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -39,7 +40,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{1\_2\_printers\_tracers.c@{1\_2\_printers\_tracers.c}!ft\_printers\_gearsort@{ft\_printers\_gearsort}}
 \index{ft\_printers\_gearsort@{ft\_printers\_gearsort}!1\_2\_printers\_tracers.c@{1\_2\_printers\_tracers.c}}
 \doxysubsubsection{\texorpdfstring{ft\_printers\_gearsort()}{ft\_printers\_gearsort()}}
-{\footnotesize\ttfamily void ft\+\_\+printers\+\_\+gearsort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{push__swap_8h_a725c14c4f0e63785e0c50ef6dd054ee0}{t\+\_\+ft\+\_\+printers\+\_\+db}}}]{s,  }\item[{\mbox{\hyperlink{push__swap__data_8h_a8e0066cb4526b2d7f286d40f1489739f}{t\+\_\+move\+\_\+lower\+\_\+cost}} \texorpdfstring{$\ast$}{*}}]{v,  }\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ft\+\_\+printers\+\_\+gearsort (\begin{DoxyParamCaption}\item[{t\+\_\+ft\+\_\+printers\+\_\+db}]{s,  }\item[{t\+\_\+move\+\_\+lower\+\_\+cost \texorpdfstring{$\ast$}{*}}]{v,  }\item[{t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -52,7 +53,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{1\_2\_printers\_tracers.c@{1\_2\_printers\_tracers.c}!print\_results@{print\_results}}
 \index{print\_results@{print\_results}!1\_2\_printers\_tracers.c@{1\_2\_printers\_tracers.c}}
 \doxysubsubsection{\texorpdfstring{print\_results()}{print\_results()}}
-{\footnotesize\ttfamily void print\+\_\+results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void print\+\_\+results (\begin{DoxyParamCaption}\item[{t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -65,7 +66,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{1\_2\_printers\_tracers.c@{1\_2\_printers\_tracers.c}!printer\_dbg\_split@{printer\_dbg\_split}}
 \index{printer\_dbg\_split@{printer\_dbg\_split}!1\_2\_printers\_tracers.c@{1\_2\_printers\_tracers.c}}
 \doxysubsubsection{\texorpdfstring{printer\_dbg\_split()}{printer\_dbg\_split()}}
-{\footnotesize\ttfamily void printer\+\_\+dbg\+\_\+split (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{push__swap_8h_a725c14c4f0e63785e0c50ef6dd054ee0}{t\+\_\+ft\+\_\+printers\+\_\+db}}}]{s,  }\item[{\mbox{\hyperlink{push__swap__data_8h_aee1523a9bd24edbe53338d4da7aeadc0}{t\+\_\+splits}} \texorpdfstring{$\ast$}{*}}]{split\+\_\+chunks,  }\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void printer\+\_\+dbg\+\_\+split (\begin{DoxyParamCaption}\item[{t\+\_\+ft\+\_\+printers\+\_\+db}]{s,  }\item[{t\+\_\+splits \texorpdfstring{$\ast$}{*}}]{split\+\_\+chunks,  }\item[{t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

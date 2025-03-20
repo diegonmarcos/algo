@@ -14,11 +14,11 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>void <link linkend="_4__2__moves__fromto_8c_1a5dbad668d5b33b7bddd6c26fb215a9b1">move_stack_fromto1</link> (<link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> from, <link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> to, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_4__2__moves__fromto_8c_1a5dbad668d5b33b7bddd6c26fb215a9b1">move_stack_fromto1</link> (t_position from, t_position to, t_list_program *list_program)</para>
 </listitem>
-            <listitem><para>void <link linkend="_4__2__moves__fromto_8c_1a0f8293188b2a65f4f199a16845be557d">move_stack_fromto2</link> (<link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> from, <link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> to, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_4__2__moves__fromto_8c_1a0f8293188b2a65f4f199a16845be557d">move_stack_fromto2</link> (t_position from, t_position to, t_list_program *list_program)</para>
 </listitem>
-            <listitem><para>void <link linkend="_4__2__moves__fromto_8c_1abfb1a630b30cf90941d0d68d61e3512c">move_stack_fromto</link> (<link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> from, <link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> to, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_4__2__moves__fromto_8c_1abfb1a630b30cf90941d0d68d61e3512c">move_stack_fromto</link> (t_position from, t_position to, t_list_program *list_program)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -28,7 +28,7 @@
     <title>move_stack_fromto()</title>
 <indexterm><primary>move_stack_fromto</primary><secondary>4_2_moves_fromto.c</secondary></indexterm>
 <indexterm><primary>4_2_moves_fromto.c</primary><secondary>move_stack_fromto</secondary></indexterm>
-<para><computeroutput>void move_stack_fromto (<link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> from, <link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> to, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void move_stack_fromto (t_position from, t_position to, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -42,7 +42,7 @@
     <title>move_stack_fromto1()</title>
 <indexterm><primary>move_stack_fromto1</primary><secondary>4_2_moves_fromto.c</secondary></indexterm>
 <indexterm><primary>4_2_moves_fromto.c</primary><secondary>move_stack_fromto1</secondary></indexterm>
-<para><computeroutput>void move_stack_fromto1 (<link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> from, <link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> to, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void move_stack_fromto1 (t_position from, t_position to, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -65,7 +65,7 @@ Here is the caller graph for this function:<para>
     <title>move_stack_fromto2()</title>
 <indexterm><primary>move_stack_fromto2</primary><secondary>4_2_moves_fromto.c</secondary></indexterm>
 <indexterm><primary>4_2_moves_fromto.c</primary><secondary>move_stack_fromto2</secondary></indexterm>
-<para><computeroutput>void move_stack_fromto2 (<link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> from, <link linkend="_push__swap__data_8h_1a846546f4c4d173d5bea598069589fa29">t_position</link> to, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void move_stack_fromto2 (t_position from, t_position to, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
