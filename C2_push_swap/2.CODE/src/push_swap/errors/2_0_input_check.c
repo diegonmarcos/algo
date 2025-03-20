@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:30:32 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/16 15:07:18 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/20 19:29:37 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,17 @@
  * - is_sorted_linked_list_push: Checks if stack_a is sorted,
  * 	if stack_b is empty, and handles memory release for termination.
  */
+/*
+** Function to check for the number of arguments
+*/
+void	error_handling_input_0(int argc, char **argv)
+{
+	if (argc < 2)
+		halt_exit_(0);
+	if (argv[1] == NULL || argv[1][0] == '\0')
+		halt_exit_(0);
+}
+
 void	error_handling_input_1(t_list_program *list_program)
 {
 	char	**argv_1;
@@ -66,17 +77,6 @@ void	error_handling_input_1(t_list_program *list_program)
 		halt_exit_(0);
 	}
 	return ;
-}
-
-/*
-** Function to check for the number of arguments
-*/
-void	error_handling_input_0(int argc, char **argv)
-{
-	if (argc < 2)
-		halt_exit_(0);
-	if (argv[1] == NULL || argv[1][0] == '\0')
-		halt_exit_(0);
 }
 
 void	is_sorted_linked_list_push(t_list_program *list_program)

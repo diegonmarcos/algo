@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/20 17:03:07 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/20 19:29:02 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -304,6 +304,7 @@ ifneq ($(ALGO),0)
 endif
 
 run_program:
+	$(MAKE) folders_build
 	$(MAKE) testers_folder_build
 	echo "#######################"
 	$(MAKE) tests_run_5
@@ -959,50 +960,72 @@ VALGRIND_EXPORT = --log-file=log/2.Memory_Check/logs/valgrind_report_.txt
 log_leaks:
 	$(MAKE)
 	$(MAKE) create_bins_leaks
+	
 	@echo "$(RED)\n# RUNNING VALGRIND: ERROR_HANDLING_INPUTS$(RESET)"
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
-	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_EMPTY$(RESET)"
+	@echo "$(RED)\n# 1.No Leaks and 2.No Errors check$(RESET)"
+	@echo "$(RED)\n# 1.Erros:Invalid..., Invalid Read and Invalid Free$(RESET)"
 	
+	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_EMPTY$(RESET)"
 	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt ./log/4.Bins_folder/push_swap_g $(ARG_EMPTY) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: ok" > log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true	
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: No Leaks" > log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true	
+	@grep -q "Invalid" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: Invalid..." >> log/2.Memory_Check/Valgrind_Report.txt || true	
+	@grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: Invalid Read" >> log/2.Memory_Check/Valgrind_Report.txt || true	
+	@grep -q "Invalid free" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: Invalid Free" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
 	
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_ONE$(RESET)"
 	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt ./log/4.Bins_folder/push_swap_g $(ARG_1) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: Invalid..." >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: Invalid Read" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid free" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: Invalid Free" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
 
 	@echo "$(BOLD)\n# RUNNING VALGRIND INT_MAX$(RESET)"
 	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt ./log/4.Bins_folder/push_swap_g $(ARG_INT_MAX) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: Invalid..." >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: Invalid Read" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid free" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: Invalid Free" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
 
 	@echo "$(BOLD)\n# RUNNING VALGRIND INT_MIN$(RESET)"
 	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt ./log/4.Bins_folder/push_swap_g $(ARG_INT_MIN) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: Invalid..." >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: Invalid Read" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid free" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: Invalid Free" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
 
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_SORTED$(RESET)"
 	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt ./log/4.Bins_folder/push_swap_g $(ARG_SORTED) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt && echo "5: Sort: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt && echo "5: Sort: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt && echo "5: Sort: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt && echo "5: Sort: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
 
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_DUPLICATED$(RESET)"
 	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt ./log/4.Bins_folder/push_swap_g $(ARG_DUPLICATED) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt && echo "6. Dupl: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt && echo "6. Dupl: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt && echo "6. Dupl: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt && echo "6. Dupl: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
 
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_NON_NUMERIC$(RESET)"
 	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt ./log/4.Bins_folder/push_swap_g $(ARG_NON_NUMERIC) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt && echo "7. Alpha: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt && echo "7. Alpha: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt && echo "7. Alpha: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt && echo "7. Alpha: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
 	echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	
 	@echo "$(RED)\n# RUNNING VALGRIND: PERFORMANCE_CHECK$(RESET)"
@@ -1011,8 +1034,13 @@ log_leaks:
 	@echo "$(BOLD)\n# RUNNING VALGRIND 5 NUMBERS$(RESET)"
 	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_5.txt ./log/4.Bins_folder/push_swap_g $(ARG_5)  2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: Invalid..." >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: Invalid read" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid free" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: Invalid free" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
+
 	
 
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
@@ -1020,8 +1048,13 @@ log_leaks:
 	@echo "$(BOLD)\n# RUNNING VALGRIND 6 NUMBERS$(RESET)"
 	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_6.txt ./log/4.Bins_folder/push_swap_g $(ARG_6) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: Nok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: Invalid" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: Invalid read" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "Invalid free" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: Invalid free" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
+
 
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	
@@ -1037,7 +1070,11 @@ log_leaks:
 		echo "10. ARG_6_Nsplit: Errors: Ok" >> log/2.Memory_Check/Valgrind_Report.txt; \
 	else \
 		echo "10. ARG_6_Nsplit: Errors: Nok" >> log/2.Memory_Check/Valgrind_Report.txt; \
+		grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_6_not_split.txt && echo "10. ARG_6: Invalid read"; \
+		grep -q "Invalid write" log/2.Memory_Check/logs/valgrind_report_push_6_not_split.txt && echo "10. ARG_6: Invalid write"; \
 	fi
+	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
+
 
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	
@@ -1138,7 +1175,7 @@ log_dynamic_analysis_tests:
 # *** Folder builder testers *** #
 testers/testers.tar.gz:
 	mkdir -p testers
-	wget -O testers/testers.tar.gz https://raw.githubusercontent.com/diegonmarcos/algo/refs/heads/main/C2_push_swap/1.RM/rsc/testers.tar.gz
+	wget -O testers/testers.tar.gz https://raw.githubusercontent.com/diegonmarcos/algo/refs/heads/main/C2_push_swap/1.RM/rsc/testers.tar.gz > /dev/null 2>&1
 #https://github.com/diegonmarcos/algo/blob/main/C2_push_swap/1.RM/rsc/testers.tar.gz
 #pipx install gdown
 #gdown 'https://drive.google.com/uc?id=10rQ0zUPZZFOO4epDa62sx_2kUUrl1EFo' -O $@
@@ -1558,6 +1595,7 @@ endif
 # *** Build message of timestamps changes *** #
 
 check_up_to_date:
+	echo 1 > log/outdate.txt
 ifneq ($(VERBOSE), 0)
 	if [ ! -f "$(NAME)" ]; then \
 		echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \

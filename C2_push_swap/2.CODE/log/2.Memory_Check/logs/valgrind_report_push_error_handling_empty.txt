@@ -1,0 +1,14 @@
+==264531== Memcheck, a memory error detector
+==264531== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==264531== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==264531== Command: ./log/4.Bins_folder/push_swap_g 
+==264531== Parent PID: 264530
+==264531== 
+==264531== 
+==264531== HEAP SUMMARY:
+==264531==     in use at exit: 0 bytes in 0 blocks
+==264531==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==264531== 
+==264531== All heap blocks were freed -- no leaks are possible
+==264531== 
+==264531== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
