@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__7__moves__optim_8c" xml:lang="en-US">
+<title>src/push_swap/sort/optim/3_7_moves_optim.c File Reference</title>
+<indexterm><primary>src/push_swap/sort/optim/3_7_moves_optim.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_7_moves_optim.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__7__moves__optim_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_3__7__moves__optim_8c_1aff6439ec780f390764e11b0c17a80d3d">moves_optimizations_0</link> (int *j, t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__7__moves__optim_8c_1a8575f0f67c9bb68bf9cde07ab0f8e831">moves_optimizations_1</link> (int *j, t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__7__moves__optim_8c_1a3946706a56440251d9babecb1099dad1">ft_strlcpy_optm</link> (int *j, char *move, int *i, t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__7__moves__optim_8c_1a278415184cb5e8a7eea684b2d06805ee">moves_optimizations</link> (t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__7__moves__optim_8c_1a843a9801e208d314db14a8f650549e65">moves_optimizations_2</link> (int *j, t_list_program *list_program)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_3__7__moves__optim_8c_1a3946706a56440251d9babecb1099dad1"/><section>
+    <title>ft_strlcpy_optm()</title>
+<indexterm><primary>ft_strlcpy_optm</primary><secondary>3_7_moves_optim.c</secondary></indexterm>
+<indexterm><primary>3_7_moves_optim.c</primary><secondary>ft_strlcpy_optm</secondary></indexterm>
+<para><computeroutput>void ft_strlcpy_optm (int * j, char * move, int * i, t_list_program * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__7__moves__optim_8c_a3946706a56440251d9babecb1099dad1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__7__moves__optim_8c_1a278415184cb5e8a7eea684b2d06805ee"/><section>
+    <title>moves_optimizations()</title>
+<indexterm><primary>moves_optimizations</primary><secondary>3_7_moves_optim.c</secondary></indexterm>
+<indexterm><primary>3_7_moves_optim.c</primary><secondary>moves_optimizations</secondary></indexterm>
+<para><computeroutput>void moves_optimizations (t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__7__moves__optim_8c_a278415184cb5e8a7eea684b2d06805ee_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__7__moves__optim_8c_a278415184cb5e8a7eea684b2d06805ee_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__7__moves__optim_8c_1aff6439ec780f390764e11b0c17a80d3d"/><section>
+    <title>moves_optimizations_0()</title>
+<indexterm><primary>moves_optimizations_0</primary><secondary>3_7_moves_optim.c</secondary></indexterm>
+<indexterm><primary>3_7_moves_optim.c</primary><secondary>moves_optimizations_0</secondary></indexterm>
+<para><computeroutput>void moves_optimizations_0 (int * j, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__7__moves__optim_8c_aff6439ec780f390764e11b0c17a80d3d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__7__moves__optim_8c_aff6439ec780f390764e11b0c17a80d3d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__7__moves__optim_8c_1a8575f0f67c9bb68bf9cde07ab0f8e831"/><section>
+    <title>moves_optimizations_1()</title>
+<indexterm><primary>moves_optimizations_1</primary><secondary>3_7_moves_optim.c</secondary></indexterm>
+<indexterm><primary>3_7_moves_optim.c</primary><secondary>moves_optimizations_1</secondary></indexterm>
+<para><computeroutput>void moves_optimizations_1 (int * j, t_list_program * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__7__moves__optim_8c_a8575f0f67c9bb68bf9cde07ab0f8e831_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__7__moves__optim_8c_1a843a9801e208d314db14a8f650549e65"/><section>
+    <title>moves_optimizations_2()</title>
+<indexterm><primary>moves_optimizations_2</primary><secondary>3_7_moves_optim.c</secondary></indexterm>
+<indexterm><primary>3_7_moves_optim.c</primary><secondary>moves_optimizations_2</secondary></indexterm>
+<para><computeroutput>void moves_optimizations_2 (int * j, t_list_program * list_program)</computeroutput></para></section>
+</section>
+</section>

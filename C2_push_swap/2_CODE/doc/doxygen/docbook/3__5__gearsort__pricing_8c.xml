@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__5__gearsort__pricing_8c" xml:lang="en-US">
+<title>src/push_swap/sort/gear/3_5_gearsort_pricing.c File Reference</title>
+<indexterm><primary>src/push_swap/sort/gear/3_5_gearsort_pricing.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_5_gearsort_pricing.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__gearsort__pricing_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_3__5__gearsort__pricing_8c_1a94dad898050e696fa4f545c5639799f0">gear_sort_pushswap</link> (t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__5__gearsort__pricing_8c_1ae86baab4f6dd3dc1ac734b5a3a862839">sort_gearing</link> (char stack_from, char stack_to, int base_case, t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__5__gearsort__pricing_8c_1af9133ed1b514fc90860dce150471e4cb">sort_move_lower_cost</link> (char stack_from, t_move_lower_cost *v, t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>int <link linkend="_3__5__gearsort__pricing_8c_1af609451518018dfea744bcf6d0914c82">node_pos_locator</link> (int value, t_list_program *list_program, char type, char stack_from)</para>
+</listitem>
+            <listitem><para>int <link linkend="_3__5__gearsort__pricing_8c_1a6e6fbdc2b632f680e9d9bd82897ae254">sort_gearing_is_base_case</link> (int base_case, t_list_program *list_program)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_3__5__gearsort__pricing_8c_1a94dad898050e696fa4f545c5639799f0"/><section>
+    <title>gear_sort_pushswap()</title>
+<indexterm><primary>gear_sort_pushswap</primary><secondary>3_5_gearsort_pricing.c</secondary></indexterm>
+<indexterm><primary>3_5_gearsort_pricing.c</primary><secondary>gear_sort_pushswap</secondary></indexterm>
+<para><computeroutput>void gear_sort_pushswap (t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__gearsort__pricing_8c_a94dad898050e696fa4f545c5639799f0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__gearsort__pricing_8c_a94dad898050e696fa4f545c5639799f0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__5__gearsort__pricing_8c_1af609451518018dfea744bcf6d0914c82"/><section>
+    <title>node_pos_locator()</title>
+<indexterm><primary>node_pos_locator</primary><secondary>3_5_gearsort_pricing.c</secondary></indexterm>
+<indexterm><primary>3_5_gearsort_pricing.c</primary><secondary>node_pos_locator</secondary></indexterm>
+<para><computeroutput>int node_pos_locator (int value, t_list_program * list_program, char type, char stack_from)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__gearsort__pricing_8c_af609451518018dfea744bcf6d0914c82_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__gearsort__pricing_8c_af609451518018dfea744bcf6d0914c82_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__5__gearsort__pricing_8c_1ae86baab4f6dd3dc1ac734b5a3a862839"/><section>
+    <title>sort_gearing()</title>
+<indexterm><primary>sort_gearing</primary><secondary>3_5_gearsort_pricing.c</secondary></indexterm>
+<indexterm><primary>3_5_gearsort_pricing.c</primary><secondary>sort_gearing</secondary></indexterm>
+<para><computeroutput>void sort_gearing (char stack_from, char stack_to, int base_case, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__gearsort__pricing_8c_ae86baab4f6dd3dc1ac734b5a3a862839_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__gearsort__pricing_8c_ae86baab4f6dd3dc1ac734b5a3a862839_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__5__gearsort__pricing_8c_1a6e6fbdc2b632f680e9d9bd82897ae254"/><section>
+    <title>sort_gearing_is_base_case()</title>
+<indexterm><primary>sort_gearing_is_base_case</primary><secondary>3_5_gearsort_pricing.c</secondary></indexterm>
+<indexterm><primary>3_5_gearsort_pricing.c</primary><secondary>sort_gearing_is_base_case</secondary></indexterm>
+<para><computeroutput>int sort_gearing_is_base_case (int base_case, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__gearsort__pricing_8c_a6e6fbdc2b632f680e9d9bd82897ae254_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__gearsort__pricing_8c_a6e6fbdc2b632f680e9d9bd82897ae254_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__5__gearsort__pricing_8c_1af9133ed1b514fc90860dce150471e4cb"/><section>
+    <title>sort_move_lower_cost()</title>
+<indexterm><primary>sort_move_lower_cost</primary><secondary>3_5_gearsort_pricing.c</secondary></indexterm>
+<indexterm><primary>3_5_gearsort_pricing.c</primary><secondary>sort_move_lower_cost</secondary></indexterm>
+<para><computeroutput>void sort_move_lower_cost (char stack_from, t_move_lower_cost * v, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__gearsort__pricing_8c_af9133ed1b514fc90860dce150471e4cb_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__5__gearsort__pricing_8c_af9133ed1b514fc90860dce150471e4cb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

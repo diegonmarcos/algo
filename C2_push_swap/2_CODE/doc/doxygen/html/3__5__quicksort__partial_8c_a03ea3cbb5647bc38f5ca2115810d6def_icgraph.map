@@ -1,0 +1,16 @@
+<map id="pivot_calculation_partial" name="pivot_calculation_partial">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1013,13,1196,38"/>
+<area shape="rect" id="Node000002" href="$3__5__quicksort__partial_8c.html#acaf4451e3fdd09ac2c34506682d4d170" title=" " alt="" coords="803,5,965,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="999,28,966,28,966,23,999,23"/>
+<area shape="rect" id="Node000003" href="$3__5__quicksort__partial_8c.html#a52d4f4cb31fbd8cbc7d92d0276647275" title=" " alt="" coords="616,13,755,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="789,28,755,28,755,23,789,23"/>
+<area shape="rect" id="Node000004" href="$3__5__gearsort__pricing_8c.html#a94dad898050e696fa4f545c5639799f0" title=" " alt="" coords="413,13,568,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="602,28,569,28,569,23,602,23"/>
+<area shape="rect" id="Node000005" href="$3__0__sort__stack_8c.html#acc93a52a98064d4a94d9e795db0461e1" title=" " alt="" coords="108,13,197,38"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="400,28,197,28,197,23,400,23"/>
+<area shape="rect" id="Node000007" href="$1__2__debugger__helpers_8c.html#adde75d21b7e1086952250fc733726608" title=" " alt="" coords="245,38,365,63"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="400,40,366,45,365,40,399,35"/>
+<area shape="rect" id="Node000006" href="$push__swap_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Implementation of the push_swap project from 42 school." alt="" coords="5,13,60,38"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="94,28,60,28,60,23,94,23"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="231,41,197,35,198,30,232,36"/>
+</map>

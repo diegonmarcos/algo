@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__1__presorting__getmin_8c" xml:lang="en-US">
+<title>src/push_swap/sort/presorting/3_1_presorting_getmin.c File Reference</title>
+<indexterm><primary>src/push_swap/sort/presorting/3_1_presorting_getmin.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_1_presorting_getmin.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__1__presorting__getmin_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>t_list_dls * <link linkend="_3__1__presorting__getmin_8c_1a15788c1cd807743a41ea6f5826f61261">get_next_min</link> (t_list_dls **stack)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__1__presorting__getmin_8c_1ae141e32930f0bad65f58459a3c7449dc">add_index_numbers</link> (t_list_dls *list)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_3__1__presorting__getmin_8c_1ae141e32930f0bad65f58459a3c7449dc"/><section>
+    <title>add_index_numbers()</title>
+<indexterm><primary>add_index_numbers</primary><secondary>3_1_presorting_getmin.c</secondary></indexterm>
+<indexterm><primary>3_1_presorting_getmin.c</primary><secondary>add_index_numbers</secondary></indexterm>
+<para><computeroutput>void add_index_numbers (t_list_dls * list)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__1__presorting__getmin_8c_ae141e32930f0bad65f58459a3c7449dc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__1__presorting__getmin_8c_ae141e32930f0bad65f58459a3c7449dc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__1__presorting__getmin_8c_1a15788c1cd807743a41ea6f5826f61261"/><section>
+    <title>get_next_min()</title>
+<indexterm><primary>get_next_min</primary><secondary>3_1_presorting_getmin.c</secondary></indexterm>
+<indexterm><primary>3_1_presorting_getmin.c</primary><secondary>get_next_min</secondary></indexterm>
+<para><computeroutput>t_list_dls * get_next_min (t_list_dls ** stack)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__1__presorting__getmin_8c_a15788c1cd807743a41ea6f5826f61261_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

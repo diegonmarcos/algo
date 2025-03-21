@@ -1,0 +1,7 @@
+<map id="data_alloc_vars" name="data_alloc_vars">
+<area shape="rect" id="Node000001" title=" " alt="" coords="245,5,369,31"/>
+<area shape="rect" id="Node000002" href="$1__0__mem__alloc_8c.html#a1852976558d65cb628d7e7f4e7f7b5ee" title=" " alt="" coords="108,5,197,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,21,198,21,198,15,232,15"/>
+<area shape="rect" id="Node000003" href="$push__swap_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Implementation of the push_swap project from 42 school." alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

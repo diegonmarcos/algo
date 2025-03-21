@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_4__1__moves__both_8c" xml:lang="en-US">
+<title>src/push_swap/moves/4_1_moves_both.c File Reference</title>
+<indexterm><primary>src/push_swap/moves/4_1_moves_both.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 4_1_moves_both.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="4__1__moves__both_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_4__1__moves__both_8c_1a516a3b5df50a80ad58e56db0d6efef2b">swap_both</link> (t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_4__1__moves__both_8c_1a73dc3f0e868f86241e7d2886bd70f559">rotate_both</link> (char *direction, t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_4__1__moves__both_8c_1ac834ac3f6087884281c23c5938452799">move_stack_fromto_case</link> (char *move_case, t_list_program *list_program)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_4__1__moves__both_8c_1ac834ac3f6087884281c23c5938452799"/><section>
+    <title>move_stack_fromto_case()</title>
+<indexterm><primary>move_stack_fromto_case</primary><secondary>4_1_moves_both.c</secondary></indexterm>
+<indexterm><primary>4_1_moves_both.c</primary><secondary>move_stack_fromto_case</secondary></indexterm>
+<para><computeroutput>void move_stack_fromto_case (char * move_case, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="4__1__moves__both_8c_ac834ac3f6087884281c23c5938452799_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="4__1__moves__both_8c_ac834ac3f6087884281c23c5938452799_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_4__1__moves__both_8c_1a73dc3f0e868f86241e7d2886bd70f559"/><section>
+    <title>rotate_both()</title>
+<indexterm><primary>rotate_both</primary><secondary>4_1_moves_both.c</secondary></indexterm>
+<indexterm><primary>4_1_moves_both.c</primary><secondary>rotate_both</secondary></indexterm>
+<para><computeroutput>void rotate_both (char * direction, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="4__1__moves__both_8c_a73dc3f0e868f86241e7d2886bd70f559_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_4__1__moves__both_8c_1a516a3b5df50a80ad58e56db0d6efef2b"/><section>
+    <title>swap_both()</title>
+<indexterm><primary>swap_both</primary><secondary>4_1_moves_both.c</secondary></indexterm>
+<indexterm><primary>4_1_moves_both.c</primary><secondary>swap_both</secondary></indexterm>
+<para><computeroutput>void swap_both (t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="4__1__moves__both_8c_a516a3b5df50a80ad58e56db0d6efef2b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

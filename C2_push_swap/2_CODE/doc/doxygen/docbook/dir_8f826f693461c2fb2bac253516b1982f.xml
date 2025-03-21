@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_8f826f693461c2fb2bac253516b1982f" xml:lang="en-US">
+<title>src/push_swap/moves Directory Reference</title>
+<indexterm><primary>src/push_swap/moves Directory Reference</primary></indexterm>
+Directory dependency graph for moves:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_8f826f693461c2fb2bac253516b1982f_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_4__0__moves__direction_8c">4_0_moves_direction.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_4__1__moves__both_8c">4_1_moves_both.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_4__2__moves__fromto_8c">4_2_moves_fromto.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

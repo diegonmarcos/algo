@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1__0__mem__alloc_8c" xml:lang="en-US">
+<title>src/push_swap/memory/1_0_mem_alloc.c File Reference</title>
+<indexterm><primary>src/push_swap/memory/1_0_mem_alloc.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 1_0_mem_alloc.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__0__mem__alloc_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_1__0__mem__alloc_8c_1a3e81e0a181d9e021f35edbd35e5ab298">data_alloc_vars</link> (int argc, char **argv, t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_1__0__mem__alloc_8c_1abe7da947f35f514adffbcf41eace0598">data_alloc_1</link> (t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_1__0__mem__alloc_8c_1a83892871ab621bdc34dafae1d77254de">data_alloc_2</link> (t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_1__0__mem__alloc_8c_1a1852976558d65cb628d7e7f4e7f7b5ee">data_alloc</link> (int argc, char **argv, t_list_program *list_program)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1__0__mem__alloc_8c_1a1852976558d65cb628d7e7f4e7f7b5ee"/><section>
+    <title>data_alloc()</title>
+<indexterm><primary>data_alloc</primary><secondary>1_0_mem_alloc.c</secondary></indexterm>
+<indexterm><primary>1_0_mem_alloc.c</primary><secondary>data_alloc</secondary></indexterm>
+<para><computeroutput>void data_alloc (int argc, char ** argv, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__0__mem__alloc_8c_a1852976558d65cb628d7e7f4e7f7b5ee_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__0__mem__alloc_8c_a1852976558d65cb628d7e7f4e7f7b5ee_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_1__0__mem__alloc_8c_1abe7da947f35f514adffbcf41eace0598"/><section>
+    <title>data_alloc_1()</title>
+<indexterm><primary>data_alloc_1</primary><secondary>1_0_mem_alloc.c</secondary></indexterm>
+<indexterm><primary>1_0_mem_alloc.c</primary><secondary>data_alloc_1</secondary></indexterm>
+<para><computeroutput>void data_alloc_1 (t_list_program * list_program)</computeroutput></para></section>
+<anchor xml:id="_1__0__mem__alloc_8c_1a83892871ab621bdc34dafae1d77254de"/><section>
+    <title>data_alloc_2()</title>
+<indexterm><primary>data_alloc_2</primary><secondary>1_0_mem_alloc.c</secondary></indexterm>
+<indexterm><primary>1_0_mem_alloc.c</primary><secondary>data_alloc_2</secondary></indexterm>
+<para><computeroutput>void data_alloc_2 (t_list_program * list_program)</computeroutput></para></section>
+<anchor xml:id="_1__0__mem__alloc_8c_1a3e81e0a181d9e021f35edbd35e5ab298"/><section>
+    <title>data_alloc_vars()</title>
+<indexterm><primary>data_alloc_vars</primary><secondary>1_0_mem_alloc.c</secondary></indexterm>
+<indexterm><primary>1_0_mem_alloc.c</primary><secondary>data_alloc_vars</secondary></indexterm>
+<para><computeroutput>void data_alloc_vars (int argc, char ** argv, t_list_program * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__0__mem__alloc_8c_a3e81e0a181d9e021f35edbd35e5ab298_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

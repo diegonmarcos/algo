@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_d58165706bc352508168e659e349b0bb" xml:lang="en-US">
+<title>src/push_swap/sort/selection Directory Reference</title>
+<indexterm><primary>src/push_swap/sort/selection Directory Reference</primary></indexterm>
+Directory dependency graph for selection:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_d58165706bc352508168e659e349b0bb_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_3__2__selectionsort_8c">3_2_selectionsort.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

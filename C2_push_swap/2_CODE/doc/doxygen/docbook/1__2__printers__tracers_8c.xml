@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1__2__printers__tracers_8c" xml:lang="en-US">
+<title>src/push_swap/tracers/1_2_printers_tracers.c File Reference</title>
+<indexterm><primary>src/push_swap/tracers/1_2_printers_tracers.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 1_2_printers_tracers.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__printers__tracers_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_1__2__printers__tracers_8c_1af1f154e261fd1c167f2dcbdf952ea1d9">print_results</link> (t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_1__2__printers__tracers_8c_1a4cfb30dfa1b732308fb83936337b274c">ft_printers</link> (t_ft_printers_db s, t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_1__2__printers__tracers_8c_1a414192e5b97946d1620c336080c7cad0">ft_printers_gearsort</link> (t_ft_printers_db s, t_move_lower_cost *v, t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_1__2__printers__tracers_8c_1a73a471f4371439f8f37cb6ecdf86f32f">printer_dbg_split</link> (t_ft_printers_db s, t_splits *split_chunks, t_list_program *list_program)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1__2__printers__tracers_8c_1a4cfb30dfa1b732308fb83936337b274c"/><section>
+    <title>ft_printers()</title>
+<indexterm><primary>ft_printers</primary><secondary>1_2_printers_tracers.c</secondary></indexterm>
+<indexterm><primary>1_2_printers_tracers.c</primary><secondary>ft_printers</secondary></indexterm>
+<para><computeroutput>void ft_printers (t_ft_printers_db s, t_list_program * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__printers__tracers_8c_a4cfb30dfa1b732308fb83936337b274c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_1__2__printers__tracers_8c_1a414192e5b97946d1620c336080c7cad0"/><section>
+    <title>ft_printers_gearsort()</title>
+<indexterm><primary>ft_printers_gearsort</primary><secondary>1_2_printers_tracers.c</secondary></indexterm>
+<indexterm><primary>1_2_printers_tracers.c</primary><secondary>ft_printers_gearsort</secondary></indexterm>
+<para><computeroutput>void ft_printers_gearsort (t_ft_printers_db s, t_move_lower_cost * v, t_list_program * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__printers__tracers_8c_a414192e5b97946d1620c336080c7cad0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_1__2__printers__tracers_8c_1af1f154e261fd1c167f2dcbdf952ea1d9"/><section>
+    <title>print_results()</title>
+<indexterm><primary>print_results</primary><secondary>1_2_printers_tracers.c</secondary></indexterm>
+<indexterm><primary>1_2_printers_tracers.c</primary><secondary>print_results</secondary></indexterm>
+<para><computeroutput>void print_results (t_list_program * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__printers__tracers_8c_af1f154e261fd1c167f2dcbdf952ea1d9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_1__2__printers__tracers_8c_1a73a471f4371439f8f37cb6ecdf86f32f"/><section>
+    <title>printer_dbg_split()</title>
+<indexterm><primary>printer_dbg_split</primary><secondary>1_2_printers_tracers.c</secondary></indexterm>
+<indexterm><primary>1_2_printers_tracers.c</primary><secondary>printer_dbg_split</secondary></indexterm>
+<para><computeroutput>void printer_dbg_split (t_ft_printers_db s, t_splits * split_chunks, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__printers__tracers_8c_a73a471f4371439f8f37cb6ecdf86f32f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

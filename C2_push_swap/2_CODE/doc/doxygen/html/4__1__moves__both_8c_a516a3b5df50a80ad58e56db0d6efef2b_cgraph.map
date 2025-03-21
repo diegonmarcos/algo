@@ -1,0 +1,8 @@
+<map id="swap_both" name="swap_both">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,97,31"/>
+<area shape="rect" id="Node000002" href="$1__2__printers__tracers_8c.html#a4cfb30dfa1b732308fb83936337b274c" title=" " alt="" coords="249,5,337,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,15,236,15,236,21,98,21"/>
+<area shape="rect" id="Node000003" href="$4__0__moves__direction_8c.html#aa2036f5bf4b8d176da973726dd806078" title=" " alt="" coords="145,31,201,56"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="98,25,132,32,131,37,97,30"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="201,35,235,27,237,33,202,40"/>
+</map>

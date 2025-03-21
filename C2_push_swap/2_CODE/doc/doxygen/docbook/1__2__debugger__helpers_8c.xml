@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1__2__debugger__helpers_8c" xml:lang="en-US">
+<title>src/push_swap/tracers/1_2_debugger_helpers.c File Reference</title>
+<indexterm><primary>src/push_swap/tracers/1_2_debugger_helpers.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 1_2_debugger_helpers.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__debugger__helpers_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_1__2__debugger__helpers_8c_1adde75d21b7e1086952250fc733726608">sort_stack_dbg</link> (t_list_program *list_program)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1__2__debugger__helpers_8c_1adde75d21b7e1086952250fc733726608"/><section>
+    <title>sort_stack_dbg()</title>
+<indexterm><primary>sort_stack_dbg</primary><secondary>1_2_debugger_helpers.c</secondary></indexterm>
+<indexterm><primary>1_2_debugger_helpers.c</primary><secondary>sort_stack_dbg</secondary></indexterm>
+<para><computeroutput>void sort_stack_dbg (t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__debugger__helpers_8c_adde75d21b7e1086952250fc733726608_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__debugger__helpers_8c_adde75d21b7e1086952250fc733726608_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

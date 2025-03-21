@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1__1__mem__clear_8c" xml:lang="en-US">
+<title>src/push_swap/memory/1_1_mem_clear.c File Reference</title>
+<indexterm><primary>src/push_swap/memory/1_1_mem_clear.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap.h&quot;<?linebreak?></programlisting>Include dependency graph for 1_1_mem_clear.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__1__mem__clear_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_1__1__mem__clear_8c_1ac6d7aa906875ca4cc39f8506e2c104cf">ft_free_push_swap_halt</link> (t_list_program *list_program)</para>
+</listitem>
+            <listitem><para>void <link linkend="_1__1__mem__clear_8c_1a559e3ef871c76e86b25be9e59343ed1b">ft_free_push_swap_end</link> (t_list_program *list_program)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1__1__mem__clear_8c_1a559e3ef871c76e86b25be9e59343ed1b"/><section>
+    <title>ft_free_push_swap_end()</title>
+<indexterm><primary>ft_free_push_swap_end</primary><secondary>1_1_mem_clear.c</secondary></indexterm>
+<indexterm><primary>1_1_mem_clear.c</primary><secondary>ft_free_push_swap_end</secondary></indexterm>
+<para><computeroutput>void ft_free_push_swap_end (t_list_program * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__1__mem__clear_8c_a559e3ef871c76e86b25be9e59343ed1b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_1__1__mem__clear_8c_1ac6d7aa906875ca4cc39f8506e2c104cf"/><section>
+    <title>ft_free_push_swap_halt()</title>
+<indexterm><primary>ft_free_push_swap_halt</primary><secondary>1_1_mem_clear.c</secondary></indexterm>
+<indexterm><primary>1_1_mem_clear.c</primary><secondary>ft_free_push_swap_halt</secondary></indexterm>
+<para><computeroutput>void ft_free_push_swap_halt (t_list_program * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__1__mem__clear_8c_ac6d7aa906875ca4cc39f8506e2c104cf_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>
