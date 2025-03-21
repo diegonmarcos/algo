@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/21 16:07:47 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/21 18:13:33 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -1565,30 +1565,26 @@ doxfile_mod:
 # ************************************************************************ #
 #                          TESTERS VISUALIZER                              #
 # ************************************************************************ #
-test_visualizer_build: testers/push_swap_visualizer/build/bin/visualizer
+test_vis_run:
+	git clone https://github.com/o-reo/push_swap_visualizer.git testers/push_swap_visualizer || true
+	mkdir -p testers/push_swap_visualizer/build && cd testers/push_swap_visualizer/build && cmake .. && make || true
+	cd testers/push_swap_visualizer && mv push_swap push_swap_default && ln -s ../../push_swap push_swap && ./build/bin/visualizer
 
-testers/push_swap_visualizer.tar.gz:
-	mkdir -p testers
-	pipx install gdown
-	gdown 'https://drive.google.com/uc?id=1xvaDfFKfIPTeiwLLu0K37YzJdesab_kx' -O $@
+
+
+#test_visualizer_build: testers/push_swap_visualizer/build/bin/visualizer
+#testers/push_swap_visualizer.tar.gz:
+#	mkdir -p testers
+#	pipx install gdown
+#	gdown 'https://drive.google.com/uc?id=1xvaDfFKfIPTeiwLLu0K37YzJdesab_kx' -O $@
 #	file $@ | grep gzip > /dev/null
 #	if [ $$? -ne 0 ]; then echo "Error: Downloaded file is not a gzip archive!"; exit 1; fi
-
-testers/push_swap_visualizer: testers/push_swap_visualizer.tar.gz
-		tar -xzf $< -C testers/
-
-testers/push_swap_visualizer/build/bin/visualizer: testers/push_swap_visualizer
-
-test_visualizer_run: testers/push_swap_visualizer/build/bin/visualizer
-	./testers/push_swap_visualizer/build/bin/visualizer
-
-test_vis_run:
-#	git clone https://github.com/o-reo/push_swap_visualizer.git testers/push_swap_visualizer || true
-#	mkdir -p testers/push_swap_visualizer/build && cd testers/push_swap_visualizer/build && cmake .. && make || true
-#	cd .. && ln -s ../../push_swap push_swap
-	./testers/push_swap_visualizer/build/bin/visualizer
-
-.PHONY: run_visualizer
+#testers/push_swap_visualizer: testers/push_swap_visualizer.tar.gz
+#		tar -xzf $< -C testers/
+#testers/push_swap_visualizer/build/bin/visualizer: testers/push_swap_visualizer
+#test_visualizer_run: testers/push_swap_visualizer/build/bin/visualizer
+#	./testers/push_swap_visualizer/build/bin/visualizer
+#.PHONY: run_visualizer
 
 
 
