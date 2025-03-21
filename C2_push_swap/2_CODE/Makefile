@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/21 08:48:54 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/21 09:21:01 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -394,6 +394,7 @@ build_system_pipeline:
 	$(MAKE) build_deps
 	$(MAKE) check_up_to_date
 	$(MAKE) $(NAME)
+	$(MAKE) build_doc
 	$(MAKE) dbg_rules
 	$(MAKE) check_up_to_date_2
 	$(MAKE) folders_ls_la
@@ -651,6 +652,21 @@ MID_GRAY =		\033[38;5;245m
 DARK_GREEN =	\033[38;2;75;179;82m
 DARK_YELLOW =	\033[38;5;143m
 
+
+# **************************************************************************** #
+#                         ROADMAP AND DOCUMENTATION                       	   #
+# **************************************************************************** #
+
+build_doc:
+	mkdir -p doc
+	wget \
+		-O doc/1_RM.tar \
+		https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/1_RM.tar \
+		> /dev/null 2>&1
+		tar -xvf doc/1_RM.tar -C doc
+		rm doc/1_RM.tar
+#https://github.com/diegonmarcos/graphic/blob/main/C2_fdf/1_RM/1_RM.tar
+#https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/1_RM.tar
 
 
 # **************************************************************************** #
