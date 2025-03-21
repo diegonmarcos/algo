@@ -1,0 +1,14 @@
+==114021== Memcheck, a memory error detector
+==114021== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==114021== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==114021== Command: ./log/4.Bins_folder/push_swap_g 5\ 4\ 3\ 2\ 1\ 1
+==114021== Parent PID: 114020
+==114021== 
+==114021== 
+==114021== HEAP SUMMARY:
+==114021==     in use at exit: 0 bytes in 0 blocks
+==114021==   total heap usage: 20,012 allocs, 20,012 frees, 200,242,028 bytes allocated
+==114021== 
+==114021== All heap blocks were freed -- no leaks are possible
+==114021== 
+==114021== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

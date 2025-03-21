@@ -1,0 +1,230 @@
+All defined functions:
+
+File src/src_all/1_0_mem_alloc.c:
+27:	void data_alloc(int, char **, t_list_program *);
+40:	void data_alloc_vars(int, char **, t_list_program *);
+
+File src/src_all/1_1_mem_clear.c:
+36:	void ft_free_push_swap_end(t_list_program *);
+22:	void ft_free_push_swap_halt(t_list_program *);
+
+File src/src_all/1_2_debugger_helpers.c:
+19:	void sort_stack_dbg(t_list_program *);
+
+File src/src_all/1_2_printers_tracers.c:
+32:	void ft_printers(t_ft_printers_db, t_list_program *);
+84:	void ft_printers_gearsort(t_ft_printers_db, t_move_lower_cost *, t_list_program *);
+21:	void print_results(t_list_program *);
+92:	void printer_dbg_split(t_ft_printers_db, t_splits *, t_list_program *);
+60:	static void ft_printers1(t_ft_printers_db, t_list_program *);
+
+File src/src_all/2_0_input_check.c:
+53:	void error_handling_input_0(int, char **);
+61:	void error_handling_input_1(t_list_program *);
+82:	void is_sorted_linked_list_push(t_list_program *);
+
+File src/src_all/3_0_sort_stack.c:
+61:	void sort_stack(t_list_program *);
+
+File src/src_all/3_1_presorting_getmin.c:
+55:	void add_index_numbers(t_list_dls *);
+30:	t_list_dls *get_next_min(t_list_dls **);
+
+File src/src_all/3_2_selectionsort.c:
+114:	int min_node_pos(t_list_program *);
+26:	void selection_sort(t_list_program *);
+108:	void selection_sort_merge_back(int *, t_list_program *);
+42:	void selection_sort_recursion(int *, t_list_program *);
+79:	void sort_3(t_list_dls **, t_list_program *);
+
+File src/src_all/3_3_radixsort.c:
+29:	void radix_sort_pushswap(t_list_program *);
+48:	void radix_sort_step(int, int, t_list_program *);
+
+File src/src_all/3_4_quicksort.c:
+19:	void quick_sort_pushswap(t_list_program *);
+
+File src/src_all/3_4_sort3_chunk.c:
+29:	void sort_3_chunk(t_list_program *);
+57:	void sort_3_chunk_case(t_sort_3_cases, t_list_program *);
+84:	void sort_3_chunk_case_1(t_sort_3_cases, t_list_program *);
+
+File src/src_all/3_5_gearsort_pricing.c:
+19:	void gear_sort_pushswap(t_list_program *);
+93:	int node_pos_locator(int, t_list_program *, char, char);
+34:	void sort_gearing(char, char, int, t_list_program *);
+117:	int sort_gearing_is_base_case(int, t_list_program *);
+63:	void sort_move_lower_cost(char, t_move_lower_cost *, t_list_program *);
+
+File src/src_all/3_5_gearsort_pricing2.c:
+38:	void high_up_stack(t_list_program *);
+60:	void low_up_stack(t_list_program *);
+19:	int node_pos_locator_is_in_place(char, int, t_node_pos_locator *);
+
+File src/src_all/3_5_quicksort_partial.c:
+19:	void pivot_calculation_partial(t_chunk *, t_splits *);
+98:	void quick_sort_partial(t_list_program *);
+88:	void recursive_split_chunk_partial(t_chunk *, t_list_program *);
+45:	static void merge_back_and_sort(t_chunk *, t_splits *, t_list_program *);
+63:	static void split_chunk(t_chunk *, t_splits *, t_list_program *);
+
+File src/src_all/3_7_moves_optim.c:
+91:	void ft_strlcpy_optm(int *, char *, int *, t_list_program *);
+24:	void moves_optimizations(t_list_program *);
+35:	void moves_optimizations_0(int *, t_list_program *);
+63:	void moves_optimizations_1(int *, t_list_program *);
+
+File src/src_all/4_0_moves_direction.c:
+51:	void push(char, t_list_program *);
+150:	void rotate(char *, char, t_list_program *);
+104:	void swap(char, t_list_program *);
+77:	static void push2(t_list_dls **, t_list_dls *, char, t_list_program *);
+
+File src/src_all/4_1_moves_both.c:
+60:	void move_stack_fromto_case(char *, t_list_program *);
+43:	void rotate_both(char *, t_list_program *);
+31:	void swap_both(t_list_program *);
+
+File src/src_all/4_2_moves_fromto.c:
+25:	void move_stack_fromto(t_position, t_position, t_list_program *);
+44:	void move_stack_fromto1(t_position, t_position, t_list_program *);
+67:	void move_stack_fromto2(t_position, t_position, t_list_program *);
+
+File src/src_all/push_swap.c:
+73:	int main(int, char **);
+
+Non-debugging symbols:
+0x0000000000401000  _init
+0x0000000000401030  free@plt
+0x0000000000401040  __errno_location@plt
+0x0000000000401050  write@plt
+0x0000000000401060  fclose@plt
+0x0000000000401070  memset@plt
+0x0000000000401080  close@plt
+0x0000000000401090  fprintf@plt
+0x00000000004010a0  fileno@plt
+0x00000000004010b0  malloc@plt
+0x00000000004010c0  fflush@plt
+0x00000000004010d0  fopen@plt
+0x00000000004010e0  perror@plt
+0x00000000004010f0  flock@plt
+0x0000000000401100  exit@plt
+0x0000000000401110  _start
+0x0000000000401140  _dl_relocate_static_pie
+0x0000000000401150  deregister_tm_clones
+0x0000000000401180  register_tm_clones
+0x00000000004011c0  __do_global_dtors_aux
+0x00000000004011f0  frame_dummy
+0x0000000000404280  ft_calloc
+0x0000000000404330  ft_calloc_
+0x0000000000404370  ft_calloc_2d
+0x0000000000404440  ft_calloc_2d_sizetype
+0x0000000000404540  is_error_calloc_2d
+0x00000000004045d0  ft_free_array_2d
+0x0000000000404640  ft_free_array_int
+0x00000000004046b0  ft_free_array_halt
+0x0000000000404700  ft_initializator_list_gargabe
+0x0000000000404790  ft_free_gb
+0x00000000004047d0  ft_free_gb_all
+0x0000000000404850  add_allocation
+0x00000000004048d0  remove_allocation
+0x0000000000404940  is_allocated
+0x00000000004049a0  ft_malloc_gb
+0x0000000000404a30  halt_exit_fd
+0x0000000000404a90  halt_exit_
+0x0000000000404ad0  ft_strlcpy
+0x0000000000404b60  ft_memcpy
+0x0000000000404bf0  ft_memmove
+0x0000000000404ce0  ft_memcpy_
+0x0000000000404d70  ft_memccpy
+0x0000000000404e30  ft_bzero_2d
+0x0000000000404e90  ft_bzero
+0x0000000000404ec0  ft_memset
+0x0000000000404f10  ft_strncmp
+0x0000000000404fe0  ft_strcmp
+0x00000000004050a0  ft_strcmp_duplicate
+0x0000000000405120  ft_strcmp_duplicate_inter
+0x00000000004051c0  ft_memcmp
+0x0000000000405260  ft_is_sorted_array_int
+0x00000000004052d0  ft_is_sorted_array_char
+0x0000000000405360  ft_isdigit
+0x00000000004053a0  ft_isnum
+0x0000000000405480  ft_is_array_int
+0x0000000000405530  digits_to_bits
+0x0000000000405590  ft_digit_count
+0x0000000000405600  ft_abs_comp
+0x0000000000405630  ft_itoa
+0x0000000000405720  ft_round
+0x0000000000405760  ft_abs
+0x0000000000405780  ft_snprintf
+0x0000000000405950  process_format
+0x0000000000405a20  handle_format_specifier
+0x0000000000405b30  handle_integer_specifier
+0x0000000000405c20  handle_string_specifier
+0x0000000000405d30  ft_strlen
+0x0000000000405d70  ft_array_size
+0x0000000000405db0  ft_strlen_gnl
+0x0000000000405e40  ft_split_long
+0x0000000000405f30  ft_split
+0x0000000000406100  ft_countwords
+0x0000000000406200  ft_strtrim
+0x00000000004063a0  ft_char_in_set
+0x0000000000406410  ft_substr
+0x0000000000406500  ft_fprintf
+0x00000000004066d0  w_str
+0x00000000004067c0  ft_dprintf
+0x0000000000406940  w_str_percent
+0x00000000004069e0  type_var
+0x0000000000406d40  ft_fprintf1
+0x0000000000406f50  w_str
+0x0000000000407040  ft_fprintf2
+0x0000000000407280  w_str_percent
+0x0000000000407320  type_var
+0x0000000000407680  ft_pointer_hexa_fpr
+0x0000000000407750  hexa_pointer_fd
+0x0000000000407860  ft_printf
+0x00000000004079d0  w_str
+0x0000000000407ac0  w_str_percent
+0x0000000000407b60  type_var
+0x0000000000408040  ft_putchar
+0x0000000000408070  ft_putchar_int
+0x00000000004080c0  ft_putchar_fd
+0x00000000004080f0  ft_putchar_fd_fpr
+0x0000000000408140  ft_putnbr
+0x0000000000408260  int_min
+0x00000000004082b0  ft_putnbr_nbr
+0x0000000000408320  ft_putnbr_fd
+0x00000000004083c0  ft_putnbr_fd_fpr
+0x00000000004084e0  ft_putstr
+0x0000000000408530  ft_putstr_str
+0x00000000004085f0  ft_putstr_fd
+0x0000000000408660  ft_putstr_fd_fpr
+0x0000000000408730  ft_putstrstr_fd_fpr
+0x00000000004087d0  array_to_d_linked_list
+0x0000000000408850  array_int_to_d_linked_list
+0x00000000004088c0  ft_free_ls_doubly
+0x0000000000408950  ft_lstnew
+0x00000000004089e0  ft_lstadd_back
+0x0000000000408a70  ft_lstsize
+0x0000000000408ae0  ft_print_ls_doubly
+0x0000000000408b90  ft_print_ls_doubly_fd_int
+0x0000000000408c50  find_min_node
+0x0000000000408d10  find_min_node1
+0x0000000000408dd0  is_sorted_linked_list
+0x0000000000408e50  max_node_finder
+0x0000000000408ee0  ft_calloc_fd
+0x0000000000408f60  ft_atoi
+0x00000000004090d0  ft_atoi_long
+0x0000000000409250  ft_atoi_long_array
+0x0000000000409310  ft_atoi_safe
+0x0000000000409390  ft_strdup
+0x0000000000409410  ft_hexa_mayusc
+0x0000000000409480  puthexa_long
+0x0000000000409580  puthexa_uns
+0x0000000000409680  ft_hexa_minusc
+0x00000000004096f0  puthexa_long
+0x00000000004097f0  puthexa_uns
+0x00000000004098f0  ft_num_unsign
+0x00000000004099a0  ft_pointer_hexa
+0x0000000000409a60  hexa_pointer
+0x0000000000409b60  _fini

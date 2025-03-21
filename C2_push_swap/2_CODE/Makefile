@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/21 12:10:30 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/21 16:07:47 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -845,7 +845,7 @@ log_alles_bonus:
 # *** static analyzer *** #
 log_static_analysis:
 #	$(MAKE) bear || true
-	$(MAKE) bonus
+	$(MAKE)
 	$(MAKE) werror
 	$(MAKE) norm
 #	$(MAKE) norm_bonus
@@ -1580,6 +1580,12 @@ testers/push_swap_visualizer: testers/push_swap_visualizer.tar.gz
 testers/push_swap_visualizer/build/bin/visualizer: testers/push_swap_visualizer
 
 test_visualizer_run: testers/push_swap_visualizer/build/bin/visualizer
+	./testers/push_swap_visualizer/build/bin/visualizer
+
+test_vis_run:
+#	git clone https://github.com/o-reo/push_swap_visualizer.git testers/push_swap_visualizer || true
+#	mkdir -p testers/push_swap_visualizer/build && cd testers/push_swap_visualizer/build && cmake .. && make || true
+#	cd .. && ln -s ../../push_swap push_swap
 	./testers/push_swap_visualizer/build/bin/visualizer
 
 .PHONY: run_visualizer

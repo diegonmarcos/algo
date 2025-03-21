@@ -1,0 +1,14 @@
+==113129== Memcheck, a memory error detector
+==113129== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==113129== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==113129== Command: ./log/4.Bins_folder/push_swap_g 
+==113129== Parent PID: 113128
+==113129== 
+==113129== 
+==113129== HEAP SUMMARY:
+==113129==     in use at exit: 0 bytes in 0 blocks
+==113129==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==113129== 
+==113129== All heap blocks were freed -- no leaks are possible
+==113129== 
+==113129== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

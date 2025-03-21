@@ -1,0 +1,1 @@
+GROUP ( libs/libchecker_0.a  libs/mylibs/mylibc/libmylibc.a ../../libs/libpush_swap_0.a )
