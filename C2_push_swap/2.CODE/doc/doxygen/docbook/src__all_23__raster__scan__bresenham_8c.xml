@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_src__all_23__raster__scan__bresenham_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/src_all/3_raster_scan_bresenham.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/src_all/3_raster_scan_bresenham.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_raster_scan_bresenham.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_23__raster__scan__bresenham_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_src__all_23__raster__scan__bresenham_8c_1ab70b51195ef9d20461b944eb7460c608">bresenham_line</link> (<link linkend="_mylibc__data_8h_1a755e2b4bf9298aa40dca560c7f27f3d1">t_bresenham</link> *b, void(*put_pixel)(int, int))</para>
+</listitem>
+            <listitem><para>void <link linkend="_src__all_23__raster__scan__bresenham_8c_1addaa66b641e04f42e342c6613139b903">example_put_pixel</link> (int x, int y)</para>
+</listitem>
+            <listitem><para>void <link linkend="_src__all_23__raster__scan__bresenham_8c_1acfa0555f3bfbf88514d656bf78b96f94">bresenham_step</link> (<link linkend="_mylibc__data_8h_1a755e2b4bf9298aa40dca560c7f27f3d1">t_bresenham</link> *b)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_src__all_23__raster__scan__bresenham_8c_1ab70b51195ef9d20461b944eb7460c608"/><section>
+    <title>bresenham_line()</title>
+<indexterm><primary>bresenham_line</primary><secondary>3_raster_scan_bresenham.c</secondary></indexterm>
+<indexterm><primary>3_raster_scan_bresenham.c</primary><secondary>bresenham_line</secondary></indexterm>
+<para><computeroutput>void bresenham_line (<link linkend="_mylibc__data_8h_1a755e2b4bf9298aa40dca560c7f27f3d1">t_bresenham</link> * b, void(*)(int, int) put_pixel)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_23__raster__scan__bresenham_8c_ab70b51195ef9d20461b944eb7460c608_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_src__all_23__raster__scan__bresenham_8c_1acfa0555f3bfbf88514d656bf78b96f94"/><section>
+    <title>bresenham_step()</title>
+<indexterm><primary>bresenham_step</primary><secondary>3_raster_scan_bresenham.c</secondary></indexterm>
+<indexterm><primary>3_raster_scan_bresenham.c</primary><secondary>bresenham_step</secondary></indexterm>
+<para><computeroutput>void bresenham_step (<link linkend="_mylibc__data_8h_1a755e2b4bf9298aa40dca560c7f27f3d1">t_bresenham</link> * b)</computeroutput></para></section>
+<anchor xml:id="_src__all_23__raster__scan__bresenham_8c_1addaa66b641e04f42e342c6613139b903"/><section>
+    <title>example_put_pixel()</title>
+<indexterm><primary>example_put_pixel</primary><secondary>3_raster_scan_bresenham.c</secondary></indexterm>
+<indexterm><primary>3_raster_scan_bresenham.c</primary><secondary>example_put_pixel</secondary></indexterm>
+<para><computeroutput>void example_put_pixel (int x, int y)</computeroutput></para></section>
+</section>
+</section>

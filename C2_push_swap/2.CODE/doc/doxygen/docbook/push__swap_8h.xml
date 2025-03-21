@@ -2,7 +2,7 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_push__swap_8h" xml:lang="en-US">
 <title>inc/push_swap.h File Reference</title>
 <indexterm><primary>inc/push_swap.h</primary></indexterm>
-<programlisting linenumbering="unnumbered">#include &quot;push_swap_defines.h&quot;<?linebreak?>#include &quot;push_swap_data.h&quot;<?linebreak?>#include &quot;../libs/mylibc/inc/mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for push_swap.h:<para>
+<programlisting linenumbering="unnumbered">#include &quot;push_swap_defines.h&quot;<?linebreak?>#include &quot;push_swap_data.h&quot;<?linebreak?>#include &quot;../libs/mylibs/mylibc/inc/mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for push_swap.h:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -266,7 +266,16 @@ Here is the caller graph for this function:<para>
     <title>error_handling_input_0()</title>
 <indexterm><primary>error_handling_input_0</primary><secondary>push_swap.h</secondary></indexterm>
 <indexterm><primary>push_swap.h</primary><secondary>error_handling_input_0</secondary></indexterm>
-<para><computeroutput>void error_handling_input_0 (int argc, char ** argv)</computeroutput></para>Here is the caller graph for this function:<para>
+<para><computeroutput>void error_handling_input_0 (int argc, char ** argv)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a485614ab5a13c8271c688910e4728047_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -350,7 +359,16 @@ Here is the caller graph for this function:<para>
     <title>ft_free_push_swap_end()</title>
 <indexterm><primary>ft_free_push_swap_end</primary><secondary>push_swap.h</secondary></indexterm>
 <indexterm><primary>push_swap.h</primary><secondary>ft_free_push_swap_end</secondary></indexterm>
-<para><computeroutput>void ft_free_push_swap_end (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+<para><computeroutput>void ft_free_push_swap_end (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a559e3ef871c76e86b25be9e59343ed1b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -364,7 +382,16 @@ Here is the caller graph for this function:<para>
     <title>ft_free_push_swap_halt()</title>
 <indexterm><primary>ft_free_push_swap_halt</primary><secondary>push_swap.h</secondary></indexterm>
 <indexterm><primary>push_swap.h</primary><secondary>ft_free_push_swap_halt</secondary></indexterm>
-<para><computeroutput>void ft_free_push_swap_halt (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_programm)</computeroutput></para>Here is the caller graph for this function:<para>
+<para><computeroutput>void ft_free_push_swap_halt (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_programm)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a8f24a43da60686f9c097bf3e2e383693_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -378,7 +405,16 @@ Here is the caller graph for this function:<para>
     <title>ft_printers()</title>
 <indexterm><primary>ft_printers</primary><secondary>push_swap.h</secondary></indexterm>
 <indexterm><primary>push_swap.h</primary><secondary>ft_printers</secondary></indexterm>
-<para><computeroutput>void ft_printers (<link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link> s, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+<para><computeroutput>void ft_printers (<link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link> s, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a4cfb30dfa1b732308fb83936337b274c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -392,7 +428,16 @@ Here is the caller graph for this function:<para>
     <title>ft_printers_gearsort()</title>
 <indexterm><primary>ft_printers_gearsort</primary><secondary>push_swap.h</secondary></indexterm>
 <indexterm><primary>push_swap.h</primary><secondary>ft_printers_gearsort</secondary></indexterm>
-<para><computeroutput>void ft_printers_gearsort (<link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link> s, <link linkend="_push__swap__data_8h_1a8e0066cb4526b2d7f286d40f1489739f">t_move_lower_cost</link> * v, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+<para><computeroutput>void ft_printers_gearsort (<link linkend="_push__swap_8h_1a725c14c4f0e63785e0c50ef6dd054ee0">t_ft_printers_db</link> s, <link linkend="_push__swap__data_8h_1a8e0066cb4526b2d7f286d40f1489739f">t_move_lower_cost</link> * v, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_a414192e5b97946d1620c336080c7cad0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -513,7 +558,16 @@ Here is the caller graph for this function:<para>
     <title>min_node_pos()</title>
 <indexterm><primary>min_node_pos</primary><secondary>push_swap.h</secondary></indexterm>
 <indexterm><primary>push_swap.h</primary><secondary>min_node_pos</secondary></indexterm>
-<para><computeroutput>int min_node_pos (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+<para><computeroutput>int min_node_pos (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_aa5355356a38fe129c21e05d54bc4b9d4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -629,7 +683,16 @@ Here is the caller graph for this function:<para>
     <title>print_results()</title>
 <indexterm><primary>print_results</primary><secondary>push_swap.h</secondary></indexterm>
 <indexterm><primary>push_swap.h</primary><secondary>print_results</secondary></indexterm>
-<para><computeroutput>void print_results (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+<para><computeroutput>void print_results (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="push__swap_8h_af1f154e261fd1c167f2dcbdf952ea1d9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>

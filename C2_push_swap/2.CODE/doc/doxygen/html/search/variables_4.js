@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['j_0',['j',['../structs__x.html#a37d972ae0b47b9099e30983131d31916',1,'s_x']]]
+  ['err_0',['err',['../structs__bresenham.html#a6ce68847c12434f60d1b2654a3dc3409',1,'s_bresenham']]]
 ];

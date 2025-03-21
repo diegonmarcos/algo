@@ -14,13 +14,13 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>void <link linkend="_4__0__moves__direction_8c_1afccc17cf6947e8045b7157ace02a1457">push</link> (char direction, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_4__0__moves__direction_8c_1afccc17cf6947e8045b7157ace02a1457">push</link> (char direction, t_list_program *list_program)</para>
 
 <para>Numbers moved from one stack to another using: push, swap, rotate. </para>
 </listitem>
-            <listitem><para>void <link linkend="_4__0__moves__direction_8c_1aa2036f5bf4b8d176da973726dd806078">swap</link> (char stack_name, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_4__0__moves__direction_8c_1aa2036f5bf4b8d176da973726dd806078">swap</link> (char stack_name, t_list_program *list_program)</para>
 </listitem>
-            <listitem><para>void <link linkend="_4__0__moves__direction_8c_1a52d7746c8b7628a2e18e1069db470556">rotate</link> (char *direction, char stack_name, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_4__0__moves__direction_8c_1a52d7746c8b7628a2e18e1069db470556">rotate</link> (char *direction, char stack_name, t_list_program *list_program)</para>
 
 <para>Rotates the specified stack. </para>
 </listitem>
@@ -32,7 +32,7 @@
     <title>push()</title>
 <indexterm><primary>push</primary><secondary>4_0_moves_direction.c</secondary></indexterm>
 <indexterm><primary>4_0_moves_direction.c</primary><secondary>push</secondary></indexterm>
-<para><computeroutput>void push (char direction, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para><para>
+<para><computeroutput>void push (char direction, t_list_program * list_program)</computeroutput></para><para>
 
 <para>Numbers moved from one stack to another using: push, swap, rotate. </para>
 </para>
@@ -80,7 +80,7 @@ Here is the caller graph for this function:<para>
     <title>rotate()</title>
 <indexterm><primary>rotate</primary><secondary>4_0_moves_direction.c</secondary></indexterm>
 <indexterm><primary>4_0_moves_direction.c</primary><secondary>rotate</secondary></indexterm>
-<para><computeroutput>void rotate (char * direction, char stack_name, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para><para>
+<para><computeroutput>void rotate (char * direction, char stack_name, t_list_program * list_program)</computeroutput></para><para>
 
 <para>Rotates the specified stack. </para>
 </para>
@@ -139,7 +139,7 @@ Here is the caller graph for this function:<para>
     <title>swap()</title>
 <indexterm><primary>swap</primary><secondary>4_0_moves_direction.c</secondary></indexterm>
 <indexterm><primary>4_0_moves_direction.c</primary><secondary>swap</secondary></indexterm>
-<para><computeroutput>void swap (char stack_name, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void swap (char stack_name, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>

@@ -14,15 +14,15 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>void <link linkend="_3__2__selectionsort_8c_1a8c475357a8f515fc57ec9c6ae6e9cee3">selection_sort</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_3__2__selectionsort_8c_1a8c475357a8f515fc57ec9c6ae6e9cee3">selection_sort</link> (t_list_program *list_program)</para>
 </listitem>
-            <listitem><para>void <link linkend="_3__2__selectionsort_8c_1a8d7a0d46a67405d91816a7b6c5dfd476">selection_sort_recursion</link> (int *pushes, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_3__2__selectionsort_8c_1a8d7a0d46a67405d91816a7b6c5dfd476">selection_sort_recursion</link> (int *pushes, t_list_program *list_program)</para>
 </listitem>
-            <listitem><para>void <link linkend="_3__2__selectionsort_8c_1afc65a8ff615d5f010c90a77d43e99901">sort_3</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> **stack_a, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_3__2__selectionsort_8c_1afc65a8ff615d5f010c90a77d43e99901">sort_3</link> (t_list_dls **stack_a, t_list_program *list_program)</para>
 </listitem>
-            <listitem><para>void <link linkend="_3__2__selectionsort_8c_1a903c705fc4ddf8716c63da4b393d5e66">selection_sort_merge_back</link> (int *pushes, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_3__2__selectionsort_8c_1a903c705fc4ddf8716c63da4b393d5e66">selection_sort_merge_back</link> (int *pushes, t_list_program *list_program)</para>
 </listitem>
-            <listitem><para>int <link linkend="_3__2__selectionsort_8c_1aa5355356a38fe129c21e05d54bc4b9d4">min_node_pos</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>int <link linkend="_3__2__selectionsort_8c_1aa5355356a38fe129c21e05d54bc4b9d4">min_node_pos</link> (t_list_program *list_program)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -32,7 +32,7 @@
     <title>min_node_pos()</title>
 <indexterm><primary>min_node_pos</primary><secondary>3_2_selectionsort.c</secondary></indexterm>
 <indexterm><primary>3_2_selectionsort.c</primary><secondary>min_node_pos</secondary></indexterm>
-<para><computeroutput>int min_node_pos (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
+<para><computeroutput>int min_node_pos (t_list_program * list_program)</computeroutput></para>Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -46,7 +46,7 @@
     <title>selection_sort()</title>
 <indexterm><primary>selection_sort</primary><secondary>3_2_selectionsort.c</secondary></indexterm>
 <indexterm><primary>3_2_selectionsort.c</primary><secondary>selection_sort</secondary></indexterm>
-<para><computeroutput>void selection_sort (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void selection_sort (t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -69,7 +69,7 @@ Here is the caller graph for this function:<para>
     <title>selection_sort_merge_back()</title>
 <indexterm><primary>selection_sort_merge_back</primary><secondary>3_2_selectionsort.c</secondary></indexterm>
 <indexterm><primary>3_2_selectionsort.c</primary><secondary>selection_sort_merge_back</secondary></indexterm>
-<para><computeroutput>void selection_sort_merge_back (int * pushes, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void selection_sort_merge_back (int * pushes, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -92,7 +92,7 @@ Here is the caller graph for this function:<para>
     <title>selection_sort_recursion()</title>
 <indexterm><primary>selection_sort_recursion</primary><secondary>3_2_selectionsort.c</secondary></indexterm>
 <indexterm><primary>3_2_selectionsort.c</primary><secondary>selection_sort_recursion</secondary></indexterm>
-<para><computeroutput>void selection_sort_recursion (int * pushes, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void selection_sort_recursion (int * pushes, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -115,7 +115,7 @@ Here is the caller graph for this function:<para>
     <title>sort_3()</title>
 <indexterm><primary>sort_3</primary><secondary>3_2_selectionsort.c</secondary></indexterm>
 <indexterm><primary>3_2_selectionsort.c</primary><secondary>sort_3</secondary></indexterm>
-<para><computeroutput>void sort_3 (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> ** stack_a, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void sort_3 (t_list_dls ** stack_a, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>

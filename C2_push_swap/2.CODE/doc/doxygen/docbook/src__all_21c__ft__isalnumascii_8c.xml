@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_src__all_21c__ft__isalnumascii_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/src_all/1c_ft_isalnumascii.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/src_all/1c_ft_isalnumascii.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for 1c_ft_isalnumascii.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21c__ft__isalnumascii_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_src__all_21c__ft__isalnumascii_8c_1a9c2c3821ea43ebdf97de07b123503f8b">ft_isalnum</link> (int c)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_21c__ft__isalnumascii_8c_1abcdba69692f21146aeea5b3d59b7d0ca">ft_isprint</link> (int c)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_21c__ft__isalnumascii_8c_1abf60ddbec6479540e81f3648cf71f1f4">ft_isascii</link> (int c)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_21c__ft__isalnumascii_8c_1ac283963beaa3b8c7d09b78851cda297e">ft_isalpha</link> (int c)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_src__all_21c__ft__isalnumascii_8c_1a9c2c3821ea43ebdf97de07b123503f8b"/><section>
+    <title>ft_isalnum()</title>
+<indexterm><primary>ft_isalnum</primary><secondary>1c_ft_isalnumascii.c</secondary></indexterm>
+<indexterm><primary>1c_ft_isalnumascii.c</primary><secondary>ft_isalnum</secondary></indexterm>
+<para><computeroutput>int ft_isalnum (int c)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21c__ft__isalnumascii_8c_a9c2c3821ea43ebdf97de07b123503f8b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_src__all_21c__ft__isalnumascii_8c_1ac283963beaa3b8c7d09b78851cda297e"/><section>
+    <title>ft_isalpha()</title>
+<indexterm><primary>ft_isalpha</primary><secondary>1c_ft_isalnumascii.c</secondary></indexterm>
+<indexterm><primary>1c_ft_isalnumascii.c</primary><secondary>ft_isalpha</secondary></indexterm>
+<para><computeroutput>int ft_isalpha (int c)</computeroutput></para></section>
+<anchor xml:id="_src__all_21c__ft__isalnumascii_8c_1abf60ddbec6479540e81f3648cf71f1f4"/><section>
+    <title>ft_isascii()</title>
+<indexterm><primary>ft_isascii</primary><secondary>1c_ft_isalnumascii.c</secondary></indexterm>
+<indexterm><primary>1c_ft_isalnumascii.c</primary><secondary>ft_isascii</secondary></indexterm>
+<para><computeroutput>int ft_isascii (int c)</computeroutput></para></section>
+<anchor xml:id="_src__all_21c__ft__isalnumascii_8c_1abcdba69692f21146aeea5b3d59b7d0ca"/><section>
+    <title>ft_isprint()</title>
+<indexterm><primary>ft_isprint</primary><secondary>1c_ft_isalnumascii.c</secondary></indexterm>
+<indexterm><primary>1c_ft_isalnumascii.c</primary><secondary>ft_isprint</secondary></indexterm>
+<para><computeroutput>int ft_isprint (int c)</computeroutput></para></section>
+</section>
+</section>

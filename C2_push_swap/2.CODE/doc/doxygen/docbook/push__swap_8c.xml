@@ -85,11 +85,11 @@ ARG=<emphasis role="stringliteral">&quot;0&#32;9&#32;8&#32;2&#32;3&quot;</emphas
 </listitem></itemizedlist>
 </para>
 
-<para><literallayout><computeroutput>make&#32;<link linkend="_push__swap__defines_8h_1a49606be7356624568932ec81c0d429f4">DBG</link>=1&#32;<link linkend="_push__swap__defines_8h_1a7e55a9f3dc70b9d5b01569c72a6290ad">ALGO</link>=selec&#32;re&#32;tests_run_5
-make&#32;<link linkend="_push__swap__defines_8h_1a49606be7356624568932ec81c0d429f4">DBG</link>=1&#32;<link linkend="_push__swap__defines_8h_1a7e55a9f3dc70b9d5b01569c72a6290ad">ALGO</link>=selec&#32;re&#32;tests_run_50
-make&#32;<link linkend="_push__swap__defines_8h_1a49606be7356624568932ec81c0d429f4">DBG</link>=1&#32;<link linkend="_push__swap__defines_8h_1a7e55a9f3dc70b9d5b01569c72a6290ad">ALGO</link>=radix&#32;re&#32;tests_run_75
-make&#32;<link linkend="_push__swap__defines_8h_1a49606be7356624568932ec81c0d429f4">DBG</link>=1&#32;<link linkend="_push__swap__defines_8h_1a7e55a9f3dc70b9d5b01569c72a6290ad">ALGO</link>=quick&#32;re&#32;tests_run_100
-make&#32;<link linkend="_push__swap__defines_8h_1a49606be7356624568932ec81c0d429f4">DBG</link>=0&#32;<link linkend="_push__swap__defines_8h_1a7e55a9f3dc70b9d5b01569c72a6290ad">ALGO</link>=gear&#32;re&#32;tests_run_500
+<para><literallayout><computeroutput>make&#32;DBG=1&#32;ALGO=selec&#32;re&#32;tests_run_5
+make&#32;DBG=1&#32;ALGO=selec&#32;re&#32;tests_run_50
+make&#32;DBG=1&#32;ALGO=radix&#32;re&#32;tests_run_75
+make&#32;DBG=1&#32;ALGO=quick&#32;re&#32;tests_run_100
+make&#32;DBG=0&#32;ALGO=gear&#32;re&#32;tests_run_500
 </computeroutput></literallayout> <literallayout><computeroutput>make&#32;debug-vscode
 make&#32;debug-lldb
 make&#32;debug-gdb

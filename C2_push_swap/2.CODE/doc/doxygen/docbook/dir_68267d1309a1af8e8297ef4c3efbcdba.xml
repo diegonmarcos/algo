@@ -2,20 +2,9 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_68267d1309a1af8e8297ef4c3efbcdba" xml:lang="en-US">
 <title>src Directory Reference</title>
 <indexterm><primary>src Directory Reference</primary></indexterm>
-Directory dependency graph for src:<para>
-    <informalfigure>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png"></imagedata>
-            </imageobject>
-        </mediaobject>
-    </informalfigure>
-</para>
 <simplesect>
     <title>Directories    </title>
         <itemizedlist>
-            <listitem><para>directory <link linkend="_dir_3550f6b64c5a0a859bb0f2bb8865e488">checker_bonus</link></para>
-</listitem>
             <listitem><para>directory <link linkend="_dir_6b551b6a991bb447a64569c643b2f0f6">push_swap</link></para>
 </listitem>
         </itemizedlist>

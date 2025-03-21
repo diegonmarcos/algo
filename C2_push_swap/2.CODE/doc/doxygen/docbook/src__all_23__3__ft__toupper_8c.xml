@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_src__all_23__3__ft__toupper_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/src_all/3_3_ft_toupper.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/src_all/3_3_ft_toupper.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_3_ft_toupper.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_23__3__ft__toupper_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_src__all_23__3__ft__toupper_8c_1aef116be7b5bceafff4b59f20a4433d12">ft_toupper</link> (int c)</para>
+</listitem>
+            <listitem><para>int <link linkend="_src__all_23__3__ft__toupper_8c_1ab86e5297914753b6c82d7e3c3020ce17">ft_tolower</link> (int c)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_src__all_23__3__ft__toupper_8c_1ab86e5297914753b6c82d7e3c3020ce17"/><section>
+    <title>ft_tolower()</title>
+<indexterm><primary>ft_tolower</primary><secondary>3_3_ft_toupper.c</secondary></indexterm>
+<indexterm><primary>3_3_ft_toupper.c</primary><secondary>ft_tolower</secondary></indexterm>
+<para><computeroutput>int ft_tolower (int c)</computeroutput></para></section>
+<anchor xml:id="_src__all_23__3__ft__toupper_8c_1aef116be7b5bceafff4b59f20a4433d12"/><section>
+    <title>ft_toupper()</title>
+<indexterm><primary>ft_toupper</primary><secondary>3_3_ft_toupper.c</secondary></indexterm>
+<indexterm><primary>3_3_ft_toupper.c</primary><secondary>ft_toupper</secondary></indexterm>
+<para><computeroutput>int ft_toupper (int c)</computeroutput></para></section>
+</section>
+</section>

@@ -1,0 +1,245 @@
+.TH "src/checker_bonus/libs/mylibs/mylibc/inc/mylibc_data.h" 3 "Thu Mar 20 2025 16:00:59" "push_swap" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/checker_bonus/libs/mylibs/mylibc/inc/mylibc_data.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'mylibc\&.h'\fP
+.br
+\fC#include 'mylibc_defines\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBs_list_garbage\fP"
+.br
+.ti -1c
+.RI "struct \fBs_list_hashmap\fP"
+.br
+.ti -1c
+.RI "struct \fBs_list_s\fP"
+.br
+.ti -1c
+.RI "struct \fBs_list_dls\fP"
+.br
+.ti -1c
+.RI "struct \fBs_list_snprintf\fP"
+.br
+.ti -1c
+.RI "struct \fBs_bresenham\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBs_list_garbage\fP \fBt_list_garbage\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBs_list_hashmap\fP \fBt_list_hashmap\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBs_list_s\fP \fBt_list_s\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBs_list_dls\fP \fBt_list_dls\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBs_list_snprintf\fP \fBt_list_snprintf\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBs_bresenham\fP \fBt_bresenham\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void * \fBft_malloc_gb\fP (size_t size, \fBt_list_garbage\fP *list_garbage)"
+.br
+.ti -1c
+.RI "int \fBadd_allocation\fP (void *ptr, \fBt_list_garbage\fP *list_garbage)"
+.br
+.ti -1c
+.RI "int \fBis_allocated\fP (void *ptr, \fBt_list_garbage\fP *list_garbage)"
+.br
+.ti -1c
+.RI "void \fBremove_allocation\fP (void *ptr, \fBt_list_garbage\fP *list_garbage)"
+.br
+.ti -1c
+.RI "void \fBft_free_gb\fP (void *ptr, \fBt_list_garbage\fP *list_garbage)"
+.br
+.ti -1c
+.RI "void \fBft_free_gb_all\fP (\fBt_list_garbage\fP *list_garbage)"
+.br
+.ti -1c
+.RI "\fBt_list_garbage\fP * \fBft_initializator_list_gargabe\fP (void)"
+.br
+.ti -1c
+.RI "void \fBinsert\fP (\fBt_list_hashmap\fP **table, int size, const char *key, int value)"
+.br
+.ti -1c
+.RI "int \fBget\fP (\fBt_list_hashmap\fP **table, int size, const char *key)"
+.br
+.ti -1c
+.RI "void \fBfree_hashtable\fP (\fBt_list_hashmap\fP **table, int size)"
+.br
+.ti -1c
+.RI "size_t \fBhash\fP (char *key, int size)"
+.br
+.ti -1c
+.RI "\fBt_list_hashmap\fP * \fBcreate_node\fP (char *key, int value)"
+.br
+.ti -1c
+.RI "void \fBft_free_ls_simple\fP (\fBt_list_s\fP *stack)"
+.br
+.ti -1c
+.RI "\fBt_list_s\fP * \fBft_lstnew_s\fP (void *content)"
+.br
+.ti -1c
+.RI "void \fBft_lstadd_front_s\fP (\fBt_list_s\fP **lst, \fBt_list_s\fP *new)"
+.br
+.ti -1c
+.RI "int \fBft_lstsize_s\fP (\fBt_list_s\fP *lst)"
+.br
+.ti -1c
+.RI "\fBt_list_s\fP * \fBft_lstlast_s\fP (\fBt_list_s\fP *lst)"
+.br
+.ti -1c
+.RI "void \fBft_lstadd_back_s\fP (\fBt_list_s\fP **lst, \fBt_list_s\fP *new)"
+.br
+.ti -1c
+.RI "void \fBft_lstdelone_s\fP (\fBt_list_s\fP *lst, void(*del)(void *))"
+.br
+.ti -1c
+.RI "void \fBft_lstclear_s\fP (\fBt_list_s\fP **lst, void(*del)(void *))"
+.br
+.ti -1c
+.RI "void \fBft_lstiter_s\fP (\fBt_list_s\fP *lst, void(*f)(void *))"
+.br
+.ti -1c
+.RI "\fBt_list_s\fP * \fBft_lstmap_s\fP (\fBt_list_s\fP *lst, void *(*f)(void *), void(*del)(void *))"
+.br
+.ti -1c
+.RI "\fBt_list_dls\fP * \fBarray_to_d_linked_list\fP (char **argv)"
+.br
+.ti -1c
+.RI "\fBt_list_dls\fP * \fBarray_int_to_d_linked_list\fP (int *argv, int size)"
+.br
+.ti -1c
+.RI "\fBt_list_dls\fP * \fBft_lstnew\fP (int value, int index)"
+.br
+.ti -1c
+.RI "void \fBft_lstadd_back\fP (\fBt_list_dls\fP **stack, \fBt_list_dls\fP *new_node)"
+.br
+.ti -1c
+.RI "int \fBft_lstsize\fP (\fBt_list_dls\fP *lst)"
+.br
+.ti -1c
+.RI "\fBt_list_dls\fP * \fBfind_min_node\fP (\fBt_list_dls\fP *stack)"
+.br
+.ti -1c
+.RI "int \fBfind_min_node1\fP (\fBt_list_dls\fP *stack)"
+.br
+.ti -1c
+.RI "void \fBft_swap_pointers\fP (\fBt_list_dls\fP **a, \fBt_list_dls\fP **b)"
+.br
+.ti -1c
+.RI "void \fBft_print_ls_doubly\fP (\fBt_list_dls\fP *stack)"
+.br
+.ti -1c
+.RI "int \fBft_print_ls_doubly_fd_int\fP (long Fd, \fBt_list_dls\fP *stack)"
+.br
+.ti -1c
+.RI "void \fBft_free_ls_doubly\fP (\fBt_list_dls\fP *stack)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBs_bresenham\fP \fBt_bresenham\fP"
+
+.SS "typedef struct \fBs_list_dls\fP \fBt_list_dls\fP"
+
+.SS "typedef struct \fBs_list_garbage\fP \fBt_list_garbage\fP"
+
+.SS "typedef struct \fBs_list_hashmap\fP \fBt_list_hashmap\fP"
+
+.SS "typedef struct \fBs_list_s\fP \fBt_list_s\fP"
+
+.SS "typedef struct \fBs_list_snprintf\fP \fBt_list_snprintf\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "int add_allocation (void * ptr, \fBt_list_garbage\fP * list_garbage)"
+
+.SS "\fBt_list_dls\fP * array_int_to_d_linked_list (int * argv, int size)"
+
+.SS "\fBt_list_dls\fP * array_to_d_linked_list (char ** argv)"
+
+.SS "\fBt_list_hashmap\fP * create_node (char * key, int value)"
+
+.SS "\fBt_list_dls\fP * find_min_node (\fBt_list_dls\fP * stack)"
+
+.SS "int find_min_node1 (\fBt_list_dls\fP * stack)"
+
+.SS "void free_hashtable (\fBt_list_hashmap\fP ** table, int size)"
+
+.SS "void ft_free_gb (void * ptr, \fBt_list_garbage\fP * list_garbage)"
+
+.SS "void ft_free_gb_all (\fBt_list_garbage\fP * list_garbage)"
+
+.SS "void ft_free_ls_doubly (\fBt_list_dls\fP * stack)"
+
+.SS "void ft_free_ls_simple (\fBt_list_s\fP * stack)"
+
+.SS "\fBt_list_garbage\fP * ft_initializator_list_gargabe (void)"
+
+.SS "void ft_lstadd_back (\fBt_list_dls\fP ** stack, \fBt_list_dls\fP * new_node)"
+
+.SS "void ft_lstadd_back_s (\fBt_list_s\fP ** lst, \fBt_list_s\fP * new)"
+
+.SS "void ft_lstadd_front_s (\fBt_list_s\fP ** lst, \fBt_list_s\fP * new)"
+
+.SS "void ft_lstclear_s (\fBt_list_s\fP ** lst, void(*)(void *) del)"
+
+.SS "void ft_lstdelone_s (\fBt_list_s\fP * lst, void(*)(void *) del)"
+
+.SS "void ft_lstiter_s (\fBt_list_s\fP * lst, void(*)(void *) f)"
+
+.SS "\fBt_list_s\fP * ft_lstlast_s (\fBt_list_s\fP * lst)"
+
+.SS "\fBt_list_s\fP * ft_lstmap_s (\fBt_list_s\fP * lst, void *(*)(void *) f, void(*)(void *) del)"
+
+.SS "\fBt_list_dls\fP * ft_lstnew (int value, int index)"
+
+.SS "\fBt_list_s\fP * ft_lstnew_s (void * content)"
+
+.SS "int ft_lstsize (\fBt_list_dls\fP * lst)"
+
+.SS "int ft_lstsize_s (\fBt_list_s\fP * lst)"
+
+.SS "void * ft_malloc_gb (size_t size, \fBt_list_garbage\fP * list_garbage)"
+
+.SS "void ft_print_ls_doubly (\fBt_list_dls\fP * stack)"
+
+.SS "int ft_print_ls_doubly_fd_int (long Fd, \fBt_list_dls\fP * stack)"
+
+.SS "void ft_swap_pointers (\fBt_list_dls\fP ** a, \fBt_list_dls\fP ** b)"
+
+.SS "int get (\fBt_list_hashmap\fP ** table, int size, const char * key)"
+
+.SS "size_t hash (char * key, int size)"
+
+.SS "void insert (\fBt_list_hashmap\fP ** table, int size, const char * key, int value)"
+
+.SS "int is_allocated (void * ptr, \fBt_list_garbage\fP * list_garbage)"
+
+.SS "void remove_allocation (void * ptr, \fBt_list_garbage\fP * list_garbage)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for push_swap from the source code\&.

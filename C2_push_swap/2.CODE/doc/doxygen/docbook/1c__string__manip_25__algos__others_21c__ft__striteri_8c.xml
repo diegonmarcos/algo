@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1c__string__manip_25__algos__others_21c__ft__striteri_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/1c_string_manip/5_algos_others/1c_ft_striteri.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/1c_string_manip/5_algos_others/1c_ft_striteri.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for 1c_ft_striteri.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1c__string__manip_25__algos__others_21c__ft__striteri_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_1c__string__manip_25__algos__others_21c__ft__striteri_8c_1ada722cffd2c6c8169ae339afd0f9763c">ft_striteri</link> (char *s, void(*f)(unsigned int, char *))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1c__string__manip_25__algos__others_21c__ft__striteri_8c_1ada722cffd2c6c8169ae339afd0f9763c"/><section>
+    <title>ft_striteri()</title>
+<indexterm><primary>ft_striteri</primary><secondary>1c_ft_striteri.c</secondary></indexterm>
+<indexterm><primary>1c_ft_striteri.c</primary><secondary>ft_striteri</secondary></indexterm>
+<para><computeroutput>void ft_striteri (char * s, void(*)(unsigned int, char *) f)</computeroutput></para></section>
+</section>
+</section>

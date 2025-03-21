@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structs__list__garbage" xml:lang="en-US">
+<title>s_list_garbage Struct Reference</title>
+<indexterm><primary>s_list_garbage</primary></indexterm>
+<para>
+<computeroutput>#include &lt;mylibc_data.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>void * <link linkend="_structs__list__garbage_1aa52be852d5e0f5956c8bcb2ae6776cbd">allocated_pointers</link> [<link linkend="_push__swap__data_8h_1aed098444ca0e8ff022726a96d3535474">MAX_ALLOCATIONS</link>]</para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__list__garbage_1afaf426689107186c9a216242d500c5cd">blocks_count</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structs__list__garbage_1aa52be852d5e0f5956c8bcb2ae6776cbd"/><section>
+    <title>allocated_pointers</title>
+<indexterm><primary>allocated_pointers</primary><secondary>s_list_garbage</secondary></indexterm>
+<indexterm><primary>s_list_garbage</primary><secondary>allocated_pointers</secondary></indexterm>
+<para><computeroutput>void* allocated_pointers[<link linkend="_push__swap__data_8h_1aed098444ca0e8ff022726a96d3535474">MAX_ALLOCATIONS</link>]</computeroutput></para></section>
+<anchor xml:id="_structs__list__garbage_1afaf426689107186c9a216242d500c5cd"/><section>
+    <title>blocks_count</title>
+<indexterm><primary>blocks_count</primary><secondary>s_list_garbage</secondary></indexterm>
+<indexterm><primary>s_list_garbage</primary><secondary>blocks_count</secondary></indexterm>
+<para><computeroutput>int blocks_count</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/checker_bonus/libs/mylibs/mylibc/inc/<link linkend="_mylibc__data_8h">mylibc_data.h</link></section>
+</section>

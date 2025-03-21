@@ -14,11 +14,11 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>void <link linkend="_3__4__sort3__chunk_8c_1adafb1cfe30021882aa17a319d4a2bc60">sort_3_chunk_case</link> (<link linkend="_push__swap__data_8h_1ae8b0fa2fd01fada1fc1bad96de46c0f3">t_sort_3_cases</link> case_, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_3__4__sort3__chunk_8c_1adafb1cfe30021882aa17a319d4a2bc60">sort_3_chunk_case</link> (t_sort_3_cases case_, t_list_program *list_program)</para>
 </listitem>
-            <listitem><para>void <link linkend="_3__4__sort3__chunk_8c_1a40d5b509ef8f9dcd9c0eee76d4286add">sort_3_chunk_case_1</link> (<link linkend="_push__swap__data_8h_1ae8b0fa2fd01fada1fc1bad96de46c0f3">t_sort_3_cases</link> case_, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_3__4__sort3__chunk_8c_1a40d5b509ef8f9dcd9c0eee76d4286add">sort_3_chunk_case_1</link> (t_sort_3_cases case_, t_list_program *list_program)</para>
 </listitem>
-            <listitem><para>void <link linkend="_3__4__sort3__chunk_8c_1af226d4d533a1b37b32cce426a743418b">sort_3_chunk</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_3__4__sort3__chunk_8c_1af226d4d533a1b37b32cce426a743418b">sort_3_chunk</link> (t_list_program *list_program)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -28,7 +28,7 @@
     <title>sort_3_chunk()</title>
 <indexterm><primary>sort_3_chunk</primary><secondary>3_4_sort3_chunk.c</secondary></indexterm>
 <indexterm><primary>3_4_sort3_chunk.c</primary><secondary>sort_3_chunk</secondary></indexterm>
-<para><computeroutput>void sort_3_chunk (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void sort_3_chunk (t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -42,7 +42,7 @@
     <title>sort_3_chunk_case()</title>
 <indexterm><primary>sort_3_chunk_case</primary><secondary>3_4_sort3_chunk.c</secondary></indexterm>
 <indexterm><primary>3_4_sort3_chunk.c</primary><secondary>sort_3_chunk_case</secondary></indexterm>
-<para><computeroutput>void sort_3_chunk_case (<link linkend="_push__swap__data_8h_1ae8b0fa2fd01fada1fc1bad96de46c0f3">t_sort_3_cases</link> case_, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void sort_3_chunk_case (t_sort_3_cases case_, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -65,7 +65,7 @@ Here is the caller graph for this function:<para>
     <title>sort_3_chunk_case_1()</title>
 <indexterm><primary>sort_3_chunk_case_1</primary><secondary>3_4_sort3_chunk.c</secondary></indexterm>
 <indexterm><primary>3_4_sort3_chunk.c</primary><secondary>sort_3_chunk_case_1</secondary></indexterm>
-<para><computeroutput>void sort_3_chunk_case_1 (<link linkend="_push__swap__data_8h_1ae8b0fa2fd01fada1fc1bad96de46c0f3">t_sort_3_cases</link> case_, <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void sort_3_chunk_case_1 (t_sort_3_cases case_, t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>

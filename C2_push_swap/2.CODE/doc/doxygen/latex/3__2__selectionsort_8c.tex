@@ -1,25 +1,26 @@
 \doxysection{src/push\+\_\+swap/sort/selection/3\+\_\+2\+\_\+selectionsort.c File Reference}
 \hypertarget{3__2__selectionsort_8c}{}\label{3__2__selectionsort_8c}\index{src/push\_swap/sort/selection/3\_2\_selectionsort.c@{src/push\_swap/sort/selection/3\_2\_selectionsort.c}}
 {\ttfamily \#include "{}push\+\_\+swap.\+h"{}}\newline
-Include dependency graph for 3\+\_\+2\+\_\+selectionsort.\+c\+:\nopagebreak
+Include dependency graph for 3\+\_\+2\+\_\+selectionsort.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{3__2__selectionsort_8c__incl}
+\includegraphics[width=241pt]{3__2__selectionsort_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{3__2__selectionsort_8c_a8c475357a8f515fc57ec9c6ae6e9cee3}{selection\+\_\+sort}} (\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+void \mbox{\hyperlink{3__2__selectionsort_8c_a8c475357a8f515fc57ec9c6ae6e9cee3}{selection\+\_\+sort}} (t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)
 \item 
-void \mbox{\hyperlink{3__2__selectionsort_8c_a8d7a0d46a67405d91816a7b6c5dfd476}{selection\+\_\+sort\+\_\+recursion}} (int \texorpdfstring{$\ast$}{*}pushes, \mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+void \mbox{\hyperlink{3__2__selectionsort_8c_a8d7a0d46a67405d91816a7b6c5dfd476}{selection\+\_\+sort\+\_\+recursion}} (int \texorpdfstring{$\ast$}{*}pushes, t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)
 \item 
-void \mbox{\hyperlink{3__2__selectionsort_8c_afc65a8ff615d5f010c90a77d43e99901}{sort\+\_\+3}} (\mbox{\hyperlink{push__swap__data_8h_a3834963377ca73af56f7e6d6f7b1c7bc}{t\+\_\+list\+\_\+dls}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}stack\+\_\+a, \mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+void \mbox{\hyperlink{3__2__selectionsort_8c_afc65a8ff615d5f010c90a77d43e99901}{sort\+\_\+3}} (t\+\_\+list\+\_\+dls \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}stack\+\_\+a, t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)
 \item 
-void \mbox{\hyperlink{3__2__selectionsort_8c_a903c705fc4ddf8716c63da4b393d5e66}{selection\+\_\+sort\+\_\+merge\+\_\+back}} (int \texorpdfstring{$\ast$}{*}pushes, \mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+void \mbox{\hyperlink{3__2__selectionsort_8c_a903c705fc4ddf8716c63da4b393d5e66}{selection\+\_\+sort\+\_\+merge\+\_\+back}} (int \texorpdfstring{$\ast$}{*}pushes, t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)
 \item 
-int \mbox{\hyperlink{3__2__selectionsort_8c_aa5355356a38fe129c21e05d54bc4b9d4}{min\+\_\+node\+\_\+pos}} (\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+int \mbox{\hyperlink{3__2__selectionsort_8c_aa5355356a38fe129c21e05d54bc4b9d4}{min\+\_\+node\+\_\+pos}} (t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)
 \end{DoxyCompactItemize}
 
 
@@ -28,7 +29,7 @@ int \mbox{\hyperlink{3__2__selectionsort_8c_aa5355356a38fe129c21e05d54bc4b9d4}{m
 \index{3\_2\_selectionsort.c@{3\_2\_selectionsort.c}!min\_node\_pos@{min\_node\_pos}}
 \index{min\_node\_pos@{min\_node\_pos}!3\_2\_selectionsort.c@{3\_2\_selectionsort.c}}
 \doxysubsubsection{\texorpdfstring{min\_node\_pos()}{min\_node\_pos()}}
-{\footnotesize\ttfamily int min\+\_\+node\+\_\+pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int min\+\_\+node\+\_\+pos (\begin{DoxyParamCaption}\item[{t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -41,7 +42,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{3\_2\_selectionsort.c@{3\_2\_selectionsort.c}!selection\_sort@{selection\_sort}}
 \index{selection\_sort@{selection\_sort}!3\_2\_selectionsort.c@{3\_2\_selectionsort.c}}
 \doxysubsubsection{\texorpdfstring{selection\_sort()}{selection\_sort()}}
-{\footnotesize\ttfamily void selection\+\_\+sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void selection\+\_\+sort (\begin{DoxyParamCaption}\item[{t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -61,7 +62,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{3\_2\_selectionsort.c@{3\_2\_selectionsort.c}!selection\_sort\_merge\_back@{selection\_sort\_merge\_back}}
 \index{selection\_sort\_merge\_back@{selection\_sort\_merge\_back}!3\_2\_selectionsort.c@{3\_2\_selectionsort.c}}
 \doxysubsubsection{\texorpdfstring{selection\_sort\_merge\_back()}{selection\_sort\_merge\_back()}}
-{\footnotesize\ttfamily void selection\+\_\+sort\+\_\+merge\+\_\+back (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{pushes,  }\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void selection\+\_\+sort\+\_\+merge\+\_\+back (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{pushes,  }\item[{t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -81,7 +82,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{3\_2\_selectionsort.c@{3\_2\_selectionsort.c}!selection\_sort\_recursion@{selection\_sort\_recursion}}
 \index{selection\_sort\_recursion@{selection\_sort\_recursion}!3\_2\_selectionsort.c@{3\_2\_selectionsort.c}}
 \doxysubsubsection{\texorpdfstring{selection\_sort\_recursion()}{selection\_sort\_recursion()}}
-{\footnotesize\ttfamily void selection\+\_\+sort\+\_\+recursion (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{pushes,  }\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void selection\+\_\+sort\+\_\+recursion (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{pushes,  }\item[{t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -101,7 +102,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{3\_2\_selectionsort.c@{3\_2\_selectionsort.c}!sort\_3@{sort\_3}}
 \index{sort\_3@{sort\_3}!3\_2\_selectionsort.c@{3\_2\_selectionsort.c}}
 \doxysubsubsection{\texorpdfstring{sort\_3()}{sort\_3()}}
-{\footnotesize\ttfamily void sort\+\_\+3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{push__swap__data_8h_a3834963377ca73af56f7e6d6f7b1c7bc}{t\+\_\+list\+\_\+dls}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{stack\+\_\+a,  }\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void sort\+\_\+3 (\begin{DoxyParamCaption}\item[{t\+\_\+list\+\_\+dls \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{stack\+\_\+a,  }\item[{t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

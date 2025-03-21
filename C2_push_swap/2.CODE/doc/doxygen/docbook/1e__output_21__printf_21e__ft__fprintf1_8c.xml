@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1e__output_21__printf_21e__ft__fprintf1_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/1e_output/1_printf/1e_ft_fprintf1.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/1e_output/1_printf/1e_ft_fprintf1.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for 1e_ft_fprintf1.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1e__output_21__printf_21e__ft__fprintf1_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_1e__output_21__printf_21e__ft__fprintf1_8c_1a14153724a186f270fb4dc5d702516996">ft_fprintf1</link> (char *filename, const char *str,...)</para>
+</listitem>
+            <listitem><para>int <link linkend="_1e__output_21__printf_21e__ft__fprintf1_8c_1ab6d4c8a0b10cc233e4b22ca7668d3345">ft_fprintf2</link> (char *fopenmode, char *filename, const char *str,...)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1e__output_21__printf_21e__ft__fprintf1_8c_1a14153724a186f270fb4dc5d702516996"/><section>
+    <title>ft_fprintf1()</title>
+<indexterm><primary>ft_fprintf1</primary><secondary>1e_ft_fprintf1.c</secondary></indexterm>
+<indexterm><primary>1e_ft_fprintf1.c</primary><secondary>ft_fprintf1</secondary></indexterm>
+<para><computeroutput>int ft_fprintf1 (char * filename, const char * str,  ...)</computeroutput></para></section>
+<anchor xml:id="_1e__output_21__printf_21e__ft__fprintf1_8c_1ab6d4c8a0b10cc233e4b22ca7668d3345"/><section>
+    <title>ft_fprintf2()</title>
+<indexterm><primary>ft_fprintf2</primary><secondary>1e_ft_fprintf1.c</secondary></indexterm>
+<indexterm><primary>1e_ft_fprintf1.c</primary><secondary>ft_fprintf2</secondary></indexterm>
+<para><computeroutput>int ft_fprintf2 (char * fopenmode, char * filename, const char * str,  ...)</computeroutput></para></section>
+</section>
+</section>

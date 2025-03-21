@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_576ffe28241fb2206ceb7e4b658665b5" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/src_all Directory Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/src_all Directory Reference</primary></indexterm>
+Directory dependency graph for src_all:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_576ffe28241fb2206ceb7e4b658665b5_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_src__all_20__ft__malloc_8c">0_ft_malloc.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_20__memory__arena__pool_8c">0_memory_arena_pool.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_20a__ft__exec_8c">0a_ft_exec.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_20a__ft__pipe_8c">0a_ft_pipe.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21a__ft__calloc_8c">1a_ft_calloc.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21a__ft__calloc__fd_8c">1a_ft_calloc_fd.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21a__ft__free_8c">1a_ft_free.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21a__ft__garbage__collector__1_8c">1a_ft_garbage_collector_1.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21a__ft__garbage__collector__2_8c">1a_ft_garbage_collector_2.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21a__ft__garbage__collector__bff_8c">1a_ft_garbage_collector_bff.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21a__halt__exit_8c">1a_halt_exit.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21b__ft__close_8c">1b_ft_close.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21b__ft__fgets__gnl_8c">1b_ft_fgets_gnl.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21b__ft__open_8c">1b_ft_open.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21b__ft__scanf_8c">1b_ft_scanf.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21b__ft__sed_8c">1b_ft_sed.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21b__ft__sscanf_8c">1b_ft_sscanf.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21b__gnl__join__split_8c">1b_gnl_join_split.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__0__ft__memcpy_8c">1c_0_ft_memcpy.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__0__ft__memset_8c">1c_0_ft_memset.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__0__ft__strlcat_8c">1c_0_ft_strlcat.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__1__ft__memchr_8c">1c_1_ft_memchr.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__1__ft__memchr1_8c">1c_1_ft_memchr1.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__1__ft__memcmp_8c">1c_1_ft_memcmp.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__ft__atoi_8c">1c_ft_atoi.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__ft__atoi__base_8c">1c_ft_atoi_base.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__ft__is__sorted_8c">1c_ft_is_sorted.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__ft__isalnumascii_8c">1c_ft_isalnumascii.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__ft__isdigit_8c">1c_ft_isdigit.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__ft__itoa_8c">1c_ft_itoa.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__ft__math_8c">1c_ft_math.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__ft__snprintf_8c">1c_ft_snprintf.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__ft__striteri_8c">1c_ft_striteri.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__ft__strlen_8c">1c_ft_strlen.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21c__ft__strmapi_8c">1c_ft_strmapi.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21d__0__ft__strcat___8c">1d_0_ft_strcat_.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21d__0__ft__strdup_8c">1d_0_ft_strdup.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21d__ft__asprintf_8c">1d_ft_asprintf.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21d__ft__strtok__split_8c">1d_ft_strtok_split.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21d__ft__strtok__split1_8c">1d_ft_strtok_split1.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21e__ft__fprintf_8c">1e_ft_fprintf.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21e__ft__fprintf1_8c">1e_ft_fprintf1.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21e__ft__hexa__mayusc_8c">1e_ft_hexa_mayusc.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21e__ft__hexa__minusc_8c">1e_ft_hexa_minusc.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21e__ft__num__unsign_8c">1e_ft_num_unsign.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21e__ft__pointer__hexa_8c">1e_ft_pointer_hexa.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21e__ft__pointer__hexa__fd__fpr_8c">1e_ft_pointer_hexa_fd_fpr.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21e__ft__printf_8c">1e_ft_printf.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21e__ft__putchar_8c">1e_ft_putchar.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21e__ft__putnbr_8c">1e_ft_putnbr.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_21e__ft__putstr1_8c">1e_ft_putstr1.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__0__ft__slinked__list_8c">2_0_ft_slinked_list.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__0__ft__slinked__list1_8c">2_0_ft_slinked_list1.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__0__ft__slinked__list3_8c">2_0_ft_slinked_list3.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__1__ft__array__to__d__linked__list_8c">2_1_ft_array_to_d_linked_list.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__1__ft__free__list__doubly_8c">2_1_ft_free_list_doubly.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__1__ft__swap__pointers_8c">2_1_ft_swap_pointers.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__1__linked__list__doubly1_8c">2_1_linked_list_doubly1.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__1__linked__list__doubly2_8c">2_1_linked_list_doubly2.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__ft__list__foreach_8c">2_ft_list_foreach.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__ft__list__remove__if_8c">2_ft_list_remove_if.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__hashtable__headarray_8c">2_hashtable_headarray.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__hashtable__headnode_8c">2_hashtable_headnode.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__heapfy__array__bst_8c">2_heapfy_array_bst.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__merge__sort__lsd_8c">2_merge_sort_lsd.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__merge__sort__lss_8c">2_merge_sort_lss.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_22__sort__list_8c">2_sort_list.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__0__bubble__sort_8c">3_0_bubble_sort.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__0__insertion__sort_8c">3_0_insertion_sort.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__0__selection__sort_8c">3_0_selection_sort.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__1__fizzbuzz_8c">3_1_fizzbuzz.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__1__merge__sort_8c">3_1_merge_sort.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__1__quick__sort_8c">3_1_quick_sort.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__2__radix__sort_8c">3_2_radix_sort.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__2__union_8c">3_2_union.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__2__wdmatch_8c">3_2_wdmatch.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__3__expand__str_8c">3_3_expand_str.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__3__ft__toupper_8c">3_3_ft_toupper.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__3__intro__sort0_8c">3_3_intro_sort0.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__3__intro__sort1_8c">3_3_intro_sort1.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__4__rev__wstr_8c">3_4_rev_wstr.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__4__rostring_8c">3_4_rostring.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__bitwise_8c">3_bitwise.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__ft__fibonacci_8c">3_ft_fibonacci.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__ft__prime_8c">3_ft_prime.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__math_8c">3_math.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__probability_8c">3_probability.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__raster__scan__bresenham_8c">3_raster_scan_bresenham.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__raster__scan__flood__fill_8c">3_raster_scan_flood_fill.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__raytracing__montecarlo_8c">3_raytracing_montecarlo.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__statistics_8c">3_statistics.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__statistics1_8c">3_statistics1.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_23__statistics2_8c">3_statistics2.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_24__ft__data__parser_8c">4_ft_data_parser.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_24__ft__memory__design_8c">4_ft_memory_design.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_24__ft__spliter_8c">4_ft_spliter.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_src__all_24__ft__sscanf_8c">4_ft_sscanf.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

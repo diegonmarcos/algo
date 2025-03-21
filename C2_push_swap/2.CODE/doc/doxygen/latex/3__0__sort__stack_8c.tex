@@ -6,17 +6,18 @@ Implements the main sorting logic for the push\+\_\+swap program.
 
 
 {\ttfamily \#include "{}push\+\_\+swap.\+h"{}}\newline
-Include dependency graph for 3\+\_\+0\+\_\+sort\+\_\+stack.\+c\+:\nopagebreak
+Include dependency graph for 3\+\_\+0\+\_\+sort\+\_\+stack.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{3__0__sort__stack_8c__incl}
+\includegraphics[width=190pt]{3__0__sort__stack_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{3__0__sort__stack_8c_acc93a52a98064d4a94d9e795db0461e1}{sort\+\_\+stack}} (\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}list\+\_\+program)
+void \mbox{\hyperlink{3__0__sort__stack_8c_acc93a52a98064d4a94d9e795db0461e1}{sort\+\_\+stack}} (t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)
 \end{DoxyCompactItemize}
 
 
@@ -44,12 +45,12 @@ This module selects and applies the appropriate sorting algorithm based on the s
 
 \begin{DoxyItemize}
 \item void \doxylink{3__0__sort__stack_8c_acc93a52a98064d4a94d9e795db0461e1}{sort\+\_\+stack(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Main function to sort the stack using the appropriate algorithm.
-\item void \doxylink{push__swap_8h_a8c475357a8f515fc57ec9c6ae6e9cee3}{selection\+\_\+sort(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Sorts the stack using the selection sort algorithm.
-\item void \doxylink{push__swap_8h_ab6eef28b44540c8e841c0549a0ce8432}{radix\+\_\+sort\+\_\+pushswap(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Sorts the stack using the radix sort algorithm.
-\item void \doxylink{push__swap_8h_aa3ace5cfa01a8732fe50b2a306016ca3}{quick\+\_\+sort\+\_\+pushswap(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Sorts the stack using the quick sort algorithm.
-\item void \doxylink{push__swap_8h_a94dad898050e696fa4f545c5639799f0}{gear\+\_\+sort\+\_\+pushswap(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Sorts the stack using the gear sort algorithm.
-\item void \doxylink{push__swap_8h_adde75d21b7e1086952250fc733726608}{sort\+\_\+stack\+\_\+dbg(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Debug function for sorting the stack.
-\item void \doxylink{push__swap_8h_a278415184cb5e8a7eea684b2d06805ee}{moves\+\_\+optimizations(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Optimizes the moves after sorting. 
+\item void \doxylink{3__2__selectionsort_8c_a8c475357a8f515fc57ec9c6ae6e9cee3}{selection\+\_\+sort(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Sorts the stack using the selection sort algorithm.
+\item void \doxylink{3__3__radixsort_8c_ab6eef28b44540c8e841c0549a0ce8432}{radix\+\_\+sort\+\_\+pushswap(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Sorts the stack using the radix sort algorithm.
+\item void \doxylink{3__4__quicksort_8c_aa3ace5cfa01a8732fe50b2a306016ca3}{quick\+\_\+sort\+\_\+pushswap(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Sorts the stack using the quick sort algorithm.
+\item void \doxylink{3__5__gearsort__pricing_8c_a94dad898050e696fa4f545c5639799f0}{gear\+\_\+sort\+\_\+pushswap(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Sorts the stack using the gear sort algorithm.
+\item void \doxylink{1__2__debugger__helpers_8c_adde75d21b7e1086952250fc733726608}{sort\+\_\+stack\+\_\+dbg(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Debug function for sorting the stack.
+\item void \doxylink{3__7__moves__optim_8c_a278415184cb5e8a7eea684b2d06805ee}{moves\+\_\+optimizations(t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}list\+\_\+program)}\+: Optimizes the moves after sorting. 
 \end{DoxyItemize}
 \end{DoxyParagraph}
 
@@ -59,7 +60,7 @@ This module selects and applies the appropriate sorting algorithm based on the s
 \index{3\_0\_sort\_stack.c@{3\_0\_sort\_stack.c}!sort\_stack@{sort\_stack}}
 \index{sort\_stack@{sort\_stack}!3\_0\_sort\_stack.c@{3\_0\_sort\_stack.c}}
 \doxysubsubsection{\texorpdfstring{sort\_stack()}{sort\_stack()}}
-{\footnotesize\ttfamily void sort\+\_\+stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{push__swap__data_8h_ab5eacb3c2438e52b1d19cf3c853f4217}{t\+\_\+list\+\_\+program}} \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void sort\+\_\+stack (\begin{DoxyParamCaption}\item[{t\+\_\+list\+\_\+program \texorpdfstring{$\ast$}{*}}]{list\+\_\+program }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

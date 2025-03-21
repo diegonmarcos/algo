@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_src__all_21a__ft__calloc__fd_8c" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/src_all/1a_ft_calloc_fd.c File Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/src_all/1a_ft_calloc_fd.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mylibc.h&quot;<?linebreak?></programlisting>Include dependency graph for 1a_ft_calloc_fd.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21a__ft__calloc__fd_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void * <link linkend="_src__all_21a__ft__calloc__fd_8c_1ad8d914f690c8fa431415a2aacc9b488a">ft_calloc_fd</link> (char *filename, size_t count, size_t sizeofvar)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_src__all_21a__ft__calloc__fd_8c_1ad8d914f690c8fa431415a2aacc9b488a"/><section>
+    <title>ft_calloc_fd()</title>
+<indexterm><primary>ft_calloc_fd</primary><secondary>1a_ft_calloc_fd.c</secondary></indexterm>
+<indexterm><primary>1a_ft_calloc_fd.c</primary><secondary>ft_calloc_fd</secondary></indexterm>
+<para><computeroutput>void * ft_calloc_fd (char * filename, size_t count, size_t sizeofvar)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21a__ft__calloc__fd_8c_ad8d914f690c8fa431415a2aacc9b488a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="src__all_21a__ft__calloc__fd_8c_ad8d914f690c8fa431415a2aacc9b488a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

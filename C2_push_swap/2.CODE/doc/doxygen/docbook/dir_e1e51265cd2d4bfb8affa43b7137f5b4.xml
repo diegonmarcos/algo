@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_e1e51265cd2d4bfb8affa43b7137f5b4" xml:lang="en-US">
+<title>src/checker_bonus/libs/mylibs/mylibc/src/3_algos_sorting Directory Reference</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/src/3_algos_sorting Directory Reference</primary></indexterm>
+Directory dependency graph for 3_algos_sorting:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_e1e51265cd2d4bfb8affa43b7137f5b4_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_d8d84fca68028eaab542a425f1ca30ba">0_sorting_arrays</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_7b8f6f56684d605cf7ddbc06a151bac3">1_sorting_dls</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_f30e2ead6e3137fdc138395e5f2f8171">1_sorting_ls</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

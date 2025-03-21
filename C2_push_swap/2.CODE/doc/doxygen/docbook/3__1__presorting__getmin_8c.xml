@@ -14,9 +14,9 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para><link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> * <link linkend="_3__1__presorting__getmin_8c_1a15788c1cd807743a41ea6f5826f61261">get_next_min</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> **stack)</para>
+            <listitem><para>t_list_dls * <link linkend="_3__1__presorting__getmin_8c_1a15788c1cd807743a41ea6f5826f61261">get_next_min</link> (t_list_dls **stack)</para>
 </listitem>
-            <listitem><para>void <link linkend="_3__1__presorting__getmin_8c_1ae141e32930f0bad65f58459a3c7449dc">add_index_numbers</link> (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> *list)</para>
+            <listitem><para>void <link linkend="_3__1__presorting__getmin_8c_1ae141e32930f0bad65f58459a3c7449dc">add_index_numbers</link> (t_list_dls *list)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -26,7 +26,7 @@
     <title>add_index_numbers()</title>
 <indexterm><primary>add_index_numbers</primary><secondary>3_1_presorting_getmin.c</secondary></indexterm>
 <indexterm><primary>3_1_presorting_getmin.c</primary><secondary>add_index_numbers</secondary></indexterm>
-<para><computeroutput>void add_index_numbers (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> * list)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void add_index_numbers (t_list_dls * list)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -49,7 +49,7 @@ Here is the caller graph for this function:<para>
     <title>get_next_min()</title>
 <indexterm><primary>get_next_min</primary><secondary>3_1_presorting_getmin.c</secondary></indexterm>
 <indexterm><primary>3_1_presorting_getmin.c</primary><secondary>get_next_min</secondary></indexterm>
-<para><computeroutput><link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> * get_next_min (<link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link> ** stack)</computeroutput></para>Here is the caller graph for this function:<para>
+<para><computeroutput>t_list_dls * get_next_min (t_list_dls ** stack)</computeroutput></para>Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>

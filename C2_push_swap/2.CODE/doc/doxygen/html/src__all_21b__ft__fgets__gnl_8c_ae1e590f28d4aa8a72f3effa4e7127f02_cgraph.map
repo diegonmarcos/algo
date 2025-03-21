@@ -1,0 +1,9 @@
+<map id="ft_fgets" name="ft_fgets">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,76,80"/>
+<area shape="rect" id="Node000002" href="$src__all_21c__0__ft__memcpy_8c.html#a5f5c5d19b1f0355d9768c75d30ed5559" title=" " alt="" coords="132,5,227,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,52,129,33,131,38,77,57"/>
+<area shape="rect" id="Node000003" href="$src__all_21c__ft__strlen_8c.html#abbb8c6c4ed85d892e7f1509f65f5768a" title=" " alt="" coords="142,55,217,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="76,65,128,65,128,70,76,70"/>
+<area shape="rect" id="Node000004" href="$1b__input_21__ft__fgets__heap_21b__ft__fgets__gnl_8c.html#a78d68a5f50a6eec0380ce25b4a1bd5b7" title=" " alt="" coords="124,104,235,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="77,77,131,97,129,102,75,82"/>
+</map>

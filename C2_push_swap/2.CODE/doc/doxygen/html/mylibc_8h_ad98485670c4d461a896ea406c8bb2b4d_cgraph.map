@@ -1,0 +1,22 @@
+<map id="ft_strdup" name="ft_strdup">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,152,84,177"/>
+<area shape="rect" id="Node000002" href="$src__all_21a__ft__calloc__fd_8c.html#ad8d914f690c8fa431415a2aacc9b488a" title=" " alt="" coords="132,79,228,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,150,142,109,144,113,70,154"/>
+<area shape="rect" id="Node000008" href="$src__all_21c__0__ft__memcpy_8c.html#a12f759eb9793cf306fede66d0b7de0fc" title=" " alt="" coords="139,152,221,177"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="84,162,125,162,125,167,84,167"/>
+<area shape="rect" id="Node000010" href="$src__all_21c__ft__strlen_8c.html#abbb8c6c4ed85d892e7f1509f65f5768a" title=" " alt="" coords="286,203,361,228"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="85,175,133,187,206,200,273,208,272,213,205,205,131,193,84,180"/>
+<area shape="rect" id="Node000003" href="$src__all_21a__ft__calloc_8c.html#ae0a6807f9f78ed4bf4f958323582d22f" title=" " alt="" coords="285,5,361,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="205,76,284,35,287,39,207,81"/>
+<area shape="rect" id="Node000006" href="$src__all_21c__1__ft__memcmp_8c.html#a9d2fe792187aa4ed08e5864fb2c4d6dc" title=" " alt="" coords="278,55,369,80"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="228,81,264,75,265,80,229,86"/>
+<area shape="rect" id="Node000007" href="$src__all_21a__halt__exit_8c.html#a04122333003213c232d5e261e0301b61" title=" " alt="" coords="280,104,367,129"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="229,97,267,104,266,109,228,102"/>
+<area shape="rect" id="Node000004" href="$src__all_21c__0__ft__memset_8c.html#a5937ab0d08e31d0e3e4a16ec71e293a1" title=" " alt="" coords="419,5,493,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="362,15,405,15,405,21,362,21"/>
+<area shape="rect" id="Node000005" href="$1c__string__manip_20__copy__set_21c__0__ft__memset_8c.html#a19d0a16cec67fe4c1af22f1571f4f8a6" title=" " alt="" coords="541,5,633,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="494,15,528,15,528,21,494,21"/>
+<area shape="rect" id="Node000009" href="$1c__string__manip_20__copy__set_21c__0__ft__memcpy_8c.html#a5f5c5d19b1f0355d9768c75d30ed5559" title=" " alt="" coords="276,153,371,179"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="222,162,262,163,262,168,222,168"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="218,175,274,195,273,200,216,180"/>
+</map>

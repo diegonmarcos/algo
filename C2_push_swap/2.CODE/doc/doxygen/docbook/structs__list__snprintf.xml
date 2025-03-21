@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structs__list__snprintf" xml:lang="en-US">
+<title>s_list_snprintf Struct Reference</title>
+<indexterm><primary>s_list_snprintf</primary></indexterm>
+<para>
+<computeroutput>#include &lt;mylibc_data.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>const char * <link linkend="_structs__list__snprintf_1a6bd2bb5fcc7628a640958994a22f997c">format</link></para>
+</listitem>
+            <listitem><para>va_list <link linkend="_structs__list__snprintf_1aaccd55b82ca2bc0f01757348bc7a2afa">args</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_structs__list__snprintf_1af56986a039ad81a1bffd79464149c488">str_p</link></para>
+</listitem>
+            <listitem><para>size_t <link linkend="_structs__list__snprintf_1ad701da283fb2b3da2e96be045e0ccfa0">remaining</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structs__list__snprintf_1afed088663f8704004425cdae2120b9b3">len</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structs__list__snprintf_1aaccd55b82ca2bc0f01757348bc7a2afa"/><section>
+    <title>args</title>
+<indexterm><primary>args</primary><secondary>s_list_snprintf</secondary></indexterm>
+<indexterm><primary>s_list_snprintf</primary><secondary>args</secondary></indexterm>
+<para><computeroutput>va_list args</computeroutput></para></section>
+<anchor xml:id="_structs__list__snprintf_1a6bd2bb5fcc7628a640958994a22f997c"/><section>
+    <title>format</title>
+<indexterm><primary>format</primary><secondary>s_list_snprintf</secondary></indexterm>
+<indexterm><primary>s_list_snprintf</primary><secondary>format</secondary></indexterm>
+<para><computeroutput>const char* format</computeroutput></para></section>
+<anchor xml:id="_structs__list__snprintf_1afed088663f8704004425cdae2120b9b3"/><section>
+    <title>len</title>
+<indexterm><primary>len</primary><secondary>s_list_snprintf</secondary></indexterm>
+<indexterm><primary>s_list_snprintf</primary><secondary>len</secondary></indexterm>
+<para><computeroutput>int len</computeroutput></para></section>
+<anchor xml:id="_structs__list__snprintf_1ad701da283fb2b3da2e96be045e0ccfa0"/><section>
+    <title>remaining</title>
+<indexterm><primary>remaining</primary><secondary>s_list_snprintf</secondary></indexterm>
+<indexterm><primary>s_list_snprintf</primary><secondary>remaining</secondary></indexterm>
+<para><computeroutput>size_t remaining</computeroutput></para></section>
+<anchor xml:id="_structs__list__snprintf_1af56986a039ad81a1bffd79464149c488"/><section>
+    <title>str_p</title>
+<indexterm><primary>str_p</primary><secondary>s_list_snprintf</secondary></indexterm>
+<indexterm><primary>s_list_snprintf</primary><secondary>str_p</secondary></indexterm>
+<para><computeroutput>char* str_p</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/checker_bonus/libs/mylibs/mylibc/inc/<link linkend="_mylibc__data_8h">mylibc_data.h</link></section>
+</section>

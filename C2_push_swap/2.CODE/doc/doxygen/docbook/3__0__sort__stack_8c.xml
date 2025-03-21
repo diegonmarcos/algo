@@ -19,7 +19,7 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>void <link linkend="_3__0__sort__stack_8c_1acc93a52a98064d4a94d9e795db0461e1">sort_stack</link> (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> *list_program)</para>
+            <listitem><para>void <link linkend="_3__0__sort__stack_8c_1acc93a52a98064d4a94d9e795db0461e1">sort_stack</link> (t_list_program *list_program)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -60,17 +60,17 @@
 <listitem>
 <para>void <link linkend="_3__0__sort__stack_8c_1acc93a52a98064d4a94d9e795db0461e1">sort_stack(t_list_program *list_program)</link>: Main function to sort the stack using the appropriate algorithm.</para>
 </listitem><listitem>
-<para>void <link linkend="_push__swap_8h_1a8c475357a8f515fc57ec9c6ae6e9cee3">selection_sort(t_list_program *list_program)</link>: Sorts the stack using the selection sort algorithm.</para>
+<para>void <link linkend="_3__2__selectionsort_8c_1a8c475357a8f515fc57ec9c6ae6e9cee3">selection_sort(t_list_program *list_program)</link>: Sorts the stack using the selection sort algorithm.</para>
 </listitem><listitem>
-<para>void <link linkend="_push__swap_8h_1ab6eef28b44540c8e841c0549a0ce8432">radix_sort_pushswap(t_list_program *list_program)</link>: Sorts the stack using the radix sort algorithm.</para>
+<para>void <link linkend="_3__3__radixsort_8c_1ab6eef28b44540c8e841c0549a0ce8432">radix_sort_pushswap(t_list_program *list_program)</link>: Sorts the stack using the radix sort algorithm.</para>
 </listitem><listitem>
-<para>void <link linkend="_push__swap_8h_1aa3ace5cfa01a8732fe50b2a306016ca3">quick_sort_pushswap(t_list_program *list_program)</link>: Sorts the stack using the quick sort algorithm.</para>
+<para>void <link linkend="_3__4__quicksort_8c_1aa3ace5cfa01a8732fe50b2a306016ca3">quick_sort_pushswap(t_list_program *list_program)</link>: Sorts the stack using the quick sort algorithm.</para>
 </listitem><listitem>
-<para>void <link linkend="_push__swap_8h_1a94dad898050e696fa4f545c5639799f0">gear_sort_pushswap(t_list_program *list_program)</link>: Sorts the stack using the gear sort algorithm.</para>
+<para>void <link linkend="_3__5__gearsort__pricing_8c_1a94dad898050e696fa4f545c5639799f0">gear_sort_pushswap(t_list_program *list_program)</link>: Sorts the stack using the gear sort algorithm.</para>
 </listitem><listitem>
-<para>void <link linkend="_push__swap_8h_1adde75d21b7e1086952250fc733726608">sort_stack_dbg(t_list_program *list_program)</link>: Debug function for sorting the stack.</para>
+<para>void <link linkend="_1__2__debugger__helpers_8c_1adde75d21b7e1086952250fc733726608">sort_stack_dbg(t_list_program *list_program)</link>: Debug function for sorting the stack.</para>
 </listitem><listitem>
-<para>void <link linkend="_push__swap_8h_1a278415184cb5e8a7eea684b2d06805ee">moves_optimizations(t_list_program *list_program)</link>: Optimizes the moves after sorting. </para>
+<para>void <link linkend="_3__7__moves__optim_8c_1a278415184cb5e8a7eea684b2d06805ee">moves_optimizations(t_list_program *list_program)</link>: Optimizes the moves after sorting. </para>
 </listitem></itemizedlist>
 </para>
 </formalpara>
@@ -82,7 +82,7 @@
     <title>sort_stack()</title>
 <indexterm><primary>sort_stack</primary><secondary>3_0_sort_stack.c</secondary></indexterm>
 <indexterm><primary>3_0_sort_stack.c</primary><secondary>sort_stack</secondary></indexterm>
-<para><computeroutput>void sort_stack (<link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link> * list_program)</computeroutput></para>Here is the call graph for this function:<para>
+<para><computeroutput>void sort_stack (t_list_program * list_program)</computeroutput></para>Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>

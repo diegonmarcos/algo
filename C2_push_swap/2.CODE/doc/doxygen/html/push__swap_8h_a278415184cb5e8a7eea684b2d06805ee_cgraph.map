@@ -1,9 +1,21 @@
 <map id="moves_optimizations" name="moves_optimizations">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,31,168,56"/>
-<area shape="rect" id="Node000002" href="$3__7__moves__optim_8c.html#aff6439ec780f390764e11b0c17a80d3d" title=" " alt="" coords="216,5,393,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,31,202,27,203,33,168,37"/>
-<area shape="rect" id="Node000004" href="$3__7__moves__optim_8c.html#a8575f0f67c9bb68bf9cde07ab0f8e831" title=" " alt="" coords="216,55,393,80"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="168,50,203,53,202,59,168,55"/>
-<area shape="rect" id="Node000003" href="$3__7__moves__optim_8c.html#a3946706a56440251d9babecb1099dad1" title=" " alt="" coords="441,5,564,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="393,15,428,15,428,21,393,21"/>
+<area shape="rect" id="Node000002" href="$3__7__moves__optim_8c.html#aff6439ec780f390764e11b0c17a80d3d" title=" " alt="" coords="216,55,393,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,50,203,53,202,59,168,55"/>
+<area shape="rect" id="Node000009" href="$3__7__moves__optim_8c.html#a8575f0f67c9bb68bf9cde07ab0f8e831" title=" " alt="" coords="216,5,393,31"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="168,31,202,27,203,33,168,37"/>
+<area shape="rect" id="Node000003" href="$src__all_21c__ft__snprintf_8c.html#a68db9cc02f54dad4f0b1e09874383ff1" title=" " alt="" coords="459,55,547,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="393,65,445,65,445,70,393,70"/>
+<area shape="rect" id="Node000004" href="$src__all_21c__1__ft__memcmp_8c.html#a1f2ff2312e5994560c9537cd9173be94" title=" " alt="" coords="461,5,544,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="356,52,447,29,449,34,357,57"/>
+<area shape="rect" id="Node000005" href="$3__7__moves__optim_8c.html#a3946706a56440251d9babecb1099dad1" title=" " alt="" coords="441,104,564,129"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="357,77,438,98,437,103,356,83"/>
+<area shape="rect" id="Node000006" href="$src__all_21c__0__ft__memcpy_8c.html#a12f759eb9793cf306fede66d0b7de0fc" title=" " alt="" coords="612,104,695,129"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="564,114,598,114,598,119,564,119"/>
+<area shape="rect" id="Node000007" href="$1c__string__manip_20__copy__set_21c__0__ft__memcpy_8c.html#a5f5c5d19b1f0355d9768c75d30ed5559" title=" " alt="" coords="743,79,837,104"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="694,106,729,100,730,105,695,112"/>
+<area shape="rect" id="Node000008" href="$src__all_21c__ft__strlen_8c.html#abbb8c6c4ed85d892e7f1509f65f5768a" title=" " alt="" coords="753,128,827,153"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="695,121,740,129,739,134,694,126"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="357,28,446,51,445,56,356,33"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="393,15,447,15,447,21,393,21"/>
 </map>

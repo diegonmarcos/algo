@@ -1,0 +1,1551 @@
+\doxysection{src/checker\+\_\+bonus/libs/mylibs/mylibc/inc/mylibc.h File Reference}
+\hypertarget{mylibc_8h}{}\label{mylibc_8h}\index{src/checker\_bonus/libs/mylibs/mylibc/inc/mylibc.h@{src/checker\_bonus/libs/mylibs/mylibc/inc/mylibc.h}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/file.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}mylibc\+\_\+defines.\+h"{}}\newline
+{\ttfamily \#include "{}mylibc\+\_\+data.\+h"{}}\newline
+Include dependency graph for mylibc.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mylibc_8h_a620cc0dbde9e931040ac966b4d428e02}{ft\+\_\+pipe}} (int \texorpdfstring{$\ast$}{*}pipe\+\_\+fd)
+\item 
+int \mbox{\hyperlink{mylibc_8h_adb7a7822b49a3359177a45b12a37eef0}{ft\+\_\+fork}} (void)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_ae0a6807f9f78ed4bf4f958323582d22f}{ft\+\_\+calloc}} (size\+\_\+t count, size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{mylibc_8h_abf02cabd909c870977e20e238eb5107e}{ft\+\_\+calloc\+\_\+}} (size\+\_\+t count, size\+\_\+t size, void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a4a8b689a0e76e91fe7b0362c8401413b}{ft\+\_\+calloc\+\_\+2d}} (size\+\_\+t count, char var\+\_\+type, void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_ad8d914f690c8fa431415a2aacc9b488a}{ft\+\_\+calloc\+\_\+fd}} (char \texorpdfstring{$\ast$}{*}filename, size\+\_\+t count, size\+\_\+t sizeofvar)
+\item 
+void \mbox{\hyperlink{mylibc_8h_af1ce563360148d347dfc5163beb8af6a}{ft\+\_\+free\+\_\+fd}} (char \texorpdfstring{$\ast$}{*}filename)
+\item 
+void \mbox{\hyperlink{mylibc_8h_afaf2556003cc74b024a4cbc6df5e7eb3}{ft\+\_\+free\+\_\+array\+\_\+2d}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a5b578834b11f2d471188d0e39ffb76e6}{ft\+\_\+free\+\_\+array\+\_\+int}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array\+\_\+int, int size)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a1f215888b6216605cb2cc7c901e79928}{ft\+\_\+free\+\_\+fd\+\_\+new}} (char \texorpdfstring{$\ast$}{*}filename)
+\item 
+void \mbox{\hyperlink{mylibc_8h_ac3a43faed26d5f83b6d31b58311398fe}{ft\+\_\+free\+\_\+array\+\_\+halt}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}farray, int failed)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a04122333003213c232d5e261e0301b61}{halt\+\_\+exit\+\_\+}} (int status)
+\item 
+void \mbox{\hyperlink{mylibc_8h_aa561a9b17f941451a5c9664e94277bfd}{halt\+\_\+exit\+\_\+fd}} (int status)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a437ddc5458426fe70e2d3a800a695c7d}{halt\+\_\+exit}} (int status, char \texorpdfstring{$\ast$}{*}description)
+\item 
+int \mbox{\hyperlink{mylibc_8h_abdf1fb48578aabed93bccd9702b9049a}{ft\+\_\+open}} (char \texorpdfstring{$\ast$}{*}file, int flags,...)
+\item 
+int \mbox{\hyperlink{mylibc_8h_af28c817e3d4b70df9c5b9e46620eca2f}{ft\+\_\+open\+\_\+readorwrite}} (char \texorpdfstring{$\ast$}{*}file, int read\+\_\+or\+\_\+write)
+\begin{DoxyCompactList}\small\item\em 0 = read, 1 = write, 2 = append \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mylibc_8h_a3cab81ee97b88c3359a617df8eaacf30}{ft\+\_\+sed}} (char \texorpdfstring{$\ast$}{*}file, char \texorpdfstring{$\ast$}{*}s1, char \texorpdfstring{$\ast$}{*}s2)
+\item 
+int \mbox{\hyperlink{mylibc_8h_aa098cf9262ef7b316279b2bda96e81fd}{ft\+\_\+fgets\+\_\+}} (char \texorpdfstring{$\ast$}{*}line, int line\+\_\+size, int fd)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a723946586cc34d81829190a49541b441}{get\+\_\+next\+\_\+line\+\_\+join}} (int fd)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a2674c5403351d2f723050b526704354a}{get\+\_\+next\+\_\+line\+\_\+split}} (int fd, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}line)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a78d68a5f50a6eec0380ce25b4a1bd5b7}{get\+\_\+next\+\_\+line}} (int fd)
+\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a7c0934a5081af8fe6a8059b6f842834a}{ft\+\_\+split}} (char \texorpdfstring{$\ast$}{*}filename, const char \texorpdfstring{$\ast$}{*}s, char c)
+\item 
+long \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a2edca9b497a7c18406ff2d6342c747fc}{ft\+\_\+split\+\_\+long}} (char \texorpdfstring{$\ast$}{*}filename, char const \texorpdfstring{$\ast$}{*}array\+\_\+source, char delimitator, int \texorpdfstring{$\ast$}{*}size)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a5e78d4bd57769179a643eca68541355e}{ft\+\_\+substr}} (char \texorpdfstring{$\ast$}{*}filename, char const \texorpdfstring{$\ast$}{*}s, unsigned int start, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Extracts a substring from a given string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mylibc_8h_a44c89bee7d84c2f5c2b99b3ce410867f}{ft\+\_\+countwords}} (char const \texorpdfstring{$\ast$}{*}s, char c)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a60352c5b39fab08469b3e28131a79e25}{ft\+\_\+strtrim}} (char const \texorpdfstring{$\ast$}{*}s1, char const \texorpdfstring{$\ast$}{*}set)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_acdc865fa140c03c01a39d74b1f5c2416}{ft\+\_\+memmove}} (void \texorpdfstring{$\ast$}{*}dst, const void \texorpdfstring{$\ast$}{*}src, size\+\_\+t len)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a5f5c5d19b1f0355d9768c75d30ed5559}{ft\+\_\+memcpy}} (void \texorpdfstring{$\ast$}{*}dst, const void \texorpdfstring{$\ast$}{*}src, size\+\_\+t n)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a47b2c4fabdfc0e11d130fd9e3bb2e715}{ft\+\_\+memccpy}} (void \texorpdfstring{$\ast$}{*}dst, const void \texorpdfstring{$\ast$}{*}src, int c, size\+\_\+t n)
+\item 
+size\+\_\+t \mbox{\hyperlink{mylibc_8h_a12f759eb9793cf306fede66d0b7de0fc}{ft\+\_\+strlcpy}} (char \texorpdfstring{$\ast$}{*}dst, const char \texorpdfstring{$\ast$}{*}src, size\+\_\+t dstsize)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a19d0a16cec67fe4c1af22f1571f4f8a6}{ft\+\_\+memset}} (void \texorpdfstring{$\ast$}{*}b, int c, size\+\_\+t len)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a5937ab0d08e31d0e3e4a16ec71e293a1}{ft\+\_\+bzero}} (void \texorpdfstring{$\ast$}{*}s, size\+\_\+t n)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a276bd1ecd6eab34bc7aa6e4647ab2880}{ft\+\_\+bzero\+\_\+2d}} (void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array, size\+\_\+t lines, size\+\_\+t size)
+\item 
+size\+\_\+t \mbox{\hyperlink{mylibc_8h_a7531453313e0cbfde6fe51662c9c3208}{ft\+\_\+strlcat}} (char \texorpdfstring{$\ast$}{*}dst, const char \texorpdfstring{$\ast$}{*}src, size\+\_\+t dstsize)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a68db9cc02f54dad4f0b1e09874383ff1}{ft\+\_\+snprintf}} (char \texorpdfstring{$\ast$}{*}str, size\+\_\+t size, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a08f665a1828c402f2ffe2e2187f135fc}{ft\+\_\+memcmp}} (const void \texorpdfstring{$\ast$}{*}s1, const void \texorpdfstring{$\ast$}{*}s2, size\+\_\+t n)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a9d2fe792187aa4ed08e5864fb2c4d6dc}{ft\+\_\+strncmp}} (const char \texorpdfstring{$\ast$}{*}s1, const char \texorpdfstring{$\ast$}{*}s2, size\+\_\+t n)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a0cd77da46560d400cb77aa518771d909}{ft\+\_\+strcmp\+\_\+duplicate}} (char \texorpdfstring{$\ast$}{*}str, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a26e848e1206c9a84971bd0477158ec58}{ft\+\_\+strcmp\+\_\+duplicate\+\_\+inter}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a1f2ff2312e5994560c9537cd9173be94}{ft\+\_\+strcmp}} (const char \texorpdfstring{$\ast$}{*}s1, const char \texorpdfstring{$\ast$}{*}s2)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_abf633e8e48a8afbe61947f61de5ac695}{ft\+\_\+memchr}} (const void \texorpdfstring{$\ast$}{*}s, int c, size\+\_\+t n)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_aa6d0c2d180f32ee585485e1a1ce3d55d}{ft\+\_\+strchr}} (const char \texorpdfstring{$\ast$}{*}s, int c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a7684eb72d021f147ce803b396ddc50f8}{ft\+\_\+strchr\+\_\+char\+\_\+duplicate}} (char c, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv, int i)
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_aafe0d00181d3d0c7a91a510ddf73481a}{ft\+\_\+strchr\+\_\+int\+\_\+duplicate}} (int \texorpdfstring{$\ast$}{*}array\+\_\+int, int size, int position)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_aba01456182a610de8ec616306aa326f6}{ft\+\_\+strchr\+\_\+gnl}} (char \texorpdfstring{$\ast$}{*}s, int c)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_ae00229613cc0bf361e86dca72ad92591}{ft\+\_\+strnstr}} (const char \texorpdfstring{$\ast$}{*}haystack, const char \texorpdfstring{$\ast$}{*}needle, size\+\_\+t len)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a49c260cf80f9997975d6f3ec74ead582}{ft\+\_\+strrchr}} (const char \texorpdfstring{$\ast$}{*}s, int c)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_ab765229cc12e08d69af1f5021fc15576}{ft\+\_\+strchr\+\_\+char\+\_\+duplicate\+\_\+interation}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array\+\_\+char)
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_af84d99e5ede66639cf1ad1bcd2b3ea7a}{ft\+\_\+strchr\+\_\+int\+\_\+duplicate\+\_\+interation}} (int \texorpdfstring{$\ast$}{*}array\+\_\+int, int size)
+\item 
+int \mbox{\hyperlink{mylibc_8h_af17969ee296092eedba9c0f0bb9fd92f}{ft\+\_\+contains}} (int num, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv, int i)
+\item 
+int \mbox{\hyperlink{mylibc_8h_afad2ec371b4188602da9a94db687cb16}{ft\+\_\+atoi}} (const char \texorpdfstring{$\ast$}{*}str)
+\item 
+long \mbox{\hyperlink{mylibc_8h_aaede2a3980a50f2726e34af8c2dc60a0}{ft\+\_\+atoi\+\_\+long}} (const char \texorpdfstring{$\ast$}{*}ptr)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a15531e9c218bdac08ac524c8dbc3ffc5}{ft\+\_\+atoi\+\_\+base}} (const char \texorpdfstring{$\ast$}{*}str, int str\+\_\+base)
+\item 
+long \mbox{\hyperlink{mylibc_8h_a874abefd72ca9c2dc752d03bef7c9431}{ft\+\_\+strol}} (const char \texorpdfstring{$\ast$}{*}str, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}endptr, int base)
+\item 
+int \mbox{\hyperlink{mylibc_8h_af00a555987392cf08f9267f8b4827771}{ft\+\_\+atoi\+\_\+safe}} (const char \texorpdfstring{$\ast$}{*}ptr)
+\item 
+long \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_adf1235f7129c57410ec46baf5c21b35c}{ft\+\_\+atoi\+\_\+long\+\_\+array}} (const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}ptr)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a8a6ea3765dfd826eabfc00d36e28ea38}{ft\+\_\+itoa}} (int n)
+\item 
+int \mbox{\hyperlink{mylibc_8h_aff4a90566681ce6f4d39d5a8f2ae4c69}{ft\+\_\+digit\+\_\+count}} (long int i)
+\item 
+size\+\_\+t \mbox{\hyperlink{mylibc_8h_a28cbdb84353148df5452b91f648bca1a}{ft\+\_\+num\+\_\+unsign}} (size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{mylibc_8h_ad20b7902ffc9ba35bcd44e49fdc1dbfb}{ft\+\_\+pointer\+\_\+hexa}} (void \texorpdfstring{$\ast$}{*}p)
+\item 
+int \mbox{\hyperlink{mylibc_8h_af6c2041419ac36760356ba5e5be271bc}{ft\+\_\+hexa\+\_\+minusc}} (int num)
+\item 
+int \mbox{\hyperlink{mylibc_8h_ab8e921b3069794811a87e76a03de385b}{ft\+\_\+hexa\+\_\+mayusc}} (int num)
+\item 
+size\+\_\+t \mbox{\hyperlink{mylibc_8h_a828402378653640f545a4be2e00e92f9}{ft\+\_\+strlen}} (const char \texorpdfstring{$\ast$}{*}str)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a064e3e0818aba275dde1ebf105ce7638}{ft\+\_\+array\+\_\+size}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}s)
+\item 
+size\+\_\+t \mbox{\hyperlink{mylibc_8h_a956d952d7a88da3b56da69e6154ae28e}{ft\+\_\+strlen\+\_\+gnl}} (char \texorpdfstring{$\ast$}{*}s, int c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a9c2c3821ea43ebdf97de07b123503f8b}{ft\+\_\+isalnum}} (int c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_ac283963beaa3b8c7d09b78851cda297e}{ft\+\_\+isalpha}} (int c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_abf60ddbec6479540e81f3648cf71f1f4}{ft\+\_\+isascii}} (int c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a2cf15b8a1a277d1e2ce3654101a2003d}{ft\+\_\+isdigit}} (int c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a69af63a7373e33a6c7e148c1af2f72ab}{ft\+\_\+isnum}} (const char \texorpdfstring{$\ast$}{*}num)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a683cdbd7995f1d2decc7cbef236004ae}{ft\+\_\+is\+\_\+num\+\_\+num}} (const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}str)
+\item 
+int \mbox{\hyperlink{mylibc_8h_abcdba69692f21146aeea5b3d59b7d0ca}{ft\+\_\+isprint}} (int c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a1c6a73d3c1782fe836f5e026742379a8}{ft\+\_\+is\+\_\+array\+\_\+int}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array)
+\item 
+int \mbox{\hyperlink{mylibc_8h_ab86e5297914753b6c82d7e3c3020ce17}{ft\+\_\+tolower}} (int c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_aef116be7b5bceafff4b59f20a4433d12}{ft\+\_\+toupper}} (int c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a54d92af0584f22ec121c60c301a864d7}{ft\+\_\+is\+\_\+sorted\+\_\+array\+\_\+char}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}arr)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a04ca077d88655172f8d9ce545447838b}{ft\+\_\+is\+\_\+sorted\+\_\+array\+\_\+int}} (int \texorpdfstring{$\ast$}{*}arr, int size)
+\item 
+void \mbox{\hyperlink{mylibc_8h_ada722cffd2c6c8169ae339afd0f9763c}{ft\+\_\+striteri}} (char \texorpdfstring{$\ast$}{*}s, void(\texorpdfstring{$\ast$}{*}f)(unsigned int, char \texorpdfstring{$\ast$}{*}))
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a668b60557bfc9d60c2d3ccda8afadf49}{ft\+\_\+strmapi}} (char const \texorpdfstring{$\ast$}{*}s, char(\texorpdfstring{$\ast$}{*}f)(unsigned int, char))
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_ad98485670c4d461a896ea406c8bb2b4d}{ft\+\_\+strdup}} (char \texorpdfstring{$\ast$}{*}name, const char \texorpdfstring{$\ast$}{*}s1)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a49df3c1d25077a2a470976663b7ce770}{ft\+\_\+strjoin}} (char \texorpdfstring{$\ast$}{*}filename, char const \texorpdfstring{$\ast$}{*}s1, char const \texorpdfstring{$\ast$}{*}s2)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mylibc_8h_a8f84bf12b7abd810ccb10e1358e7a2b2}{ft\+\_\+strjoin\+\_\+gnl}} (char \texorpdfstring{$\ast$}{*}left\+\_\+str, char \texorpdfstring{$\ast$}{*}buff, int c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_ae90ca75ca2ece9b29639a94017718091}{ft\+\_\+write\+\_\+bff}} (int fd, char \texorpdfstring{$\ast$}{*}string, int len)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a8ee15a511946c1397bd2bdea4aed6aee}{ft\+\_\+putchar\+\_\+fd}} (char c, int fd)
+\item 
+void \mbox{\hyperlink{mylibc_8h_aeb112152acfc553d58d61a5df38afcde}{ft\+\_\+putendl\+\_\+fd}} (char \texorpdfstring{$\ast$}{*}s, int fd)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a63cc0aec12256d125d3f85e472280972}{ft\+\_\+putnbr\+\_\+fd}} (int n, int fd)
+\item 
+void \mbox{\hyperlink{mylibc_8h_acefce9ac519f8f8b7d3fde33dbafe469}{ft\+\_\+putstr\+\_\+fd}} (char \texorpdfstring{$\ast$}{*}s, int fd)
+\item 
+int \mbox{\hyperlink{mylibc_8h_ae07c9c3acc8313cfbea5cf3092ffe6a4}{ft\+\_\+putstr}} (char \texorpdfstring{$\ast$}{*}str)
+\item 
+int \mbox{\hyperlink{mylibc_8h_ad68d7f4bd08039a3e0516d435b1059d5}{ft\+\_\+putstr\+\_\+str}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}str)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a2e51f80c9e46e52f4adf94617fb51ada}{ft\+\_\+putnbr}} (int n)
+\item 
+int \mbox{\hyperlink{mylibc_8h_ae7e2fec198dbbd277a7c486fd76d87db}{ft\+\_\+putnbr\+\_\+nbr}} (int \texorpdfstring{$\ast$}{*}n, int size)
+\item 
+int \mbox{\hyperlink{mylibc_8h_acd7460946eff57f27671a7208eac9437}{ft\+\_\+putstr\+\_\+fd\+\_\+fpr}} (long fd, char \texorpdfstring{$\ast$}{*}s)
+\item 
+int \mbox{\hyperlink{mylibc_8h_ad91f9a4c11e9dcd122e88fe8c19557e6}{ft\+\_\+putstrstr\+\_\+fd\+\_\+fpr}} (long fd, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}str)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a382314c4483ec26eea93aa4cbee46a0e}{ft\+\_\+putnbr\+\_\+fd\+\_\+fpr}} (long fd, int n)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a7882b4d52fd482b6b1d1f9415dbcedc5}{ft\+\_\+putchar\+\_\+fd\+\_\+fpr}} (long fd, int c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a8b5c8ecd9dd02406abd454e7464f4ff3}{ft\+\_\+putchar}} (char c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a8dbf1ac019615e971372de62633967d8}{ft\+\_\+putchar\+\_\+int}} (int c)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a9a6cc50d2872dff51f0d6fbbd388ee47}{ft\+\_\+pointer\+\_\+hexa\+\_\+fpr}} (long fd, void \texorpdfstring{$\ast$}{*}p)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a383e83bdddc4554c4cd3f0d833b6e804}{ft\+\_\+fprintf}} (FILE \texorpdfstring{$\ast$}{*}file\+\_\+struct, const char \texorpdfstring{$\ast$}{*}str,...)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a14153724a186f270fb4dc5d702516996}{ft\+\_\+fprintf1}} (char \texorpdfstring{$\ast$}{*}filename, const char \texorpdfstring{$\ast$}{*}str,...)
+\item 
+int \mbox{\hyperlink{mylibc_8h_ab6d4c8a0b10cc233e4b22ca7668d3345}{ft\+\_\+fprintf2}} (char \texorpdfstring{$\ast$}{*}fopenmode, char \texorpdfstring{$\ast$}{*}filename, const char \texorpdfstring{$\ast$}{*}str,...)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a1a04419f657be214129cb35741adf28f}{ft\+\_\+printf}} (const char \texorpdfstring{$\ast$}{*}str,...)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a83b5e8d5a8106745d505e08261984223}{ft\+\_\+dprintf}} (long fd, const char \texorpdfstring{$\ast$}{*}str,...)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a1c6c3862fc82db2087497b88d1457411}{heapify}} (int arr\mbox{[}$\,$\mbox{]}, int n, int i)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a0467fe1d4cf5835a03840e3998eceae0}{heap\+\_\+sort}} (int arr\mbox{[}$\,$\mbox{]}, int n)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a64ad59a88d29daf3d81305ade3627975}{quick\+\_\+sort}} (int arr\mbox{[}$\,$\mbox{]}, int low, int high, int depthlimit)
+\item 
+int \mbox{\hyperlink{mylibc_8h_af3d8997b18410a08b5c5e982a24e363a}{ft\+\_\+log\+\_\+introsort}} (int n)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a307734c126897c09e919eb65119bb102}{intro\+\_\+sort}} (int arr\mbox{[}$\,$\mbox{]}, int n)
+\item 
+void \mbox{\hyperlink{mylibc_8h_ad38d9c701da937aa7644a2053e512863}{swap\+\_\+introsort}} (int \texorpdfstring{$\ast$}{*}a, int \texorpdfstring{$\ast$}{*}b)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a2f0658d814c1e14b49d419add95c79b9}{partition}} (int arr\mbox{[}$\,$\mbox{]}, int low, int high)
+\item 
+int \mbox{\hyperlink{mylibc_8h_aa08d9f8fd59789cc722de1f2bdfe48a1}{ft\+\_\+abs}} (int number)
+\item 
+long \mbox{\hyperlink{mylibc_8h_a017a4bcb42598da0012b13131d562f53}{ft\+\_\+max}} (long a, long b)
+\item 
+int \mbox{\hyperlink{mylibc_8h_a9d4d1f47840c693f9b7e819e00cefce0}{ft\+\_\+round}} (double num)
+\item 
+void \mbox{\hyperlink{mylibc_8h_a24712ac200c27af6c4baca2e646a476f}{matrix3\+\_\+init}} (float(\texorpdfstring{$\ast$}{*}matrix)\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{mylibc_8h_a444f95ef474736b965e5eb10e81d88e7}{print\+\_\+bits}} (unsigned char octet)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mylibc_8h_aa08d9f8fd59789cc722de1f2bdfe48a1}\label{mylibc_8h_aa08d9f8fd59789cc722de1f2bdfe48a1} 
+\index{mylibc.h@{mylibc.h}!ft\_abs@{ft\_abs}}
+\index{ft\_abs@{ft\_abs}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_abs()}{ft\_abs()}}
+{\footnotesize\ttfamily int ft\+\_\+abs (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a064e3e0818aba275dde1ebf105ce7638}\label{mylibc_8h_a064e3e0818aba275dde1ebf105ce7638} 
+\index{mylibc.h@{mylibc.h}!ft\_array\_size@{ft\_array\_size}}
+\index{ft\_array\_size@{ft\_array\_size}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_array\_size()}{ft\_array\_size()}}
+{\footnotesize\ttfamily int ft\+\_\+array\+\_\+size (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_afad2ec371b4188602da9a94db687cb16}\label{mylibc_8h_afad2ec371b4188602da9a94db687cb16} 
+\index{mylibc.h@{mylibc.h}!ft\_atoi@{ft\_atoi}}
+\index{ft\_atoi@{ft\_atoi}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_atoi()}{ft\_atoi()}}
+{\footnotesize\ttfamily int ft\+\_\+atoi (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{mylibc_8h_afad2ec371b4188602da9a94db687cb16_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a15531e9c218bdac08ac524c8dbc3ffc5}\label{mylibc_8h_a15531e9c218bdac08ac524c8dbc3ffc5} 
+\index{mylibc.h@{mylibc.h}!ft\_atoi\_base@{ft\_atoi\_base}}
+\index{ft\_atoi\_base@{ft\_atoi\_base}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_atoi\_base()}{ft\_atoi\_base()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} ft\+\_\+atoi\+\_\+base (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{int}]{str\+\_\+base }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{mylibc_8h_a15531e9c218bdac08ac524c8dbc3ffc5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{mylibc_8h_a15531e9c218bdac08ac524c8dbc3ffc5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_aaede2a3980a50f2726e34af8c2dc60a0}\label{mylibc_8h_aaede2a3980a50f2726e34af8c2dc60a0} 
+\index{mylibc.h@{mylibc.h}!ft\_atoi\_long@{ft\_atoi\_long}}
+\index{ft\_atoi\_long@{ft\_atoi\_long}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_atoi\_long()}{ft\_atoi\_long()}}
+{\footnotesize\ttfamily long ft\+\_\+atoi\+\_\+long (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{ptr }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{mylibc_8h_aaede2a3980a50f2726e34af8c2dc60a0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_adf1235f7129c57410ec46baf5c21b35c}\label{mylibc_8h_adf1235f7129c57410ec46baf5c21b35c} 
+\index{mylibc.h@{mylibc.h}!ft\_atoi\_long\_array@{ft\_atoi\_long\_array}}
+\index{ft\_atoi\_long\_array@{ft\_atoi\_long\_array}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_atoi\_long\_array()}{ft\_atoi\_long\_array()}}
+{\footnotesize\ttfamily long \texorpdfstring{$\ast$}{*} ft\+\_\+atoi\+\_\+long\+\_\+array (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{ptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{mylibc_8h_adf1235f7129c57410ec46baf5c21b35c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_af00a555987392cf08f9267f8b4827771}\label{mylibc_8h_af00a555987392cf08f9267f8b4827771} 
+\index{mylibc.h@{mylibc.h}!ft\_atoi\_safe@{ft\_atoi\_safe}}
+\index{ft\_atoi\_safe@{ft\_atoi\_safe}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_atoi\_safe()}{ft\_atoi\_safe()}}
+{\footnotesize\ttfamily int ft\+\_\+atoi\+\_\+safe (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{ptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_af00a555987392cf08f9267f8b4827771_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a5937ab0d08e31d0e3e4a16ec71e293a1}\label{mylibc_8h_a5937ab0d08e31d0e3e4a16ec71e293a1} 
+\index{mylibc.h@{mylibc.h}!ft\_bzero@{ft\_bzero}}
+\index{ft\_bzero@{ft\_bzero}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_bzero()}{ft\_bzero()}}
+{\footnotesize\ttfamily void ft\+\_\+bzero (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{s,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{mylibc_8h_a5937ab0d08e31d0e3e4a16ec71e293a1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{mylibc_8h_a5937ab0d08e31d0e3e4a16ec71e293a1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a276bd1ecd6eab34bc7aa6e4647ab2880}\label{mylibc_8h_a276bd1ecd6eab34bc7aa6e4647ab2880} 
+\index{mylibc.h@{mylibc.h}!ft\_bzero\_2d@{ft\_bzero\_2d}}
+\index{ft\_bzero\_2d@{ft\_bzero\_2d}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_bzero\_2d()}{ft\_bzero\_2d()}}
+{\footnotesize\ttfamily void ft\+\_\+bzero\+\_\+2d (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array,  }\item[{size\+\_\+t}]{lines,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{mylibc_8h_a276bd1ecd6eab34bc7aa6e4647ab2880_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ae0a6807f9f78ed4bf4f958323582d22f}\label{mylibc_8h_ae0a6807f9f78ed4bf4f958323582d22f} 
+\index{mylibc.h@{mylibc.h}!ft\_calloc@{ft\_calloc}}
+\index{ft\_calloc@{ft\_calloc}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_calloc()}{ft\_calloc()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} ft\+\_\+calloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{count,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{mylibc_8h_ae0a6807f9f78ed4bf4f958323582d22f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{mylibc_8h_ae0a6807f9f78ed4bf4f958323582d22f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_abf02cabd909c870977e20e238eb5107e}\label{mylibc_8h_abf02cabd909c870977e20e238eb5107e} 
+\index{mylibc.h@{mylibc.h}!ft\_calloc\_@{ft\_calloc\_}}
+\index{ft\_calloc\_@{ft\_calloc\_}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_calloc\_()}{ft\_calloc\_()}}
+{\footnotesize\ttfamily void ft\+\_\+calloc\+\_\+ (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{count,  }\item[{size\+\_\+t}]{size,  }\item[{void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{mylibc_8h_abf02cabd909c870977e20e238eb5107e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_abf02cabd909c870977e20e238eb5107e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a4a8b689a0e76e91fe7b0362c8401413b}\label{mylibc_8h_a4a8b689a0e76e91fe7b0362c8401413b} 
+\index{mylibc.h@{mylibc.h}!ft\_calloc\_2d@{ft\_calloc\_2d}}
+\index{ft\_calloc\_2d@{ft\_calloc\_2d}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_calloc\_2d()}{ft\_calloc\_2d()}}
+{\footnotesize\ttfamily void ft\+\_\+calloc\+\_\+2d (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{count,  }\item[{char}]{var\+\_\+type,  }\item[{void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{mylibc_8h_a4a8b689a0e76e91fe7b0362c8401413b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ad8d914f690c8fa431415a2aacc9b488a}\label{mylibc_8h_ad8d914f690c8fa431415a2aacc9b488a} 
+\index{mylibc.h@{mylibc.h}!ft\_calloc\_fd@{ft\_calloc\_fd}}
+\index{ft\_calloc\_fd@{ft\_calloc\_fd}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_calloc\_fd()}{ft\_calloc\_fd()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} ft\+\_\+calloc\+\_\+fd (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{size\+\_\+t}]{count,  }\item[{size\+\_\+t}]{sizeofvar }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_ad8d914f690c8fa431415a2aacc9b488a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_af17969ee296092eedba9c0f0bb9fd92f}\label{mylibc_8h_af17969ee296092eedba9c0f0bb9fd92f} 
+\index{mylibc.h@{mylibc.h}!ft\_contains@{ft\_contains}}
+\index{ft\_contains@{ft\_contains}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_contains()}{ft\_contains()}}
+{\footnotesize\ttfamily int ft\+\_\+contains (\begin{DoxyParamCaption}\item[{int}]{num,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{mylibc_8h_af17969ee296092eedba9c0f0bb9fd92f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a44c89bee7d84c2f5c2b99b3ce410867f}\label{mylibc_8h_a44c89bee7d84c2f5c2b99b3ce410867f} 
+\index{mylibc.h@{mylibc.h}!ft\_countwords@{ft\_countwords}}
+\index{ft\_countwords@{ft\_countwords}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_countwords()}{ft\_countwords()}}
+{\footnotesize\ttfamily int ft\+\_\+countwords (\begin{DoxyParamCaption}\item[{char const \texorpdfstring{$\ast$}{*}}]{s,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a44c89bee7d84c2f5c2b99b3ce410867f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_aff4a90566681ce6f4d39d5a8f2ae4c69}\label{mylibc_8h_aff4a90566681ce6f4d39d5a8f2ae4c69} 
+\index{mylibc.h@{mylibc.h}!ft\_digit\_count@{ft\_digit\_count}}
+\index{ft\_digit\_count@{ft\_digit\_count}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_digit\_count()}{ft\_digit\_count()}}
+{\footnotesize\ttfamily int ft\+\_\+digit\+\_\+count (\begin{DoxyParamCaption}\item[{long int}]{i }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{mylibc_8h_aff4a90566681ce6f4d39d5a8f2ae4c69_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a83b5e8d5a8106745d505e08261984223}\label{mylibc_8h_a83b5e8d5a8106745d505e08261984223} 
+\index{mylibc.h@{mylibc.h}!ft\_dprintf@{ft\_dprintf}}
+\index{ft\_dprintf@{ft\_dprintf}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_dprintf()}{ft\_dprintf()}}
+{\footnotesize\ttfamily int ft\+\_\+dprintf (\begin{DoxyParamCaption}\item[{long}]{fd,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_aa098cf9262ef7b316279b2bda96e81fd}\label{mylibc_8h_aa098cf9262ef7b316279b2bda96e81fd} 
+\index{mylibc.h@{mylibc.h}!ft\_fgets\_@{ft\_fgets\_}}
+\index{ft\_fgets\_@{ft\_fgets\_}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_fgets\_()}{ft\_fgets\_()}}
+{\footnotesize\ttfamily int ft\+\_\+fgets\+\_\+ (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{line,  }\item[{int}]{line\+\_\+size,  }\item[{int}]{fd }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_adb7a7822b49a3359177a45b12a37eef0}\label{mylibc_8h_adb7a7822b49a3359177a45b12a37eef0} 
+\index{mylibc.h@{mylibc.h}!ft\_fork@{ft\_fork}}
+\index{ft\_fork@{ft\_fork}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_fork()}{ft\_fork()}}
+{\footnotesize\ttfamily int ft\+\_\+fork (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{mylibc_8h_adb7a7822b49a3359177a45b12a37eef0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a383e83bdddc4554c4cd3f0d833b6e804}\label{mylibc_8h_a383e83bdddc4554c4cd3f0d833b6e804} 
+\index{mylibc.h@{mylibc.h}!ft\_fprintf@{ft\_fprintf}}
+\index{ft\_fprintf@{ft\_fprintf}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_fprintf()}{ft\_fprintf()}}
+{\footnotesize\ttfamily int ft\+\_\+fprintf (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{file\+\_\+struct,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a14153724a186f270fb4dc5d702516996}\label{mylibc_8h_a14153724a186f270fb4dc5d702516996} 
+\index{mylibc.h@{mylibc.h}!ft\_fprintf1@{ft\_fprintf1}}
+\index{ft\_fprintf1@{ft\_fprintf1}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_fprintf1()}{ft\_fprintf1()}}
+{\footnotesize\ttfamily int ft\+\_\+fprintf1 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_ab6d4c8a0b10cc233e4b22ca7668d3345}\label{mylibc_8h_ab6d4c8a0b10cc233e4b22ca7668d3345} 
+\index{mylibc.h@{mylibc.h}!ft\_fprintf2@{ft\_fprintf2}}
+\index{ft\_fprintf2@{ft\_fprintf2}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_fprintf2()}{ft\_fprintf2()}}
+{\footnotesize\ttfamily int ft\+\_\+fprintf2 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{fopenmode,  }\item[{char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{mylibc_8h_ab6d4c8a0b10cc233e4b22ca7668d3345_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_afaf2556003cc74b024a4cbc6df5e7eb3}\label{mylibc_8h_afaf2556003cc74b024a4cbc6df5e7eb3} 
+\index{mylibc.h@{mylibc.h}!ft\_free\_array\_2d@{ft\_free\_array\_2d}}
+\index{ft\_free\_array\_2d@{ft\_free\_array\_2d}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_free\_array\_2d()}{ft\_free\_array\_2d()}}
+{\footnotesize\ttfamily void ft\+\_\+free\+\_\+array\+\_\+2d (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_ac3a43faed26d5f83b6d31b58311398fe}\label{mylibc_8h_ac3a43faed26d5f83b6d31b58311398fe} 
+\index{mylibc.h@{mylibc.h}!ft\_free\_array\_halt@{ft\_free\_array\_halt}}
+\index{ft\_free\_array\_halt@{ft\_free\_array\_halt}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_free\_array\_halt()}{ft\_free\_array\_halt()}}
+{\footnotesize\ttfamily void ft\+\_\+free\+\_\+array\+\_\+halt (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{farray,  }\item[{int}]{failed }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a5b578834b11f2d471188d0e39ffb76e6}\label{mylibc_8h_a5b578834b11f2d471188d0e39ffb76e6} 
+\index{mylibc.h@{mylibc.h}!ft\_free\_array\_int@{ft\_free\_array\_int}}
+\index{ft\_free\_array\_int@{ft\_free\_array\_int}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_free\_array\_int()}{ft\_free\_array\_int()}}
+{\footnotesize\ttfamily void ft\+\_\+free\+\_\+array\+\_\+int (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array\+\_\+int,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_af1ce563360148d347dfc5163beb8af6a}\label{mylibc_8h_af1ce563360148d347dfc5163beb8af6a} 
+\index{mylibc.h@{mylibc.h}!ft\_free\_fd@{ft\_free\_fd}}
+\index{ft\_free\_fd@{ft\_free\_fd}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_free\_fd()}{ft\_free\_fd()}}
+{\footnotesize\ttfamily void ft\+\_\+free\+\_\+fd (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a1f215888b6216605cb2cc7c901e79928}\label{mylibc_8h_a1f215888b6216605cb2cc7c901e79928} 
+\index{mylibc.h@{mylibc.h}!ft\_free\_fd\_new@{ft\_free\_fd\_new}}
+\index{ft\_free\_fd\_new@{ft\_free\_fd\_new}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_free\_fd\_new()}{ft\_free\_fd\_new()}}
+{\footnotesize\ttfamily void ft\+\_\+free\+\_\+fd\+\_\+new (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_ab8e921b3069794811a87e76a03de385b}\label{mylibc_8h_ab8e921b3069794811a87e76a03de385b} 
+\index{mylibc.h@{mylibc.h}!ft\_hexa\_mayusc@{ft\_hexa\_mayusc}}
+\index{ft\_hexa\_mayusc@{ft\_hexa\_mayusc}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_hexa\_mayusc()}{ft\_hexa\_mayusc()}}
+{\footnotesize\ttfamily int ft\+\_\+hexa\+\_\+mayusc (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_af6c2041419ac36760356ba5e5be271bc}\label{mylibc_8h_af6c2041419ac36760356ba5e5be271bc} 
+\index{mylibc.h@{mylibc.h}!ft\_hexa\_minusc@{ft\_hexa\_minusc}}
+\index{ft\_hexa\_minusc@{ft\_hexa\_minusc}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_hexa\_minusc()}{ft\_hexa\_minusc()}}
+{\footnotesize\ttfamily int ft\+\_\+hexa\+\_\+minusc (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a1c6a73d3c1782fe836f5e026742379a8}\label{mylibc_8h_a1c6a73d3c1782fe836f5e026742379a8} 
+\index{mylibc.h@{mylibc.h}!ft\_is\_array\_int@{ft\_is\_array\_int}}
+\index{ft\_is\_array\_int@{ft\_is\_array\_int}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_is\_array\_int()}{ft\_is\_array\_int()}}
+{\footnotesize\ttfamily int ft\+\_\+is\+\_\+array\+\_\+int (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{mylibc_8h_a1c6a73d3c1782fe836f5e026742379a8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a683cdbd7995f1d2decc7cbef236004ae}\label{mylibc_8h_a683cdbd7995f1d2decc7cbef236004ae} 
+\index{mylibc.h@{mylibc.h}!ft\_is\_num\_num@{ft\_is\_num\_num}}
+\index{ft\_is\_num\_num@{ft\_is\_num\_num}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_is\_num\_num()}{ft\_is\_num\_num()}}
+{\footnotesize\ttfamily int ft\+\_\+is\+\_\+num\+\_\+num (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a54d92af0584f22ec121c60c301a864d7}\label{mylibc_8h_a54d92af0584f22ec121c60c301a864d7} 
+\index{mylibc.h@{mylibc.h}!ft\_is\_sorted\_array\_char@{ft\_is\_sorted\_array\_char}}
+\index{ft\_is\_sorted\_array\_char@{ft\_is\_sorted\_array\_char}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_is\_sorted\_array\_char()}{ft\_is\_sorted\_array\_char()}}
+{\footnotesize\ttfamily int ft\+\_\+is\+\_\+sorted\+\_\+array\+\_\+char (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{arr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{mylibc_8h_a54d92af0584f22ec121c60c301a864d7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a04ca077d88655172f8d9ce545447838b}\label{mylibc_8h_a04ca077d88655172f8d9ce545447838b} 
+\index{mylibc.h@{mylibc.h}!ft\_is\_sorted\_array\_int@{ft\_is\_sorted\_array\_int}}
+\index{ft\_is\_sorted\_array\_int@{ft\_is\_sorted\_array\_int}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_is\_sorted\_array\_int()}{ft\_is\_sorted\_array\_int()}}
+{\footnotesize\ttfamily int ft\+\_\+is\+\_\+sorted\+\_\+array\+\_\+int (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{arr,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a9c2c3821ea43ebdf97de07b123503f8b}\label{mylibc_8h_a9c2c3821ea43ebdf97de07b123503f8b} 
+\index{mylibc.h@{mylibc.h}!ft\_isalnum@{ft\_isalnum}}
+\index{ft\_isalnum@{ft\_isalnum}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_isalnum()}{ft\_isalnum()}}
+{\footnotesize\ttfamily int ft\+\_\+isalnum (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{mylibc_8h_a9c2c3821ea43ebdf97de07b123503f8b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ac283963beaa3b8c7d09b78851cda297e}\label{mylibc_8h_ac283963beaa3b8c7d09b78851cda297e} 
+\index{mylibc.h@{mylibc.h}!ft\_isalpha@{ft\_isalpha}}
+\index{ft\_isalpha@{ft\_isalpha}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_isalpha()}{ft\_isalpha()}}
+{\footnotesize\ttfamily int ft\+\_\+isalpha (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{mylibc_8h_ac283963beaa3b8c7d09b78851cda297e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_abf60ddbec6479540e81f3648cf71f1f4}\label{mylibc_8h_abf60ddbec6479540e81f3648cf71f1f4} 
+\index{mylibc.h@{mylibc.h}!ft\_isascii@{ft\_isascii}}
+\index{ft\_isascii@{ft\_isascii}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_isascii()}{ft\_isascii()}}
+{\footnotesize\ttfamily int ft\+\_\+isascii (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a2cf15b8a1a277d1e2ce3654101a2003d}\label{mylibc_8h_a2cf15b8a1a277d1e2ce3654101a2003d} 
+\index{mylibc.h@{mylibc.h}!ft\_isdigit@{ft\_isdigit}}
+\index{ft\_isdigit@{ft\_isdigit}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_isdigit()}{ft\_isdigit()}}
+{\footnotesize\ttfamily int ft\+\_\+isdigit (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{mylibc_8h_a2cf15b8a1a277d1e2ce3654101a2003d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a69af63a7373e33a6c7e148c1af2f72ab}\label{mylibc_8h_a69af63a7373e33a6c7e148c1af2f72ab} 
+\index{mylibc.h@{mylibc.h}!ft\_isnum@{ft\_isnum}}
+\index{ft\_isnum@{ft\_isnum}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_isnum()}{ft\_isnum()}}
+{\footnotesize\ttfamily int ft\+\_\+isnum (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{num }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{mylibc_8h_a69af63a7373e33a6c7e148c1af2f72ab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a69af63a7373e33a6c7e148c1af2f72ab_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_abcdba69692f21146aeea5b3d59b7d0ca}\label{mylibc_8h_abcdba69692f21146aeea5b3d59b7d0ca} 
+\index{mylibc.h@{mylibc.h}!ft\_isprint@{ft\_isprint}}
+\index{ft\_isprint@{ft\_isprint}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_isprint()}{ft\_isprint()}}
+{\footnotesize\ttfamily int ft\+\_\+isprint (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a8a6ea3765dfd826eabfc00d36e28ea38}\label{mylibc_8h_a8a6ea3765dfd826eabfc00d36e28ea38} 
+\index{mylibc.h@{mylibc.h}!ft\_itoa@{ft\_itoa}}
+\index{ft\_itoa@{ft\_itoa}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_itoa()}{ft\_itoa()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+itoa (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a8a6ea3765dfd826eabfc00d36e28ea38_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_af3d8997b18410a08b5c5e982a24e363a}\label{mylibc_8h_af3d8997b18410a08b5c5e982a24e363a} 
+\index{mylibc.h@{mylibc.h}!ft\_log\_introsort@{ft\_log\_introsort}}
+\index{ft\_log\_introsort@{ft\_log\_introsort}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_log\_introsort()}{ft\_log\_introsort()}}
+{\footnotesize\ttfamily int ft\+\_\+log\+\_\+introsort (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{mylibc_8h_af3d8997b18410a08b5c5e982a24e363a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a017a4bcb42598da0012b13131d562f53}\label{mylibc_8h_a017a4bcb42598da0012b13131d562f53} 
+\index{mylibc.h@{mylibc.h}!ft\_max@{ft\_max}}
+\index{ft\_max@{ft\_max}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_max()}{ft\_max()}}
+{\footnotesize\ttfamily long ft\+\_\+max (\begin{DoxyParamCaption}\item[{long}]{a,  }\item[{long}]{b }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a47b2c4fabdfc0e11d130fd9e3bb2e715}\label{mylibc_8h_a47b2c4fabdfc0e11d130fd9e3bb2e715} 
+\index{mylibc.h@{mylibc.h}!ft\_memccpy@{ft\_memccpy}}
+\index{ft\_memccpy@{ft\_memccpy}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_memccpy()}{ft\_memccpy()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} ft\+\_\+memccpy (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{dst,  }\item[{const void \texorpdfstring{$\ast$}{*}}]{src,  }\item[{int}]{c,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_abf633e8e48a8afbe61947f61de5ac695}\label{mylibc_8h_abf633e8e48a8afbe61947f61de5ac695} 
+\index{mylibc.h@{mylibc.h}!ft\_memchr@{ft\_memchr}}
+\index{ft\_memchr@{ft\_memchr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_memchr()}{ft\_memchr()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} ft\+\_\+memchr (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{s,  }\item[{int}]{c,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a08f665a1828c402f2ffe2e2187f135fc}\label{mylibc_8h_a08f665a1828c402f2ffe2e2187f135fc} 
+\index{mylibc.h@{mylibc.h}!ft\_memcmp@{ft\_memcmp}}
+\index{ft\_memcmp@{ft\_memcmp}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_memcmp()}{ft\_memcmp()}}
+{\footnotesize\ttfamily int ft\+\_\+memcmp (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{s1,  }\item[{const void \texorpdfstring{$\ast$}{*}}]{s2,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a5f5c5d19b1f0355d9768c75d30ed5559}\label{mylibc_8h_a5f5c5d19b1f0355d9768c75d30ed5559} 
+\index{mylibc.h@{mylibc.h}!ft\_memcpy@{ft\_memcpy}}
+\index{ft\_memcpy@{ft\_memcpy}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_memcpy()}{ft\_memcpy()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} ft\+\_\+memcpy (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{dst,  }\item[{const void \texorpdfstring{$\ast$}{*}}]{src,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a5f5c5d19b1f0355d9768c75d30ed5559_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_acdc865fa140c03c01a39d74b1f5c2416}\label{mylibc_8h_acdc865fa140c03c01a39d74b1f5c2416} 
+\index{mylibc.h@{mylibc.h}!ft\_memmove@{ft\_memmove}}
+\index{ft\_memmove@{ft\_memmove}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_memmove()}{ft\_memmove()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} ft\+\_\+memmove (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{dst,  }\item[{const void \texorpdfstring{$\ast$}{*}}]{src,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{mylibc_8h_acdc865fa140c03c01a39d74b1f5c2416_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a19d0a16cec67fe4c1af22f1571f4f8a6}\label{mylibc_8h_a19d0a16cec67fe4c1af22f1571f4f8a6} 
+\index{mylibc.h@{mylibc.h}!ft\_memset@{ft\_memset}}
+\index{ft\_memset@{ft\_memset}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_memset()}{ft\_memset()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} ft\+\_\+memset (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{b,  }\item[{int}]{c,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a19d0a16cec67fe4c1af22f1571f4f8a6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a28cbdb84353148df5452b91f648bca1a}\label{mylibc_8h_a28cbdb84353148df5452b91f648bca1a} 
+\index{mylibc.h@{mylibc.h}!ft\_num\_unsign@{ft\_num\_unsign}}
+\index{ft\_num\_unsign@{ft\_num\_unsign}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_num\_unsign()}{ft\_num\_unsign()}}
+{\footnotesize\ttfamily size\+\_\+t ft\+\_\+num\+\_\+unsign (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{mylibc_8h_a28cbdb84353148df5452b91f648bca1a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{mylibc_8h_a28cbdb84353148df5452b91f648bca1a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_abdf1fb48578aabed93bccd9702b9049a}\label{mylibc_8h_abdf1fb48578aabed93bccd9702b9049a} 
+\index{mylibc.h@{mylibc.h}!ft\_open@{ft\_open}}
+\index{ft\_open@{ft\_open}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_open()}{ft\_open()}}
+{\footnotesize\ttfamily int ft\+\_\+open (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file,  }\item[{int}]{flags,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{mylibc_8h_abdf1fb48578aabed93bccd9702b9049a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_af28c817e3d4b70df9c5b9e46620eca2f}\label{mylibc_8h_af28c817e3d4b70df9c5b9e46620eca2f} 
+\index{mylibc.h@{mylibc.h}!ft\_open\_readorwrite@{ft\_open\_readorwrite}}
+\index{ft\_open\_readorwrite@{ft\_open\_readorwrite}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_open\_readorwrite()}{ft\_open\_readorwrite()}}
+{\footnotesize\ttfamily int ft\+\_\+open\+\_\+readorwrite (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file,  }\item[{int}]{read\+\_\+or\+\_\+write }\end{DoxyParamCaption})}
+
+
+
+0 = read, 1 = write, 2 = append 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & file to open \\
+\hline
+{\em read\+\_\+or\+\_\+write} & 0 = read, 1 = write, 2 = append \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_af28c817e3d4b70df9c5b9e46620eca2f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a620cc0dbde9e931040ac966b4d428e02}\label{mylibc_8h_a620cc0dbde9e931040ac966b4d428e02} 
+\index{mylibc.h@{mylibc.h}!ft\_pipe@{ft\_pipe}}
+\index{ft\_pipe@{ft\_pipe}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_pipe()}{ft\_pipe()}}
+{\footnotesize\ttfamily void ft\+\_\+pipe (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{pipe\+\_\+fd }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{mylibc_8h_a620cc0dbde9e931040ac966b4d428e02_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ad20b7902ffc9ba35bcd44e49fdc1dbfb}\label{mylibc_8h_ad20b7902ffc9ba35bcd44e49fdc1dbfb} 
+\index{mylibc.h@{mylibc.h}!ft\_pointer\_hexa@{ft\_pointer\_hexa}}
+\index{ft\_pointer\_hexa@{ft\_pointer\_hexa}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_pointer\_hexa()}{ft\_pointer\_hexa()}}
+{\footnotesize\ttfamily int ft\+\_\+pointer\+\_\+hexa (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a9a6cc50d2872dff51f0d6fbbd388ee47}\label{mylibc_8h_a9a6cc50d2872dff51f0d6fbbd388ee47} 
+\index{mylibc.h@{mylibc.h}!ft\_pointer\_hexa\_fpr@{ft\_pointer\_hexa\_fpr}}
+\index{ft\_pointer\_hexa\_fpr@{ft\_pointer\_hexa\_fpr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_pointer\_hexa\_fpr()}{ft\_pointer\_hexa\_fpr()}}
+{\footnotesize\ttfamily int ft\+\_\+pointer\+\_\+hexa\+\_\+fpr (\begin{DoxyParamCaption}\item[{long}]{fd,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a1a04419f657be214129cb35741adf28f}\label{mylibc_8h_a1a04419f657be214129cb35741adf28f} 
+\index{mylibc.h@{mylibc.h}!ft\_printf@{ft\_printf}}
+\index{ft\_printf@{ft\_printf}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_printf()}{ft\_printf()}}
+{\footnotesize\ttfamily int ft\+\_\+printf (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a8b5c8ecd9dd02406abd454e7464f4ff3}\label{mylibc_8h_a8b5c8ecd9dd02406abd454e7464f4ff3} 
+\index{mylibc.h@{mylibc.h}!ft\_putchar@{ft\_putchar}}
+\index{ft\_putchar@{ft\_putchar}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putchar()}{ft\_putchar()}}
+{\footnotesize\ttfamily int ft\+\_\+putchar (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a8ee15a511946c1397bd2bdea4aed6aee}\label{mylibc_8h_a8ee15a511946c1397bd2bdea4aed6aee} 
+\index{mylibc.h@{mylibc.h}!ft\_putchar\_fd@{ft\_putchar\_fd}}
+\index{ft\_putchar\_fd@{ft\_putchar\_fd}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putchar\_fd()}{ft\_putchar\_fd()}}
+{\footnotesize\ttfamily void ft\+\_\+putchar\+\_\+fd (\begin{DoxyParamCaption}\item[{char}]{c,  }\item[{int}]{fd }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a7882b4d52fd482b6b1d1f9415dbcedc5}\label{mylibc_8h_a7882b4d52fd482b6b1d1f9415dbcedc5} 
+\index{mylibc.h@{mylibc.h}!ft\_putchar\_fd\_fpr@{ft\_putchar\_fd\_fpr}}
+\index{ft\_putchar\_fd\_fpr@{ft\_putchar\_fd\_fpr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putchar\_fd\_fpr()}{ft\_putchar\_fd\_fpr()}}
+{\footnotesize\ttfamily int ft\+\_\+putchar\+\_\+fd\+\_\+fpr (\begin{DoxyParamCaption}\item[{long}]{fd,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a8dbf1ac019615e971372de62633967d8}\label{mylibc_8h_a8dbf1ac019615e971372de62633967d8} 
+\index{mylibc.h@{mylibc.h}!ft\_putchar\_int@{ft\_putchar\_int}}
+\index{ft\_putchar\_int@{ft\_putchar\_int}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putchar\_int()}{ft\_putchar\_int()}}
+{\footnotesize\ttfamily int ft\+\_\+putchar\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_aeb112152acfc553d58d61a5df38afcde}\label{mylibc_8h_aeb112152acfc553d58d61a5df38afcde} 
+\index{mylibc.h@{mylibc.h}!ft\_putendl\_fd@{ft\_putendl\_fd}}
+\index{ft\_putendl\_fd@{ft\_putendl\_fd}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putendl\_fd()}{ft\_putendl\_fd()}}
+{\footnotesize\ttfamily void ft\+\_\+putendl\+\_\+fd (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{s,  }\item[{int}]{fd }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a2e51f80c9e46e52f4adf94617fb51ada}\label{mylibc_8h_a2e51f80c9e46e52f4adf94617fb51ada} 
+\index{mylibc.h@{mylibc.h}!ft\_putnbr@{ft\_putnbr}}
+\index{ft\_putnbr@{ft\_putnbr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putnbr()}{ft\_putnbr()}}
+{\footnotesize\ttfamily int ft\+\_\+putnbr (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{mylibc_8h_a2e51f80c9e46e52f4adf94617fb51ada_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{mylibc_8h_a2e51f80c9e46e52f4adf94617fb51ada_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a63cc0aec12256d125d3f85e472280972}\label{mylibc_8h_a63cc0aec12256d125d3f85e472280972} 
+\index{mylibc.h@{mylibc.h}!ft\_putnbr\_fd@{ft\_putnbr\_fd}}
+\index{ft\_putnbr\_fd@{ft\_putnbr\_fd}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putnbr\_fd()}{ft\_putnbr\_fd()}}
+{\footnotesize\ttfamily void ft\+\_\+putnbr\+\_\+fd (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{fd }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{mylibc_8h_a63cc0aec12256d125d3f85e472280972_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{mylibc_8h_a63cc0aec12256d125d3f85e472280972_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a382314c4483ec26eea93aa4cbee46a0e}\label{mylibc_8h_a382314c4483ec26eea93aa4cbee46a0e} 
+\index{mylibc.h@{mylibc.h}!ft\_putnbr\_fd\_fpr@{ft\_putnbr\_fd\_fpr}}
+\index{ft\_putnbr\_fd\_fpr@{ft\_putnbr\_fd\_fpr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putnbr\_fd\_fpr()}{ft\_putnbr\_fd\_fpr()}}
+{\footnotesize\ttfamily int ft\+\_\+putnbr\+\_\+fd\+\_\+fpr (\begin{DoxyParamCaption}\item[{long}]{fd,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{mylibc_8h_a382314c4483ec26eea93aa4cbee46a0e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{mylibc_8h_a382314c4483ec26eea93aa4cbee46a0e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ae7e2fec198dbbd277a7c486fd76d87db}\label{mylibc_8h_ae7e2fec198dbbd277a7c486fd76d87db} 
+\index{mylibc.h@{mylibc.h}!ft\_putnbr\_nbr@{ft\_putnbr\_nbr}}
+\index{ft\_putnbr\_nbr@{ft\_putnbr\_nbr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putnbr\_nbr()}{ft\_putnbr\_nbr()}}
+{\footnotesize\ttfamily int ft\+\_\+putnbr\+\_\+nbr (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{n,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{mylibc_8h_ae7e2fec198dbbd277a7c486fd76d87db_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ae07c9c3acc8313cfbea5cf3092ffe6a4}\label{mylibc_8h_ae07c9c3acc8313cfbea5cf3092ffe6a4} 
+\index{mylibc.h@{mylibc.h}!ft\_putstr@{ft\_putstr}}
+\index{ft\_putstr@{ft\_putstr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putstr()}{ft\_putstr()}}
+{\footnotesize\ttfamily int ft\+\_\+putstr (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{mylibc_8h_ae07c9c3acc8313cfbea5cf3092ffe6a4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_acefce9ac519f8f8b7d3fde33dbafe469}\label{mylibc_8h_acefce9ac519f8f8b7d3fde33dbafe469} 
+\index{mylibc.h@{mylibc.h}!ft\_putstr\_fd@{ft\_putstr\_fd}}
+\index{ft\_putstr\_fd@{ft\_putstr\_fd}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putstr\_fd()}{ft\_putstr\_fd()}}
+{\footnotesize\ttfamily void ft\+\_\+putstr\+\_\+fd (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{s,  }\item[{int}]{fd }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_acd7460946eff57f27671a7208eac9437}\label{mylibc_8h_acd7460946eff57f27671a7208eac9437} 
+\index{mylibc.h@{mylibc.h}!ft\_putstr\_fd\_fpr@{ft\_putstr\_fd\_fpr}}
+\index{ft\_putstr\_fd\_fpr@{ft\_putstr\_fd\_fpr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putstr\_fd\_fpr()}{ft\_putstr\_fd\_fpr()}}
+{\footnotesize\ttfamily int ft\+\_\+putstr\+\_\+fd\+\_\+fpr (\begin{DoxyParamCaption}\item[{long}]{fd,  }\item[{char \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{mylibc_8h_acd7460946eff57f27671a7208eac9437_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ad68d7f4bd08039a3e0516d435b1059d5}\label{mylibc_8h_ad68d7f4bd08039a3e0516d435b1059d5} 
+\index{mylibc.h@{mylibc.h}!ft\_putstr\_str@{ft\_putstr\_str}}
+\index{ft\_putstr\_str@{ft\_putstr\_str}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putstr\_str()}{ft\_putstr\_str()}}
+{\footnotesize\ttfamily int ft\+\_\+putstr\+\_\+str (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{mylibc_8h_ad68d7f4bd08039a3e0516d435b1059d5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ad91f9a4c11e9dcd122e88fe8c19557e6}\label{mylibc_8h_ad91f9a4c11e9dcd122e88fe8c19557e6} 
+\index{mylibc.h@{mylibc.h}!ft\_putstrstr\_fd\_fpr@{ft\_putstrstr\_fd\_fpr}}
+\index{ft\_putstrstr\_fd\_fpr@{ft\_putstrstr\_fd\_fpr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_putstrstr\_fd\_fpr()}{ft\_putstrstr\_fd\_fpr()}}
+{\footnotesize\ttfamily int ft\+\_\+putstrstr\+\_\+fd\+\_\+fpr (\begin{DoxyParamCaption}\item[{long}]{fd,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{mylibc_8h_ad91f9a4c11e9dcd122e88fe8c19557e6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a9d4d1f47840c693f9b7e819e00cefce0}\label{mylibc_8h_a9d4d1f47840c693f9b7e819e00cefce0} 
+\index{mylibc.h@{mylibc.h}!ft\_round@{ft\_round}}
+\index{ft\_round@{ft\_round}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_round()}{ft\_round()}}
+{\footnotesize\ttfamily int ft\+\_\+round (\begin{DoxyParamCaption}\item[{double}]{num }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a3cab81ee97b88c3359a617df8eaacf30}\label{mylibc_8h_a3cab81ee97b88c3359a617df8eaacf30} 
+\index{mylibc.h@{mylibc.h}!ft\_sed@{ft\_sed}}
+\index{ft\_sed@{ft\_sed}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_sed()}{ft\_sed()}}
+{\footnotesize\ttfamily int ft\+\_\+sed (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file,  }\item[{char \texorpdfstring{$\ast$}{*}}]{s1,  }\item[{char \texorpdfstring{$\ast$}{*}}]{s2 }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a68db9cc02f54dad4f0b1e09874383ff1}\label{mylibc_8h_a68db9cc02f54dad4f0b1e09874383ff1} 
+\index{mylibc.h@{mylibc.h}!ft\_snprintf@{ft\_snprintf}}
+\index{ft\_snprintf@{ft\_snprintf}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_snprintf()}{ft\_snprintf()}}
+{\footnotesize\ttfamily int ft\+\_\+snprintf (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{size\+\_\+t}]{size,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a7c0934a5081af8fe6a8059b6f842834a}\label{mylibc_8h_a7c0934a5081af8fe6a8059b6f842834a} 
+\index{mylibc.h@{mylibc.h}!ft\_split@{ft\_split}}
+\index{ft\_split@{ft\_split}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_split()}{ft\_split()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} ft\+\_\+split (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{s,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a7c0934a5081af8fe6a8059b6f842834a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{mylibc_8h_a7c0934a5081af8fe6a8059b6f842834a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a2edca9b497a7c18406ff2d6342c747fc}\label{mylibc_8h_a2edca9b497a7c18406ff2d6342c747fc} 
+\index{mylibc.h@{mylibc.h}!ft\_split\_long@{ft\_split\_long}}
+\index{ft\_split\_long@{ft\_split\_long}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_split\_long()}{ft\_split\_long()}}
+{\footnotesize\ttfamily long \texorpdfstring{$\ast$}{*} ft\+\_\+split\+\_\+long (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{array\+\_\+source,  }\item[{char}]{delimitator,  }\item[{int \texorpdfstring{$\ast$}{*}}]{size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a2edca9b497a7c18406ff2d6342c747fc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_aa6d0c2d180f32ee585485e1a1ce3d55d}\label{mylibc_8h_aa6d0c2d180f32ee585485e1a1ce3d55d} 
+\index{mylibc.h@{mylibc.h}!ft\_strchr@{ft\_strchr}}
+\index{ft\_strchr@{ft\_strchr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strchr()}{ft\_strchr()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+strchr (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{s,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a7684eb72d021f147ce803b396ddc50f8}\label{mylibc_8h_a7684eb72d021f147ce803b396ddc50f8} 
+\index{mylibc.h@{mylibc.h}!ft\_strchr\_char\_duplicate@{ft\_strchr\_char\_duplicate}}
+\index{ft\_strchr\_char\_duplicate@{ft\_strchr\_char\_duplicate}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strchr\_char\_duplicate()}{ft\_strchr\_char\_duplicate()}}
+{\footnotesize\ttfamily int ft\+\_\+strchr\+\_\+char\+\_\+duplicate (\begin{DoxyParamCaption}\item[{char}]{c,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{mylibc_8h_a7684eb72d021f147ce803b396ddc50f8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ab765229cc12e08d69af1f5021fc15576}\label{mylibc_8h_ab765229cc12e08d69af1f5021fc15576} 
+\index{mylibc.h@{mylibc.h}!ft\_strchr\_char\_duplicate\_interation@{ft\_strchr\_char\_duplicate\_interation}}
+\index{ft\_strchr\_char\_duplicate\_interation@{ft\_strchr\_char\_duplicate\_interation}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strchr\_char\_duplicate\_interation()}{ft\_strchr\_char\_duplicate\_interation()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+strchr\+\_\+char\+\_\+duplicate\+\_\+interation (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array\+\_\+char }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_aba01456182a610de8ec616306aa326f6}\label{mylibc_8h_aba01456182a610de8ec616306aa326f6} 
+\index{mylibc.h@{mylibc.h}!ft\_strchr\_gnl@{ft\_strchr\_gnl}}
+\index{ft\_strchr\_gnl@{ft\_strchr\_gnl}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strchr\_gnl()}{ft\_strchr\_gnl()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+strchr\+\_\+gnl (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{s,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{mylibc_8h_aba01456182a610de8ec616306aa326f6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_aafe0d00181d3d0c7a91a510ddf73481a}\label{mylibc_8h_aafe0d00181d3d0c7a91a510ddf73481a} 
+\index{mylibc.h@{mylibc.h}!ft\_strchr\_int\_duplicate@{ft\_strchr\_int\_duplicate}}
+\index{ft\_strchr\_int\_duplicate@{ft\_strchr\_int\_duplicate}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strchr\_int\_duplicate()}{ft\_strchr\_int\_duplicate()}}
+{\footnotesize\ttfamily int \texorpdfstring{$\ast$}{*} ft\+\_\+strchr\+\_\+int\+\_\+duplicate (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{array\+\_\+int,  }\item[{int}]{size,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_af84d99e5ede66639cf1ad1bcd2b3ea7a}\label{mylibc_8h_af84d99e5ede66639cf1ad1bcd2b3ea7a} 
+\index{mylibc.h@{mylibc.h}!ft\_strchr\_int\_duplicate\_interation@{ft\_strchr\_int\_duplicate\_interation}}
+\index{ft\_strchr\_int\_duplicate\_interation@{ft\_strchr\_int\_duplicate\_interation}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strchr\_int\_duplicate\_interation()}{ft\_strchr\_int\_duplicate\_interation()}}
+{\footnotesize\ttfamily int \texorpdfstring{$\ast$}{*} ft\+\_\+strchr\+\_\+int\+\_\+duplicate\+\_\+interation (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{array\+\_\+int,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a1f2ff2312e5994560c9537cd9173be94}\label{mylibc_8h_a1f2ff2312e5994560c9537cd9173be94} 
+\index{mylibc.h@{mylibc.h}!ft\_strcmp@{ft\_strcmp}}
+\index{ft\_strcmp@{ft\_strcmp}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strcmp()}{ft\_strcmp()}}
+{\footnotesize\ttfamily int ft\+\_\+strcmp (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{s1,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{s2 }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a1f2ff2312e5994560c9537cd9173be94_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a0cd77da46560d400cb77aa518771d909}\label{mylibc_8h_a0cd77da46560d400cb77aa518771d909} 
+\index{mylibc.h@{mylibc.h}!ft\_strcmp\_duplicate@{ft\_strcmp\_duplicate}}
+\index{ft\_strcmp\_duplicate@{ft\_strcmp\_duplicate}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strcmp\_duplicate()}{ft\_strcmp\_duplicate()}}
+{\footnotesize\ttfamily int ft\+\_\+strcmp\+\_\+duplicate (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{mylibc_8h_a0cd77da46560d400cb77aa518771d909_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a26e848e1206c9a84971bd0477158ec58}\label{mylibc_8h_a26e848e1206c9a84971bd0477158ec58} 
+\index{mylibc.h@{mylibc.h}!ft\_strcmp\_duplicate\_inter@{ft\_strcmp\_duplicate\_inter}}
+\index{ft\_strcmp\_duplicate\_inter@{ft\_strcmp\_duplicate\_inter}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strcmp\_duplicate\_inter()}{ft\_strcmp\_duplicate\_inter()}}
+{\footnotesize\ttfamily int ft\+\_\+strcmp\+\_\+duplicate\+\_\+inter (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{mylibc_8h_a26e848e1206c9a84971bd0477158ec58_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ad98485670c4d461a896ea406c8bb2b4d}\label{mylibc_8h_ad98485670c4d461a896ea406c8bb2b4d} 
+\index{mylibc.h@{mylibc.h}!ft\_strdup@{ft\_strdup}}
+\index{ft\_strdup@{ft\_strdup}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strdup()}{ft\_strdup()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+strdup (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{name,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{s1 }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_ad98485670c4d461a896ea406c8bb2b4d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ada722cffd2c6c8169ae339afd0f9763c}\label{mylibc_8h_ada722cffd2c6c8169ae339afd0f9763c} 
+\index{mylibc.h@{mylibc.h}!ft\_striteri@{ft\_striteri}}
+\index{ft\_striteri@{ft\_striteri}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_striteri()}{ft\_striteri()}}
+{\footnotesize\ttfamily void ft\+\_\+striteri (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{s,  }\item[{void(\texorpdfstring{$\ast$}{*})(unsigned int, char \texorpdfstring{$\ast$}{*})}]{f }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a49df3c1d25077a2a470976663b7ce770}\label{mylibc_8h_a49df3c1d25077a2a470976663b7ce770} 
+\index{mylibc.h@{mylibc.h}!ft\_strjoin@{ft\_strjoin}}
+\index{ft\_strjoin@{ft\_strjoin}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strjoin()}{ft\_strjoin()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+strjoin (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{s1,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{s2 }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a49df3c1d25077a2a470976663b7ce770_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a8f84bf12b7abd810ccb10e1358e7a2b2}\label{mylibc_8h_a8f84bf12b7abd810ccb10e1358e7a2b2} 
+\index{mylibc.h@{mylibc.h}!ft\_strjoin\_gnl@{ft\_strjoin\_gnl}}
+\index{ft\_strjoin\_gnl@{ft\_strjoin\_gnl}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strjoin\_gnl()}{ft\_strjoin\_gnl()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+strjoin\+\_\+gnl (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{left\+\_\+str,  }\item[{char \texorpdfstring{$\ast$}{*}}]{buff,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{mylibc_8h_a8f84bf12b7abd810ccb10e1358e7a2b2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a7531453313e0cbfde6fe51662c9c3208}\label{mylibc_8h_a7531453313e0cbfde6fe51662c9c3208} 
+\index{mylibc.h@{mylibc.h}!ft\_strlcat@{ft\_strlcat}}
+\index{ft\_strlcat@{ft\_strlcat}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strlcat()}{ft\_strlcat()}}
+{\footnotesize\ttfamily size\+\_\+t ft\+\_\+strlcat (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dst,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{src,  }\item[{size\+\_\+t}]{dstsize }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{mylibc_8h_a7531453313e0cbfde6fe51662c9c3208_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a12f759eb9793cf306fede66d0b7de0fc}\label{mylibc_8h_a12f759eb9793cf306fede66d0b7de0fc} 
+\index{mylibc.h@{mylibc.h}!ft\_strlcpy@{ft\_strlcpy}}
+\index{ft\_strlcpy@{ft\_strlcpy}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strlcpy()}{ft\_strlcpy()}}
+{\footnotesize\ttfamily size\+\_\+t ft\+\_\+strlcpy (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dst,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{src,  }\item[{size\+\_\+t}]{dstsize }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{mylibc_8h_a12f759eb9793cf306fede66d0b7de0fc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a828402378653640f545a4be2e00e92f9}\label{mylibc_8h_a828402378653640f545a4be2e00e92f9} 
+\index{mylibc.h@{mylibc.h}!ft\_strlen@{ft\_strlen}}
+\index{ft\_strlen@{ft\_strlen}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strlen()}{ft\_strlen()}}
+{\footnotesize\ttfamily size\+\_\+t ft\+\_\+strlen (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a956d952d7a88da3b56da69e6154ae28e}\label{mylibc_8h_a956d952d7a88da3b56da69e6154ae28e} 
+\index{mylibc.h@{mylibc.h}!ft\_strlen\_gnl@{ft\_strlen\_gnl}}
+\index{ft\_strlen\_gnl@{ft\_strlen\_gnl}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strlen\_gnl()}{ft\_strlen\_gnl()}}
+{\footnotesize\ttfamily size\+\_\+t ft\+\_\+strlen\+\_\+gnl (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{s,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a668b60557bfc9d60c2d3ccda8afadf49}\label{mylibc_8h_a668b60557bfc9d60c2d3ccda8afadf49} 
+\index{mylibc.h@{mylibc.h}!ft\_strmapi@{ft\_strmapi}}
+\index{ft\_strmapi@{ft\_strmapi}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strmapi()}{ft\_strmapi()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+strmapi (\begin{DoxyParamCaption}\item[{char const \texorpdfstring{$\ast$}{*}}]{s,  }\item[{char(\texorpdfstring{$\ast$}{*})(unsigned int, char)}]{f }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{mylibc_8h_a668b60557bfc9d60c2d3ccda8afadf49_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a9d2fe792187aa4ed08e5864fb2c4d6dc}\label{mylibc_8h_a9d2fe792187aa4ed08e5864fb2c4d6dc} 
+\index{mylibc.h@{mylibc.h}!ft\_strncmp@{ft\_strncmp}}
+\index{ft\_strncmp@{ft\_strncmp}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strncmp()}{ft\_strncmp()}}
+{\footnotesize\ttfamily int ft\+\_\+strncmp (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{s1,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{s2,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_ae00229613cc0bf361e86dca72ad92591}\label{mylibc_8h_ae00229613cc0bf361e86dca72ad92591} 
+\index{mylibc.h@{mylibc.h}!ft\_strnstr@{ft\_strnstr}}
+\index{ft\_strnstr@{ft\_strnstr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strnstr()}{ft\_strnstr()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+strnstr (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{haystack,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{needle,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{mylibc_8h_ae00229613cc0bf361e86dca72ad92591_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a874abefd72ca9c2dc752d03bef7c9431}\label{mylibc_8h_a874abefd72ca9c2dc752d03bef7c9431} 
+\index{mylibc.h@{mylibc.h}!ft\_strol@{ft\_strol}}
+\index{ft\_strol@{ft\_strol}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strol()}{ft\_strol()}}
+{\footnotesize\ttfamily long ft\+\_\+strol (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{endptr,  }\item[{int}]{base }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{mylibc_8h_a874abefd72ca9c2dc752d03bef7c9431_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a49c260cf80f9997975d6f3ec74ead582}\label{mylibc_8h_a49c260cf80f9997975d6f3ec74ead582} 
+\index{mylibc.h@{mylibc.h}!ft\_strrchr@{ft\_strrchr}}
+\index{ft\_strrchr@{ft\_strrchr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strrchr()}{ft\_strrchr()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+strrchr (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{s,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a60352c5b39fab08469b3e28131a79e25}\label{mylibc_8h_a60352c5b39fab08469b3e28131a79e25} 
+\index{mylibc.h@{mylibc.h}!ft\_strtrim@{ft\_strtrim}}
+\index{ft\_strtrim@{ft\_strtrim}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_strtrim()}{ft\_strtrim()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+strtrim (\begin{DoxyParamCaption}\item[{char const \texorpdfstring{$\ast$}{*}}]{s1,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{set }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{mylibc_8h_a60352c5b39fab08469b3e28131a79e25_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a5e78d4bd57769179a643eca68541355e}\label{mylibc_8h_a5e78d4bd57769179a643eca68541355e} 
+\index{mylibc.h@{mylibc.h}!ft\_substr@{ft\_substr}}
+\index{ft\_substr@{ft\_substr}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_substr()}{ft\_substr()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+substr (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{s,  }\item[{unsigned int}]{start,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Extracts a substring from a given string. 
+
+This function allocates (with ft\+\_\+calloc\+\_\+fd) and returns a substring from the string \textquotesingle{}s\textquotesingle{}. The substring begins at index \textquotesingle{}start\textquotesingle{} and is of maximum size \textquotesingle{}len\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to be used with ft\+\_\+calloc\+\_\+fd and ft\+\_\+strdup. \\
+\hline
+{\em s} & The original string from which the substring will be extracted. \\
+\hline
+{\em start} & The starting index of the substring in the original string. \\
+\hline
+{\em len} & The maximum length of the substring to be extracted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly allocated substring, or NULL if the allocation fails. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a5e78d4bd57769179a643eca68541355e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ab86e5297914753b6c82d7e3c3020ce17}\label{mylibc_8h_ab86e5297914753b6c82d7e3c3020ce17} 
+\index{mylibc.h@{mylibc.h}!ft\_tolower@{ft\_tolower}}
+\index{ft\_tolower@{ft\_tolower}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_tolower()}{ft\_tolower()}}
+{\footnotesize\ttfamily int ft\+\_\+tolower (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_aef116be7b5bceafff4b59f20a4433d12}\label{mylibc_8h_aef116be7b5bceafff4b59f20a4433d12} 
+\index{mylibc.h@{mylibc.h}!ft\_toupper@{ft\_toupper}}
+\index{ft\_toupper@{ft\_toupper}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_toupper()}{ft\_toupper()}}
+{\footnotesize\ttfamily int ft\+\_\+toupper (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_ae90ca75ca2ece9b29639a94017718091}\label{mylibc_8h_ae90ca75ca2ece9b29639a94017718091} 
+\index{mylibc.h@{mylibc.h}!ft\_write\_bff@{ft\_write\_bff}}
+\index{ft\_write\_bff@{ft\_write\_bff}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{ft\_write\_bff()}{ft\_write\_bff()}}
+{\footnotesize\ttfamily int ft\+\_\+write\+\_\+bff (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{char \texorpdfstring{$\ast$}{*}}]{string,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a78d68a5f50a6eec0380ce25b4a1bd5b7}\label{mylibc_8h_a78d68a5f50a6eec0380ce25b4a1bd5b7} 
+\index{mylibc.h@{mylibc.h}!get\_next\_line@{get\_next\_line}}
+\index{get\_next\_line@{get\_next\_line}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{get\_next\_line()}{get\_next\_line()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} get\+\_\+next\+\_\+line (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a78d68a5f50a6eec0380ce25b4a1bd5b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{mylibc_8h_a78d68a5f50a6eec0380ce25b4a1bd5b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a723946586cc34d81829190a49541b441}\label{mylibc_8h_a723946586cc34d81829190a49541b441} 
+\index{mylibc.h@{mylibc.h}!get\_next\_line\_join@{get\_next\_line\_join}}
+\index{get\_next\_line\_join@{get\_next\_line\_join}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{get\_next\_line\_join()}{get\_next\_line\_join()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} get\+\_\+next\+\_\+line\+\_\+join (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a723946586cc34d81829190a49541b441_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a2674c5403351d2f723050b526704354a}\label{mylibc_8h_a2674c5403351d2f723050b526704354a} 
+\index{mylibc.h@{mylibc.h}!get\_next\_line\_split@{get\_next\_line\_split}}
+\index{get\_next\_line\_split@{get\_next\_line\_split}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{get\_next\_line\_split()}{get\_next\_line\_split()}}
+{\footnotesize\ttfamily int get\+\_\+next\+\_\+line\+\_\+split (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{line }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a2674c5403351d2f723050b526704354a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a437ddc5458426fe70e2d3a800a695c7d}\label{mylibc_8h_a437ddc5458426fe70e2d3a800a695c7d} 
+\index{mylibc.h@{mylibc.h}!halt\_exit@{halt\_exit}}
+\index{halt\_exit@{halt\_exit}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{halt\_exit()}{halt\_exit()}}
+{\footnotesize\ttfamily void halt\+\_\+exit (\begin{DoxyParamCaption}\item[{int}]{status,  }\item[{char \texorpdfstring{$\ast$}{*}}]{description }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a04122333003213c232d5e261e0301b61}\label{mylibc_8h_a04122333003213c232d5e261e0301b61} 
+\index{mylibc.h@{mylibc.h}!halt\_exit\_@{halt\_exit\_}}
+\index{halt\_exit\_@{halt\_exit\_}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{halt\_exit\_()}{halt\_exit\_()}}
+{\footnotesize\ttfamily void halt\+\_\+exit\+\_\+ (\begin{DoxyParamCaption}\item[{int}]{status }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_aa561a9b17f941451a5c9664e94277bfd}\label{mylibc_8h_aa561a9b17f941451a5c9664e94277bfd} 
+\index{mylibc.h@{mylibc.h}!halt\_exit\_fd@{halt\_exit\_fd}}
+\index{halt\_exit\_fd@{halt\_exit\_fd}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{halt\_exit\_fd()}{halt\_exit\_fd()}}
+{\footnotesize\ttfamily void halt\+\_\+exit\+\_\+fd (\begin{DoxyParamCaption}\item[{int}]{status }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{mylibc_8h_aa561a9b17f941451a5c9664e94277bfd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a0467fe1d4cf5835a03840e3998eceae0}\label{mylibc_8h_a0467fe1d4cf5835a03840e3998eceae0} 
+\index{mylibc.h@{mylibc.h}!heap\_sort@{heap\_sort}}
+\index{heap\_sort@{heap\_sort}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{heap\_sort()}{heap\_sort()}}
+{\footnotesize\ttfamily void heap\+\_\+sort (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a0467fe1d4cf5835a03840e3998eceae0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{mylibc_8h_a0467fe1d4cf5835a03840e3998eceae0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a1c6c3862fc82db2087497b88d1457411}\label{mylibc_8h_a1c6c3862fc82db2087497b88d1457411} 
+\index{mylibc.h@{mylibc.h}!heapify@{heapify}}
+\index{heapify@{heapify}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{heapify()}{heapify()}}
+{\footnotesize\ttfamily void heapify (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{n,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{mylibc_8h_a1c6c3862fc82db2087497b88d1457411_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{mylibc_8h_a1c6c3862fc82db2087497b88d1457411_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a307734c126897c09e919eb65119bb102}\label{mylibc_8h_a307734c126897c09e919eb65119bb102} 
+\index{mylibc.h@{mylibc.h}!intro\_sort@{intro\_sort}}
+\index{intro\_sort@{intro\_sort}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{intro\_sort()}{intro\_sort()}}
+{\footnotesize\ttfamily void intro\+\_\+sort (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{mylibc_8h_a307734c126897c09e919eb65119bb102_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a24712ac200c27af6c4baca2e646a476f}\label{mylibc_8h_a24712ac200c27af6c4baca2e646a476f} 
+\index{mylibc.h@{mylibc.h}!matrix3\_init@{matrix3\_init}}
+\index{matrix3\_init@{matrix3\_init}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{matrix3\_init()}{matrix3\_init()}}
+{\footnotesize\ttfamily void matrix3\+\_\+init (\begin{DoxyParamCaption}\item[{float(\texorpdfstring{$\ast$}{*})}]{matrix\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+\Hypertarget{mylibc_8h_a2f0658d814c1e14b49d419add95c79b9}\label{mylibc_8h_a2f0658d814c1e14b49d419add95c79b9} 
+\index{mylibc.h@{mylibc.h}!partition@{partition}}
+\index{partition@{partition}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily int partition (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{mylibc_8h_a2f0658d814c1e14b49d419add95c79b9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a444f95ef474736b965e5eb10e81d88e7}\label{mylibc_8h_a444f95ef474736b965e5eb10e81d88e7} 
+\index{mylibc.h@{mylibc.h}!print\_bits@{print\_bits}}
+\index{print\_bits@{print\_bits}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{print\_bits()}{print\_bits()}}
+{\footnotesize\ttfamily void print\+\_\+bits (\begin{DoxyParamCaption}\item[{unsigned char}]{octet }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{mylibc_8h_a444f95ef474736b965e5eb10e81d88e7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_a64ad59a88d29daf3d81305ade3627975}\label{mylibc_8h_a64ad59a88d29daf3d81305ade3627975} 
+\index{mylibc.h@{mylibc.h}!quick\_sort@{quick\_sort}}
+\index{quick\_sort@{quick\_sort}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{quick\_sort()}{quick\_sort()}}
+{\footnotesize\ttfamily void quick\+\_\+sort (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{low,  }\item[{int}]{high,  }\item[{int}]{depthlimit }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_a64ad59a88d29daf3d81305ade3627975_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{mylibc_8h_a64ad59a88d29daf3d81305ade3627975_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mylibc_8h_ad38d9c701da937aa7644a2053e512863}\label{mylibc_8h_ad38d9c701da937aa7644a2053e512863} 
+\index{mylibc.h@{mylibc.h}!swap\_introsort@{swap\_introsort}}
+\index{swap\_introsort@{swap\_introsort}!mylibc.h@{mylibc.h}}
+\doxysubsubsection{\texorpdfstring{swap\_introsort()}{swap\_introsort()}}
+{\footnotesize\ttfamily void swap\+\_\+introsort (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{a,  }\item[{int \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mylibc_8h_ad38d9c701da937aa7644a2053e512863_icgraph}
+\end{center}
+\end{figure}

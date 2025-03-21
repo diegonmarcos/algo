@@ -1,0 +1,12 @@
+<map id="ft_substr" name="ft_substr">
+<area shape="rect" id="Node000001" title="Extracts a substring from a given string." alt="" coords="532,5,611,31"/>
+<area shape="rect" id="Node000002" href="$src__all_21d__ft__strtok__split_8c.html#a3f66d7fe88166a46cad116a76f6673dc" title=" " alt="" coords="417,5,484,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="518,30,484,29,484,23,518,24"/>
+<area shape="poly" id="edge5_Node000001_Node000002" title=" " alt="" coords="518,12,484,13,484,7,518,6"/>
+<area shape="rect" id="Node000003" href="$1__0__mem__alloc_8c.html#a3e81e0a181d9e021f35edbd35e5ab298" title=" " alt="" coords="245,5,369,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="403,21,370,21,370,15,403,15"/>
+<area shape="rect" id="Node000004" href="$1__0__mem__alloc_8c.html#a1852976558d65cb628d7e7f4e7f7b5ee" title=" " alt="" coords="108,5,197,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="232,21,198,21,198,15,232,15"/>
+<area shape="rect" id="Node000005" href="$checker__bonus_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

@@ -51,9 +51,9 @@ This graph shows which files directly or indirectly include this file:<para>
 <simplesect>
     <title>Typedefs    </title>
         <itemizedlist>
-            <listitem><para>typedef struct s_list_dls <link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link></para>
+            <listitem><para>typedef struct <link linkend="_structs__list__dls">s_list_dls</link> <link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link></para>
 </listitem>
-            <listitem><para>typedef struct s_list_garbage <link linkend="_push__swap__data_8h_1a99ef35a30f94abb8960cfa09342f9ab6">t_list_garbage</link></para>
+            <listitem><para>typedef struct <link linkend="_structs__list__garbage">s_list_garbage</link> <link linkend="_push__swap__data_8h_1a99ef35a30f94abb8960cfa09342f9ab6">t_list_garbage</link></para>
 </listitem>
             <listitem><para>typedef struct <link linkend="_structs__list__program">s_list_program</link> <link linkend="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217">t_list_program</link></para>
 </listitem>
@@ -121,12 +121,12 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>t_list_dls</title>
 <indexterm><primary>t_list_dls</primary><secondary>push_swap_data.h</secondary></indexterm>
 <indexterm><primary>push_swap_data.h</primary><secondary>t_list_dls</secondary></indexterm>
-<para><computeroutput>typedef struct s_list_dls <link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link></computeroutput></para></section>
+<para><computeroutput>typedef struct <link linkend="_structs__list__dls">s_list_dls</link> <link linkend="_push__swap__data_8h_1a3834963377ca73af56f7e6d6f7b1c7bc">t_list_dls</link></computeroutput></para></section>
 <anchor xml:id="_push__swap__data_8h_1a99ef35a30f94abb8960cfa09342f9ab6"/><section>
     <title>t_list_garbage</title>
 <indexterm><primary>t_list_garbage</primary><secondary>push_swap_data.h</secondary></indexterm>
 <indexterm><primary>push_swap_data.h</primary><secondary>t_list_garbage</secondary></indexterm>
-<para><computeroutput>typedef struct s_list_garbage <link linkend="_push__swap__data_8h_1a99ef35a30f94abb8960cfa09342f9ab6">t_list_garbage</link></computeroutput></para></section>
+<para><computeroutput>typedef struct <link linkend="_structs__list__garbage">s_list_garbage</link> <link linkend="_push__swap__data_8h_1a99ef35a30f94abb8960cfa09342f9ab6">t_list_garbage</link></computeroutput></para></section>
 <anchor xml:id="_push__swap__data_8h_1ab5eacb3c2438e52b1d19cf3c853f4217"/><section>
     <title>t_list_program</title>
 <indexterm><primary>t_list_program</primary><secondary>push_swap_data.h</secondary></indexterm>

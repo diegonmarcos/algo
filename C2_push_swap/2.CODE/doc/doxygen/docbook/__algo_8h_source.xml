@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="___algo_8h_source" xml:lang="en-US">
+<title>_algo.h</title>
+<indexterm><primary>src/checker_bonus/libs/mylibs/mylibc/inc/_algo.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*&#32;**************************************************************************&#32;*/</emphasis>
+2 <emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+3 <emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:::&#32;&#32;&#32;&#32;&#32;&#32;::::::::&#32;&#32;&#32;*/</emphasis>
+4 <emphasis role="comment">/*&#32;&#32;&#32;_algo.h&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:+:&#32;&#32;&#32;&#32;&#32;&#32;:+:&#32;&#32;&#32;&#32;:+:&#32;&#32;&#32;*/</emphasis>
+5 <emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+:+&#32;+:+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+:+&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+6 <emphasis role="comment">/*&#32;&#32;&#32;By:&#32;dinepomu&#32;&lt;dinepomu@student.42berlin.de&gt;&#32;&#32;&#32;&#32;+#+&#32;&#32;+:+&#32;&#32;&#32;&#32;&#32;&#32;&#32;+#+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+7 <emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+#+#+#+#+#+&#32;&#32;&#32;+#+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+8 <emphasis role="comment">/*&#32;&#32;&#32;Created:&#32;2025/03/10&#32;08:37:33&#32;by&#32;dinepomu&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#+#&#32;&#32;&#32;&#32;#+#&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+9 <emphasis role="comment">/*&#32;&#32;&#32;Updated:&#32;2025/03/10&#32;10:58:22&#32;by&#32;dinepomu&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;###&#32;&#32;&#32;########.fr&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+10 <emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+11 <emphasis role="comment">/*&#32;**************************************************************************&#32;*/</emphasis>
+12 
+13 <emphasis role="comment">/*&#32;**************************************************************************&#32;*/</emphasis>
+14 <emphasis role="comment">/*&#32;https://linktr.ee/diegonmarcos&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+15 <emphasis role="comment">/*&#32;**************************************************************************&#32;*/</emphasis>
+16 
+17 <emphasis role="preprocessor">#ifndef&#32;_ALGO_H</emphasis>
+18 <emphasis role="preprocessor">#&#32;define&#32;_ALGO_H</emphasis>
+19 
+20 <emphasis role="preprocessor">#&#32;include&#32;&lt;unistd.h&gt;</emphasis>
+21 
+22 <emphasis role="comment">//&#32;▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓&#32;//</emphasis>
+23 
+24 <emphasis role="comment">/*#########################################################################&#32;*/</emphasis>
+25 <emphasis role="comment">/*&#32;3.&#32;ALGOS&#32;graphic&#32;sorting&#32;parser&#32;others&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+26 <emphasis role="comment">/*#########################################################################&#32;*/</emphasis>
+27 
+28 <emphasis role="comment">/*&#32;*************************************************************&#32;*/</emphasis>
+29 <emphasis role="comment">/*&#32;ALGOS/SORTING&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+30 <emphasis role="comment">/*&#32;*************************************************************&#32;*/</emphasis>
+31 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;<link linkend="___algo_8h_1a1c6c3862fc82db2087497b88d1457411">heapify</link>(<emphasis role="keywordtype">int</emphasis>&#32;arr[],&#32;<emphasis role="keywordtype">int</emphasis>&#32;n,&#32;<emphasis role="keywordtype">int</emphasis>&#32;i);
+32 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;<link linkend="___algo_8h_1a0467fe1d4cf5835a03840e3998eceae0">heap_sort</link>(<emphasis role="keywordtype">int</emphasis>&#32;arr[],&#32;<emphasis role="keywordtype">int</emphasis>&#32;n);
+33 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;<link linkend="___algo_8h_1a64ad59a88d29daf3d81305ade3627975">quick_sort</link>(<emphasis role="keywordtype">int</emphasis>&#32;arr[],&#32;<emphasis role="keywordtype">int</emphasis>&#32;low,&#32;<emphasis role="keywordtype">int</emphasis>&#32;high,&#32;<emphasis role="keywordtype">int</emphasis>&#32;depthlimit);
+34 <emphasis role="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;<link linkend="___algo_8h_1af3d8997b18410a08b5c5e982a24e363a">ft_log_introsort</link>(<emphasis role="keywordtype">int</emphasis>&#32;n);
+35 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;<link linkend="___algo_8h_1a307734c126897c09e919eb65119bb102">intro_sort</link>(<emphasis role="keywordtype">int</emphasis>&#32;arr[],&#32;<emphasis role="keywordtype">int</emphasis>&#32;n);
+36 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;<link linkend="___algo_8h_1ad38d9c701da937aa7644a2053e512863">swap_introsort</link>(<emphasis role="keywordtype">int</emphasis>&#32;*a,&#32;<emphasis role="keywordtype">int</emphasis>&#32;*b);
+37 <emphasis role="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;<link linkend="___algo_8h_1a2f0658d814c1e14b49d419add95c79b9">partition</link>(<emphasis role="keywordtype">int</emphasis>&#32;arr[],&#32;<emphasis role="keywordtype">int</emphasis>&#32;low,&#32;<emphasis role="keywordtype">int</emphasis>&#32;high);
+38 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;<link linkend="___algo_8h_1a1c6c3862fc82db2087497b88d1457411">heapify</link>(<emphasis role="keywordtype">int</emphasis>&#32;arr[],&#32;<emphasis role="keywordtype">int</emphasis>&#32;n,&#32;<emphasis role="keywordtype">int</emphasis>&#32;i);
+39 
+40 <emphasis role="comment">/*&#32;*************************************************************&#32;*/</emphasis>
+41 <emphasis role="comment">/*&#32;ARITHMETIC/MATH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+42 <emphasis role="comment">/*&#32;*************************************************************&#32;*/</emphasis>
+43 <emphasis role="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;<link linkend="___algo_8h_1aa08d9f8fd59789cc722de1f2bdfe48a1">ft_abs</link>(<emphasis role="keywordtype">int</emphasis>&#32;number);
+44 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;<link linkend="___algo_8h_1a24712ac200c27af6c4baca2e646a476f">matrix3_init</link>(<emphasis role="keywordtype">float</emphasis>&#32;(*matrix)[3]);
+45 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;<link linkend="___algo_8h_1a444f95ef474736b965e5eb10e81d88e7">print_bits</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;octet);
+46 
+47 <emphasis role="comment">/*&#32;*************************************************************&#32;*/</emphasis>
+48 <emphasis role="comment">/*&#32;ARITHMETIC/STATISTICS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+49 <emphasis role="comment">/*&#32;*************************************************************&#32;*/</emphasis>
+50 
+51 <emphasis role="comment">/*&#32;*************************************************************&#32;*/</emphasis>
+52 <emphasis role="comment">/*&#32;ARITHMETIC/PROBABILITY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+53 <emphasis role="comment">/*&#32;*************************************************************&#32;*/</emphasis>
+54 
+55 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

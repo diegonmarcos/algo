@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 09:57:09 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/19 10:27:41 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/20 14:03:54 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	radix_sort_step(int bit, int size, t_list_program *list_program);
 /* QUICK SORT														 */
 /* ***************************************************************** */
 void	quick_sort_pushswap(t_list_program *list_program);
-//void	recursive_split_chunk(t_chunk *chunk_to_sort, \
+//void	recursive_split_chunk(t_chunk *chunk_to_sort,
 //			t_list_program *list_program);
 void	sort_3_chunk(t_list_program *list_program);
 
@@ -96,8 +96,7 @@ void	moves_optimizations(t_list_program *list_program);
 //######################################################################### */
 // STACK MOVES																*/
 //######################################################################### */
-void	rotate(char *direction, char stack_name, \
-					t_list_program *list_program);
+void	rotate(char *direction, char stack_name, t_list_program *list_program);
 void	push(char direction, t_list_program *list_program);
 void	swap(char stack_name, t_list_program *list_program);
 void	swap_both(t_list_program *t_list_program);

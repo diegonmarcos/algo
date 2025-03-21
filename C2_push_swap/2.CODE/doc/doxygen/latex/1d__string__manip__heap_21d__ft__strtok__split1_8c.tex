@@ -1,0 +1,44 @@
+\doxysection{src/checker\+\_\+bonus/libs/mylibs/mylibc/src/1d\+\_\+string\+\_\+manip\+\_\+heap/1d\+\_\+ft\+\_\+strtok\+\_\+split1.c File Reference}
+\hypertarget{1d__string__manip__heap_21d__ft__strtok__split1_8c}{}\label{1d__string__manip__heap_21d__ft__strtok__split1_8c}\index{src/checker\_bonus/libs/mylibs/mylibc/src/1d\_string\_manip\_heap/1d\_ft\_strtok\_split1.c@{src/checker\_bonus/libs/mylibs/mylibc/src/1d\_string\_manip\_heap/1d\_ft\_strtok\_split1.c}}
+{\ttfamily \#include "{}mylibc.\+h"{}}\newline
+Include dependency graph for 1d\+\_\+ft\+\_\+strtok\+\_\+split1.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{1d__string__manip__heap_21d__ft__strtok__split1_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{1d__string__manip__heap_21d__ft__strtok__split1_8c_a358b8865e576515c08abf6e2209e8e7f}{ft\+\_\+substr}} (char \texorpdfstring{$\ast$}{*}filename, const char \texorpdfstring{$\ast$}{*}s, unsigned int start, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Extracts a substring from a given string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{1d__string__manip__heap_21d__ft__strtok__split1_8c_a358b8865e576515c08abf6e2209e8e7f}\label{1d__string__manip__heap_21d__ft__strtok__split1_8c_a358b8865e576515c08abf6e2209e8e7f} 
+\index{1d\_ft\_strtok\_split1.c@{1d\_ft\_strtok\_split1.c}!ft\_substr@{ft\_substr}}
+\index{ft\_substr@{ft\_substr}!1d\_ft\_strtok\_split1.c@{1d\_ft\_strtok\_split1.c}}
+\doxysubsubsection{\texorpdfstring{ft\_substr()}{ft\_substr()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ft\+\_\+substr (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{s,  }\item[{unsigned int}]{start,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Extracts a substring from a given string. 
+
+This function allocates (with ft\+\_\+calloc\+\_\+fd) and returns a substring from the string \textquotesingle{}s\textquotesingle{}. The substring begins at index \textquotesingle{}start\textquotesingle{} and is of maximum size \textquotesingle{}len\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to be used with ft\+\_\+calloc\+\_\+fd and ft\+\_\+strdup. \\
+\hline
+{\em s} & The original string from which the substring will be extracted. \\
+\hline
+{\em start} & The starting index of the substring in the original string. \\
+\hline
+{\em len} & The maximum length of the substring to be extracted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly allocated substring, or NULL if the allocation fails. 
+\end{DoxyReturn}
