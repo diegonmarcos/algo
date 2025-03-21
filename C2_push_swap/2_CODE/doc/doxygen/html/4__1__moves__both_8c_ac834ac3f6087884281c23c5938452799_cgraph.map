@@ -1,9 +1,0 @@
-<map id="move_stack_fromto_case" name="move_stack_fromto_case">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,195,56"/>
-<area shape="rect" id="Node000002" href="$4__0__moves__direction_8c.html#afccc17cf6947e8045b7157ace02a1457" title="Numbers moved from one stack to another using: push, swap, rotate." alt="" coords="247,5,300,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,28,233,21,234,26,188,33"/>
-<area shape="rect" id="Node000003" href="$4__0__moves__direction_8c.html#a52d7746c8b7628a2e18e1069db470556" title="Rotates the specified stack." alt="" coords="243,55,304,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,53,230,59,229,64,191,59"/>
-<area shape="rect" id="Node000004" href="$1__2__printers__tracers_8c.html#a4cfb30dfa1b732308fb83936337b274c" title=" " alt="" coords="352,55,440,80"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="304,65,338,65,338,70,304,70"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="move_stack_fromto2" name="move_stack_fromto2">
-<area shape="rect" id="Node000001" title=" " alt="" coords="413,5,573,31"/>
-<area shape="rect" id="Node000002" href="$4__2__moves__fromto_8c.html#a5dbad668d5b33b7bddd6c26fb215a9b1" title=" " alt="" coords="205,5,365,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="400,21,366,21,366,15,400,15"/>
-<area shape="rect" id="Node000003" href="$4__2__moves__fromto_8c.html#abfb1a630b30cf90941d0d68d61e3512c" title=" " alt="" coords="5,5,157,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="192,21,157,21,157,15,192,15"/>
-</map>

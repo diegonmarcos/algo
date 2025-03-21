@@ -1,7 +1,0 @@
-<map id="node_pos_locator" name="node_pos_locator">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,141,60"/>
-<area shape="rect" id="Node000002" href="$3__3__radixsort_8c.html#afe4cfd19820a440051688b50dec1b4ce" title=" " alt="" coords="199,5,334,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,34,185,28,186,33,142,40"/>
-<area shape="rect" id="Node000003" href="$3__5__gearsort__pricing2_8c.html#a499b0d7d62f18ca9a7d33c016b97ffff" title=" " alt="" coords="189,55,344,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,54,176,60,175,65,141,60"/>
-</map>
