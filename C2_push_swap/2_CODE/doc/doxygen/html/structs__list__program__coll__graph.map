@@ -1,8 +1,0 @@
-<map id="s_list_program" name="s_list_program">
-<area shape="rect" id="Node000001" title=" " alt="" coords="61,112,180,137"/>
-<area shape="rect" id="Node000002" href="$structs__list__garbage.html" title=" " alt="" coords="5,7,121,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,46,64,67,71,87,82,100,96,110,93,114,78,104,66,89,59,68,58,47"/>
-<area shape="rect" id="Node000003" href="$structs__list__dls.html" title=" " alt="" coords="146,7,229,33"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,46,156,90,135,113,131,110,152,86,175,44"/>
-<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="243,9,252,13,255,20,247,30,229,33,228,27,244,25,250,20,248,17,241,14"/>
-</map>

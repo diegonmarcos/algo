@@ -1,9 +1,0 @@
-<map id="quick_sort_partial" name="quick_sort_partial">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,144,60"/>
-<area shape="rect" id="Node000002" href="$1__2__printers__tracers_8c.html#a4cfb30dfa1b732308fb83936337b274c" title=" " alt="" coords="229,5,317,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,35,215,24,216,29,144,40"/>
-<area shape="rect" id="Node000003" href="$3__5__quicksort__partial_8c.html#acaf4451e3fdd09ac2c34506682d4d170" title=" " alt="" coords="192,55,355,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,54,179,59,178,65,144,60"/>
-<area shape="rect" id="Node000004" href="$3__5__quicksort__partial_8c.html#a03ea3cbb5647bc38f5ca2115810d6def" title=" " alt="" coords="403,63,585,88"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="355,73,389,73,389,78,355,78"/>
-</map>

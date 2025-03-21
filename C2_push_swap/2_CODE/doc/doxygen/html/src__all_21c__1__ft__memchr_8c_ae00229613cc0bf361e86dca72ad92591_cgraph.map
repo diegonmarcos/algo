@@ -1,7 +1,0 @@
-<map id="ft_strnstr" name="ft_strnstr">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,85,56"/>
-<area shape="rect" id="Node000002" href="$src__all_21c__ft__strlen_8c.html#abbb8c6c4ed85d892e7f1509f65f5768a" title=" " alt="" coords="141,5,216,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,33,127,25,128,30,86,38"/>
-<area shape="rect" id="Node000003" href="$src__all_21c__1__ft__memcmp_8c.html#a9d2fe792187aa4ed08e5864fb2c4d6dc" title=" " alt="" coords="133,55,224,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="86,48,120,54,119,59,85,53"/>
-</map>
