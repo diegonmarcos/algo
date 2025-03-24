@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/21 18:13:33 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/24 21:35:40 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -504,6 +504,8 @@ BONUS_BUILD 	= $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 
 bonus:		
 			$(MAKE) clean
+			$(MAKE)
+			cp libs/libpush_swap_0.a src/checker_bonus/libs
 			$(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS="" BONUS=1
 mylibs_clean:
 	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
