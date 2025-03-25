@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/19 10:46:58 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/25 11:26:54 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void	sort_gearing(char stack_from, char stack_to, int base_case, \
 {
 	t_sort_gearing		v;
 	t_move_lower_cost	v1;
-	int					count;
 
 	if (sort_gearing_is_base_case(base_case, list_program))
 		return ;

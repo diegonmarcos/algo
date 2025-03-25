@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 12:39:18 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 09:38:21 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/25 11:28:15 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ void	moves_optimizations_0(int *j, t_list_program *list_program)
 	{
 		arr0 = list_program->moves[i];
 		arr1 = list_program->moves[i + 1];
-		if (!ft_strcmp(arr0, "sa") && !ft_strcmp(arr1, "sb") || \
-				(!ft_strcmp(arr0, "sb") && !ft_strcmp(arr1, "sa")))
+		if ((!ft_strcmp(arr0, "sa") && !ft_strcmp(arr1, "sb")) || \
+				((!ft_strcmp(arr0, "sb") && !ft_strcmp(arr1, "sa"))))
 			ft_strlcpy_optm(j, "ss", &i, list_program);
-		else if (!ft_strcmp(arr0, "ra") && !ft_strcmp(arr1, "rb") || \
-				(!ft_strcmp(arr0, "rb") && !ft_strcmp(arr1, "ra")))
+		else if ((!ft_strcmp(arr0, "ra") && !ft_strcmp(arr1, "rb")) || \
+				((!ft_strcmp(arr0, "rb") && !ft_strcmp(arr1, "ra"))))
 			ft_strlcpy_optm(j, "rr", &i, list_program);
-		else if (!ft_strcmp(arr0, "rra") && !ft_strcmp(arr1, "rrb") || \
-				(!ft_strcmp(arr0, "rra") && !ft_strcmp(arr1, "rrb")))
+		else if ((!ft_strcmp(arr0, "rra") && !ft_strcmp(arr1, "rrb")) || \
+				((!ft_strcmp(arr0, "rra") && !ft_strcmp(arr1, "rrb"))))
 			ft_strlcpy_optm(j, "rrr", &i, list_program);
 		else
 			ft_snprintf(list_program->moves_optim[*j], 12000, "%s", \
@@ -68,15 +68,15 @@ void	moves_optimizations_1(int *j, t_list_program *list_program)
 	*j = 0;
 	while (i < list_program->move_optim_count)
 	{
-		if (!ft_strcmp(list_program->moves_optim[i], "ra") && \
-			!ft_strcmp(list_program->moves_optim[i + 1], "rra") || \
-			(!ft_strcmp(list_program->moves_optim[i], "rra") && \
-			!ft_strcmp(list_program->moves_optim[i + 1], "ra")))
+		if ((!ft_strcmp(list_program->moves_optim[i], "ra") && \
+			!ft_strcmp(list_program->moves_optim[i + 1], "rra")) || \
+			((!ft_strcmp(list_program->moves_optim[i], "rra") && \
+			!ft_strcmp(list_program->moves_optim[i + 1], "ra"))))
 			i++;
-		else if (!ft_strcmp(list_program->moves_optim[i], "rb") && \
-				!ft_strcmp(list_program->moves_optim[i + 1], "rrb") || \
-				(!ft_strcmp(list_program->moves_optim[i], "rrb") && \
-				!ft_strcmp(list_program->moves_optim[i + 1], "rb")))
+		else if ((!ft_strcmp(list_program->moves_optim[i], "rb") && \
+				!ft_strcmp(list_program->moves_optim[i + 1], "rrb")) || \
+				((!ft_strcmp(list_program->moves_optim[i], "rrb") && \
+				!ft_strcmp(list_program->moves_optim[i + 1], "rb"))))
 			i++;
 		else
 		{

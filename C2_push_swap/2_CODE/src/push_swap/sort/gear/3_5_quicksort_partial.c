@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/16 15:05:46 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/25 11:32:47 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,12 @@ static void	merge_back_and_sort(t_chunk *chunk_to_sort, \
 {
 	t_list_dls	**stack_b;
 	int			i;
-	t_chunk		chunk_to_sort_new;
 
 	printer_dbg_split(MERGE_AS, split_chunks, list_program);
 	stack_b = list_program->stack_b;
 	i = split_chunks->mid.size;
+	if (chunk_to_sort->size_parent == 0)
+		chunk_to_sort->size++;
 	while (i-- > 0)
 		push('a', list_program);
 	i = split_chunks->min.size ;
@@ -102,6 +103,6 @@ void	quick_sort_partial(t_list_program *list_program)
 
 	ft_printers(QUICK, list_program);
 	size = list_program->stack_a_size;
-	chunk_to_sort = (t_chunk){0, size - 1, size, TOP_A};
+	chunk_to_sort = (t_chunk){0, size - 1, size, TOP_A, size};
 	recursive_split_chunk_partial(&chunk_to_sort, list_program);
 }
