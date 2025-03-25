@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/25 07:53:01 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/25 09:29:32 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -187,7 +187,7 @@ LIB_LINK_STATIC 	= ar rcs
 RM 					= rm -rf
 GCL 				= git clone --depth=1
 WGET 				= wget
-
+CFLAGS_DBG			+= -Wall -Wextra -Werror
 
 
 
