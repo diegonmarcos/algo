@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:30:48 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 09:38:21 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/25 17:53:12 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@
  *   Debug function for sorting the stack.
  * - void moves_optimizations(t_list_program *list_program):
  *   Optimizes the moves after sorting.
+ * 	 quick_sort_pushswap(list_program);
  */
 void	sort_stack(t_list_program	*list_program)
 {
@@ -68,7 +69,7 @@ void	sort_stack(t_list_program	*list_program)
 		else if (list_program->stack_a_size < 65)
 			radix_sort_pushswap(list_program);
 		else if (list_program->stack_a_size <= 75)
-			quick_sort_pushswap(list_program);
+			radix_sort_pushswap(list_program);
 		else if (list_program->stack_a_size <= 100)
 			gear_sort_pushswap(list_program);
 		else if (list_program->stack_a_size <= 500)
