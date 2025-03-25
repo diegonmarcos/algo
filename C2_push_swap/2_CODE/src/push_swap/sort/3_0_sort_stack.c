@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:30:48 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/25 17:53:12 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/25 18:15:30 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,6 @@ void	sort_stack(t_list_program	*list_program)
 		if (list_program->stack_a_size <= 50)
 			selection_sort(list_program);
 		else if (list_program->stack_a_size < 65)
-			radix_sort_pushswap(list_program);
-		else if (list_program->stack_a_size <= 75)
 			radix_sort_pushswap(list_program);
 		else if (list_program->stack_a_size <= 100)
 			gear_sort_pushswap(list_program);

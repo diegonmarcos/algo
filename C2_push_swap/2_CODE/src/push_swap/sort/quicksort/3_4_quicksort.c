@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:59:22 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 09:38:21 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/25 18:14:33 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,12 @@
 
 #include "push_swap.h"
 
-void	quick_sort_pushswap(t_list_program *list_program)
-{
-	ft_printers(QUICK, list_program);
-}
-/* void	recursive_split_chunk(t_chunk *chunk_to_sort, int *i, t_list_program \
+/* 
+void	recursive_split_chunk(t_chunk *chunk_to_sort, int *i, t_list_program \
 			*list_program);
 void	pivot_calculation(t_chunk *chunk_to_sort, t_splits *splits);
 void	split_chunk(t_splits *splits, t_list_program *list_program);
 void	merge_back(t_splits *splits, int *i, t_list_program *list_program);
-
 
 void	quick_sort_pushswap(t_list_program *list_program)
 {
@@ -45,7 +41,15 @@ void	recursive_split_chunk(t_chunk *chunk_to_sort, int *i, \
 {
 	t_splits	splits;
 
-	splits = (t_splits){0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	splits.min_number = 0;
+	splits.pivot1 = 0;
+	splits.pivot2 = 0;
+	splits.max_number = 0;
+	splits.size_total = 0;
+	splits.position_from = 0;
+	splits.max = (t_chunk){0, 0, 0, 0, 0};
+	splits.mid = (t_chunk){0, 0, 0, 0, 0};
+	splits.min = (t_chunk){0, 0, 0, 0, 0};
 	if (chunk_to_sort->size_parent <= 4)	//review this base case!
 	{
 //		sort_3_chunk(list_program);

@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:35:06 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/25 11:35:52 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/25 18:16:17 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,8 @@ int	main(int argc, char **argv)
 {
 	t_list_program	*list_program;
 
-	list_program = &(t_list_program){0, NULL, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, 0};
+	list_program = &(t_list_program){0, NULL, 0, NULL, NULL, 0, NULL, NULL, \
+		NULL, 0, 0, NULL, 0};
 	error_handling_input_0(argc, argv);
 	data_alloc(argc, argv, list_program);
 	error_handling_input_1(list_program);
