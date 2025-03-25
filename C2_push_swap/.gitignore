@@ -1,4 +1,13 @@
+# Folders ignore
+doc/
+libs/
+log/
+objs/
+testers/
+
+# Files ignore
 **/malloc_alloc.txt
 **/malloc_allocs
-rclone.log
 **/rclone.log
+**/*.o
+**/*.d

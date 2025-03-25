@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/24 21:35:40 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/25 07:53:01 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -174,6 +174,11 @@ LIB_3_CONFIG	=
 # COMPILER AND LINKER VARS												   #
 # ************************************************************************ #
 # *** Compiler, Make and Library compilers Declar *** #
+### make (without -j): Compiles one file at a time
+### make -j8: Compiles 8 files simultaneously
+### make -j: May try to compile all files at once
+### -O: Output from parallel jobs can intermix in the terminal if using -j
+### Output is properly synchronized so error messages and warnings remain readable
 MAKE 				= make -j -O
 COMPILER 			= clang
 PIC 				= -fPIC
@@ -506,7 +511,7 @@ bonus:
 			$(MAKE) clean
 			$(MAKE)
 			cp libs/libpush_swap_0.a src/checker_bonus/libs
-			$(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS="" BONUS=1
+			$(MAKE) -C $(CHECKER_BONUS_DIR) BONUS=1
 mylibs_clean:
 	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
 	$(RM) libs/mylibs/mylibcpp libs/mylibs/mylibx libs/mylibs/mytools libs/mylibs/myunittest
@@ -1186,7 +1191,7 @@ log_dynamic_analysis_tests:
 	$(MAKE) bonus
 	$(MAKE) tests_run | tee log/3.Unit_Testing/Testing_Report.txt
 	$(MAKE) test_performance
-	$(MAKE) create_bins_dbg
+#	$(MAKE) create_bins_dbg
 
 #sed -r 's/\x1B\[[0-9;]*[mGKH]//g'
 # ************************************************************************ #

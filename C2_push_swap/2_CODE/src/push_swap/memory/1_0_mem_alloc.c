@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 08:48:03 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 09:34:36 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/25 07:56:41 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	data_alloc_2(t_list_program *list_program);
 */
 void	data_alloc(int argc, char **argv, t_list_program *list_program)
 {
-	__asm__("");
 	data_alloc_vars(argc, argv, list_program);
 	ft_calloc_2d(list_program->max_moves, 'c', (void ***)&list_program->moves);
 	ft_calloc_2d(list_program->max_moves, 'c', (void ***)&list_program->\
@@ -49,7 +48,6 @@ void	data_alloc_vars(int argc, char **argv, t_list_program *list_program)
 	list_program->max_moves = MAX_MOVES;
 	list_program->stack_a_size = 0;
 	list_program->dbg = DBG;
-	__asm__("");
 	if (argc == 2)
 	{
 		list_program->stack_a_size = ft_countwords(argv[1], ' ');

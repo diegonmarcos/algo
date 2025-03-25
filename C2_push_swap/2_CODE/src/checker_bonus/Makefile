@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/20 15:40:17 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/25 07:24:57 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -144,7 +144,7 @@ LIB_2_NAME 		= push_swap_0
 LIB_2_PATH 		= ../../libs
 LIB_2_FILE 		= $(LIB_2_PATH)/lib$(LIB_2_NAME).a
 LIB_2_REPO 		=
-LIB_2_CONFIG	=
+#LIB_2_CONFIG	= cp ../../libs/libpush_swap_0.a libs
 
 
 LIB_3_NAME 		= 0

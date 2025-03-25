@@ -18,9 +18,18 @@
 #test_files/
 #*.log
 
-*/malloc_allocs
-*/malloc_allocs.txt
-*/rclone.log
+# Folders ignore
+doc/
+libs/
+log/
+objs/
+testers/
 
+# Files ignore
+**/malloc_alloc.txt
+**/malloc_allocs
+**/rclone.log
+**/*.o
+**/*.d
 
 
