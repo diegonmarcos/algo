@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/25 09:29:32 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/25 12:48:39 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -441,7 +441,7 @@ endif
 # ************************************************************************ #
 # ************************************************************************ #
 NAME_PRGM = $(OUTPUT_PLACE)$(NAME0)
-$(NAME_PRGM): $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
+$(NAME_PRGM): folders_build $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
 	$(COMPILER) $(OBJECTS) $(LIBS_PATH) $(CFLAGS_DBG) $(CFLAGS_INCL) $(LDFLAGS) -o $(NAME)
 	echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
 
@@ -464,14 +464,17 @@ endif
 $(LIB_1_FILE):
 	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
 	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
+	$(LIB_1_CONFIG)
 	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE)
 $(LIB_2_FILE):
 	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
 	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
+	$(LIB_2_CONFIG)
 	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE)
 $(LIB_3_FILE):
 	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
 	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
+	$(LIB_3_CONFIG)
 	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS=""
 
 

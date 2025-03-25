@@ -4,6 +4,8 @@ libs/
 log/
 objs/
 testers/
+tests/
+maps/
 
 # Files ignore
 **/malloc_alloc.txt
@@ -11,3 +13,11 @@ testers/
 **/rclone.log
 **/*.o
 **/*.d
+**/*.a
+
+# Files ignore 42
+#**/*.so
+#**/*.out
+#**/*.log
+#**/*.txt
+#**/*.md
