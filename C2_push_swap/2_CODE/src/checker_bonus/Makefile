@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/25 07:24:57 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/26 19:18:57 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -261,7 +261,7 @@ LIB_OUTPUT_MERGED=libs/lib$(NAME0).a
 #                         VERBOSE AND DEBUG		                           #
 # ************************************************************************ #
 # *** VERBOSE MAKE? *** #
-MAKEFLAGS		:= --no-print-directory --silent -r -R
+MAKEFLAGS		:= --no-print-directory --silent
 ifeq ($(VERBOSE), 2)
 MAKEFLAGS		:=
 #MAKE 			+= --trace all --warn-undefined-variables
@@ -515,8 +515,9 @@ mylibs_clean:
 # *** Clean Objects only *** #
 clean:
 	$(RM) objs
+	$(MAKE) clean -C $(LIB_1_PATH)
 ifeq ($(BONUS),1)
-	$(MAKE) clean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
+	$(MAKE) clean -C $(CHECKER_BONUS_DIR)
 endif
 	@echo	"$(RED)	¯\_(ツ)_/¯ OBJECTS REMOVED!$(RESET)"
 
@@ -524,8 +525,9 @@ endif
 fclean:	clean
 	$(RM) $(NAME)
 	$(RM) libs/*.a
+	$(MAKE) fclean -C $(LIB_1_PATH)
 ifeq ($(BONUS),1)
-	$(MAKE) fclean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
+	$(MAKE) fclean -C $(CHECKER_BONUS_DIR)
 endif
 	@echo	"$(RED)		(╯°□°）╯︵ ┻━┻ FILE, OBJ REMOVED!$(RESET)"
 
@@ -542,6 +544,7 @@ fclean_all:	fclean
 	if [ -f imgui.ini ]; then \
 		rm imgui.ini; \
 	fi
+	$(MAKE) fclean_all -C $(LIB_1_PATH)
 	@echo	"$(RED)			(╯°□°）╯︵ ┻━┻ FILE, OBJ AND LOG REMOVED!$(RESET)"
 
 # *** Re_all *** #

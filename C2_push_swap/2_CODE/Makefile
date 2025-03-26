@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/26 18:59:58 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/26 19:19:23 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -546,7 +546,7 @@ clean:
 	$(RM) objs
 	$(MAKE) clean -C $(LIB_1_PATH)
 ifeq ($(BONUS),1)
-	$(MAKE) clean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
+	$(MAKE) clean -C $(CHECKER_BONUS_DIR)
 endif
 	@echo	"$(RED)	¯\_(ツ)_/¯ OBJECTS REMOVED!$(RESET)"
 
@@ -556,7 +556,7 @@ fclean:	clean
 	$(RM) libs/*.a
 	$(MAKE) fclean -C $(LIB_1_PATH)
 ifeq ($(BONUS),1)
-	$(MAKE) fclean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
+	$(MAKE) fclean -C $(CHECKER_BONUS_DIR)
 endif
 	@echo	"$(RED)		(╯°□°）╯︵ ┻━┻ FILE, OBJ REMOVED!$(RESET)"
 
@@ -575,6 +575,9 @@ fclean_all:	fclean
 	if [ -f imgui.ini ]; then \
 		rm imgui.ini; \
 	fi
+ifeq ($(BONUS),1)
+	$(MAKE) fclean_all -C $(CHECKER_BONUS_DIR)
+endif
 	@echo	"$(RED)			(╯°□°）╯︵ ┻━┻ FILE, OBJ AND LOG REMOVED!$(RESET)"
 
 # *** Re_all *** #
