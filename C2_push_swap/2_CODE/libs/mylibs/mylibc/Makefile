@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/26 18:59:58 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/26 18:44:29 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,45 +92,122 @@
 # MAIN (NAME, IS? AND SOURCE FILES)										   #
 # ************************************************************************ #
 # *** Name Output *** #
-NAME0 					= push_swap
-NAME_REPO				= https://github.com/diegonmarcos/algo
+NAME0 					= mylibc
+NAME_REPO				= https://github.com/diegonmarcos/mylibs
 
 # *** ../ or ../../ or empty *** # Libraries autocmactly already have the ../
 OUTPUT_PLACE 			=
 
 # ***Is? *** #
-IS_PROGRAM_AND_NOT_LIB 	= 1# 0 or 1
-INCLUDE_LIB 			= 1# 0 or 1
-BUILD_LIBRARY 			= 1# 0 or 1
-BONUS 					= 1# 0 or 1
+IS_PROGRAM_AND_NOT_LIB 	= 0# 0 or 1
+INCLUDE_LIB 			= 0# 0 or 1
+BUILD_LIBRARY 			= 0# 0 or 1
+BONUS 					= 0# 0 or 1
 VERBOSE 				= 0# 0, 1 or 2 - Vebosity of the makefile
 DOCKER					= 0# 0 or 1
 DBG 					= 0# 0 or 1 - Debug mode for the program
 
 # ************************************************************************ #
 # *** Files source *.c *** #
-SOURCE_MAIN 	=						\
-				push_swap.c		
+SOURCE_MAIN 	=								\		
 
-SOURCE_FILES 	= 						\
-				1_0_mem_alloc.c			\
-				1_1_mem_clear.c			\
-				1_2_debugger_helpers.c	\
-				1_2_printers_tracers.c	\
-				2_0_input_check.c		\
-				3_0_sort_stack.c		\
-				3_1_presorting_getmin.c	\
-				3_2_selectionsort.c		\
-				3_3_radixsort.c			\
-				3_4_quicksort.c			\
-				3_4_sort3_chunk.c		\
-				3_5_gearsort_pricing.c	\
-				3_5_gearsort_pricing2.c	\
-				3_5_quicksort_partial.c	\
-				3_7_moves_optim.c		\
-				4_0_moves_direction.c	\
-				4_1_moves_both.c		\
-				4_2_moves_fromto.c
+SOURCE_FILES = 									\
+				0_ft_malloc.c					\
+				0_memory_arena_pool.c			\
+				0a_ft_exec.c					\
+				0a_ft_pipe.c					\
+				1a_ft_calloc.c					\
+				1a_ft_calloc_fd.c				\
+				1a_ft_free.c					\
+				1a_ft_garbage_collector_1.c		\
+				1a_ft_garbage_collector_2.c		\
+				1a_ft_garbage_collector_bff.c	\
+				1a_halt_exit.c					\
+				1b_ft_close.c					\
+				1b_ft_fgets_gnl.c				\
+				1b_ft_open.c					\
+				1b_ft_sed.c						\
+				1b_ft_sscanf.c					\
+				1b_gnl_join_split.c				\
+				1c_0_ft_memcpy.c				\
+				1c_0_ft_memset.c				\
+				1c_0_ft_strlcat.c				\
+				1c_1_ft_memchr.c				\
+				1c_1_ft_memchr1.c				\
+				1c_1_ft_memcmp.c				\
+				1c_ft_atoi.c					\
+				1c_ft_atoi_base.c				\
+				1c_ft_is_sorted.c				\
+				1c_ft_isalnumascii.c			\
+				1c_ft_isdigit.c					\
+				1c_ft_itoa.c					\
+				1c_ft_math.c					\
+				1c_ft_snprintf.c				\
+				1c_ft_striteri.c				\
+				1c_ft_strlen.c					\
+				1c_ft_strmapi.c					\
+				1d_0_ft_strcat_.c				\
+				1d_0_ft_strdup.c				\
+				1d_ft_asprintf.c				\
+				1d_ft_strtok_split.c			\
+				1d_ft_strtok_split1.c			\
+				1e_ft_fprintf.c					\
+				1e_ft_fprintf1.c				\
+				1e_ft_hexa_mayusc.c				\
+				1e_ft_hexa_minusc.c				\
+				1e_ft_num_unsign.c				\
+				1e_ft_pointer_hexa.c			\
+				1e_ft_pointer_hexa_fd_fpr.c		\
+				1e_ft_printf.c					\
+				1e_ft_putchar.c					\
+				1e_ft_putnbr.c					\
+				1e_ft_putstr1.c					\
+				2_0_ft_slinked_list.c			\
+				2_0_ft_slinked_list1.c			\
+				2_0_ft_slinked_list3.c			\
+				2_1_ft_array_to_d_linked_list.c	\
+				2_1_ft_free_list_doubly.c		\
+				2_1_ft_swap_pointers.c			\
+				2_1_linked_list_doubly1.c		\
+				2_1_linked_list_doubly2.c		\
+				2_ft_list_foreach.c				\
+				2_ft_list_remove_if.c			\
+				2_hashtable_headarray.c			\
+				2_hashtable_headnode.c			\
+				2_heapfy_array_bst.c			\
+				2_merge_sort_lsd.c				\
+				2_merge_sort_lss.c				\
+				2_sort_list.c					\
+				3_0_bubble_sort.c				\
+				3_0_insertion_sort.c			\
+				3_0_selection_sort.c			\
+				3_1_fizzbuzz.c					\
+				3_1_merge_sort.c				\
+				3_1_quick_sort.c				\
+				3_2_radix_sort.c				\
+				3_2_union.c						\
+				3_2_wdmatch.c					\
+				3_3_expand_str.c				\
+				3_3_ft_toupper.c				\
+				3_3_intro_sort0.c				\
+				3_3_intro_sort1.c				\
+				3_4_rev_wstr.c					\
+				3_4_rostring.c					\
+				3_bitwise.c						\
+				3_ft_fibonacci.c				\
+				3_ft_prime.c					\
+				3_math.c						\
+				3_probability.c					\
+				3_raster_scan_bresenham.c		\
+				3_raster_scan_flood_fill.c		\
+				3_raytracing_montecarlo.c		\
+				3_statistics.c					\
+				3_statistics1.c					\
+				3_statistics2.c					\
+				4_ft_data_parser.c				\
+				4_ft_memory_design.c			\
+				4_ft_spliter.c					\
+				4_ft_sscanf.c
 
 VPATH 			= src/src_all:			\
 
@@ -149,36 +226,31 @@ LIBS_SO 		=
 
 
 # *** Library *.a (libraries to be included) THE ORDER MATTERS!!! *** #
-LIBS_DIR 		= libs
+LIBS_DIR 	= libs
 
-LIB_1_NAME 		= mylibc
-LIB_1_PATH 		= libs/mylibs/mylibc
-LIB_1_FILE 		= $(LIB_1_PATH)/lib$(LIB_1_NAME).a
-LIB_1_REPO 		= https://github.com/diegonmarcos/mylibs.git
+LIB_1_NAME		= 0
+LIB_1_PATH		= 
+LIB_1_FILE		= 
+LIB_1_REPO		= 
 LIB_1_CONFIG	=
 
-LIB_2_NAME 		= 0
-LIB_2_PATH 		= 
-LIB_2_FILE 		= 
-LIB_2_REPO 		=
+LIB_2_NAME		= 0
+LIB_2_PATH		= 
+LIB_2_FILE		=
+LIB_2_REPO		=
 LIB_2_CONFIG	=
 
-
-LIB_3_NAME 		= 0
-LIB_3_PATH 		= 
-LIB_3_FILE 		=
-LIB_3_REPO 		=
+LIB_3_NAME		= 0
+LIB_3_PATH		= 
+LIB_3_FILE		=
+LIB_3_REPO		=
 LIB_3_CONFIG	= 
+
 
 # ************************************************************************ #
 # COMPILER AND LINKER VARS												   #
 # ************************************************************************ #
 # *** Compiler, Make and Library compilers Declar *** #
-### make (without -j): Compiles one file at a time
-### make -j8: Compiles 8 files simultaneously
-### make -j: May try to compile all files at once
-### -O: Output from parallel jobs can intermix in the terminal if using -j
-### Output is properly synchronized so error messages and warnings remain readable
 MAKE 				= make -j -O
 COMPILER 			= clang
 PIC 				= -fPIC
@@ -187,7 +259,7 @@ LIB_LINK_STATIC 	= ar rcs
 RM 					= rm -rf
 GCL 				= git clone --depth=1
 WGET 				= wget
-CFLAGS_DBG			+= -Wall -Wextra -Werror
+
 
 
 
@@ -283,7 +355,7 @@ LIB_OUTPUT_MERGED=libs/lib$(NAME0).a
 #                         VERBOSE AND DEBUG		                           #
 # ************************************************************************ #
 # *** VERBOSE MAKE? *** #
-MAKEFLAGS		:= --no-print-directory --silent -r -R
+MAKEFLAGS		:= --no-print-directory --silent
 ifeq ($(VERBOSE), 2)
 MAKEFLAGS		:=
 #MAKE 			+= --trace all --warn-undefined-variables
@@ -308,13 +380,13 @@ ifneq ($(ALGO),0)
 	MACROS 		+= -D$(M2)=\"$(ALGO)\"
 endif
 
-run_program:
-	$(MAKE) folders_build
-	$(MAKE) testers_folder_build
-	echo "#######################"
-	$(MAKE) tests_run_5
-	echo "$(RESET)#######################"
 
+
+# ************************************************************************ #
+#                         BONUS HELPERSº		                           #
+# ************************************************************************ #
+# *** Bonus Source Files .c Definition path *** #
+CHECKER_BUILD 	= $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 
 
 
@@ -399,7 +471,6 @@ build_system_pipeline:
 	$(MAKE) build_deps
 	$(MAKE) check_up_to_date
 	$(MAKE) $(NAME)
-	$(MAKE) build_doc
 	$(MAKE) dbg_rules
 	$(MAKE) check_up_to_date_2
 	$(MAKE) folders_ls_la
@@ -411,28 +482,29 @@ build_system_pipeline:
 build_enviroment_folders:
 	$(MAKE) folders_build
 build_dependencies_docker:
-
+#	$(MAKE) docker_install
 build_enviroment_docker:
 ifeq ($(DOCKER),1)
-	$(MAKE) docker_build || true
+	$(MAKE) build_docker || true
 endif
-#	$(MAKE) docker_run
+#	$(MAKE) run_docker
+
 build_deps:
 ifneq ($(LIB_1_NAME),0)
-##	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
-#	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
+	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
+	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
 	$(LIB_1_CONFIG)
 	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE) || true
 endif
 ifneq ($(LIB_2_NAME),0)
-##	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
-##	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
+	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
+	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
 	$(LIB_2_CONFIG)
 	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE) || true
 endif
 ifneq ($(LIB_3_NAME), 0)
-##	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
-##	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
+	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
+	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
 	$(LIB_3_CONFIG)
 	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS="" || true
 endif
@@ -441,7 +513,7 @@ endif
 # ************************************************************************ #
 # ************************************************************************ #
 NAME_PRGM = $(OUTPUT_PLACE)$(NAME0)
-$(NAME_PRGM): folders_build $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
+$(NAME_PRGM): $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
 	$(COMPILER) $(OBJECTS) $(LIBS_PATH) $(CFLAGS_DBG) $(CFLAGS_INCL) $(LDFLAGS) -o $(NAME)
 	echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
 
@@ -462,19 +534,16 @@ endif
 
 
 $(LIB_1_FILE):
-##	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
-##	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
-	$(LIB_1_CONFIG)
+	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
+	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
 	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE)
 $(LIB_2_FILE):
-##	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
-##	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
-	$(LIB_2_CONFIG)
+	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
+	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
 	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE)
 $(LIB_3_FILE):
-##	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
-##	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
-	$(LIB_3_CONFIG)
+	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
+	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
 	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS=""
 
 
@@ -507,22 +576,13 @@ all: $(NAME)
 
 # ************************************************************************ #
 # *** Bonus Rule *** #
-
-BONUS_BUILD 	= $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
-
 bonus:		
 			$(MAKE) clean
-			$(MAKE)
-			cp libs/libpush_swap_0.a src/checker_bonus/libs
-			$(MAKE) -C $(CHECKER_BONUS_DIR) BONUS=1
+			$(MAKE) BONUS=1
 mylibs_clean:
 	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
-	$(RM) libs/mylibs/mylibcpp libs/mylibs/mylibx libs/mylibs/mytools libs/mylibs/myunittest
+	$(RM) libs/mylibs/mylibcpp libs/mylibs/mytools libs/mylibs/mylibx libs/mylibs/myunittest
 # ************************************************************************ #
-
-
-
-
 
 
 
@@ -544,21 +604,19 @@ mylibs_clean:
 # *** Clean Objects only *** #
 clean:
 	$(RM) objs
-	$(MAKE) clean -C $(LIB_1_PATH)
 ifeq ($(BONUS),1)
 	$(MAKE) clean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 endif
-	@echo	"$(RED)	¯\_(ツ)_/¯ OBJECTS REMOVED!$(RESET)"
+	@echo	"$(RED)¯\_(ツ)_/¯ Objs cleaned!$(RESET)"
 
 # *** Clean+Bins+Libs *** #
 fclean:	clean
 	$(RM) $(NAME)
 	$(RM) libs/*.a
-	$(MAKE) fclean -C $(LIB_1_PATH)
 ifeq ($(BONUS),1)
 	$(MAKE) fclean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 endif
-	@echo	"$(RED)		(╯°□°）╯︵ ┻━┻ FILE, OBJ REMOVED!$(RESET)"
+	@echo "$(RED) (╯°□°）╯ Bin and objs cleaned!$(RESET)"
 
 # *** FClean+Build *** #
 re: fclean build_system_pipeline
@@ -571,11 +629,10 @@ fclean_all:	fclean
 	$(RM) testers
 	$(RM) doc
 	$(RM) Makedocker.sh
-	$(MAKE) fclean_all -C $(LIB_1_PATH)
 	if [ -f imgui.ini ]; then \
 		rm imgui.ini; \
 	fi
-	@echo	"$(RED)			(╯°□°）╯︵ ┻━┻ FILE, OBJ AND LOG REMOVED!$(RESET)"
+	@echo	"$(RED)  (╯°□°）╯ ︵ ┻━┻ Bin, objs and folders removed!$(RESET)"
 
 # *** Re_all *** #
 re_all: fclean_all build_system_pipeline
@@ -617,7 +674,6 @@ folders_log_build:
 	mkdir -p log/6.Make_dbg
 	mkdir -p log/7.Doxygen
 	mkdir -p log/8.Docker
-
 
 
 
@@ -665,27 +721,12 @@ DARK_GREEN =	\033[38;2;75;179;82m
 DARK_YELLOW =	\033[38;5;143m
 
 
-# **************************************************************************** #
-#                         ROADMAP AND DOCUMENTATION                       	   #
-# **************************************************************************** #
-
-build_doc:
-	mkdir -p doc
-	wget \
-		-O doc/1_RM.tar \
-		https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/1_RM.tar \
-		> /dev/null 2>&1
-		tar -xvf doc/1_RM.tar -C doc > /dev/null 2>&1
-		rm doc/1_RM.tar
-#https://github.com/diegonmarcos/graphic/blob/main/C2_fdf/1_RM/1_RM.tar
-#https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/1_RM.tar
-
 
 # **************************************************************************** #
 #                         DOCKER AND DEPENDENCIES                          	   #
 # **************************************************************************** #
 
-docker_build: log/8.Docker/Makedocker.sh
+build_docker: log/8.Docker/Makedocker.sh
 log/8.Docker/Makedocker.sh:
 	mkdir -p log/8.Docker
 	wget \
@@ -696,7 +737,7 @@ log/8.Docker/Makedocker.sh:
 	./Makedocker.sh clear
 	./Makedocker.sh build
 
-docker_run:
+run_docker:
 	./log/8.Docker/Makedocker.sh run
 
 
@@ -804,13 +845,13 @@ docker_run:
 
 log_alles:
 	$(MAKE)
-	$(MAKE) log_doxygen || true
 	$(MAKE) log_static_analysis || true
 	$(MAKE) log_leaks || true
 	$(MAKE) log_dynamic_analysis_tests || true
 	$(MAKE) log_dbg_info || true
+	$(MAKE) log_doxygen || true
 	$(MAKE) log_make_performance || true
-	$(MAKE) test_visualizer_run || true
+	$(MAKE) test_run_visualizer || true
 
 log_alles_bonus:
 	$(MAKE) bonus
@@ -856,12 +897,12 @@ log_alles_bonus:
 # ############################################################################ #
 # *** static analyzer *** #
 log_static_analysis:
-#	$(MAKE) bear || true
-	$(MAKE)
+	$(MAKE) bear
+	$(MAKE) bonus
 	$(MAKE) werror
 	$(MAKE) norm
-#	$(MAKE) norm_bonus
-#	$(MAKE) werror_bonus
+	$(MAKE) norm_bonus
+	$(MAKE) werror_bonus
 #	$(MAKE) clang_tidy_fix
 
 # *** Bear *** #
@@ -874,15 +915,15 @@ werror:
 	@echo "$(GREEN)\n·Clang lintings$(RESET)"
 	echo "\n##Clang Wall Wextra - fsyntaxOnly"
 	echo "############################################\n"
-	$(MAKE) VERBOSE="0" CFLAGS_DBG="-Wall -Wextra" 2>&1 | sed 's/\x1b\[//g'| sed 's/\0;93m//g'| sed 's/\0;90m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_www.txt
+	$(MAKE) CFLAGS_DBG=" -Wall -Wextra" 2>&1 | sed 's/\x1b\[//g'| sed 's/\0;93m//g'| sed 's/\0;90m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_www.txt
 
 	@echo "\n##Clang Fron-End Semantic Wcore - fsyntaxOnly"
 	echo "############################################\n"
-	$(MAKE) VERBOSE="0" CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_wcore.txt
+	$(MAKE) CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_wcore.txt
 
 	@echo "\n##Clang Fron-End Semantic wEverything - fsyntaxOnly"
 	echo "############################################\n"
-	$(MAKE) VERBOSE="0" CFLAGS_DBG="-Weverything" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_wevery.txt
+	$(MAKE) CFLAGS_DBG="-Weverything" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/clang_wevery.txt
 
 	@echo "\n##Clang Fron-End Semantic Clang-Tidy - fsyntaxOnly"
 	echo "############################################\n"
@@ -890,7 +931,7 @@ werror:
 	
 	@echo "\n###Clang Static Analyzer Wcore"
 	echo  "#########################\n"
-	$(MAKE) VERBOSE="0" CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_linting/clang_analyzer.txt
+	$(MAKE) CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_linting/clang_analyzer.txt
 
 # *** Norminette on Project*** #
 norm:
@@ -912,15 +953,15 @@ werror_bonus:
 	@echo "$(GREEN)\n·Clang lintings$(RESET)"
 	echo "\n## BONUS Clang Wall Wextra - fsyntaxOnly"
 	echo "############################################\n"
-	BONUSER_BUILD) CFLAGS_DBG="-Wall -Wextra" || true > log/1.Warning_linting/bonus_clang_www.txt
+	$(CHECKER_BUILD) CFLAGS_DBG="-Wall -Wextra" || true > log/1.Warning_linting/bonus_clang_www.txt
 	
 	@echo "\n## BONUS Clang Fron-End Semantic - fsyntaxOnly"
 	echo "############################################\n"
-	BONUSER_BUILD) CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/bonus_clang_wevery.txt
+	$(CHECKER_BUILD) CFLAGS_DBG="-Wformat -Warray-bounds -Wnull-dereference -Wvla -ftrapv" 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' > log/1.Warning_linting/bonus_clang_wevery.txt
 	
 	@echo "\n### BONUS Clang Static Analyzer"
 	echo  "#########################\n"
-	BONUSER_BUILD) CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core " 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_linting/bonus_clang_analyzer.txt
+	$(CHECKER_BUILD) CFLAGS_DBG="--analyze -Xanalyzer -analyzer-checker=core " 2>&1 | sed 's/\x1b\[//g' | sed 's/\0;93m//g'| sed 's/\0;92m//g'| sed 's/\0;39m//g' | tee log/1.Warning_linting/bonus_clang_analyzer.txt
 
 
 
@@ -959,28 +1000,24 @@ leaks_bonus:
 
 # *** Create bins for the leaks analyzer *** #
 
-create_bins_leaks: log/4.Bins_folder/${NAME}_g $(OBJECTS)
+create_bins_leaks: log/4.Bins_folder/${NAME0}_g $(OBJECTS)
+log/4.Bins_folder/$(NAME0)_g: $(OBJECTS)
 
-log/4.Bins_folder/$(NAME)_g: $(OBJECTS)
 # *** _g *** #
 	$(MAKE) fclean
-	$(MAKE) CFLAGS_DBG=" -g"
-	mv $(NAME) log/4.Bins_folder/$(NAME)_g
-	gdb -batch -ex "info functions" log/4.Bins_folder/$(NAME)_g > log/4.Bins_folder/log/gdb_functions_$(NAME)_g.txt
-	$(MAKE) fclean
+	$(MAKE) CFLAGS_DBG=" -g" OUTPUT_PLACE="log/4.Bins_folder/" NAME0=$(NAME0)_g
+	gdb -batch -ex "info functions" log/4.Bins_folder/$(NAME0)_g > log/4.Bins_folder/log/gdb_functions_$(NAME0)_g.txt
 
 # *** Asan *** #
 	$(MAKE) fclean
-	$(MAKE) CFLAG_DBG="-g -fsanitize=address -fno-omit-frame-pointer"
-	mv $(NAME) log/4.Bins_folder/$(NAME)_asan
+	$(MAKE) CFLAG_ASAN=" -g -fsanitize=address -fno-omit-frame-pointer" OUTPUT_PLACE="log/4.Bins_folder/" NAME0=$(NAME0)_asan
 	gdb -batch -ex "info functions" log/4.Bins_folder/$(NAME0)_asan > log/4.Bins_folder/log/gdb_functions_$(NAME0)_asan.txt
 	$(MAKE) fclean
 
 # *** BONUS _g *** #
 create_bins_leaks_bonus:
-	$(MAKE) clean -C $(CHECKER_BONUS_DIR)
-	$(MAKE) CFLAGS_DBG=" -g" -C $(CHECKER_BONUS_DIR)
-	mv $(CHECKER_BONUS_DIR)/checker log/4.Bins_folder/$(CHECKER_BONUS_DIR)/checker_g
+	$(MAKE) fclean -C $(CHECKER_BONUS_DIR)
+	$(MAKE) CFLAGS_DBG=" -g" OUTPUT_PLACE="../../log/4.Bins_folder/" NAME0="checker_g" -C $(CHECKER_BONUS_DIR)
 	gdb -batch -ex "info functions" log/4.Bins_folder/checker_g > log/4.Bins_folder/log/gdb_functions_checker_g_asan.txt
 
 # *** Runing Valgrind *** #
@@ -990,106 +1027,74 @@ VALGRIND_EXPORT = --log-file=log/2.Memory_Check/logs/valgrind_report_.txt
 log_leaks:
 	$(MAKE)
 	$(MAKE) create_bins_leaks
-	
 	@echo "$(RED)\n# RUNNING VALGRIND: ERROR_HANDLING_INPUTS$(RESET)"
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
-	@echo "$(RED)\n# 1.No Leaks and 2.No Errors check$(RESET)"
-	@echo "$(RED)\n# 1.Erros:Invalid..., Invalid Read and Invalid Free$(RESET)"
-	
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_EMPTY$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
+	
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt ./log/4.Bins_folder/push_swap_g $(ARG_EMPTY) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: No Leaks" > log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true	
-	@grep -q "Invalid" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: Invalid..." >> log/2.Memory_Check/Valgrind_Report.txt || true	
-	@grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: Invalid Read" >> log/2.Memory_Check/Valgrind_Report.txt || true	
-	@grep -q "Invalid free" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: Invalid Free" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: ok" > log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_empty.txt && echo "1. Empty: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true	
 	
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_ONE$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt ./log/4.Bins_folder/push_swap_g $(ARG_1) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: Invalid..." >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: Invalid Read" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid free" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: Invalid Free" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_one.txt && echo "2. One: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
 
 	@echo "$(BOLD)\n# RUNNING VALGRIND INT_MAX$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt ./log/4.Bins_folder/push_swap_g $(ARG_INT_MAX) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: Invalid..." >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: Invalid Read" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid free" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: Invalid Free" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_intmax.txt && echo "3. INT_MAX: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
 
 	@echo "$(BOLD)\n# RUNNING VALGRIND INT_MIN$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt ./log/4.Bins_folder/push_swap_g $(ARG_INT_MIN) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: Invalid..." >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: Invalid Read" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid free" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: Invalid Free" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_min.txt && echo "4. INT_MIN: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
 
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_SORTED$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt ./log/4.Bins_folder/push_swap_g $(ARG_SORTED) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt && echo "5: Sort: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt && echo "5: Sort: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt && echo "5: Sort: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_sort.txt && echo "5: Sort: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
 
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_DUPLICATED$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt ./log/4.Bins_folder/push_swap_g $(ARG_DUPLICATED) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt && echo "6. Dupl: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt && echo "6. Dupl: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt && echo "6. Dupl: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_dupl.txt && echo "6. Dupl: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
 
 	@echo "$(BOLD)\n# RUNNING VALGRIND ARG_NON_NUMERIC$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt ./log/4.Bins_folder/push_swap_g $(ARG_NON_NUMERIC) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt && echo "7. Alpha: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt && echo "7. Alpha: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt && echo "7. Alpha: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_error_handling_nonnum.txt && echo "7. Alpha: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
 	echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	
 	@echo "$(RED)\n# RUNNING VALGRIND: PERFORMANCE_CHECK$(RESET)"
 	@echo "---------------------------------------------------------------------------------------------------------------------------"
 	
 	@echo "$(BOLD)\n# RUNNING VALGRIND 5 NUMBERS$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_5.txt ./log/4.Bins_folder/push_swap_g $(ARG_5)  2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: Invalid..." >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: Invalid read" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid free" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: Invalid free" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
-
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_5.txt && echo "8. ARG_5: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
 	
 
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	
 	@echo "$(BOLD)\n# RUNNING VALGRIND 6 NUMBERS$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_6.txt ./log/4.Bins_folder/push_swap_g $(ARG_6) 2>&1 || true
-	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: No Leaks" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: No Errors" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: Invalid" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: Invalid read" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@grep -q "Invalid free" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: Invalid free" >> log/2.Memory_Check/Valgrind_Report.txt || true
-	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
-
+	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
+	@grep -q "ERROR SUMMARY: 0 errors from 0 contexts" log/2.Memory_Check/logs/valgrind_report_push_6.txt && echo "9. ARG_6: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
 
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	
 	@echo "$(BOLD)\n# RUNNING VALGRIND 6 NUMBERS_NO_SPLIT$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.005; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_push_6_not_split.txt ./log/4.Bins_folder/push_swap_g 0 9 1 8 2 6 2>&1 || true
 	@if grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_push_6_not_split.txt; then \
 		echo "10. ARG_6_Nsplit: Leaks: Ok" >> log/2.Memory_Check/Valgrind_Report.txt; \
@@ -1100,16 +1105,12 @@ log_leaks:
 		echo "10. ARG_6_Nsplit: Errors: Ok" >> log/2.Memory_Check/Valgrind_Report.txt; \
 	else \
 		echo "10. ARG_6_Nsplit: Errors: Nok" >> log/2.Memory_Check/Valgrind_Report.txt; \
-		grep -q "Invalid read" log/2.Memory_Check/logs/valgrind_report_push_6_not_split.txt && echo "10. ARG_6: Invalid read"; \
-		grep -q "Invalid write" log/2.Memory_Check/logs/valgrind_report_push_6_not_split.txt && echo "10. ARG_6: Invalid write"; \
 	fi
-	@echo " " >> log/2.Memory_Check/Valgrind_Report.txt || true
-
 
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	
 	@echo "$(BOLD)\n# RUNNING VALGRIND ON CHECKER$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0005; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
 	$(VALGRIND) --log-file=log/2.Memory_Check/logs/valgrind_report_checker_6.txt ./log/4.Bins_folder/push_swap_g $(ARG_6) | ./log/4.Bins_folder/checker_g $(ARG_6) || true
 	@echo "11. ARG_6 Checker:" >> log/2.Memory_Check/Valgrind_Report.txt || true
 	@grep -q "All heap blocks were freed -- no leaks are possible" log/2.Memory_Check/logs/valgrind_report_checker_6.txt && echo "11. ARG_6 Checker: ok" >> log/2.Memory_Check/Valgrind_Report.txt || true
@@ -1132,7 +1133,7 @@ log_leaks:
 asan:
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
 	@echo "$(BOLD)\n# RUNNING ASAN$(RESET)"
-	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0005; done; echo " ✓$(RESET)"
+	@for i in $(shell seq 1 100); do printf "$(GREEN)▓";sleep 0.0001; done; echo " ✓$(RESET)"
 	export ASAN_OPTIONS="halt_on_error=0:log_path=log/2.Memory_Check/logs/Asan_report.txt";
 	./log/4.Bins_folder/push_swap_asan $(ARG_6)
 	@echo "$(RESET)---------------------------------------------------------------------------------------------------------------------------"
@@ -1196,7 +1197,7 @@ log_dynamic_analysis_tests:
 	$(MAKE) bonus
 	$(MAKE) tests_run | tee log/3.Unit_Testing/Testing_Report.txt
 	$(MAKE) test_performance
-#	$(MAKE) create_bins_dbg
+	$(MAKE) create_bins_dbg
 
 #sed -r 's/\x1B\[[0-9;]*[mGKH]//g'
 # ************************************************************************ #
@@ -1204,11 +1205,9 @@ log_dynamic_analysis_tests:
 # ************************************************************************ #
 # *** Folder builder testers *** #
 testers/testers.tar.gz:
+	pipx install gdown
 	mkdir -p testers
-	wget -O testers/testers.tar.gz https://raw.githubusercontent.com/diegonmarcos/algo/refs/heads/main/C2_push_swap/1_RM/rsc/testers.tar.gz > /dev/null 2>&1
-#https://github.com/diegonmarcos/algo/blob/main/C2_push_swap/1.RM/rsc/testers.tar.gz
-#pipx install gdown
-#gdown 'https://drive.google.com/uc?id=10rQ0zUPZZFOO4epDa62sx_2kUUrl1EFo' -O $@
+	gdown 'https://drive.google.com/uc?id=10rQ0zUPZZFOO4epDa62sx_2kUUrl1EFo' -O $@
 #https://drive.google.com/file/d/10rQ0zUPZZFOO4epDa62sx_2kUUrl1EFo/view?usp=sharing
 
 testers/checker_linux: testers/testers.tar.gz
@@ -1238,7 +1237,6 @@ ARG_4="0 9 -2 8"
 ARG_5="3 9 2 8 0"
 
 ARG_6="0 9 2 8 3"
-ARG_9="0 9 2 8 1 4 5 3 6"
 ARG_12="150 20 124 -80 100 123 -139 -27 59 91 186 212"
 ARG_24="-8 -121 178 236 -131 -185 117 26 86 -156 -148 213 -216 102 -61 -126 93 -42 200 79 -116 78 -198 216"
 ARG_50="-47 139 204 167 -95 76 203 67 -60 -12 -238 191 -105 -7 28 235 -54 239 189 -141 135 104 202 -226 -165 -9 101 -88 78 250 124 -157 163 40 -210 192 136 -99 137 157 72 -66 -33 -235 -118 -17 170 -49 -101 174"
@@ -1321,7 +1319,6 @@ tests_run:
 	@echo "Min Points: 8"
 	@echo "---------------------------------------------------------------------------------------------------------------------------"
 	echo"";
-	-echo -n "$(GRAY) MAIN $(RESET)"; echo"";
 	-echo -n "$(GRAY)A ERROR_HANDLING_INPUTS $(RESET)"; echo"";
 	-echo -n "$(YELLOW)a1. ARG_DUPLICATED$(GREEN): | " ; ./push_swap $(ARG_DUPLICATED) 2>&1  | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_DUPLICATED) 2>&1 | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	-echo -n "$(YELLOW)a2. ARG_NON_NUMERIC$(GREEN): | " ; ./push_swap $(ARG_NON_NUMERIC) 2>&1 | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_NON_NUMERIC) 2>&1  | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
@@ -1348,7 +1345,6 @@ tests_run:
 	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_100) | ./checker $(ARG_100) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_100) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	-echo -n "$(YELLOW)b3. ARG_500 && CHECKER_BONUS$(GREEN): | " ; ./push_swap $(ARG_500) | ./checker $(ARG_500) | tr '\n' ' ' ; echo -n " | " ; ./push_swap $(ARG_500) | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
 	echo"";
-	-echo -n "$(GRAY) BONUS $(RESET)"; echo"";
 	-echo -n "$(GRAY)C ERROR_HANDLING_INPUTS_BONUS $(RESET)"; echo"";
 	-echo -n "$(YELLOW)a1. ARG_INT_MAX$(GREEN): | " ; ./checker $(ARG_INT_MAX) 2>&1 | tr '\n' ' ' ; echo -n " | " ; ./checker $(ARG_INT_MAX) 2>&1 | wc -l | tr '\n' ' ' ; echo -n " | "  ; echo "";
 	-echo -n "$(YELLOW)a2. ARG_INT_MIN$(GREEN): | " ; ./checker $(ARG_INT_MIN) 2>&1 | tr '\n' ' ' ; echo -n " | " ; ./checker $(ARG_INT_MIN) 2>&1 | wc -l | tr '\n' ' ' ; echo -n " | " ; echo "";
@@ -1515,12 +1511,13 @@ make_dbg:
 DOXYGEN_FILE	= log/7.Doxygen/Doxygen
 DOXYGEN_PATH 	= log/7.Doxygen
 DOXYGEN_OUTPUT	= doc/doxygen
-log_doxygen:
+doxygen:
 	rm -rf $(DOXYGEN_PATH)
-	$(MAKE) create_Doxyfile || true
-	$(MAKE) doxfile_mod || true
-	doxygen ./$(DOXYGEN_FILE) || true
+	$(MAKE) create_Doxyfile
+	$(MAKE) doxfile_mod
+	doxygen ./$(DOXYGEN_FILE)
 	xdg-open doc/doxygen/html/index.html
+
 
 create_Doxyfile:
 	mkdir -p log/7.Doxygen
@@ -1533,9 +1530,9 @@ doxfile_mod:
 	sed -i 's/OPTIMIZE_OUTPUT_FOR_C  = NO/OPTIMIZE_OUTPUT_FOR_C  = YES/g' ./$(DOXYGEN_FILE)
 	sed -i 's/EXTRACT_ALL            = NO/EXTRACT_ALL            = YES/g' ./$(DOXYGEN_FILE)
 	sed -i 's/HIDE_SCOPE_NAMES       = NO/HIDE_SCOPE_NAMES       = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/INPUT                  =/INPUT                  = src\/push_swap/g' ./$(DOXYGEN_FILE)
+	sed -i 's/INPUT                  =/INPUT                  = src/g' ./$(DOXYGEN_FILE)
 	sed -i 's/RECURSIVE              = NO/RECURSIVE              = YES/g' ./$(DOXYGEN_FILE)
-	sed -i 's/EXCLUDE                =/EXCLUDE                = src\/src_all2/g' ./$(DOXYGEN_FILE)
+	sed -i 's/EXCLUDE                =/EXCLUDE                = src\/src_all/g' ./$(DOXYGEN_FILE)
 	sed -i 's/GENERATE_LATEX         = NO/GENERATE_LATEX         = YES/g' ./$(DOXYGEN_FILE)
 	sed -i 's/GENERATE_TREEVIEW      = NO/GENERATE_TREEVIEW      = YES/g' ./$(DOXYGEN_FILE)
 	sed -i 's/GENERATE_MAN           = NO/GENERATE_MAN           = YES/g' ./$(DOXYGEN_FILE)
@@ -1547,7 +1544,7 @@ doxfile_mod:
 
 
 
-.PHONY: log_doxygen create_Doxyfile
+.PHONY: doxygen create_Doxyfile
 
 
 
@@ -1577,26 +1574,24 @@ doxfile_mod:
 # ************************************************************************ #
 #                          TESTERS VISUALIZER                              #
 # ************************************************************************ #
-test_vis_run:
-	git clone https://github.com/o-reo/push_swap_visualizer.git testers/push_swap_visualizer || true
-	mkdir -p testers/push_swap_visualizer/build && cd testers/push_swap_visualizer/build && cmake .. && make || true
-	cd testers/push_swap_visualizer && mv push_swap push_swap_default && ln -s ../../push_swap push_swap && ./build/bin/visualizer
+test_visualizer_build: testers/push_swap_visualizer/build/bin/visualizer
 
-
-
-#test_visualizer_build: testers/push_swap_visualizer/build/bin/visualizer
-#testers/push_swap_visualizer.tar.gz:
-#	mkdir -p testers
-#	pipx install gdown
-#	gdown 'https://drive.google.com/uc?id=1xvaDfFKfIPTeiwLLu0K37YzJdesab_kx' -O $@
+testers/push_swap_visualizer.tar.gz:
+	pipx install gdown
+	mkdir -p testers
+	gdown 'https://drive.google.com/uc?id=1xvaDfFKfIPTeiwLLu0K37YzJdesab_kx' -O $@
 #	file $@ | grep gzip > /dev/null
 #	if [ $$? -ne 0 ]; then echo "Error: Downloaded file is not a gzip archive!"; exit 1; fi
-#testers/push_swap_visualizer: testers/push_swap_visualizer.tar.gz
-#		tar -xzf $< -C testers/
-#testers/push_swap_visualizer/build/bin/visualizer: testers/push_swap_visualizer
-#test_visualizer_run: testers/push_swap_visualizer/build/bin/visualizer
-#	./testers/push_swap_visualizer/build/bin/visualizer
-#.PHONY: run_visualizer
+
+testers/push_swap_visualizer: testers/push_swap_visualizer.tar.gz
+		tar -xzf $< -C testers/
+
+testers/push_swap_visualizer/build/bin/visualizer: testers/push_swap_visualizer
+
+test_visualizer_run: testers/push_swap_visualizer/build/bin/visualizer
+	./testers/push_swap_visualizer/build/bin/visualizer
+
+.PHONY: run_visualizer
 
 
 
@@ -1625,7 +1620,6 @@ ifneq ($(VERBOSE), 0)
 endif
 
 # *** Build message of timestamps changes *** #
-
 check_up_to_date:
 	echo 1 > log/outdate.txt
 ifneq ($(VERBOSE), 0)
@@ -1650,7 +1644,6 @@ ifneq ($(VERBOSE), 0)
 		fi; \
 	fi;
 endif
-
 
 check_up_to_date_2:
 	if [ "$(shell cat log/outdate.txt)" -eq "1" ]; then \
@@ -1712,19 +1705,6 @@ folders_lns_build:
 
 # *** help message *** #
 help:
-	@echo "$(GRAY) DEFAULT RULES:$(GREEN)"
-	echo " make  docker_build"
-	echo " bash Makedocker.sh build"
-	echo " bash Makedocker.sh run"
-	echo " make  log_doxygen"
-	echo " make  log_static_analysis"
-	echo " make  log_leaks"
-	echo " make  log_dynamic_analysis_tests"
-	echo " make  log_dbg_info"
-	echo " make  log_make_performance"
-	echo " make  test_visualizer_run"
-
-help3:
 	@echo "$(GRAY)\n### 1.DESCRIPTION:$(RESET)"
 	@echo "$(GREEN)	This is make file for build either PROGRAM, LIBRARY, PROGRAM+LIBRARY with their dependencies connect.$(RESET)"
 	@echo "$(GREEN)	- This Makefile is a template for a project with the following structure:$(RESET)"
@@ -1760,16 +1740,7 @@ help3:
 	@echo "$(GRAY)\n### 2. USAGE:$(RESET)"
 	@echo "$(GREEN)	make [option]$(RESET)"
 	@echo "$(GRAY)\n### 3. OPTIONS:$(RESET)"
-	@echo "$(GRAY) DEFAULT RULES:$(GREEN)"
-	echo " make  log_doxygen"
-	echo " make  log_static_analysis"
-	echo " make  log_leaks"
-	echo " make  log_dynamic_analysis_tests"
-	echo " make  log_dbg_info"
-	echo " make  log_make_performance"
-	echo " make  test_visualizer_run"
-
-help2:
+	@echo "$(GRAY) DEFAULT RULES:$(RESET)"
 	@echo "$(GREEN)	1. all, clean, fclean, fclean_all, re$(RESET)"
 	@echo "$(GRAY) FUNCTIONS BUILD:$(RESET)"
 	@echo "$(GREEN)	2. program_or_lib, program, lib, libs_build $(RESET)"
@@ -1788,6 +1759,9 @@ help2:
 	@echo "$(GRAY) EXTRAS:$(RESET)"
 	@echo "$(GREEN)	10. bonus\n$(RESET)"
 	
+
+
+
 
 
 
