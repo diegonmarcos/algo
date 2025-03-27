@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/27 15:39:49 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/27 16:39:48 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -516,7 +516,7 @@ bonus:
 			cp libs/libpush_swap_0.a src/checker_bonus/libs
 			$(MAKE) -C $(CHECKER_BONUS_DIR) BONUS=1
 mylibs_clean:
-	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
+#	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
 	$(RM) libs/mylibs/mylibcpp libs/mylibs/mylibx libs/mylibs/mytools libs/mylibs/myunittest
 # ************************************************************************ #
 
@@ -1215,7 +1215,7 @@ testers/testers.tar.gz:
 #https://drive.google.com/file/d/10rQ0zUPZZFOO4epDa62sx_2kUUrl1EFo/view?usp=sharing
 
 testers/checker_linux: testers/testers.tar.gz
-	tar -xzf testers/testers.tar.gz -C .
+	tar -xzf testers/testers.tar.gz -C . || true
 
 testers_folder_build: testers/checker_linux
 

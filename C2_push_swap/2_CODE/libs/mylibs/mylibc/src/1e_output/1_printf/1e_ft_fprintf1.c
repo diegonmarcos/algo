@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   0c_ft_fprintf1.c                                   :+:      :+:    :+:   */
+/*   1e_ft_fprintf1.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 17:23:43 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/05 12:31:17 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/27 16:49:30 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,24 +78,18 @@ int	ft_fprintf1(char *filename, const char *str, ...)
 {
 	va_list	item;
 	int		char_count;
-	FILE	*output_file;
+	int		output_file;
 	long	fd;
 
-	output_file = fopen(filename, "a");
-	if (output_file == NULL)
+	output_file = open(filename, O_WRONLY | O_CREAT | O_APPEND, 0644);
+	if (output_file == -1)
 		return (1);
-	fd = fileno(output_file);
-	if (flock(fd, LOCK_EX) == -1)
-	{
-		perror("Failed to lock file");
-		close(fd);
-		return (1);
-	}
+	fd = open(filename, O_WRONLY | O_CREAT | O_APPEND, 0644);
 	char_count = 0;
 	va_start(item, str);
 	char_count = w_str(fd, str, item, char_count);
 	va_end(item);
-	fclose(output_file);
+	close(output_file);
 	return (char_count);
 }
 
@@ -107,28 +101,21 @@ int	ft_fprintf2(char *fopenmode, char *filename, const char *str, ...)
 {
 	va_list	item;
 	int		char_count;
-	FILE	*output_file;
+	int		output_file;
 	long	fd;
 
-	output_file = fopen(filename, fopenmode);
-	if (output_file == NULL)
+	output_file = open(filename, O_WRONLY | O_CREAT | O_APPEND, 0644);
+	if (output_file == -1)
 		return (1);
 	if (ft_strcmp(filename, "1") == 0)
-		fd = fileno(stdout);
+		fd = 1;
 	else
-		fd = fileno(output_file);
-	if (flock(fd, LOCK_EX) == -1)
-	{
-		perror("Failed to lock file");
-		close(fd);
-		return (1);
-	}
+		fd = output_file;
 	char_count = 0;
 	va_start(item, str);
 	char_count = w_str(fd, str, item, char_count);
 	va_end(item);
-	fflush(output_file);
-	fclose(output_file);
+	close(output_file);
 	return (char_count);
 }
 

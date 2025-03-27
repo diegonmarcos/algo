@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 14:47:54 by dnepomuc          #+#    #+#             */
-/*   Updated: 2025/03/18 10:57:23 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/27 15:49:12 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@
 # include <unistd.h>	// close, read, write, pipe, fork, execve, dup2
 # include <fcntl.h>		// open, O_RDONLY, O_WRONLY, O_CREAT, O_TRUNC
 # include <stdlib.h>	// realloc,free|atoi,strtol|rand|exit|search/sort
-# include <stdarg.h>	// Variadic functions for fprintf and printf
+# include <stdarg.h>	// Variadic functions for ft_fprintf and printf
 
 /* ************************************************************* */
 /* ************************************************************* */
@@ -46,7 +46,7 @@
 
 /* ************************************************************* */
 /* ************************************************************* */
-# include <stdio.h>		// High Level I/O(frwrite,fread/fprintf) and erros
+# include <stdio.h>		// High Level I/O(frwrite,fread/ft_fprintf) and erros
 # include <string.h>	// Actually can't use, only for testers...
 
 /* ************************************************************* */

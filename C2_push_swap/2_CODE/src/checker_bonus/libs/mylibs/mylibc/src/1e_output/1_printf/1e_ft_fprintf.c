@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fprintf.c                                       :+:      :+:    :+:   */
+/*   1e_ft_fprintf.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 17:23:43 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/16 13:40:44 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/27 16:48:33 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,13 +80,7 @@ int	ft_fprintf(FILE *file_struct, const char *str, ...)
 	int		char_count;
 	long	fd;
 
-	fd = fileno(file_struct);
-	if (flock(fd, LOCK_EX) == -1)
-	{
-		perror("Failed to lock file");
-		close(fd);
-		return (1);
-	}
+	fd = 1;
 	char_count = 0;
 	va_start(item, str);
 	char_count = w_str(fd, str, item, char_count);

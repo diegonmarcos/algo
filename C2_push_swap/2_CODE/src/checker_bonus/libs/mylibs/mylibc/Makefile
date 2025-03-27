@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/26 19:11:51 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/27 16:37:16 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -491,8 +491,8 @@ endif
 
 build_deps:
 ifneq ($(LIB_1_NAME),0)
-	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
-	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
+#	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
+#	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
 	$(LIB_1_CONFIG)
 	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE) || true
 endif
@@ -534,8 +534,8 @@ endif
 
 
 $(LIB_1_FILE):
-	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
-	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
+#	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
+#	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
 	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE)
 $(LIB_2_FILE):
 	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
@@ -580,7 +580,7 @@ bonus:
 			$(MAKE) clean
 			$(MAKE) BONUS=1
 mylibs_clean:
-	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
+#	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
 	$(RM) libs/mylibs/mylibcpp libs/mylibs/mytools libs/mylibs/mylibx libs/mylibs/myunittest
 # ************************************************************************ #
 

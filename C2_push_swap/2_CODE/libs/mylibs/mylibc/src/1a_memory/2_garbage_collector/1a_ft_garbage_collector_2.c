@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_garbage_collector_2.c                           :+:      :+:    :+:   */
+/*   1a_ft_garbage_collector_2.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 18:57:56 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/01/31 20:17:57 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/27 15:49:12 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ void	*ft_malloc_gb(size_t size, t_list_garbage *list_garbage)
 	{
 		if (!add_allocation(ptr, list_garbage))
 		{
-			fprintf(stderr, "Error: Allocation tracking array is full!\n");
+			ft_fprintf(stderr, "Error: Allocation tracking array is full!\n");
 			free(ptr);
 			return (NULL);
 		}

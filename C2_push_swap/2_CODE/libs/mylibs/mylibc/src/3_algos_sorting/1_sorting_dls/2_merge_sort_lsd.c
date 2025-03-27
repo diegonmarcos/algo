@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   merge_sort_lsd.c                                   :+:      :+:    :+:   */
+/*   2_merge_sort_lsd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 20:11:30 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/01/31 20:19:39 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/27 15:49:12 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 t_list *create_new_node(int value) {
     t_list *new_node = (t_list *)malloc(sizeof(t_list));
     if (!new_node) {
-        fprintf(stderr, "Memory allocation failed!\n");
+        ft_fprintf(stderr, "Memory allocation failed!\n");
         exit(1);
     }
     new_node->value = value;

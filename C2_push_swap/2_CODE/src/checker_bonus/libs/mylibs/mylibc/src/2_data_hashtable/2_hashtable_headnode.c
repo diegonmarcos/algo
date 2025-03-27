@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hashtable_headnode.c                               :+:      :+:    :+:   */
+/*   2_hashtable_headnode.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 20:00:35 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/01/31 20:19:39 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/27 15:49:12 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,13 @@ t_hash_table *create_hash_table(int size)
 
 	ht = (t_hash_table *)malloc(sizeof(t_hash_table));
 	if (ht == NULL) {
-		fprintf(stderr, "Error: Memory allocation failed for hash table\n");
+		ft_fprintf(stderr, "Error: Memory allocation failed for hash table\n");
 		return (NULL);
 	}
 	ht->size = size;
 	ht->table = (t_hash_node **)calloc(size, sizeof(t_hash_node *));
 	if (ht->table == NULL) {
-		fprintf(stderr, "Error: HasMap ALloc\n");
+		ft_fprintf(stderr, "Error: HasMap ALloc\n");
 		free(ht);
 		return (NULL);
 	}
@@ -63,12 +63,12 @@ t_hash_node *create_node(const char *key, int value)
 
 	new_node = (t_hash_node *)malloc(sizeof(t_hash_node));
 	if (new_node == NULL) {
-		fprintf(stderr, "Error: Memory allocation failed for node\n");
+		ft_fprintf(stderr, "Error: Memory allocation failed for node\n");
 		return (NULL);
 	}
 	new_node->key = strdup(key);
 	if (new_node->key == NULL) {
-		fprintf(stderr, "Error: Memory allocation failed for key\n");
+		ft_fprintf(stderr, "Error: Memory allocation failed for key\n");
 		free(new_node);
 		return (NULL);
 	}

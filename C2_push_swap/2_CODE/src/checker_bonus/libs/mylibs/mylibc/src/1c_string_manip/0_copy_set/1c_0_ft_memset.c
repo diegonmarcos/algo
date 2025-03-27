@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   1_0_ft_memset.c                                    :+:      :+:    :+:   */
+/*   1c_0_ft_memset.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 10:58:33 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/08 09:46:14 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/27 15:52:09 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,21 +65,21 @@ int main ()
 {
 	// Char Test
 	char str[50] = "GeeksForGeeks is for programming geeks.";
-	printf("\nBefore memset(): %s\n", str);
+	printf("\nBefore ft_memset(): %s\n", str);
 	ft_memset(str + 13, '.', 8 * sizeof(char));
-	printf("After memset():  %s\n", str);
+	printf("After ft_memset():  %s\n", str);
 
 	//Int Test
 		
-		//before memset
+		//before ft_memset
 	int arr[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-	printf("\nBefore memset(): ");
+	printf("\nBefore ft_memset(): ");
 	for (int i = 0; i < 10; i++)
 		printf("%d ", arr[i]);
 		
-		//after memset
+		//after ft_memset
 	ft_memset(arr, 0, 10 * sizeof(int));
-	printf("\nAfter memset():  ");
+	printf("\nAfter ft_memset():  ");
 	for (int i = 0; i < 10; i++)
 		printf("%d ", arr[i]);
 	return 0;

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hashtable_headarray.c                              :+:      :+:    :+:   */
+/*   2_hashtable_headarray.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 19:43:05 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/01/31 20:38:26 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/27 15:49:12 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ t_node_	*create_node(const char *key, int value)
 	new_node = (t_node_ *)malloc(sizeof(t_node_));
 	if (new_node == NULL)
 	{
-		fprintf(stderr, "Error: Memory allocation failed for node\n");
+		ft_fprintf(stderr, "Error: Memory allocation failed for node\n");
 		return (NULL);
 	}
 	new_node->key = strdup(key);
 	if (new_node->key == NULL)
 	{
-		fprintf(stderr, "Error: Memory allocation failed for key\n");
+		ft_fprintf(stderr, "Error: Memory allocation failed for key\n");
 		free(new_node);
 		return (NULL);
 	}
@@ -120,7 +120,7 @@ void	free_hashtable(t_node_ **table, int size)
 	table = (t_node_ **)calloc(size, sizeof(t_node_ *));
 	if (table == NULL)
 	{
-		fprintf(stderr, "Error: Memory\n");
+		ft_fprintf(stderr, "Error: Memory\n");
 		return (1);
 	}
 	insert(table, size, "apple", 1);
