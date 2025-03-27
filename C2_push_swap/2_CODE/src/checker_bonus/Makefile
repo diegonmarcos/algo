@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/27 16:44:11 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/27 16:53:44 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -540,6 +540,7 @@ re: fclean build_system_pipeline
 fclean_all:	fclean
 	$(RM) log
 	$(RM) testers
+	$(RM) doc
 	$(RM) Makedocker.sh
 	if [ -f imgui.ini ]; then \
 		rm imgui.ini; \
