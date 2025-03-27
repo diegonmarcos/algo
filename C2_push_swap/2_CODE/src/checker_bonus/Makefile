@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/27 16:53:44 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/27 16:59:35 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -1508,7 +1508,7 @@ testers/push_swap_visualizer.tar.gz:
 #	if [ $$? -ne 0 ]; then echo "Error: Downloaded file is not a gzip archive!"; exit 1; fi
 
 testers/push_swap_visualizer: testers/push_swap_visualizer.tar.gz
-		tar -xzf $< -C testers/
+		tar -xzf $< -C testers/ || true
 
 testers/push_swap_visualizer/build/bin/visualizer: testers/push_swap_visualizer
 
