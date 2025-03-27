@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/27 15:34:57 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/27 15:39:49 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -1477,13 +1477,12 @@ prgm_nm:
 	make -n > log/6.Make_dbg/make_n.txt
 
 libs_nm_art:
-	nm libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_nm.txt
-	ar t libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_art.txt
-	nm libs/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_nm.txt
-	ar t libs/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_art.txt
+	nm libs/mylibs/mylibc/libs/lib$(LIB_1_NAME)_0.a > log/5.Libs_nmart/lib$(LIB_1_NAME)_nm.txt
+	ar t libs/mylibs/mylibc/libs/lib$(LIB_1_NAME)_0.a > log/5.Libs_nmart/lib$(LIB_1_NAME)_art.txt
+#	nm libs/mylibs/mylibc/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_nm.txt
+#	ar t libs/mylibs/mylibc/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_art.txt
 
 make_dbg:
-	$(MAKE) -d > log/6.Make_dbg/make_d.txt
 	$(MAKE) CFLAGS_DBG="-v" > log/6.Make_dbg/clang_v.txt
 	$(MAKE) --debug=b -j1 re > log/6.Make_dbg/make_debug_b.txt
 	$(MAKE) --debug=v -j1 re > log/6.Make_dbg/make_debug_v.txt
