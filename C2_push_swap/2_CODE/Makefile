@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/26 19:19:23 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/27 15:34:57 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -1466,10 +1466,15 @@ log/4.Bins_folder/$(NAME0)_g3: $(OBJECTS)
 .PHONY: create_bins_dbg
 
 # *** Librarys info and make=debug *** #
-debuggers_info:
+log_debugers_info:
+	$(MAKE) prgm_nm
 	$(MAKE) libs_nm_art
 #	$(MAKE) make_dbg
 
+prgm_nm:
+	nm -u $(NAME) > log/6.Make_dbg/program_nm.txt
+	make -d > log/6.Make_dbg/make_d.txt
+	make -n > log/6.Make_dbg/make_n.txt
 
 libs_nm_art:
 	nm libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_nm.txt
