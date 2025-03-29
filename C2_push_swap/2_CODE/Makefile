@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/27 16:39:48 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/29 08:14:14 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -403,7 +403,7 @@ build_system_pipeline:
 	$(MAKE) dbg_rules
 	$(MAKE) check_up_to_date_2
 	$(MAKE) folders_ls_la
-	if [ "$(IS_PROGRAM_AND_NOT_LIB)" -eq "1" ]; then \
+#	if [ "$(IS_PROGRAM_AND_NOT_LIB)" -eq "1" ]; then \
 		$(MAKE) run_program; \
 	fi
 
@@ -441,7 +441,8 @@ endif
 # ************************************************************************ #
 # ************************************************************************ #
 NAME_PRGM = $(OUTPUT_PLACE)$(NAME0)
-$(NAME_PRGM): folders_build $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
+$(NAME_PRGM): $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
+	$(MAKE) folders_build
 	$(COMPILER) $(OBJECTS) $(LIBS_PATH) $(CFLAGS_DBG) $(CFLAGS_INCL) $(LDFLAGS) -o $(NAME)
 	echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
 
