@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/29 08:14:14 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/29 13:41:00 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -489,6 +489,7 @@ endif
 
 
 objs/%.o:	%.c
+	$(MAKE) folders_build
 	$(COMPILER) $(PIC) $(CFLAGS_DBG) $(CFLAG_ASAN) $(CFLAGS_INCL) $(DEPFLAGS) $(MACROS) -c $< -o $@
 ifneq ($(VERBOSE), 0)
 	@echo "$(GRAY)()و $@ $(NAME) Compiling Objects done!$(RESET)"
